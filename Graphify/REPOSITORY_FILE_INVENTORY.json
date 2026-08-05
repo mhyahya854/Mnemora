@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "fingerprint": "76E77C32263EFBA4EC6F06C15AFFE74EA646632EF4A6A6263F92E4188B604DBB",
-  "generated_at": "2026-08-05T12:19:52.225551Z",
+  "generated_at": "2026-08-05T12:42:42.603384Z",
   "scope": "Current codebase files plus the three immutable Master Plan sources; derived Graphify artifacts are validated separately",
   "file_count": 24842,
   "files": [

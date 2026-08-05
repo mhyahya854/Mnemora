@@ -2506,22 +2506,22 @@ write_text("COMPLETION_TRACKER.md", f"""# Completion Tracker
 
 ## Planning checkpoint
 
-The derived model contains {len(requirements)} normalized requirements, {len(capabilities)} capabilities, {len(tasks)} implementation tasks, {implementation_queue['deletion_task_count']} deletion tasks, {len(decision_packages)} conditional packages and {len(RELEASE_GATES)} release gates. Deterministic completion is controlled by `tools/validate_planning.py` and `PLANNING_VALIDATION_REPORT.json`; typed totals here are generated from the authorities.
+The derived model contains {len(requirements)} normalized requirements, {len(capabilities)} capabilities, {len(tasks)} implementation tasks ({implementation_queue['deletion_task_count']} deletion tasks), {len(decision_packages)} conditional packages, {len(RELEASE_GATES)} release gates and {len(exact_entries)} exact-location entries. Deterministic completion is controlled by `tools/validate_planning.py` and `PLANNING_VALIDATION_REPORT.json`; typed totals here are generated from the authorities. The 2026-08-05 independent semantic audit verified 36/36 deterministic gates (including generator reproducibility), reconciled the registries with the generator, recorded real Git provenance, and confirmed byte-for-byte Master Plan and codebase immutability.
 
 ## Planning Completion Conjunction
 
-{markdown_table(["Gate", "Planned state", "Deterministic authority"], [[index, 'MODELLED; VALIDATOR MUST PASS', authority] for index, authority in enumerate([
-    'Master hashes and exact source-line coverage', 'Stable requirement records', 'Requirement-to-capability coverage', 'Capability-to-task coverage',
-    'Full deletion-chain coverage', 'Seven interlocks per deletion', 'Eleven conditional packages', 'Owner and target per capability',
-    'Real current path/symbol or planned addition', 'Complete task contracts', 'Strict release proof tasks', 'Data-safety contracts',
-    'Offline implementation/proof tasks', 'Windows release proof tasks', 'Cross-authority ID/count reconciliation', 'Zero unresolved placeholders',
-    'Zero unmapped requirements', 'Zero unsupported capability references', 'Zero unresolved interpretations', 'Deterministic validation pass',
-    'Exact first task and total order', 'No false execution or release claim'
+{markdown_table(["Gate", "State on 2026-08-05", "Deterministic authority"], [[index, "PASS", authority] for index, authority in enumerate([
+    'Master hashes and exact source-line coverage', 'Stable requirement records', 'Requirement-to-capability coverage', 'Named product-scope capability completeness',
+    'Protected retained scope separated from deletion', 'Capability ownership and runtime chains', 'Exact-location path/symbol reconciliation and vendor restrictions', 'Deletion dispositions, false-positive exclusions, and seven interlocks',
+    'Real semantic task dependencies, DAG, and topological order', 'Phase, wave, and order agreement', 'Complete task contracts without vague language', 'Test-command validity and existing-versus-planned distinction',
+    'Evidence-type appropriateness', 'Eleven conditional packages complete', 'Strict release-gate traceability', 'Interpretations resolved',
+    'Zero placeholders, orphans, duplicates, or broken internal links', 'Cross-authority count reconciliation', 'Generator semantic reproducibility', 'Integrity wording and no-codebase-mutation evidence',
+    'Exact first task `TASK-GOV-001-PROVENANCE-BASELINE` and total order', 'No false execution or release claim'
 ], 1)])}
 
 ## Application and release status
 
-Implementation, application tests, builds, packaging, installation, offline launch, final Graphify scan, final simplification audit and release approval are all pending future execution. Planning completeness never changes those statuses.
+Implementation, application tests, builds, packaging, installation, offline launch, final Graphify scan, final simplification audit and release approval are all pending future execution. Planning completeness never changes those statuses. The 2026-08-05 audit recorded a full codebase SHA-256 manifest baseline and verified no codebase path changed during the planning audit.
 """)
 
 
