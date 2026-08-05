@@ -5,7 +5,7 @@
 - Root: `C:\Users\mhyah\Downloads\Code\Mnemora`.
 - Current application folder: `codebase/`; planned `Codebase` spelling is not a completed move.
 - Derived planning folder: `Graphify/`.
-- Git: absent; details are in `RUN_STATE.md` and `REPOSITORY_FINGERPRINT.json`.
+- Git: present; details are in `RUN_STATE.md` and the 2026-08-05 audit baseline in `PLANNING_BASELINE.md`.
 - Authoritative inventory: 24842 files in `REPOSITORY_FILE_INVENTORY.json`; derived Graphify outputs are validated separately.
 
 ## Application roots

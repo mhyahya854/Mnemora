@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "authority": "Single machine-readable implementation task authority",
-  "generated_at": "2026-08-05T12:03:43.488955Z",
+  "generated_at": "2026-08-05T12:13:53.564085Z",
   "implementation_status": "NOT STARTED",
   "exact_first_task_id": "TASK-GOV-001-PROVENANCE-BASELINE",
   "task_count": 158,
@@ -179,7 +179,7 @@
       "current_locations": [
         {
           "path": ".git/",
-          "status": "ABSENT AT PLANNING CHECKPOINT",
+          "status": "PRESENT AT PLANNING CHECKPOINT",
           "symbols": []
         },
         {
@@ -194,7 +194,7 @@
         {
           "path": ".git/",
           "symbol": "repository provenance",
-          "status": "PLANNED ADDITION IF STILL ABSENT AND IMPLEMENTATION AUTHORITY PERMITS"
+          "status": "PRESENT - PROVENANCE RECORDING REQUIRED AT IMPLEMENTATION START"
         },
         {
           "path": "Graphify/RUN_STATE.md",

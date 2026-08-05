@@ -48,6 +48,23 @@ EXPECTED_MASTER_HASHES = {
 }
 
 
+def probe_git_state(root: Path) -> dict[str, Any]:
+    """Read-only Git presence probe used by derived provenance records."""
+    git_dir = root / ".git"
+    branch: str | None = None
+    if git_dir.is_dir():
+        try:
+            head = (git_dir / "HEAD").read_text(encoding="utf-8", errors="replace").strip()
+            match = re.match(r"^ref: refs/heads/(.+)$", head)
+            branch = match.group(1) if match else None
+        except OSError:
+            branch = None
+    return {"present": git_dir.is_dir(), "branch": branch}
+
+
+GIT_STATE = probe_git_state(ROOT)
+
+
 def sha256(path: Path) -> str:
     h = hashlib.sha256()
     with path.open("rb") as stream:
@@ -1647,8 +1664,8 @@ first = add_task(
     "This is the exact first implementation task because every later mutation, migration, deletion and rollback requires recoverable provenance.",
 )
 first["preconditions"] = ["Future implementation authority is explicit.", "All three immutable Master Plan hashes match their recorded values.", "The user worktree has been inventoried without mutation."]
-first["current_locations"] = [{"path": ".git/", "status": "ABSENT AT PLANNING CHECKPOINT", "symbols": []}, {"path": "Graphify/REPOSITORY_FILE_INVENTORY.json", "status": "PRESENT BASELINE", "symbols": ["source_authoritative entries"]}]
-first["target_locations"] = [{"path": ".git/", "symbol": "repository provenance", "status": "PLANNED ADDITION IF STILL ABSENT AND IMPLEMENTATION AUTHORITY PERMITS"}, {"path": "Graphify/RUN_STATE.md", "symbol": "verified implementation checkpoint", "status": "PLANNED UPDATE"}]
+first["current_locations"] = [{"path": ".git/", "status": ("PRESENT AT PLANNING CHECKPOINT" if GIT_STATE["present"] else "ABSENT AT PLANNING CHECKPOINT"), "symbols": []}, {"path": "Graphify/REPOSITORY_FILE_INVENTORY.json", "status": "PRESENT BASELINE", "symbols": ["source_authoritative entries"]}]
+first["target_locations"] = [{"path": ".git/", "symbol": "repository provenance", "status": ("PRESENT - PROVENANCE RECORDING REQUIRED AT IMPLEMENTATION START" if GIT_STATE["present"] else "PLANNED ADDITION IF STILL ABSENT AND IMPLEMENTATION AUTHORITY PERMITS")}, {"path": "Graphify/RUN_STATE.md", "symbol": "verified implementation checkpoint", "status": "PLANNED UPDATE"}]
 first["files_expected_to_change"] = [".git/ if absent", ".gitignore if required by verified inventory", "Graphify/RUN_STATE.md", "Graphify/REPOSITORY_FILE_INVENTORY.json", "Graphify/evidence/provenance/"]
 first["semantic_dependencies"] = []
 first["dependencies"] = []
@@ -2374,6 +2391,18 @@ Evaluate all gates in `RELEASE_GATE_PLAN.json` only after their evidence-produci
 """)
 
 
+git_state_line = (
+    f"- Git: present at the repository root (branch `{GIT_STATE['branch'] or '(detached)'}`); branch, commit, staged, unstaged, deleted and untracked states are verified at implementation time by `TASK-GOV-001-PROVENANCE-BASELINE` and recorded in the audit baseline."
+    if GIT_STATE["present"]
+    else "- Git: absent at the repository root and every searched parent through `C:\\`; branch, commit, staged, unstaged, deleted and untracked Git states are unavailable."
+)
+inventory_git_line = (
+    "Git: present; details are in `RUN_STATE.md` and the 2026-08-05 audit baseline in `PLANNING_BASELINE.md`."
+    if GIT_STATE["present"]
+    else "Git: absent; details are in `RUN_STATE.md` and `REPOSITORY_FINGERPRINT.json`."
+)
+
+
 write_text("RUN_STATE.md", f"""# Run State
 
 ## Current checkpoint
@@ -2381,7 +2410,7 @@ write_text("RUN_STATE.md", f"""# Run State
 - Mode: final derived-planning completion; application implementation not started.
 - Repository root: `{ROOT}`.
 - Current application root: `{CB}` (lowercase path is authoritative current evidence).
-- Git: absent at the root and every searched parent through `C:\\`; branch, commit, staged, unstaged, deleted and untracked Git states are unavailable.
+{git_state_line}
 - Provenance fallback: `REPOSITORY_FILE_INVENTORY.json` plus `REPOSITORY_FINGERPRINT.json`; future implementation begins with `TASK-GOV-001-PROVENANCE-BASELINE`.
 - Immutable Master Plan files: verified against the SHA-256 values below before derived generation.
 - Application writes in this planning run: none authorized.
@@ -2500,7 +2529,7 @@ write_text("REPOSITORY_INVENTORY.md", f"""# Repository Inventory
 - Root: `{ROOT}`.
 - Current application folder: `codebase/`; planned `Codebase` spelling is not a completed move.
 - Derived planning folder: `Graphify/`.
-- Git: absent; details are in `RUN_STATE.md` and `REPOSITORY_FINGERPRINT.json`.
+- {inventory_git_line}
 - Authoritative inventory: {len(inventory_files)} files in `REPOSITORY_FILE_INVENTORY.json`; derived Graphify outputs are validated separately.
 
 ## Application roots

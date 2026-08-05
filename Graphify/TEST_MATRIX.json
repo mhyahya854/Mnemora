@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "authority": "Planning-only test and evidence contract authority",
-  "generated_at": "2026-08-05T12:03:43.488955Z",
+  "generated_at": "2026-08-05T12:13:53.564085Z",
   "test_contract_count": 158,
   "executed_in_this_run": 0,
   "verified_package_scripts": {

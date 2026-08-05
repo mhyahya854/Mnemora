@@ -1,6 +1,6 @@
 {
   "schema_version": 4,
-  "validated_at": "2026-08-05T12:03:43.181536Z",
+  "validated_at": "2026-08-05T12:13:53.242451Z",
   "scope": "DERIVED GRAPHIFY PLANNING ONLY - IMPLEMENTATION NOT STARTED",
   "verdict": "PASS",
   "completion_statement": "SEMANTIC GRAPHIFY PLANNING COMPLETE — IMPLEMENTATION NOT STARTED",
@@ -636,8 +636,8 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "before": "4F947C7FD1657FF721702398BB381CCC895171F55A8F9E53A682A7801C195A97",
-        "after": "4F947C7FD1657FF721702398BB381CCC895171F55A8F9E53A682A7801C195A97",
+        "before": "79FDDDA6A85B76C057C8002D9A0E480F8722F97C87EE980D50D58783A5BC04C4",
+        "after": "79FDDDA6A85B76C057C8002D9A0E480F8722F97C87EE980D50D58783A5BC04C4",
         "generator_stdout": "{\n  \"requirements\": 536,\n  \"capabilities\": 120,\n  \"tasks\": 158,\n  \"deletion_tasks\": 31,\n  \"conditional_packages\": 11,\n  \"release_gates\": 12,\n  \"exact_locations\": 780\n}"
       }
     },
