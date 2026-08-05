@@ -18,6 +18,7 @@ This is the single authoritative entry point for a future implementation run. Im
 
 - Repository root: `C:\Users\mhyah\Downloads\Code\Mnemora`.
 - Current application root: `C:\Users\mhyah\Downloads\Code\Mnemora\codebase`; the lowercase path remains authoritative until a future casing-safe move task is executed.
+- Current repository state: Git is present at the repository root. The semantic planning audit is performed on the `graphify-semantic-audit` branch and is fast-forward-integrated into `main` by the audit-run completion step; the generation-time branch is recorded in `RUN_STATE.md`.
 - The completed run represented here edited only `Graphify/`. A future implementation run may edit application-owned files only when the active queue task names them under `files_expected_to_change`; the three Master Plan files and every task's `files_forbidden_from_changing` remain immutable boundaries.
 - Installed dependencies, generated output, user databases, recordings, notes, transcripts, exports and backups are never implementation targets. Destructive tests use disposable verified copies.
 
@@ -72,6 +73,8 @@ A task becomes `COMPLETE` only after its preconditions and `semantic_dependencie
 ## Provenance and false-completion controls
 
 Use one focused Git commit per recoverable capability batch when Git exists. When it does not, save pre/post path, byte-size and SHA-256 inventories plus the reversible delta before continuing. Never reset, clean, restore, stash or discard unrelated work. Planning status, file existence, mocks, administrative success text and an unavailable-hardware waiver cannot substitute for required real evidence.
+
+After every coherent batch, review the exact diff, verify only permitted `Graphify/` paths changed, run the deterministic validator, commit, push to the configured origin, fetch origin, and confirm the local branch HEAD equals the remote branch HEAD before starting the next batch. Use `git push` without force; never rewrite history or discard unrelated work.
 
 Evaluate all gates in `RELEASE_GATE_PLAN.json` only after their evidence-producing tasks finish. A gate fails when any applicable requirement/task lacks same-checkpoint proof; `NOT APPLICABLE` requires an explicit Master Plan or conditional-decision reachability basis, and absent hardware is `HARDWARE UNAVAILABLE`, not `PASS`. Final release approval requires the conjunction of all applicable gates.
 

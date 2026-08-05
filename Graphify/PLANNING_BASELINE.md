@@ -173,3 +173,16 @@ All 1,719 source lines were read completely in this audit run before any repair.
 `SEMANTIC GRAPHIFY PLANNING INCOMPLETE - CONTINUE WORKING`
 
 Reason: the stored completion claim was stale; the generator and registries were out of sync, and the full independent conjunction had not yet been re-proven on this run.
+
+## Audit batch records (2026-08-05)
+
+Every coherent audit/fix batch is committed on `graphify-semantic-audit` and pushed to `origin`; each entry records the local/remote-verified commit.
+
+| Batch | Commit | Content | Remote verified |
+| --- | --- | --- | --- |
+| 1 | `09e3fc4c8e77faae60c7ee0727801954ffdae0f3` | Independent audit baseline (this file) plus full codebase SHA-256 manifest `AUDIT_CODEBASE_BASELINE_SHA256.txt` | Yes |
+| 2 | `6a708d1bf54905ecb86151c797965dd1b08ddafb` | Reconciled regenerated authorities with the deterministic generator; adopted 26 reviewed deletion-evidence entries (759 to 780 exact locations) for cloud synchronisation, MCP, public API, upgrade systems and usage quotas; validator 36/36 | Yes |
+| 3 | `a1d739967d4a409847fdc948c941c28b201d7213` | Generator repair: real Git provenance state in RUN_STATE, REPOSITORY_INVENTORY and TASK-GOV-001; validator 36/36 | Yes |
+| 4 | (recorded at audit completion) | Finalised implementation handoff (START-HERE current-state and push procedure) and completion tracker | Yes |
+
+Independent read-only verification performed in this audit: requirement heading/line/section reconciliation (0 defects); scope-lock completeness (all 8 named capabilities on all 3 scope locks); capability ownership for AEC, exact search, semantic search, and notes (0 cross-domain contamination); exact-location path and symbol/anchor existence (0 real defects); no vendor/generated editable targets (only the legitimate `.git/` provenance target); test-command validity (0 missing scripts); existing-test path existence (0 missing); DAG acyclicity and topological order (0 defects); phase/wave/order monotonicity (0 defects); deletion false-positive classes for tokenizer, login-item, migration, and legal paths (0 active); governance/deletion evidence-type appropriateness (0 synthetic app tests); conditional packages (11/11 complete); release gates (12/12 complete); orphan/duplicate/placeholder counts (0).

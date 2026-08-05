@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "authority": "Authoritative exact-location registry; no Markdown mirror is authoritative",
-  "generated_at": "2026-08-05T12:13:53.564085Z",
+  "generated_at": "2026-08-05T12:19:52.225551Z",
   "provenance": "Rebuilt from immutable Master Plan authority, reviewed capability-domain rules, verified current symbols or content hashes, and context-dispositioned deletion evidence. Genuine prior Graphify/static analysis informed review; no graph node ID is invented.",
   "entry_count": 780,
   "required_fields": [
