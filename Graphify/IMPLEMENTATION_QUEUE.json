@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "authority": "Single machine-readable implementation task authority",
-  "generated_at": "2026-08-02T09:12:01.894257Z",
+  "generated_at": "2026-08-05T12:03:43.488955Z",
   "implementation_status": "NOT STARTED",
   "exact_first_task_id": "TASK-GOV-001-PROVENANCE-BASELINE",
   "task_count": 158,
@@ -17257,10 +17257,14 @@
         "Historical migrations must not be deleted merely because they contain removed names. Add new forward migrations instead. Preserve user upgrade paths.",
         "Never delete user content while removing metadata."
       ],
-      "presence_absence_status": "NO ACTIVE PATH CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
+      "presence_absence_status": "ACTIVE REMOVAL CANDIDATES MAPPED - IMPLEMENTATION INTERLOCKS REQUIRED",
       "implementation_gap": "Runtime completeness is not claimed by static planning; execute the linked characterization and completion contract.",
-      "current_paths": [],
-      "current_symbols": [],
+      "current_paths": [
+        "codebase/shared/i18n/en/translation.json"
+      ],
+      "current_symbols": [
+        "codebase/shared/i18n/en/translation.json::sha256:9C8CB4F49FDB1EA30A9377177D239A968E12649FD4F6AB84B91BA63D1ECF5C41"
+      ],
       "intended_target_paths": [
         "ABSENT_FROM_ACTIVE_PRODUCT"
       ],
@@ -17269,9 +17273,11 @@
       ],
       "current_locations": [
         {
-          "path": null,
-          "status": "NO ACTIVE PATH CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
-          "symbols": []
+          "path": "codebase/shared/i18n/en/translation.json",
+          "status": "PRESENT",
+          "symbols": [
+            "codebase/shared/i18n/en/translation.json::sha256:9C8CB4F49FDB1EA30A9377177D239A968E12649FD4F6AB84B91BA63D1ECF5C41"
+          ]
         }
       ],
       "target_locations": [
@@ -17282,7 +17288,7 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-CAPABILITY-REMOVE-CLOUD-SYNCHRONISATION"
+        "REG-DEL-6A7DBEB827E52296"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -17299,7 +17305,7 @@
         "TASK-GOV-004-REMOVAL-GATE"
       ],
       "files_expected_to_change": [
-        "PLANNED LOCATION: ABSENT_FROM_ACTIVE_PRODUCT"
+        "codebase/shared/i18n/en/translation.json"
       ],
       "files_forbidden_from_changing": [
         "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
@@ -17321,7 +17327,7 @@
       },
       "packaging_impact": "Run packaged smoke coverage if the changed module is reachable from production packaging; no asset change is presumed.",
       "exact_implementation_actions": [
-        "Review all 0 recorded static candidates and the exact registry for CAP-REMOVE-CLOUD-SYNCHRONISATION; label each ACTIVE, HISTORICAL/LEGAL/MIGRATION, BUILD-TIME-ISOLATED or FALSE POSITIVE with path, symbol/anchor and owner.",
+        "Review all 1 recorded static candidates and the exact registry for CAP-REMOVE-CLOUD-SYNCHRONISATION; label each ACTIVE, HISTORICAL/LEGAL/MIGRATION, BUILD-TIME-ISOLATED or FALSE POSITIVE with path, symbol/anchor and owner.",
         "Trace static imports, dynamic imports, string references and runtime registration from renderer entry through preload/IPC/service to data, filesystem, native, child-process and packaged effects; an empty text search cannot close a layer.",
         "Add characterization tests for every retained workflow sharing a boundary, and create a disposable database/user-data fixture before any schema or filesystem change.",
         "Complete BDI-1 through BDI-4; stop if any retained caller, data path, migration history, legal notice or replacement proof is unresolved.",
@@ -17405,8 +17411,24 @@
       "phase": "PHASE-04-EXCLUDED-SYSTEM-REMOVAL",
       "wave": "WAVE-04",
       "ordering_rationale": "Deletion follows provenance, characterization, migration protection and boundary mapping; it precedes retained feature completion so removed coupling cannot be rebuilt.",
-      "static_analysis_candidates": [],
-      "candidate_disposition_counts": {},
+      "static_analysis_candidates": [
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 2197,
+          "anchor": "\"description\": \"Sync across machines using your API key.\",",
+          "matched_terms": [
+            "sync across machines"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        }
+      ],
+      "candidate_disposition_counts": {
+        "ACTIVE REMOVAL CANDIDATE": 1
+      },
       "deletion_architectural_layer_coverage": {
         "UI": {
           "status": "NONE CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
@@ -17489,8 +17511,10 @@
           "absence_rule": "An empty candidate list is not absence proof; inspect imports, dynamic/string references, runtime registration and packaged output, then save a scoped not-present record."
         },
         "translations": {
-          "status": "NONE CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
-          "candidates": [],
+          "status": "CANDIDATES REVIEWED - IMPLEMENTATION-TIME PROOF REQUIRED",
+          "candidates": [
+            "codebase/shared/i18n/en/translation.json:2197::ACTIVE REMOVAL CANDIDATE::\"description\": \"Sync across machines using your API key.\","
+          ],
           "absence_rule": "An empty candidate list is not absence proof; inspect imports, dynamic/string references, runtime registration and packaged output, then save a scoped not-present record."
         },
         "build": {
@@ -19396,10 +19420,14 @@
         "Delete MCP card/server/startup/configuration, public network API, notes/transcript/automation APIs, routes/listeners, token/key generation, remote auth, CLI login, developer screens/settings, agent API skills, remote API docs/tests, and automation routes.",
         "Retain internal typed Electron IPC only."
       ],
-      "presence_absence_status": "NO ACTIVE PATH CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
+      "presence_absence_status": "ACTIVE REMOVAL CANDIDATES MAPPED - IMPLEMENTATION INTERLOCKS REQUIRED",
       "implementation_gap": "Runtime completeness is not claimed by static planning; execute the linked characterization and completion contract.",
-      "current_paths": [],
-      "current_symbols": [],
+      "current_paths": [
+        "codebase/shared/i18n/en/translation.json"
+      ],
+      "current_symbols": [
+        "codebase/shared/i18n/en/translation.json::sha256:9C8CB4F49FDB1EA30A9377177D239A968E12649FD4F6AB84B91BA63D1ECF5C41"
+      ],
       "intended_target_paths": [
         "ABSENT_FROM_ACTIVE_PRODUCT"
       ],
@@ -19408,9 +19436,11 @@
       ],
       "current_locations": [
         {
-          "path": null,
-          "status": "NO ACTIVE PATH CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
-          "symbols": []
+          "path": "codebase/shared/i18n/en/translation.json",
+          "status": "PRESENT",
+          "symbols": [
+            "codebase/shared/i18n/en/translation.json::sha256:9C8CB4F49FDB1EA30A9377177D239A968E12649FD4F6AB84B91BA63D1ECF5C41"
+          ]
         }
       ],
       "target_locations": [
@@ -19421,7 +19451,10 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-CAPABILITY-REMOVE-MCP"
+        "REG-DEL-30B632664011BF05",
+        "REG-DEL-89C7F871CC147113",
+        "REG-DEL-10230B0C33C06BE6",
+        "REG-DEL-8111749C176B7521"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -19438,7 +19471,7 @@
         "TASK-GOV-004-REMOVAL-GATE"
       ],
       "files_expected_to_change": [
-        "PLANNED LOCATION: ABSENT_FROM_ACTIVE_PRODUCT"
+        "codebase/shared/i18n/en/translation.json"
       ],
       "files_forbidden_from_changing": [
         "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
@@ -19460,7 +19493,7 @@
       },
       "packaging_impact": "Run packaged smoke coverage if the changed module is reachable from production packaging; no asset change is presumed.",
       "exact_implementation_actions": [
-        "Review all 0 recorded static candidates and the exact registry for CAP-REMOVE-MCP; label each ACTIVE, HISTORICAL/LEGAL/MIGRATION, BUILD-TIME-ISOLATED or FALSE POSITIVE with path, symbol/anchor and owner.",
+        "Review all 4 recorded static candidates and the exact registry for CAP-REMOVE-MCP; label each ACTIVE, HISTORICAL/LEGAL/MIGRATION, BUILD-TIME-ISOLATED or FALSE POSITIVE with path, symbol/anchor and owner.",
         "Trace static imports, dynamic imports, string references and runtime registration from renderer entry through preload/IPC/service to data, filesystem, native, child-process and packaged effects; an empty text search cannot close a layer.",
         "Add characterization tests for every retained workflow sharing a boundary, and create a disposable database/user-data fixture before any schema or filesystem change.",
         "Complete BDI-1 through BDI-4; stop if any retained caller, data path, migration history, legal notice or replacement proof is unresolved.",
@@ -19544,8 +19577,63 @@
       "phase": "PHASE-04-EXCLUDED-SYSTEM-REMOVAL",
       "wave": "WAVE-04",
       "ordering_rationale": "Deletion follows provenance, characterization, migration protection and boundary mapping; it precedes retained feature completion so removed coupling cannot be rebuilt.",
-      "static_analysis_candidates": [],
-      "candidate_disposition_counts": {},
+      "static_analysis_candidates": [
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 2159,
+          "anchor": "\"mcp\": \"MCP\",",
+          "matched_terms": [
+            "mcp"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 2170,
+          "anchor": "\"mcp\": {",
+          "matched_terms": [
+            "mcp"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 2173,
+          "anchor": "\"step1\": \"In your AI tool, add Mnemora MCP using the public URL\",",
+          "matched_terms": [
+            "mcp"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 2178,
+          "anchor": "\"copyUrl\": \"Copy MCP URL\",",
+          "matched_terms": [
+            "mcp"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        }
+      ],
+      "candidate_disposition_counts": {
+        "ACTIVE REMOVAL CANDIDATE": 4
+      },
       "deletion_architectural_layer_coverage": {
         "UI": {
           "status": "NONE CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
@@ -19628,8 +19716,13 @@
           "absence_rule": "An empty candidate list is not absence proof; inspect imports, dynamic/string references, runtime registration and packaged output, then save a scoped not-present record."
         },
         "translations": {
-          "status": "NONE CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
-          "candidates": [],
+          "status": "CANDIDATES REVIEWED - IMPLEMENTATION-TIME PROOF REQUIRED",
+          "candidates": [
+            "codebase/shared/i18n/en/translation.json:2159::ACTIVE REMOVAL CANDIDATE::\"mcp\": \"MCP\",",
+            "codebase/shared/i18n/en/translation.json:2170::ACTIVE REMOVAL CANDIDATE::\"mcp\": {",
+            "codebase/shared/i18n/en/translation.json:2173::ACTIVE REMOVAL CANDIDATE::\"step1\": \"In your AI tool, add Mnemora MCP using the public URL\",",
+            "codebase/shared/i18n/en/translation.json:2178::ACTIVE REMOVAL CANDIDATE::\"copyUrl\": \"Copy MCP URL\","
+          ],
           "absence_rule": "An empty candidate list is not absence proof; inspect imports, dynamic/string references, runtime registration and packaged output, then save a scoped not-present record."
         },
         "build": {
@@ -20194,10 +20287,14 @@
         "Delete MCP card/server/startup/configuration, public network API, notes/transcript/automation APIs, routes/listeners, token/key generation, remote auth, CLI login, developer screens/settings, agent API skills, remote API docs/tests, and automation routes.",
         "Retain internal typed Electron IPC only."
       ],
-      "presence_absence_status": "NO ACTIVE PATH CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
+      "presence_absence_status": "ACTIVE REMOVAL CANDIDATES MAPPED - IMPLEMENTATION INTERLOCKS REQUIRED",
       "implementation_gap": "Runtime completeness is not claimed by static planning; execute the linked characterization and completion contract.",
-      "current_paths": [],
-      "current_symbols": [],
+      "current_paths": [
+        "codebase/shared/i18n/en/translation.json"
+      ],
+      "current_symbols": [
+        "codebase/shared/i18n/en/translation.json::sha256:9C8CB4F49FDB1EA30A9377177D239A968E12649FD4F6AB84B91BA63D1ECF5C41"
+      ],
       "intended_target_paths": [
         "ABSENT_FROM_ACTIVE_PRODUCT"
       ],
@@ -20206,9 +20303,11 @@
       ],
       "current_locations": [
         {
-          "path": null,
-          "status": "NO ACTIVE PATH CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
-          "symbols": []
+          "path": "codebase/shared/i18n/en/translation.json",
+          "status": "PRESENT",
+          "symbols": [
+            "codebase/shared/i18n/en/translation.json::sha256:9C8CB4F49FDB1EA30A9377177D239A968E12649FD4F6AB84B91BA63D1ECF5C41"
+          ]
         }
       ],
       "target_locations": [
@@ -20219,7 +20318,11 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-CAPABILITY-REMOVE-PUBLIC-API"
+        "REG-DEL-99BAC67F4A457008",
+        "REG-DEL-C69ED9DCCB4D983A",
+        "REG-DEL-3AF2A135828047C7",
+        "REG-DEL-B7639B9157DFFF78",
+        "REG-DEL-53C630E1E51DDD84"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -20236,7 +20339,7 @@
         "TASK-GOV-004-REMOVAL-GATE"
       ],
       "files_expected_to_change": [
-        "PLANNED LOCATION: ABSENT_FROM_ACTIVE_PRODUCT"
+        "codebase/shared/i18n/en/translation.json"
       ],
       "files_forbidden_from_changing": [
         "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
@@ -20258,7 +20361,7 @@
       },
       "packaging_impact": "Run packaged smoke coverage if the changed module is reachable from production packaging; no asset change is presumed.",
       "exact_implementation_actions": [
-        "Review all 0 recorded static candidates and the exact registry for CAP-REMOVE-PUBLIC-API; label each ACTIVE, HISTORICAL/LEGAL/MIGRATION, BUILD-TIME-ISOLATED or FALSE POSITIVE with path, symbol/anchor and owner.",
+        "Review all 5 recorded static candidates and the exact registry for CAP-REMOVE-PUBLIC-API; label each ACTIVE, HISTORICAL/LEGAL/MIGRATION, BUILD-TIME-ISOLATED or FALSE POSITIVE with path, symbol/anchor and owner.",
         "Trace static imports, dynamic imports, string references and runtime registration from renderer entry through preload/IPC/service to data, filesystem, native, child-process and packaged effects; an empty text search cannot close a layer.",
         "Add characterization tests for every retained workflow sharing a boundary, and create a disposable database/user-data fixture before any schema or filesystem change.",
         "Complete BDI-1 through BDI-4; stop if any retained caller, data path, migration history, legal notice or replacement proof is unresolved.",
@@ -20342,8 +20445,76 @@
       "phase": "PHASE-04-EXCLUDED-SYSTEM-REMOVAL",
       "wave": "WAVE-04",
       "ordering_rationale": "Deletion follows provenance, characterization, migration protection and boundary mapping; it precedes retained feature completion so removed coupling cannot be rebuilt.",
-      "static_analysis_candidates": [],
-      "candidate_disposition_counts": {},
+      "static_analysis_candidates": [
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 2164,
+          "anchor": "\"description\": \"Manage API keys for programmatic access\",",
+          "matched_terms": [
+            "programmatic access"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 2173,
+          "anchor": "\"step1\": \"In your AI tool, add Mnemora MCP using the public URL\",",
+          "matched_terms": [
+            "public url"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 2175,
+          "anchor": "\"step3\": \"Paste the key as the Authorization header to connect.\",",
+          "matched_terms": [
+            "authorization header"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 2183,
+          "anchor": "\"title\": \"Command-line access\",",
+          "matched_terms": [
+            "command-line access"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 2198,
+          "anchor": "\"proRequired\": \"Upgrade to a paid plan to use the CLI in cloud mode.\"",
+          "matched_terms": [
+            "cloud mode"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        }
+      ],
+      "candidate_disposition_counts": {
+        "ACTIVE REMOVAL CANDIDATE": 5
+      },
       "deletion_architectural_layer_coverage": {
         "UI": {
           "status": "NONE CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
@@ -20426,8 +20597,14 @@
           "absence_rule": "An empty candidate list is not absence proof; inspect imports, dynamic/string references, runtime registration and packaged output, then save a scoped not-present record."
         },
         "translations": {
-          "status": "NONE CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
-          "candidates": [],
+          "status": "CANDIDATES REVIEWED - IMPLEMENTATION-TIME PROOF REQUIRED",
+          "candidates": [
+            "codebase/shared/i18n/en/translation.json:2164::ACTIVE REMOVAL CANDIDATE::\"description\": \"Manage API keys for programmatic access\",",
+            "codebase/shared/i18n/en/translation.json:2173::ACTIVE REMOVAL CANDIDATE::\"step1\": \"In your AI tool, add Mnemora MCP using the public URL\",",
+            "codebase/shared/i18n/en/translation.json:2175::ACTIVE REMOVAL CANDIDATE::\"step3\": \"Paste the key as the Authorization header to connect.\",",
+            "codebase/shared/i18n/en/translation.json:2183::ACTIVE REMOVAL CANDIDATE::\"title\": \"Command-line access\",",
+            "codebase/shared/i18n/en/translation.json:2198::ACTIVE REMOVAL CANDIDATE::\"proRequired\": \"Upgrade to a paid plan to use the CLI in cloud mode.\""
+          ],
           "absence_rule": "An empty candidate list is not absence proof; inspect imports, dynamic/string references, runtime registration and packaged output, then save a scoped not-present record."
         },
         "build": {
@@ -23935,10 +24112,14 @@
       "requirement_contracts": [
         "Delete subscription/account-tier/plan/credit/quota/counter/blocking displays, billing routes/settings/pricing, upgrade prompts/buttons, enterprise sales, referral dashboards/modals/cards/links, team/workspace/organisation billing, feature gating, subscription checks, IPC/preload/fields/tests/translations/docs."
       ],
-      "presence_absence_status": "NO ACTIVE PATH CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
+      "presence_absence_status": "ACTIVE REMOVAL CANDIDATES MAPPED - IMPLEMENTATION INTERLOCKS REQUIRED",
       "implementation_gap": "Runtime completeness is not claimed by static planning; execute the linked characterization and completion contract.",
-      "current_paths": [],
-      "current_symbols": [],
+      "current_paths": [
+        "codebase/shared/i18n/en/translation.json"
+      ],
+      "current_symbols": [
+        "codebase/shared/i18n/en/translation.json::sha256:9C8CB4F49FDB1EA30A9377177D239A968E12649FD4F6AB84B91BA63D1ECF5C41"
+      ],
       "intended_target_paths": [
         "ABSENT_FROM_ACTIVE_PRODUCT"
       ],
@@ -23947,9 +24128,11 @@
       ],
       "current_locations": [
         {
-          "path": null,
-          "status": "NO ACTIVE PATH CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
-          "symbols": []
+          "path": "codebase/shared/i18n/en/translation.json",
+          "status": "PRESENT",
+          "symbols": [
+            "codebase/shared/i18n/en/translation.json::sha256:9C8CB4F49FDB1EA30A9377177D239A968E12649FD4F6AB84B91BA63D1ECF5C41"
+          ]
         }
       ],
       "target_locations": [
@@ -23960,7 +24143,7 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-CAPABILITY-REMOVE-UPGRADE-SYSTEMS",
+        "REG-DEL-F74B5BC985C26DBE",
         "REG-DEL-AECF3CCA54A0C680",
         "REG-DEL-D4958F9F37A455C6",
         "REG-DEL-4DE0A88757A0E36C",
@@ -23972,7 +24155,17 @@
         "REG-DEL-A3A41FAC849728E6",
         "REG-DEL-29F27A8A79C71950",
         "REG-DEL-013EDF25C7A532F8",
-        "REG-DEL-F0D1A653D245C702"
+        "REG-DEL-F0D1A653D245C702",
+        "REG-DEL-262ECFD8A32803D4",
+        "REG-DEL-F0289D00D6039CDA",
+        "REG-DEL-CA67FC1230ED6B9B",
+        "REG-DEL-BDE034FAECA1DD25",
+        "REG-DEL-8FC2CD3925628852",
+        "REG-DEL-7D702552A5802616",
+        "REG-DEL-43FC8A7538FAA3AB",
+        "REG-DEL-D162A54093E6B224",
+        "REG-DEL-F35341B5969A0E3F",
+        "REG-DEL-1CD6DA2D2D3A6A47"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -23989,7 +24182,7 @@
         "TASK-GOV-004-REMOVAL-GATE"
       ],
       "files_expected_to_change": [
-        "PLANNED LOCATION: ABSENT_FROM_ACTIVE_PRODUCT"
+        "codebase/shared/i18n/en/translation.json"
       ],
       "files_forbidden_from_changing": [
         "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
@@ -24011,7 +24204,7 @@
       },
       "packaging_impact": "Run packaged smoke coverage if the changed module is reachable from production packaging; no asset change is presumed.",
       "exact_implementation_actions": [
-        "Review all 12 recorded static candidates and the exact registry for CAP-REMOVE-UPGRADE-SYSTEMS; label each ACTIVE, HISTORICAL/LEGAL/MIGRATION, BUILD-TIME-ISOLATED or FALSE POSITIVE with path, symbol/anchor and owner.",
+        "Review all 23 recorded static candidates and the exact registry for CAP-REMOVE-UPGRADE-SYSTEMS; label each ACTIVE, HISTORICAL/LEGAL/MIGRATION, BUILD-TIME-ISOLATED or FALSE POSITIVE with path, symbol/anchor and owner.",
         "Trace static imports, dynamic imports, string references and runtime registration from renderer entry through preload/IPC/service to data, filesystem, native, child-process and packaged effects; an empty text search cannot close a layer.",
         "Add characterization tests for every retained workflow sharing a boundary, and create a disposable database/user-data fixture before any schema or filesystem change.",
         "Complete BDI-1 through BDI-4; stop if any retained caller, data path, migration history, legal notice or replacement proof is unresolved.",
@@ -24096,6 +24289,19 @@
       "wave": "WAVE-04",
       "ordering_rationale": "Deletion follows provenance, characterization, migration protection and boundary mapping; it precedes retained feature completion so removed coupling cannot be rebuilt.",
       "static_analysis_candidates": [
+        {
+          "path": "codebase/main/infrastructure/runtime/process.js",
+          "line": 52,
+          "anchor": "PIP_UPGRADE: 60000, // 1 minute for pip upgrade",
+          "matched_terms": [
+            "upgrade"
+          ],
+          "reviewed_disposition": "RETAINED DEPENDENCY - DO NOT DELETE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "service"
+          ]
+        },
         {
           "path": "codebase/renderer/app/index.css",
           "line": 60,
@@ -24249,6 +24455,7 @@
           "line": 1,
           "anchor": "{\"version\":\"1.0\",\"truncation\":{\"max_length\":128,\"strategy\":\"LongestFirst\",\"stride\":0},\"padding\":{\"strategy\":{\"Fixed\":128},\"direction\":\"Right\",\"pad_to_multiple_of\":null,\"pad_id\":0,\"pad_type_id\":0,\"pad_token\":\"[PAD]\"},\"add",
           "matched_terms": [
+            "upgrade",
             "premium"
           ],
           "reviewed_disposition": "RETAINED DEPENDENCY - DO NOT DELETE",
@@ -24265,11 +24472,142 @@
             "translations",
             "build"
           ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 327,
+          "anchor": "\"weeklyDescription\": \"Your limit resets on a rolling basis. Upgrade to Pro or use your own API key for unlimited use.\"",
+          "matched_terms": [
+            "upgrade"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 564,
+          "anchor": "\"dailyLimitReached\": \"You've reached today's transcription limit. Try again tomorrow or upgrade your plan.\",",
+          "matched_terms": [
+            "upgrade"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 1777,
+          "anchor": "\"byokTooLargeNeedsAccount\": \"Create an account and upgrade to a paid plan to transcribe larger files with Mnemora Cloud.\",",
+          "matched_terms": [
+            "upgrade"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 1778,
+          "anchor": "\"byokTooLargeNeedsUpgrade\": \"Upgrade to a paid plan to transcribe larger files with Mnemora Cloud.\",",
+          "matched_terms": [
+            "upgrade"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 1781,
+          "anchor": "\"upgrade\": \"Upgrade\",",
+          "matched_terms": [
+            "upgrade"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 1872,
+          "anchor": "\"upgrade\": \"Upgrade\"",
+          "matched_terms": [
+            "upgrade"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 2165,
+          "anchor": "\"proRequired\": \"Upgrade to a paid plan to access the API\",",
+          "matched_terms": [
+            "upgrade"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 2179,
+          "anchor": "\"proRequired\": \"Upgrade to a paid plan to connect Mnemora to Claude, ChatGPT, and Cursor.\",",
+          "matched_terms": [
+            "upgrade"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 2198,
+          "anchor": "\"proRequired\": \"Upgrade to a paid plan to use the CLI in cloud mode.\"",
+          "matched_terms": [
+            "upgrade"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 2210,
+          "anchor": "\"upgrade\": \"Upgrade\"",
+          "matched_terms": [
+            "upgrade"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
         }
       ],
       "candidate_disposition_counts": {
+        "ACTIVE REMOVAL CANDIDATE": 10,
         "FALSE POSITIVE": 11,
-        "RETAINED DEPENDENCY - DO NOT DELETE": 1
+        "RETAINED DEPENDENCY - DO NOT DELETE": 2
       },
       "deletion_architectural_layer_coverage": {
         "UI": {
@@ -24345,6 +24683,7 @@
         "service": {
           "status": "CANDIDATES REVIEWED - IMPLEMENTATION-TIME PROOF REQUIRED",
           "candidates": [
+            "codebase/main/infrastructure/runtime/process.js:52::RETAINED DEPENDENCY - DO NOT DELETE::PIP_UPGRADE: 60000, // 1 minute for pip upgrade",
             "codebase/resources/bin/all-MiniLM-L6-v2/tokenizer.json:1::RETAINED DEPENDENCY - DO NOT DELETE::{\"version\":\"1.0\",\"truncation\":{\"max_length\":128,\"strategy\":\"LongestFirst\",\"stride\":0},\"padding\":{\"strategy\":{\"Fixed\":128},\"direction\":\"Right\",\"pad_to_multiple_of\":null,\"pad_id\":0,\"pad_type_id\":0,\"pad_token\":\"[PAD]\"},\"add"
           ],
           "absence_rule": "An empty candidate list is not absence proof; inspect imports, dynamic/string references, runtime registration and packaged output, then save a scoped not-present record."
@@ -24388,7 +24727,17 @@
         "translations": {
           "status": "CANDIDATES REVIEWED - IMPLEMENTATION-TIME PROOF REQUIRED",
           "candidates": [
-            "codebase/resources/bin/all-MiniLM-L6-v2/tokenizer.json:1::RETAINED DEPENDENCY - DO NOT DELETE::{\"version\":\"1.0\",\"truncation\":{\"max_length\":128,\"strategy\":\"LongestFirst\",\"stride\":0},\"padding\":{\"strategy\":{\"Fixed\":128},\"direction\":\"Right\",\"pad_to_multiple_of\":null,\"pad_id\":0,\"pad_type_id\":0,\"pad_token\":\"[PAD]\"},\"add"
+            "codebase/resources/bin/all-MiniLM-L6-v2/tokenizer.json:1::RETAINED DEPENDENCY - DO NOT DELETE::{\"version\":\"1.0\",\"truncation\":{\"max_length\":128,\"strategy\":\"LongestFirst\",\"stride\":0},\"padding\":{\"strategy\":{\"Fixed\":128},\"direction\":\"Right\",\"pad_to_multiple_of\":null,\"pad_id\":0,\"pad_type_id\":0,\"pad_token\":\"[PAD]\"},\"add",
+            "codebase/shared/i18n/en/translation.json:327::ACTIVE REMOVAL CANDIDATE::\"weeklyDescription\": \"Your limit resets on a rolling basis. Upgrade to Pro or use your own API key for unlimited use.\"",
+            "codebase/shared/i18n/en/translation.json:564::ACTIVE REMOVAL CANDIDATE::\"dailyLimitReached\": \"You've reached today's transcription limit. Try again tomorrow or upgrade your plan.\",",
+            "codebase/shared/i18n/en/translation.json:1777::ACTIVE REMOVAL CANDIDATE::\"byokTooLargeNeedsAccount\": \"Create an account and upgrade to a paid plan to transcribe larger files with Mnemora Cloud.\",",
+            "codebase/shared/i18n/en/translation.json:1778::ACTIVE REMOVAL CANDIDATE::\"byokTooLargeNeedsUpgrade\": \"Upgrade to a paid plan to transcribe larger files with Mnemora Cloud.\",",
+            "codebase/shared/i18n/en/translation.json:1781::ACTIVE REMOVAL CANDIDATE::\"upgrade\": \"Upgrade\",",
+            "codebase/shared/i18n/en/translation.json:1872::ACTIVE REMOVAL CANDIDATE::\"upgrade\": \"Upgrade\"",
+            "codebase/shared/i18n/en/translation.json:2165::ACTIVE REMOVAL CANDIDATE::\"proRequired\": \"Upgrade to a paid plan to access the API\",",
+            "codebase/shared/i18n/en/translation.json:2179::ACTIVE REMOVAL CANDIDATE::\"proRequired\": \"Upgrade to a paid plan to connect Mnemora to Claude, ChatGPT, and Cursor.\",",
+            "codebase/shared/i18n/en/translation.json:2198::ACTIVE REMOVAL CANDIDATE::\"proRequired\": \"Upgrade to a paid plan to use the CLI in cloud mode.\"",
+            "codebase/shared/i18n/en/translation.json:2210::ACTIVE REMOVAL CANDIDATE::\"upgrade\": \"Upgrade\""
           ],
           "absence_rule": "An empty candidate list is not absence proof; inspect imports, dynamic/string references, runtime registration and packaged output, then save a scoped not-present record."
         },
@@ -24492,10 +24841,14 @@
       "requirement_contracts": [
         "Delete subscription/account-tier/plan/credit/quota/counter/blocking displays, billing routes/settings/pricing, upgrade prompts/buttons, enterprise sales, referral dashboards/modals/cards/links, team/workspace/organisation billing, feature gating, subscription checks, IPC/preload/fields/tests/translations/docs."
       ],
-      "presence_absence_status": "NO ACTIVE PATH CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
+      "presence_absence_status": "ACTIVE REMOVAL CANDIDATES MAPPED - IMPLEMENTATION INTERLOCKS REQUIRED",
       "implementation_gap": "Runtime completeness is not claimed by static planning; execute the linked characterization and completion contract.",
-      "current_paths": [],
-      "current_symbols": [],
+      "current_paths": [
+        "codebase/shared/i18n/en/translation.json"
+      ],
+      "current_symbols": [
+        "codebase/shared/i18n/en/translation.json::sha256:9C8CB4F49FDB1EA30A9377177D239A968E12649FD4F6AB84B91BA63D1ECF5C41"
+      ],
       "intended_target_paths": [
         "ABSENT_FROM_ACTIVE_PRODUCT"
       ],
@@ -24504,9 +24857,11 @@
       ],
       "current_locations": [
         {
-          "path": null,
-          "status": "NO ACTIVE PATH CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
-          "symbols": []
+          "path": "codebase/shared/i18n/en/translation.json",
+          "status": "PRESENT",
+          "symbols": [
+            "codebase/shared/i18n/en/translation.json::sha256:9C8CB4F49FDB1EA30A9377177D239A968E12649FD4F6AB84B91BA63D1ECF5C41"
+          ]
         }
       ],
       "target_locations": [
@@ -24517,8 +24872,12 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-CAPABILITY-REMOVE-USAGE-QUOTAS",
-        "REG-DEL-64F53DC6152DB844"
+        "REG-DEL-64F53DC6152DB844",
+        "REG-DEL-0A6DCDC385EF8013",
+        "REG-DEL-C7EF3B399D9A3E8E",
+        "REG-DEL-CE9DAF3FBFB47C98",
+        "REG-DEL-75179A3D9390129A",
+        "REG-DEL-F7BE918D21D5AB2D"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -24535,7 +24894,7 @@
         "TASK-GOV-004-REMOVAL-GATE"
       ],
       "files_expected_to_change": [
-        "PLANNED LOCATION: ABSENT_FROM_ACTIVE_PRODUCT"
+        "codebase/shared/i18n/en/translation.json"
       ],
       "files_forbidden_from_changing": [
         "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
@@ -24557,7 +24916,7 @@
       },
       "packaging_impact": "Run packaged smoke coverage if the changed module is reachable from production packaging; no asset change is presumed.",
       "exact_implementation_actions": [
-        "Review all 1 recorded static candidates and the exact registry for CAP-REMOVE-USAGE-QUOTAS; label each ACTIVE, HISTORICAL/LEGAL/MIGRATION, BUILD-TIME-ISOLATED or FALSE POSITIVE with path, symbol/anchor and owner.",
+        "Review all 6 recorded static candidates and the exact registry for CAP-REMOVE-USAGE-QUOTAS; label each ACTIVE, HISTORICAL/LEGAL/MIGRATION, BUILD-TIME-ISOLATED or FALSE POSITIVE with path, symbol/anchor and owner.",
         "Trace static imports, dynamic imports, string references and runtime registration from renderer entry through preload/IPC/service to data, filesystem, native, child-process and packaged effects; an empty text search cannot close a layer.",
         "Add characterization tests for every retained workflow sharing a boundary, and create a disposable database/user-data fixture before any schema or filesystem change.",
         "Complete BDI-1 through BDI-4; stop if any retained caller, data path, migration history, legal notice or replacement proof is unresolved.",
@@ -24663,9 +25022,75 @@
             "translations",
             "build"
           ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 327,
+          "anchor": "\"weeklyDescription\": \"Your limit resets on a rolling basis. Upgrade to Pro or use your own API key for unlimited use.\"",
+          "matched_terms": [
+            "limit resets"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 336,
+          "anchor": "\"bannerDescription\": \"You're on the free plan for now - you still get {{limit}} words per week. Update your payment to get back to Pro.\",",
+          "matched_terms": [
+            "words per week"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 375,
+          "anchor": "\"failedLimitReached\": \"Daily limit reached\",",
+          "matched_terms": [
+            "daily limit"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 546,
+          "anchor": "\"dailyLimitReached\": \"Daily Limit Reached\",",
+          "matched_terms": [
+            "daily limit"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
+        },
+        {
+          "path": "codebase/shared/i18n/en/translation.json",
+          "line": 564,
+          "anchor": "\"dailyLimitReached\": \"You've reached today's transcription limit. Try again tomorrow or upgrade your plan.\",",
+          "matched_terms": [
+            "transcription limit"
+          ],
+          "reviewed_disposition": "ACTIVE REMOVAL CANDIDATE",
+          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
+          "layers": [
+            "translations"
+          ]
         }
       ],
       "candidate_disposition_counts": {
+        "ACTIVE REMOVAL CANDIDATE": 5,
         "RETAINED DEPENDENCY - DO NOT DELETE": 1
       },
       "deletion_architectural_layer_coverage": {
@@ -24768,7 +25193,12 @@
         "translations": {
           "status": "CANDIDATES REVIEWED - IMPLEMENTATION-TIME PROOF REQUIRED",
           "candidates": [
-            "codebase/resources/bin/all-MiniLM-L6-v2/tokenizer.json:1::RETAINED DEPENDENCY - DO NOT DELETE::{\"version\":\"1.0\",\"truncation\":{\"max_length\":128,\"strategy\":\"LongestFirst\",\"stride\":0},\"padding\":{\"strategy\":{\"Fixed\":128},\"direction\":\"Right\",\"pad_to_multiple_of\":null,\"pad_id\":0,\"pad_type_id\":0,\"pad_token\":\"[PAD]\"},\"add"
+            "codebase/resources/bin/all-MiniLM-L6-v2/tokenizer.json:1::RETAINED DEPENDENCY - DO NOT DELETE::{\"version\":\"1.0\",\"truncation\":{\"max_length\":128,\"strategy\":\"LongestFirst\",\"stride\":0},\"padding\":{\"strategy\":{\"Fixed\":128},\"direction\":\"Right\",\"pad_to_multiple_of\":null,\"pad_id\":0,\"pad_type_id\":0,\"pad_token\":\"[PAD]\"},\"add",
+            "codebase/shared/i18n/en/translation.json:327::ACTIVE REMOVAL CANDIDATE::\"weeklyDescription\": \"Your limit resets on a rolling basis. Upgrade to Pro or use your own API key for unlimited use.\"",
+            "codebase/shared/i18n/en/translation.json:336::ACTIVE REMOVAL CANDIDATE::\"bannerDescription\": \"You're on the free plan for now - you still get {{limit}} words per week. Update your payment to get back to Pro.\",",
+            "codebase/shared/i18n/en/translation.json:375::ACTIVE REMOVAL CANDIDATE::\"failedLimitReached\": \"Daily limit reached\",",
+            "codebase/shared/i18n/en/translation.json:546::ACTIVE REMOVAL CANDIDATE::\"dailyLimitReached\": \"Daily Limit Reached\",",
+            "codebase/shared/i18n/en/translation.json:564::ACTIVE REMOVAL CANDIDATE::\"dailyLimitReached\": \"You've reached today's transcription limit. Try again tomorrow or upgrade your plan.\","
           ],
           "absence_rule": "An empty candidate list is not absence proof; inspect imports, dynamic/string references, runtime registration and packaged output, then save a scoped not-present record."
         },

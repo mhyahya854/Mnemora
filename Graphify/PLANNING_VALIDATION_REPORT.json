@@ -1,6 +1,6 @@
 {
   "schema_version": 4,
-  "validated_at": "2026-08-02T09:12:01.515369Z",
+  "validated_at": "2026-08-05T12:03:43.181536Z",
   "scope": "DERIVED GRAPHIFY PLANNING ONLY - IMPLEMENTATION NOT STARTED",
   "verdict": "PASS",
   "completion_statement": "SEMANTIC GRAPHIFY PLANNING COMPLETE — IMPLEMENTATION NOT STARTED",
@@ -636,9 +636,9 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "before": "BE13917373AF3B6D2A4F1BA6AC1467C6B5BBABE6B9C5CA6289353078CF152876",
-        "after": "BE13917373AF3B6D2A4F1BA6AC1467C6B5BBABE6B9C5CA6289353078CF152876",
-        "generator_stdout": "{\n  \"requirements\": 536,\n  \"capabilities\": 120,\n  \"tasks\": 158,\n  \"deletion_tasks\": 31,\n  \"conditional_packages\": 11,\n  \"release_gates\": 12,\n  \"exact_locations\": 759\n}"
+        "before": "4F947C7FD1657FF721702398BB381CCC895171F55A8F9E53A682A7801C195A97",
+        "after": "4F947C7FD1657FF721702398BB381CCC895171F55A8F9E53A682A7801C195A97",
+        "generator_stdout": "{\n  \"requirements\": 536,\n  \"capabilities\": 120,\n  \"tasks\": 158,\n  \"deletion_tasks\": 31,\n  \"conditional_packages\": 11,\n  \"release_gates\": 12,\n  \"exact_locations\": 780\n}"
       }
     },
     {
@@ -717,7 +717,7 @@
       "Testing requirement": 7
     },
     "capabilities": 120,
-    "exact_locations": 759,
+    "exact_locations": 780,
     "tasks": 158,
     "deletion_tasks": 31,
     "conditional_packages": 11,
@@ -737,16 +737,16 @@
     "topological_order_result": "PASS"
   },
   "deletion_dispositions": {
-    "ACTIVE REMOVAL CANDIDATE": 105,
+    "ACTIVE REMOVAL CANDIDATE": 130,
     "BUILD-TIME ONLY - REVIEW UNDER BUILD RULE": 25,
     "FALSE POSITIVE": 14,
     "HISTORICAL MIGRATION - PRESERVE": 10,
     "LEGAL/ATTRIBUTION - PRESERVE": 2,
     "POSITIVE OFFLINE/LOCAL MESSAGE - RETAIN": 5,
     "REQUIRES IMPLEMENTATION-TIME STATIC PROOF": 21,
-    "RETAINED DEPENDENCY - DO NOT DELETE": 20
+    "RETAINED DEPENDENCY - DO NOT DELETE": 21
   },
-  "deletion_candidate_count": 202,
+  "deletion_candidate_count": 228,
   "known_false_positive_active_count": 0,
   "unmapped_requirement_count": 0,
   "placeholder_count": 0,

@@ -15,7 +15,7 @@
 
 - Requirements: 536 in `MASTER_REQUIREMENT_REGISTER.json`.
 - Capabilities: 120 in `CAPABILITY_REGISTRY.json`.
-- Exact-location entries: 759 in `EXACT_LOCATION_REGISTRY.json`.
+- Exact-location entries: 780 in `EXACT_LOCATION_REGISTRY.json`.
 - Implementation tasks: 158 in `IMPLEMENTATION_QUEUE.json`.
 - Deletion tasks: 31.
 - Conditional decision packages: 11.

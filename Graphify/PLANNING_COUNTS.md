@@ -37,4 +37,4 @@ This navigation report is generated from the machine authorities. It is not an i
 - Deletion tasks: 31
 - Conditional decision packages: 11
 - Release gates: 12
-- Exact-location entries: 759
+- Exact-location entries: 780

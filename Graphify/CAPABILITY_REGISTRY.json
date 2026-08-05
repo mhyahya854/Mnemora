@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "authority": "Single derived capability authority; runtime_chain retains genuine Graphify/static-analysis evidence and must not be interpreted as execution proof",
-  "generated_at": "2026-08-02T09:12:01.894257Z",
+  "generated_at": "2026-08-05T12:03:43.488955Z",
   "capability_count": 120,
   "decision_counts": {
     "ADD": 5,
@@ -14373,15 +14373,19 @@
       "module_owner": "Excluded-system removal",
       "planning_status": "PLANNING COMPLETE - IMPLEMENTATION EVIDENCE PENDING",
       "implementation_status": "NOT STARTED",
-      "presence_status": "NO ACTIVE PATH CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
+      "presence_status": "ACTIVE REMOVAL CANDIDATES MAPPED - IMPLEMENTATION INTERLOCKS REQUIRED",
       "master_requirement_ids": [
         "REQ-MP2-485FA7863C",
         "REQ-MP2-22766909E1",
         "REQ-MP2-1431F05756",
         "REQ-MP2-9E85A9214D"
       ],
-      "current_paths": [],
-      "current_symbols": [],
+      "current_paths": [
+        "codebase/shared/i18n/en/translation.json"
+      ],
+      "current_symbols": [
+        "codebase/shared/i18n/en/translation.json::sha256:9C8CB4F49FDB1EA30A9377177D239A968E12649FD4F6AB84B91BA63D1ECF5C41"
+      ],
       "target_paths": [
         "ABSENT_FROM_ACTIVE_PRODUCT"
       ],
@@ -14846,13 +14850,17 @@
       "module_owner": "Excluded-system removal",
       "planning_status": "PLANNING COMPLETE - IMPLEMENTATION EVIDENCE PENDING",
       "implementation_status": "NOT STARTED",
-      "presence_status": "NO ACTIVE PATH CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
+      "presence_status": "ACTIVE REMOVAL CANDIDATES MAPPED - IMPLEMENTATION INTERLOCKS REQUIRED",
       "master_requirement_ids": [
         "REQ-MP2-63D0D5467A",
         "REQ-MP2-D73520893C"
       ],
-      "current_paths": [],
-      "current_symbols": [],
+      "current_paths": [
+        "codebase/shared/i18n/en/translation.json"
+      ],
+      "current_symbols": [
+        "codebase/shared/i18n/en/translation.json::sha256:9C8CB4F49FDB1EA30A9377177D239A968E12649FD4F6AB84B91BA63D1ECF5C41"
+      ],
       "target_paths": [
         "ABSENT_FROM_ACTIVE_PRODUCT"
       ],
@@ -15032,13 +15040,17 @@
       "module_owner": "Excluded-system removal",
       "planning_status": "PLANNING COMPLETE - IMPLEMENTATION EVIDENCE PENDING",
       "implementation_status": "NOT STARTED",
-      "presence_status": "NO ACTIVE PATH CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
+      "presence_status": "ACTIVE REMOVAL CANDIDATES MAPPED - IMPLEMENTATION INTERLOCKS REQUIRED",
       "master_requirement_ids": [
         "REQ-MP2-63D0D5467A",
         "REQ-MP2-D73520893C"
       ],
-      "current_paths": [],
-      "current_symbols": [],
+      "current_paths": [
+        "codebase/shared/i18n/en/translation.json"
+      ],
+      "current_symbols": [
+        "codebase/shared/i18n/en/translation.json::sha256:9C8CB4F49FDB1EA30A9377177D239A968E12649FD4F6AB84B91BA63D1ECF5C41"
+      ],
       "target_paths": [
         "ABSENT_FROM_ACTIVE_PRODUCT"
       ],
@@ -15862,12 +15874,16 @@
       "module_owner": "Excluded-system removal",
       "planning_status": "PLANNING COMPLETE - IMPLEMENTATION EVIDENCE PENDING",
       "implementation_status": "NOT STARTED",
-      "presence_status": "NO ACTIVE PATH CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
+      "presence_status": "ACTIVE REMOVAL CANDIDATES MAPPED - IMPLEMENTATION INTERLOCKS REQUIRED",
       "master_requirement_ids": [
         "REQ-MP2-FFBDDB1948"
       ],
-      "current_paths": [],
-      "current_symbols": [],
+      "current_paths": [
+        "codebase/shared/i18n/en/translation.json"
+      ],
+      "current_symbols": [
+        "codebase/shared/i18n/en/translation.json::sha256:9C8CB4F49FDB1EA30A9377177D239A968E12649FD4F6AB84B91BA63D1ECF5C41"
+      ],
       "target_paths": [
         "ABSENT_FROM_ACTIVE_PRODUCT"
       ],
@@ -15953,12 +15969,16 @@
       "module_owner": "Excluded-system removal",
       "planning_status": "PLANNING COMPLETE - IMPLEMENTATION EVIDENCE PENDING",
       "implementation_status": "NOT STARTED",
-      "presence_status": "NO ACTIVE PATH CURRENTLY MAPPED - IMPLEMENTATION-TIME PROOF STILL REQUIRED",
+      "presence_status": "ACTIVE REMOVAL CANDIDATES MAPPED - IMPLEMENTATION INTERLOCKS REQUIRED",
       "master_requirement_ids": [
         "REQ-MP2-FFBDDB1948"
       ],
-      "current_paths": [],
-      "current_symbols": [],
+      "current_paths": [
+        "codebase/shared/i18n/en/translation.json"
+      ],
+      "current_symbols": [
+        "codebase/shared/i18n/en/translation.json::sha256:9C8CB4F49FDB1EA30A9377177D239A968E12649FD4F6AB84B91BA63D1ECF5C41"
+      ],
       "target_paths": [
         "ABSENT_FROM_ACTIVE_PRODUCT"
       ],

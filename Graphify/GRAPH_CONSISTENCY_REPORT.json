@@ -1,11 +1,11 @@
 {
   "schema_version": 3,
-  "validated_at": "2026-08-02T09:12:01.515369Z",
+  "validated_at": "2026-08-05T12:03:43.181536Z",
   "verdict": "PASS",
   "requirements": 536,
   "capabilities": 120,
   "tasks": 158,
-  "exact_locations": 759,
+  "exact_locations": 780,
   "dependency_graph": {
     "task_nodes": 158,
     "dependency_edges": 323,
