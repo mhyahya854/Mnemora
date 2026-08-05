@@ -200,3 +200,15 @@ Independent read-only verification performed in this audit: requirement heading/
 ## Final audit-run verdict
 
 `SEMANTIC GRAPHIFY PLANNING COMPLETE - AUDITED, REPAIRED, AND VERIFIED ON ORIGIN/MAIN - IMPLEMENTATION NOT STARTED`
+
+## 2026-08-05 continuation recovery verification
+
+The prior run completed every audit batch, pushed the branch, and fast-forward-integrated `main`, but its required final report was not issued. This continuation run recovered that state and re-verified it end to end before issuing the report.
+
+- Repository state as found: `main`, `graphify-semantic-audit`, `origin/main` and `origin/graphify-semantic-audit` all at `1efbee3666ae9a5057906204cc05192b298a981c`; working tree clean; Master Plan and codebase hashes intact.
+- Remote access: Git for Windows' bundled SSH could not reach the loaded agent, so `core.sshCommand` (local, untracked) was pointed at `C:/Windows/System32/OpenSSH/ssh.exe`; `git ls-remote` then authenticated as `mhyahya854` and both remote branches were confirmed at `1efbee3`.
+- Validators re-run on `graphify-semantic-audit`: `semantic_validator.py --self-test-only` 14/14 fixtures PASS; `validate_planning.py` 36/36 PASS; `validate_planning.py --full-codebase` 36/36 PASS (post-run full SHA-256 fingerprint `9A284F7106FC272B440EA7B10C155AAAAC483990851DFE829C659B82918725A0`).
+- Independent read-only cross-checks (separate from the validator) all PASS: 536 requirements and MP split; three scope locks mapping all 8 retained capabilities; AEC free of dictionary echo filtering; exact search free of vector terms while owning the SQLite boundary; semantic search owning vector implementation; Notes free of tokenizer/diarization/binary assets (only the Master Plan scope-lock sentence legitimately names Diarization); MiniLM tokenizer assets absent from active unrelated deletion candidates; OS login-item/startup text not authentication deletion; historical migration and LICENSE attribution preserved; no editable vendor/generated targets; DAG 158 nodes/323 edges acyclic with single root `TASK-GOV-001-PROVENANCE-BASELINE`, single leaf `TASK-REL-11-AUDIT`, max depth 17, valid topological order; phase/wave/order and START-HERE agreement; test-command and package-script validity; existing (26) versus planned (125) test distinction; governance tasks without synthetic application tests; 11 conditional packages; 12 release gates; zero placeholders, orphans, duplicates, or contradictions; implementation NOT STARTED.
+- Full codebase immutability: final manifest `Graphify/AUDIT_CODEBASE_FINAL_SHA256.txt` (24,839 files, path plus SHA-256) exactly equals the pre-audit baseline `AUDIT_CODEBASE_BASELINE_SHA256.txt`; added 0, removed 0, modified 0.
+- Whisper model: size 147,951,465 bytes; SHA-256 `60ED5BC3DD14EEA856493D334349B405782DDCAF0028D4B5DF4088345FBA2EFE` in baseline, final manifest and live file; exact LFS rule intact; `git lfs fsck` OK; LFS object present locally and nothing pending.
+- This continuation batch adds the final manifest and refreshed report timestamps; it is committed on `graphify-semantic-audit`, pushed, and fast-forward-integrated into `main` without force.
