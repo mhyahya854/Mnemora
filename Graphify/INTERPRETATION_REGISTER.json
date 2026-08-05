@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "authority": "Derived interpretations subordinate to immutable Master Plan",
+  "generated_at": "2026-08-02T09:12:01.894257Z",
+  "interpretation_count": 7,
+  "unresolved_conflict_count": 0,
+  "interpretations": [
+    {
+      "interpretation_id": "INT-001-PARAKEET-SHERPA",
+      "source_documents": [
+        "01-EVERYTHING-WE-ARE-KEEPING.md",
+        "03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md"
+      ],
+      "relevant_headings": [
+        "5. Local transcription engines",
+        "11. How We Replace Removed Systems"
+      ],
+      "apparent_ambiguity": "Master Plan 1 names Parakeet and Sherpa-ONNX as conditional retained local engines; a Master Plan 3 replacement table names optional Parakeet without repeating Sherpa-ONNX.",
+      "adopted_interpretation": "Both Parakeet and Sherpa-ONNX remain separate conditional retained packages. The shorter replacement-table cell does not delete or override Sherpa-ONNX.",
+      "preservation_rationale": "It applies the explicit keep rule and treats the replacement table as non-exhaustive, so neither conditional engine is removed without evidence.",
+      "affected_capability_ids": [
+        "CAP-PARAKEET",
+        "CAP-SHERPA-ONNX",
+        "CAP-WHISPER"
+      ],
+      "affected_task_ids": [
+        "TASK-DEC-PARAKEET",
+        "TASK-OUT-PARAKEET-DEFAULT",
+        "TASK-OUT-PARAKEET-DEVIATION",
+        "TASK-DEC-SHERPA-ONNX",
+        "TASK-OUT-SHERPA-ONNX-DEFAULT",
+        "TASK-OUT-SHERPA-ONNX-DEVIATION",
+        "TASK-CAP-WHISPER"
+      ],
+      "user_clarification_required": false
+    },
+    {
+      "interpretation_id": "INT-002-CODEBASE-CASING",
+      "source_documents": [
+        "03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md"
+      ],
+      "relevant_headings": [
+        "2. Final Root Structure",
+        "14. Moving the Application into Codebase"
+      ],
+      "apparent_ambiguity": "The planned target tree uses Codebase while the actual application folder is currently lowercase codebase.",
+      "adopted_interpretation": "codebase is the authoritative current application path. Codebase is only a future target spelling and this planning run must not rename or move it.",
+      "preservation_rationale": "It records current evidence accurately and reserves the move for a provenance-protected implementation task.",
+      "affected_capability_ids": [
+        "CAP-REPOSITORY",
+        "CAP-PROVENANCE",
+        "CAP-IMPLEMENTATION-GOVERNANCE"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-REPOSITORY",
+        "TASK-GOV-001-PROVENANCE-BASELINE",
+        "TASK-CAP-IMPLEMENTATION-GOVERNANCE",
+        "TASK-GOV-002-CHARACTERIZATION-GATE",
+        "TASK-GOV-003-DECOUPLING-GATE",
+        "TASK-GOV-004-REMOVAL-GATE",
+        "TASK-GOV-005-CAPABILITY-GATE",
+        "TASK-GOV-006-CONSOLIDATION-GATE"
+      ],
+      "user_clarification_required": false
+    },
+    {
+      "interpretation_id": "INT-003-PLANNING-ONLY",
+      "source_documents": [
+        "03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md"
+      ],
+      "relevant_headings": [
+        "6.2 Autonomous execution law",
+        "24. Autonomous Authority"
+      ],
+      "apparent_ambiguity": "The implementation plan grants autonomous execution authority, but the present user run is expressly planning-only.",
+      "adopted_interpretation": "Autonomous mutation authority begins only in a future implementation run. This run may update derived planning under Graphify and may not edit codebase.",
+      "preservation_rationale": "The interpretation preserves future authority while honoring the narrower, later user instruction and read-only scope.",
+      "affected_capability_ids": [
+        "CAP-PLANNING-GOVERNANCE",
+        "CAP-IMPLEMENTATION-GOVERNANCE",
+        "CAP-PROVENANCE"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-PLANNING-GOVERNANCE",
+        "TASK-CAP-IMPLEMENTATION-GOVERNANCE",
+        "TASK-GOV-002-CHARACTERIZATION-GATE",
+        "TASK-GOV-003-DECOUPLING-GATE",
+        "TASK-GOV-004-REMOVAL-GATE",
+        "TASK-GOV-005-CAPABILITY-GATE",
+        "TASK-GOV-006-CONSOLIDATION-GATE",
+        "TASK-GOV-001-PROVENANCE-BASELINE"
+      ],
+      "user_clarification_required": false
+    },
+    {
+      "interpretation_id": "INT-004-PLATFORM-PROOF",
+      "source_documents": [
+        "01-EVERYTHING-WE-ARE-KEEPING.md",
+        "03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md"
+      ],
+      "relevant_headings": [
+        "22. Native and platform components",
+        "Hardware-dependent status",
+        "Strict Release Conjunction"
+      ],
+      "apparent_ambiguity": "Windows proof is mandatory for first release while macOS/Linux source is retained and hardware may be unavailable.",
+      "adopted_interpretation": "Windows build, installation, launch and offline proof are mandatory. macOS/Linux source and configuration must be preserved and statically or in CI verified; unavailable hardware is recorded as HARDWARE UNAVAILABLE and does not block the Windows release unless a gate explicitly applies to that platform.",
+      "preservation_rationale": "No cross-platform source is discarded and no unavailable-hardware result is misreported as a pass.",
+      "affected_capability_ids": [
+        "CAP-PACKAGING",
+        "CAP-WINDOWS-INSTALLER",
+        "CAP-MACOS-LINUX",
+        "CAP-TESTING"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-PACKAGING",
+        "TASK-CAP-WINDOWS-INSTALLER",
+        "TASK-DEC-MACOS-LINUX",
+        "TASK-OUT-MACOS-LINUX-DEFAULT",
+        "TASK-OUT-MACOS-LINUX-DEVIATION",
+        "TASK-CAP-TESTING"
+      ],
+      "user_clarification_required": false
+    },
+    {
+      "interpretation_id": "INT-005-RUNTIME-DOWNLOADS",
+      "source_documents": [
+        "01-EVERYTHING-WE-ARE-KEEPING.md",
+        "02-EVERYTHING-WE-ARE-DELETING.md",
+        "03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md"
+      ],
+      "relevant_headings": [
+        "6. Local model handling",
+        "15. Runtime model and binary downloads",
+        "22. Runtime Offline Enforcement"
+      ],
+      "apparent_ambiguity": "Runtime downloads are forbidden while existing download scripts may be needed to acquire release assets.",
+      "adopted_interpretation": "Installed runtime code cannot reach download logic. Build-time acquisition may remain only as isolated tooling that produces pinned, checksummed inputs before packaging and is unreachable from the installed application.",
+      "preservation_rationale": "It preserves reproducible build tooling without weakening offline runtime enforcement.",
+      "affected_capability_ids": [
+        "CAP-REMOVE-RUNTIME-MODEL-DOWNLOADS",
+        "CAP-MODEL-PACK",
+        "CAP-NETWORK-POLICY",
+        "CAP-PACKAGING"
+      ],
+      "affected_task_ids": [
+        "TASK-DEL-RUNTIME-MODEL-DOWNLOADS",
+        "TASK-CAP-MODEL-PACK",
+        "TASK-CAP-NETWORK-POLICY",
+        "TASK-CAP-PACKAGING"
+      ],
+      "user_clarification_required": false
+    },
+    {
+      "interpretation_id": "INT-006-LOOPBACK",
+      "source_documents": [
+        "01-EVERYTHING-WE-ARE-KEEPING.md",
+        "02-EVERYTHING-WE-ARE-DELETING.md",
+        "03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md"
+      ],
+      "relevant_headings": [
+        "3. Application shell",
+        "16. External runtime networking",
+        "22. Runtime Offline Enforcement"
+      ],
+      "apparent_ambiguity": "External networking is forbidden while local services may communicate over localhost or loopback.",
+      "adopted_interpretation": "Loopback is allowed only for a named, owned, bundled local process under an explicit allow-list and lifecycle owner. External hosts, third-party services and unowned listeners remain forbidden.",
+      "preservation_rationale": "It permits required local sidecars such as Qdrant without reintroducing an external service boundary.",
+      "affected_capability_ids": [
+        "CAP-NETWORK-POLICY",
+        "CAP-QDRANT",
+        "CAP-LOOPBACK-WEBSOCKETS",
+        "CAP-REMOVE-RUNTIME-EXTERNAL-NETWORKING"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-NETWORK-POLICY",
+        "TASK-DEC-QDRANT",
+        "TASK-OUT-QDRANT-DEFAULT",
+        "TASK-OUT-QDRANT-DEVIATION",
+        "TASK-DEC-LOOPBACK-WEBSOCKETS",
+        "TASK-OUT-LOOPBACK-WEBSOCKETS-DEFAULT",
+        "TASK-OUT-LOOPBACK-WEBSOCKETS-DEVIATION",
+        "TASK-DEL-RUNTIME-EXTERNAL-NETWORKING"
+      ],
+      "user_clarification_required": false
+    },
+    {
+      "interpretation_id": "INT-007-HISTORICAL-MIGRATIONS",
+      "source_documents": [
+        "01-EVERYTHING-WE-ARE-KEEPING.md",
+        "02-EVERYTHING-WE-ARE-DELETING.md",
+        "03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md"
+      ],
+      "relevant_headings": [
+        "1. Product and legal identity",
+        "Protected Until Proven Otherwise",
+        "Historical migrations"
+      ],
+      "apparent_ambiguity": "Removed names and schema terms can appear in historical migrations although active product behavior must not retain removed systems.",
+      "adopted_interpretation": "Historical migration SQL, compatibility keys and legal provenance are evidence and may retain legacy terms. They are not active forbidden behavior unless reachable runtime code recreates or exposes the removed capability.",
+      "preservation_rationale": "It protects migration continuity and attribution while requiring active runtime paths to pass deletion interlocks.",
+      "affected_capability_ids": [
+        "CAP-LEGACY-MIGRATION",
+        "CAP-DATA-SAFETY",
+        "CAP-REMOVE-ACTIVE-OPENWHISPR-IDENTITY",
+        "CAP-DELETION-GOVERNANCE"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-LEGACY-MIGRATION",
+        "TASK-CAP-DATA-SAFETY",
+        "TASK-DEL-ACTIVE-OPENWHISPR-IDENTITY",
+        "TASK-CAP-DELETION-GOVERNANCE"
+      ],
+      "user_clarification_required": false
+    }
+  ]
+}

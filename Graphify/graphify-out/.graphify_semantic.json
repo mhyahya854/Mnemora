@@ -1,0 +1,1255 @@
+{
+  "nodes": [
+    {
+      "id": "graphify_master_plan_01_everything_we_are_keeping_everything_we_are_keeping",
+      "label": "Everything We Are Keeping",
+      "file_type": "document",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_01_everything_we_are_keeping_decision_classification_framework",
+      "label": "Keep Decision Classification Framework",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_01_everything_we_are_keeping_retained_local_product_scope",
+      "label": "Retained Local Product Scope",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_01_everything_we_are_keeping_legal_identity_and_desktop_stack",
+      "label": "Legal Identity and Core Desktop Stack",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_01_everything_we_are_keeping_local_dictation_and_transcription",
+      "label": "Local Dictation, Transcription, and Model Handling",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_01_everything_we_are_keeping_meeting_audio_and_recording_recovery",
+      "label": "Meeting Audio, Recording, and Recovery",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_01_everything_we_are_keeping_diarization_transcripts_and_notes",
+      "label": "Diarization, Structured Transcripts, and Notes",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_01_everything_we_are_keeping_exact_and_semantic_search",
+      "label": "Exact and Semantic Search",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_01_everything_we_are_keeping_sqlite_local_data_and_io",
+      "label": "SQLite, Local Data, Import, Export, and Backup",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_01_everything_we_are_keeping_local_only_runtime_boundary",
+      "label": "Local-Only Runtime Boundary",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_01_everything_we_are_keeping_native_packaging_and_real_proof",
+      "label": "Native Components, Packaging, and Real Proof",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_01_everything_we_are_keeping_preservation_first_acceptance",
+      "label": "Preservation-First Keep Acceptance",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_02_everything_we_are_deleting_everything_we_are_deleting",
+      "label": "Everything We Are Deleting",
+      "file_type": "document",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_02_everything_we_are_deleting_binding_deletion_interlock",
+      "label": "Binding Deletion Interlock",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_02_everything_we_are_deleting_active_identity_auth_and_accounts",
+      "label": "Active OpenWhispr Identity, Authentication, and Accounts Removal",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_02_everything_we_are_deleting_cloud_sync_collaboration_and_sharing",
+      "label": "Cloud Sync, Collaboration, and Sharing Removal",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_02_everything_we_are_deleting_hosted_transcription_ai_agents_and_tools",
+      "label": "Hosted Transcription, AI, Agents, Chat, and Tools Removal",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_02_everything_we_are_deleting_remote_integrations_api_keys_and_billing",
+      "label": "Remote Integrations, APIs, Credentials, and Billing Removal",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_02_everything_we_are_deleting_updates_runtime_downloads_and_external_network",
+      "label": "Updates, Runtime Downloads, and External Network Removal",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_02_everything_we_are_deleting_cloud_audio_speakers_and_metadata",
+      "label": "Cloud Audio, Remote Speakers, and Metadata Removal",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_02_everything_we_are_deleting_forward_migration_user_data_safety",
+      "label": "Forward Migration and User-Data Safety",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_02_everything_we_are_deleting_ui_settings_native_and_dependency_cleanup",
+      "label": "UI, Settings, Native, Dependency, and Dead-Code Cleanup",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_02_everything_we_are_deleting_markdown_relocation",
+      "label": "Markdown Relocation to Graphify",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_02_everything_we_are_deleting_evidence_based_deletion_acceptance",
+      "label": "Evidence-Based Deletion Acceptance",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_how_we_will_keep_delete_and_replace",
+      "label": "How We Will Keep, Delete, Replace, Reorganise, and Verify",
+      "file_type": "document",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_operational_control_laws",
+      "label": "Correct-File and Autonomous Execution Laws",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_preservation_data_and_git_safety_laws",
+      "label": "Preservation, Data-Safety, and Git-Safety Laws",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_authoritative_root_and_master_plan",
+      "label": "Authoritative Root Structure and Master Plan",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_graphify_mapping_and_exact_registry",
+      "label": "Graphify Mapping and Exact-Location Registry",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_capability_ownership_and_safe_batches",
+      "label": "Capability Ownership and Dependency-Safe Batches",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_keep_delete_and_replace_methods",
+      "label": "Keep, Delete, and Local Replacement Methods",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_missing_features_and_reuse_first",
+      "label": "Missing Features and Reuse-First Integration",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_reorganization_and_ipc_audit",
+      "label": "Reorganization, Markdown Movement, and IPC Audit",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_legacy_migration_and_sqlite_safety",
+      "label": "Legacy Migration and SQLite Native-Binding Safety",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_continuous_verification_and_real_evidence",
+      "label": "Continuous Verification and Real Integration Evidence",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_runtime_offline_enforcement",
+      "label": "Runtime Offline Enforcement",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_ponytail_and_completion_tracking",
+      "label": "Ponytail Simplification and Completion Tracking",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_strict_release_conjunction",
+      "label": "Strict Release Conjunction",
+      "file_type": "rationale",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "codebase_renderer_assets_icon_mnemora_application_icon",
+      "label": "Mnemora Application Icon",
+      "file_type": "image",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\codebase\\renderer\\assets\\icon.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "codebase_renderer_assets_icontemplate_3x_circular_monogram_icon",
+      "label": "Circular Monogram Template Icon",
+      "file_type": "image",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\codebase\\renderer\\assets\\iconTemplate@3x.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "codebase_renderer_assets_logo_mnemora_logo",
+      "label": "Mnemora Logo",
+      "file_type": "image",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\codebase\\renderer\\assets\\logo.svg",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "codebase_renderer_assets_mnemora_icon_assets_icon_mnemora_brand_icon",
+      "label": "Mnemora Brand Icon",
+      "file_type": "image",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\codebase\\renderer\\assets\\mnemora.icon\\Assets\\ICON.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "codebase_native_meeting_aec_helper_cmakelists_meeting_aec_helper_build",
+      "label": "Meeting AEC Helper Native Build",
+      "file_type": "document",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\codebase\\native\\meeting-aec-helper\\CMakeLists.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "codebase_native_meeting_aec_helper_cmakelists_generated_webrtc_source_manifest",
+      "label": "Generated WebRTC Source Manifest",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\codebase\\native\\meeting-aec-helper\\CMakeLists.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "codebase_native_meeting_aec_helper_cmakelists_conditional_avx2_compilation",
+      "label": "Conditional AVX2 Compilation",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\codebase\\native\\meeting-aec-helper\\CMakeLists.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "codebase_renderer_index_mnemora_renderer_entrypoint",
+      "label": "Mnemora Renderer Entrypoint",
+      "file_type": "document",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\codebase\\renderer\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "codebase_renderer_index_local_renderer_assets",
+      "label": "Local Renderer Assets",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\codebase\\renderer\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "codebase_renderer_index_renderer_module_bootstrap",
+      "label": "Renderer Module Bootstrap",
+      "file_type": "concept",
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\codebase\\renderer\\index.html",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "graphify_master_plan_01_everything_we_are_keeping_everything_we_are_keeping",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_decision_classification_framework",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_01_everything_we_are_keeping_everything_we_are_keeping",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_retained_local_product_scope",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_01_everything_we_are_keeping_everything_we_are_keeping",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_legal_identity_and_desktop_stack",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_01_everything_we_are_keeping_everything_we_are_keeping",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_local_dictation_and_transcription",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_01_everything_we_are_keeping_everything_we_are_keeping",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_meeting_audio_and_recording_recovery",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_01_everything_we_are_keeping_everything_we_are_keeping",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_diarization_transcripts_and_notes",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_01_everything_we_are_keeping_everything_we_are_keeping",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_exact_and_semantic_search",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_01_everything_we_are_keeping_everything_we_are_keeping",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_sqlite_local_data_and_io",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_01_everything_we_are_keeping_everything_we_are_keeping",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_local_only_runtime_boundary",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_01_everything_we_are_keeping_everything_we_are_keeping",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_native_packaging_and_real_proof",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_01_everything_we_are_keeping_everything_we_are_keeping",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_preservation_first_acceptance",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_01_everything_we_are_keeping_decision_classification_framework",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_retained_local_product_scope",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_01_everything_we_are_keeping_preservation_first_acceptance",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_retained_local_product_scope",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_01_everything_we_are_keeping_local_only_runtime_boundary",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_local_dictation_and_transcription",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_01_everything_we_are_keeping_local_only_runtime_boundary",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_exact_and_semantic_search",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_01_everything_we_are_keeping_sqlite_local_data_and_io",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_diarization_transcripts_and_notes",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_01_everything_we_are_keeping_meeting_audio_and_recording_recovery",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_diarization_transcripts_and_notes",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\01-EVERYTHING-WE-ARE-KEEPING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_everything_we_are_deleting",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_binding_deletion_interlock",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_everything_we_are_deleting",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_active_identity_auth_and_accounts",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_everything_we_are_deleting",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_cloud_sync_collaboration_and_sharing",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_everything_we_are_deleting",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_hosted_transcription_ai_agents_and_tools",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_everything_we_are_deleting",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_remote_integrations_api_keys_and_billing",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_everything_we_are_deleting",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_updates_runtime_downloads_and_external_network",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_everything_we_are_deleting",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_cloud_audio_speakers_and_metadata",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_everything_we_are_deleting",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_forward_migration_user_data_safety",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_everything_we_are_deleting",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_ui_settings_native_and_dependency_cleanup",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_everything_we_are_deleting",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_markdown_relocation",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_everything_we_are_deleting",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_evidence_based_deletion_acceptance",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_binding_deletion_interlock",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_evidence_based_deletion_acceptance",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_forward_migration_user_data_safety",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_cloud_audio_speakers_and_metadata",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_ui_settings_native_and_dependency_cleanup",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_hosted_transcription_ai_agents_and_tools",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_ui_settings_native_and_dependency_cleanup",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_remote_integrations_api_keys_and_billing",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\02-EVERYTHING-WE-ARE-DELETING.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_how_we_will_keep_delete_and_replace",
+      "target": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_operational_control_laws",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_how_we_will_keep_delete_and_replace",
+      "target": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_preservation_data_and_git_safety_laws",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_how_we_will_keep_delete_and_replace",
+      "target": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_authoritative_root_and_master_plan",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_how_we_will_keep_delete_and_replace",
+      "target": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_graphify_mapping_and_exact_registry",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_how_we_will_keep_delete_and_replace",
+      "target": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_capability_ownership_and_safe_batches",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_how_we_will_keep_delete_and_replace",
+      "target": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_keep_delete_and_replace_methods",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_how_we_will_keep_delete_and_replace",
+      "target": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_missing_features_and_reuse_first",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_how_we_will_keep_delete_and_replace",
+      "target": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_reorganization_and_ipc_audit",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_how_we_will_keep_delete_and_replace",
+      "target": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_legacy_migration_and_sqlite_safety",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_how_we_will_keep_delete_and_replace",
+      "target": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_continuous_verification_and_real_evidence",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_how_we_will_keep_delete_and_replace",
+      "target": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_runtime_offline_enforcement",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_how_we_will_keep_delete_and_replace",
+      "target": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_ponytail_and_completion_tracking",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_how_we_will_keep_delete_and_replace",
+      "target": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_strict_release_conjunction",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_authoritative_root_and_master_plan",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_everything_we_are_keeping",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_authoritative_root_and_master_plan",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_everything_we_are_deleting",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_capability_ownership_and_safe_batches",
+      "target": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_graphify_mapping_and_exact_registry",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_missing_features_and_reuse_first",
+      "target": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_keep_delete_and_replace_methods",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_continuous_verification_and_real_evidence",
+      "target": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_strict_release_conjunction",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_runtime_offline_enforcement",
+      "target": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_strict_release_conjunction",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_ponytail_and_completion_tracking",
+      "target": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_strict_release_conjunction",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_preservation_data_and_git_safety_laws",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_preservation_first_acceptance",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_keep_delete_and_replace_methods",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_binding_deletion_interlock",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_legacy_migration_and_sqlite_safety",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_forward_migration_user_data_safety",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_legacy_migration_and_sqlite_safety",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_sqlite_local_data_and_io",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_runtime_offline_enforcement",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_updates_runtime_downloads_and_external_network",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_runtime_offline_enforcement",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_local_only_runtime_boundary",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_03_how_we_will_keep_delete_and_replace_reorganization_and_ipc_audit",
+      "target": "graphify_master_plan_02_everything_we_are_deleting_markdown_relocation",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_hosted_transcription_ai_agents_and_tools",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_local_dictation_and_transcription",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_hosted_transcription_ai_agents_and_tools",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_exact_and_semantic_search",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_cloud_sync_collaboration_and_sharing",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_sqlite_local_data_and_io",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_updates_runtime_downloads_and_external_network",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_local_dictation_and_transcription",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "graphify_master_plan_02_everything_we_are_deleting_active_identity_auth_and_accounts",
+      "target": "graphify_master_plan_01_everything_we_are_keeping_legal_identity_and_desktop_stack",
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "codebase_native_meeting_aec_helper_cmakelists_meeting_aec_helper_build",
+      "target": "codebase_native_meeting_aec_helper_cmakelists_generated_webrtc_source_manifest",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\codebase\\native\\meeting-aec-helper\\CMakeLists.txt",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "codebase_native_meeting_aec_helper_cmakelists_meeting_aec_helper_build",
+      "target": "codebase_native_meeting_aec_helper_cmakelists_conditional_avx2_compilation",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\codebase\\native\\meeting-aec-helper\\CMakeLists.txt",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "codebase_renderer_index_mnemora_renderer_entrypoint",
+      "target": "codebase_renderer_index_local_renderer_assets",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\codebase\\renderer\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "codebase_renderer_index_mnemora_renderer_entrypoint",
+      "target": "codebase_renderer_index_renderer_module_bootstrap",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\codebase\\renderer\\index.html",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "authoritative_mnemora_master_plan",
+      "label": "Authoritative Mnemora Master Plan",
+      "nodes": [
+        "graphify_master_plan_01_everything_we_are_keeping_everything_we_are_keeping",
+        "graphify_master_plan_02_everything_we_are_deleting_everything_we_are_deleting",
+        "graphify_master_plan_03_how_we_will_keep_delete_and_replace_how_we_will_keep_delete_and_replace"
+      ],
+      "relation": "form",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md"
+    },
+    {
+      "id": "local_only_product_transformation",
+      "label": "Local-Only Product Transformation",
+      "nodes": [
+        "graphify_master_plan_01_everything_we_are_keeping_local_only_runtime_boundary",
+        "graphify_master_plan_02_everything_we_are_deleting_updates_runtime_downloads_and_external_network",
+        "graphify_master_plan_03_how_we_will_keep_delete_and_replace_runtime_offline_enforcement"
+      ],
+      "relation": "implement",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md"
+    },
+    {
+      "id": "evidence_gated_release_control",
+      "label": "Evidence-Gated Release Control",
+      "nodes": [
+        "graphify_master_plan_01_everything_we_are_keeping_preservation_first_acceptance",
+        "graphify_master_plan_02_everything_we_are_deleting_evidence_based_deletion_acceptance",
+        "graphify_master_plan_03_how_we_will_keep_delete_and_replace_strict_release_conjunction"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\Master Plan\\03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md"
+    }
+  ]
+}

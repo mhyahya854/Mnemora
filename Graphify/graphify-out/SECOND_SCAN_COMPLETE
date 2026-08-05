@@ -1,0 +1,21 @@
+{
+  "completed_at": "2026-07-28T10:28:12.139126Z",
+  "initial": {
+    "supported_files": 324,
+    "nodes": 4897,
+    "edges": 13768
+  },
+  "final": {
+    "supported_files": 311,
+    "code_files": 302,
+    "nodes": 3651,
+    "edges": 6963,
+    "communities": 212,
+    "external_reference_nodes": 148,
+    "stale_paths": 0,
+    "duplicate_node_ids": 0,
+    "dangling_endpoint_edges": 0,
+    "missing_endpoint_edges": 0
+  },
+  "repair": "Removed generated build-output symbols from source authority; retained them in inventory; restored hand-maintained scripts/build sources hidden by generic detector rules; materialized Graphify ref_* external endpoints; refreshed line locations and community labels."
+}

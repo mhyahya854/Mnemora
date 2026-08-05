@@ -1,0 +1,53 @@
+{
+  "whisperModels": {
+    "tiny": {
+      "name": "Tiny",
+      "description": "Fastest, lower quality",
+      "size": "75 MB",
+      "sizeMb": 75,
+      "expectedSizeBytes": 78000000,
+      "fileName": "ggml-tiny.bin"
+    },
+    "base": {
+      "name": "Base",
+      "description": "Good balance",
+      "size": "142 MB",
+      "sizeMb": 142,
+      "expectedSizeBytes": 148000000,
+      "fileName": "ggml-base.bin",
+      "recommended": true
+    },
+    "small": {
+      "name": "Small",
+      "description": "Better quality, slower",
+      "size": "466 MB",
+      "sizeMb": 466,
+      "expectedSizeBytes": 488000000,
+      "fileName": "ggml-small.bin"
+    },
+    "medium": {
+      "name": "Medium",
+      "description": "High quality",
+      "size": "1.5 GB",
+      "sizeMb": 1500,
+      "expectedSizeBytes": 1570000000,
+      "fileName": "ggml-medium.bin"
+    },
+    "large": {
+      "name": "Large",
+      "description": "Best quality, slowest",
+      "size": "3 GB",
+      "sizeMb": 3000,
+      "expectedSizeBytes": 3140000000,
+      "fileName": "ggml-large-v3.bin"
+    },
+    "turbo": {
+      "name": "Turbo",
+      "description": "Fast with good quality",
+      "size": "1.6 GB",
+      "sizeMb": 1600,
+      "expectedSizeBytes": 1670000000,
+      "fileName": "ggml-large-v3-turbo.bin"
+    }
+  }
+}

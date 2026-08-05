@@ -1,0 +1,556 @@
+{
+  "schema_version": 1,
+  "authority": "Complete evidence-driven conditional decision packages",
+  "generated_at": "2026-08-02T09:12:01.894257Z",
+  "package_count": 11,
+  "packages": [
+    {
+      "decision_package_id": "DEC-QDRANT",
+      "capability_id": "CAP-QDRANT",
+      "title": "Qdrant versus an embedded local vector alternative",
+      "master_requirement_ids": [
+        "REQ-MP1-859C19B732",
+        "REQ-MP1-727ECAB78C",
+        "REQ-MP3-334B7FAA78",
+        "REQ-MP3-6AD58F93AB"
+      ],
+      "master_plan_sources": [
+        "01-EVERYTHING-WE-ARE-KEEPING.md",
+        "03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md"
+      ],
+      "master_plan_default": "Retain the current bundled local Qdrant sidecar until a measured fully local alternative proves semantic-search, migration, lifecycle, packaging and recovery equivalence.",
+      "mandatory_default": "Retain the current bundled local Qdrant sidecar until a measured fully local alternative proves semantic-search, migration, lifecycle, packaging and recovery equivalence.",
+      "deviation_condition": "A candidate embedded/local alternative is already licence-compatible and proves equivalent behavior on representative Mnemora data with lower verified maintenance or packaging cost.",
+      "evidence_to_collect": [
+        "Run the same indexed corpus through exact semantic result checks, restart recovery, index migration, corrupt-sidecar recovery, offline launch and packaged Windows lifecycle tests."
+      ],
+      "exact_current_implementation_locations": [
+        "codebase/main/features/search/qdrantManager.js::QdrantManager",
+        "codebase/main/features/search/vectorIndex.js",
+        "codebase/resources/bin/qdrant-win32-x64.exe",
+        "codebase/scripts/downloads/download-qdrant.js::main"
+      ],
+      "test_method": "Run the same indexed corpus through exact semantic result checks, restart recovery, index migration, corrupt-sidecar recovery, offline launch and packaged Windows lifecycle tests.",
+      "comparison_dimensions": [
+        "result correctness",
+        "index migration",
+        "startup/shutdown ownership",
+        "offline behavior",
+        "binary/package size",
+        "licence",
+        "recovery",
+        "maintenance surface"
+      ],
+      "decision_owner": "Semantic search and Windows packaging",
+      "decision_phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "fallback": "Keep bundled Qdrant and harden its local lifecycle and allow-list.",
+      "threshold_rule": "Do not invent an arbitrary numeric threshold. Record observed data and use only a threshold already mandated by the Master Plan, a documented platform constraint, a licence/safety requirement, or a user-approved product limit.",
+      "allowed_outcomes": [
+        "DEFAULT",
+        "DEVIATION"
+      ],
+      "conditional_preservation_rule": "Do not delete or disable the conditional capability merely to simplify packaging; select the Master default unless the evidence package proves the deviation condition.",
+      "downstream_tasks_by_outcome": {
+        "DEFAULT": "TASK-OUT-QDRANT-DEFAULT",
+        "DEVIATION": "TASK-OUT-QDRANT-DEVIATION"
+      },
+      "decision_task_id": "TASK-DEC-QDRANT",
+      "planning_status": "COMPLETE PACKAGE - FUTURE EVIDENCE AND DECISION PENDING"
+    },
+    {
+      "decision_package_id": "DEC-PARAKEET",
+      "capability_id": "CAP-PARAKEET",
+      "title": "Parakeet packaging",
+      "master_requirement_ids": [
+        "REQ-MP1-E72593FD81",
+        "REQ-MP1-727ECAB78C",
+        "REQ-MP3-AC9DC0D90B"
+      ],
+      "master_plan_sources": [
+        "01-EVERYTHING-WE-ARE-KEEPING.md",
+        "03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md"
+      ],
+      "master_plan_default": "Preserve Parakeet as an optional offline engine or offline model pack; Whisper.cpp remains the bundled fallback and Parakeet is not mandatory in the default installer without evidence.",
+      "mandatory_default": "Preserve Parakeet as an optional offline engine or offline model pack; Whisper.cpp remains the bundled fallback and Parakeet is not mandatory in the default installer without evidence.",
+      "deviation_condition": "A proven, licence-compatible local implementation and asset set demonstrates platform coverage, acceptable package impact and reliable offline transcription.",
+      "evidence_to_collect": [
+        "Prove engine discovery, checksum rejection, supported-language behavior, cancellation, retry, package inclusion, clean offline launch and Whisper.cpp fallback on each supported packaged platform."
+      ],
+      "exact_current_implementation_locations": [
+        "codebase/shared/i18n/en/translation.json::Parakeet references",
+        "codebase/main/features/transcription/::no proven Parakeet runtime engine",
+        "codebase/electron-builder.json::extraResources"
+      ],
+      "test_method": "Prove engine discovery, checksum rejection, supported-language behavior, cancellation, retry, package inclusion, clean offline launch and Whisper.cpp fallback on each supported packaged platform.",
+      "comparison_dimensions": [
+        "runtime presence",
+        "accuracy evidence",
+        "latency",
+        "memory",
+        "package size",
+        "platform support",
+        "licence",
+        "offline fallback"
+      ],
+      "decision_owner": "Local transcription and packaging",
+      "decision_phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "fallback": "Ship Whisper.cpp by default and expose Parakeet only through a verified offline model pack.",
+      "threshold_rule": "Do not invent an arbitrary numeric threshold. Record observed data and use only a threshold already mandated by the Master Plan, a documented platform constraint, a licence/safety requirement, or a user-approved product limit.",
+      "allowed_outcomes": [
+        "DEFAULT",
+        "DEVIATION"
+      ],
+      "conditional_preservation_rule": "Do not delete or disable the conditional capability merely to simplify packaging; select the Master default unless the evidence package proves the deviation condition.",
+      "downstream_tasks_by_outcome": {
+        "DEFAULT": "TASK-OUT-PARAKEET-DEFAULT",
+        "DEVIATION": "TASK-OUT-PARAKEET-DEVIATION"
+      },
+      "decision_task_id": "TASK-DEC-PARAKEET",
+      "planning_status": "COMPLETE PACKAGE - FUTURE EVIDENCE AND DECISION PENDING"
+    },
+    {
+      "decision_package_id": "DEC-SHERPA-ONNX",
+      "capability_id": "CAP-SHERPA-ONNX",
+      "title": "Sherpa-ONNX packaging",
+      "master_requirement_ids": [
+        "REQ-MP1-E72593FD81",
+        "REQ-MP1-727ECAB78C",
+        "REQ-MP3-334B7FAA78"
+      ],
+      "master_plan_sources": [
+        "01-EVERYTHING-WE-ARE-KEEPING.md",
+        "03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md"
+      ],
+      "master_plan_default": "Preserve the current bundled Sherpa-ONNX diarization implementation and evaluate any optional transcription role separately; never remove it merely for installer-size preference.",
+      "mandatory_default": "Preserve the current bundled Sherpa-ONNX diarization implementation and evaluate any optional transcription role separately; never remove it merely for installer-size preference.",
+      "deviation_condition": "Real platform/package evidence proves a narrower offline pack or an equivalent retained local implementation without breaking diarization or recovery.",
+      "evidence_to_collect": [
+        "Run real fixture diarization, process cleanup, missing/corrupt model handling, offline pack import and packaged Windows binary/model discovery; preserve separate transcription-engine evidence."
+      ],
+      "exact_current_implementation_locations": [
+        "codebase/main/features/meetings/diarization.js",
+        "codebase/resources/bin/sherpa-onnx-diarize-win32-x64.exe",
+        "codebase/resources/bin/diarization-models/",
+        "codebase/scripts/downloads/download-sherpa-onnx.js::main"
+      ],
+      "test_method": "Run real fixture diarization, process cleanup, missing/corrupt model handling, offline pack import and packaged Windows binary/model discovery; preserve separate transcription-engine evidence.",
+      "comparison_dimensions": [
+        "diarization correctness",
+        "transcription role",
+        "binary/model packaging",
+        "platform coverage",
+        "process cleanup",
+        "licence",
+        "offline recovery"
+      ],
+      "decision_owner": "Diarization, local transcription and packaging",
+      "decision_phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "fallback": "Keep the proven bundled diarization helper and Whisper.cpp transcription fallback.",
+      "threshold_rule": "Do not invent an arbitrary numeric threshold. Record observed data and use only a threshold already mandated by the Master Plan, a documented platform constraint, a licence/safety requirement, or a user-approved product limit.",
+      "allowed_outcomes": [
+        "DEFAULT",
+        "DEVIATION"
+      ],
+      "conditional_preservation_rule": "Do not delete or disable the conditional capability merely to simplify packaging; select the Master default unless the evidence package proves the deviation condition.",
+      "downstream_tasks_by_outcome": {
+        "DEFAULT": "TASK-OUT-SHERPA-ONNX-DEFAULT",
+        "DEVIATION": "TASK-OUT-SHERPA-ONNX-DEVIATION"
+      },
+      "decision_task_id": "TASK-DEC-SHERPA-ONNX",
+      "planning_status": "COMPLETE PACKAGE - FUTURE EVIDENCE AND DECISION PENDING"
+    },
+    {
+      "decision_package_id": "DEC-KYSELY",
+      "capability_id": "CAP-KYSELY",
+      "title": "Kysely retention",
+      "master_requirement_ids": [
+        "REQ-MP1-00F5F9F108",
+        "REQ-MP1-727ECAB78C"
+      ],
+      "master_plan_sources": [
+        "01-EVERYTHING-WE-ARE-KEEPING.md"
+      ],
+      "master_plan_default": "Keep Kysely only if current or planned local SQLite code receives measurable type-safety benefit; do not order a persistence rewrite for style.",
+      "mandatory_default": "Keep Kysely only if current or planned local SQLite code receives measurable type-safety benefit; do not order a persistence rewrite for style.",
+      "deviation_condition": "Repository evidence confirms Kysely is absent, used only by removed systems, or duplicates direct better-sqlite3 with a safe migration and measurable maintenance benefit.",
+      "evidence_to_collect": [
+        "Inventory imports and dependency lock entries, characterize every persistence query and migration, then compare type checks, SQL behavior, transaction behavior and native binding packaging."
+      ],
+      "exact_current_implementation_locations": [
+        "codebase/package.json::dependencies",
+        "codebase/main/infrastructure/persistence/database.js::DatabaseManager",
+        "codebase/package-lock.json::packages"
+      ],
+      "test_method": "Inventory imports and dependency lock entries, characterize every persistence query and migration, then compare type checks, SQL behavior, transaction behavior and native binding packaging.",
+      "comparison_dimensions": [
+        "actual usage",
+        "query type safety",
+        "migration risk",
+        "transaction behavior",
+        "dependency cost",
+        "maintenance benefit"
+      ],
+      "decision_owner": "SQLite persistence",
+      "decision_phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "fallback": "Use the verified existing direct better-sqlite3 layer; current static evidence indicates Kysely is absent.",
+      "threshold_rule": "Do not invent an arbitrary numeric threshold. Record observed data and use only a threshold already mandated by the Master Plan, a documented platform constraint, a licence/safety requirement, or a user-approved product limit.",
+      "allowed_outcomes": [
+        "DEFAULT",
+        "DEVIATION"
+      ],
+      "conditional_preservation_rule": "Do not delete or disable the conditional capability merely to simplify packaging; select the Master default unless the evidence package proves the deviation condition.",
+      "downstream_tasks_by_outcome": {
+        "DEFAULT": "TASK-OUT-KYSELY-DEFAULT",
+        "DEVIATION": "TASK-OUT-KYSELY-DEVIATION"
+      },
+      "decision_task_id": "TASK-DEC-KYSELY",
+      "planning_status": "COMPLETE PACKAGE - FUTURE EVIDENCE AND DECISION PENDING"
+    },
+    {
+      "decision_package_id": "DEC-LOOPBACK-WEBSOCKETS",
+      "capability_id": "CAP-LOOPBACK-WEBSOCKETS",
+      "title": "Loopback WebSockets",
+      "master_requirement_ids": [
+        "REQ-MP1-932FF7B911",
+        "REQ-MP1-727ECAB78C",
+        "REQ-MP3-72EF213D95",
+        "REQ-MP3-6AD58F93AB",
+        "REQ-MP3-4D9AC1DCBE"
+      ],
+      "master_plan_sources": [
+        "01-EVERYTHING-WE-ARE-KEEPING.md",
+        "03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md"
+      ],
+      "master_plan_default": "Do not add or retain a WebSocket path unless a named bundled local service requires it and the runtime policy explicitly owns its listener, client and shutdown lifecycle.",
+      "mandatory_default": "Do not add or retain a WebSocket path unless a named bundled local service requires it and the runtime policy explicitly owns its listener, client and shutdown lifecycle.",
+      "deviation_condition": "A retained local service proves bidirectional event transport cannot use existing IPC or bounded local HTTP without greater risk or complexity.",
+      "evidence_to_collect": [
+        "Capture listener ownership, bind address, random-port behavior, authentication or process-bound trust, external-host denial, teardown and packaged offline behavior."
+      ],
+      "exact_current_implementation_locations": [
+        "codebase/main/infrastructure/runtime/runtimeNetworkPolicy.js",
+        "codebase/main/features/search/qdrantManager.js::_checkHealth",
+        "codebase/package.json::dependencies"
+      ],
+      "test_method": "Capture listener ownership, bind address, random-port behavior, authentication or process-bound trust, external-host denial, teardown and packaged offline behavior.",
+      "comparison_dimensions": [
+        "necessity",
+        "listener ownership",
+        "bind scope",
+        "external reachability",
+        "lifecycle",
+        "dependency cost",
+        "IPC/HTTP alternative"
+      ],
+      "decision_owner": "Runtime network policy",
+      "decision_phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "fallback": "Use typed Electron IPC or bounded owned loopback HTTP; current static evidence does not prove an active WebSocket dependency.",
+      "threshold_rule": "Do not invent an arbitrary numeric threshold. Record observed data and use only a threshold already mandated by the Master Plan, a documented platform constraint, a licence/safety requirement, or a user-approved product limit.",
+      "allowed_outcomes": [
+        "DEFAULT",
+        "DEVIATION"
+      ],
+      "conditional_preservation_rule": "Do not delete or disable the conditional capability merely to simplify packaging; select the Master default unless the evidence package proves the deviation condition.",
+      "downstream_tasks_by_outcome": {
+        "DEFAULT": "TASK-OUT-LOOPBACK-WEBSOCKETS-DEFAULT",
+        "DEVIATION": "TASK-OUT-LOOPBACK-WEBSOCKETS-DEVIATION"
+      },
+      "decision_task_id": "TASK-DEC-LOOPBACK-WEBSOCKETS",
+      "planning_status": "COMPLETE PACKAGE - FUTURE EVIDENCE AND DECISION PENDING"
+    },
+    {
+      "decision_package_id": "DEC-KEYRING",
+      "capability_id": "CAP-KEYRING",
+      "title": "OS keyring",
+      "master_requirement_ids": [
+        "REQ-MP1-1E48120290",
+        "REQ-MP1-727ECAB78C"
+      ],
+      "master_plan_sources": [
+        "01-EVERYTHING-WE-ARE-KEEPING.md"
+      ],
+      "master_plan_default": "Do not add a keyring dependency unless a retained local secret is identified; removed provider and account credentials do not justify it.",
+      "mandatory_default": "Do not add a keyring dependency unless a retained local secret is identified; removed provider and account credentials do not justify it.",
+      "deviation_condition": "A retained feature has a concrete secret that cannot safely remain in existing local configuration and native packaging evidence supports all applicable platforms.",
+      "evidence_to_collect": [
+        "Inventory retained secret values, prove platform keyring read/write/delete, upgrade recovery, uninstall behavior and packaged native-module loading without exposing removed provider settings."
+      ],
+      "exact_current_implementation_locations": [
+        "codebase/package.json::dependencies",
+        "codebase/main/infrastructure/persistence/database.js::settings",
+        "codebase/renderer/features/settings/"
+      ],
+      "test_method": "Inventory retained secret values, prove platform keyring read/write/delete, upgrade recovery, uninstall behavior and packaged native-module loading without exposing removed provider settings.",
+      "comparison_dimensions": [
+        "retained secret need",
+        "platform support",
+        "native packaging",
+        "migration",
+        "recovery",
+        "dependency surface"
+      ],
+      "decision_owner": "Settings and platform security",
+      "decision_phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "fallback": "Add no keyring dependency; current static evidence finds no keyring package and removed remote credentials stay deleted.",
+      "threshold_rule": "Do not invent an arbitrary numeric threshold. Record observed data and use only a threshold already mandated by the Master Plan, a documented platform constraint, a licence/safety requirement, or a user-approved product limit.",
+      "allowed_outcomes": [
+        "DEFAULT",
+        "DEVIATION"
+      ],
+      "conditional_preservation_rule": "Do not delete or disable the conditional capability merely to simplify packaging; select the Master default unless the evidence package proves the deviation condition.",
+      "downstream_tasks_by_outcome": {
+        "DEFAULT": "TASK-OUT-KEYRING-DEFAULT",
+        "DEVIATION": "TASK-OUT-KEYRING-DEVIATION"
+      },
+      "decision_task_id": "TASK-DEC-KEYRING",
+      "planning_status": "COMPLETE PACKAGE - FUTURE EVIDENCE AND DECISION PENDING"
+    },
+    {
+      "decision_package_id": "DEC-VOICE-FINGERPRINTING",
+      "capability_id": "CAP-VOICE-FINGERPRINTING",
+      "title": "Local voice fingerprinting",
+      "master_requirement_ids": [
+        "REQ-MP1-C576A9C830",
+        "REQ-MP1-727ECAB78C",
+        "REQ-MP2-91FC96AE90"
+      ],
+      "master_plan_sources": [
+        "01-EVERYTHING-WE-ARE-KEEPING.md",
+        "02-EVERYTHING-WE-ARE-DELETING.md"
+      ],
+      "master_plan_default": "Preserve current local speaker embeddings only while consent, deletion, false-match, migration and useful speaker-identification evidence are proven.",
+      "mandatory_default": "Preserve current local speaker embeddings only while consent, deletion, false-match, migration and useful speaker-identification evidence are proven.",
+      "deviation_condition": "Privacy or correctness evidence shows the feature cannot meet local-only consent, deletion and safe-match requirements, or a simpler non-persistent mapping meets the retained scope.",
+      "evidence_to_collect": [
+        "Use consented local fixtures to measure repeat identity, false matches, unknown-speaker behavior, deletion, export exclusion, schema upgrade, corrupt embedding recovery and offline-only execution."
+      ],
+      "exact_current_implementation_locations": [
+        "codebase/main/features/meetings/speakerEmbeddings.js",
+        "codebase/main/features/meetings/liveSpeakerIdentifier.js",
+        "codebase/main/infrastructure/persistence/database.js::speaker tables",
+        "codebase/main/ipc/ipcHandlers.js::speaker mapping handlers"
+      ],
+      "test_method": "Use consented local fixtures to measure repeat identity, false matches, unknown-speaker behavior, deletion, export exclusion, schema upgrade, corrupt embedding recovery and offline-only execution.",
+      "comparison_dimensions": [
+        "user value",
+        "consent",
+        "false-match risk",
+        "deletion",
+        "migration",
+        "local-only proof",
+        "storage cost"
+      ],
+      "decision_owner": "Diarization and speaker management",
+      "decision_phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "fallback": "Retain non-biometric per-transcript speaker labels and explicit manual naming without persistent voice fingerprints.",
+      "threshold_rule": "Do not invent an arbitrary numeric threshold. Record observed data and use only a threshold already mandated by the Master Plan, a documented platform constraint, a licence/safety requirement, or a user-approved product limit.",
+      "allowed_outcomes": [
+        "DEFAULT",
+        "DEVIATION"
+      ],
+      "conditional_preservation_rule": "Do not delete or disable the conditional capability merely to simplify packaging; select the Master default unless the evidence package proves the deviation condition.",
+      "downstream_tasks_by_outcome": {
+        "DEFAULT": "TASK-OUT-VOICE-FINGERPRINTING-DEFAULT",
+        "DEVIATION": "TASK-OUT-VOICE-FINGERPRINTING-DEVIATION"
+      },
+      "decision_task_id": "TASK-DEC-VOICE-FINGERPRINTING",
+      "planning_status": "COMPLETE PACKAGE - FUTURE EVIDENCE AND DECISION PENDING"
+    },
+    {
+      "decision_package_id": "DEC-MEETING-DETECTION",
+      "capability_id": "CAP-MEETING-DETECTION",
+      "title": "Local process-based meeting detection",
+      "master_requirement_ids": [
+        "REQ-MP1-574724F081",
+        "REQ-MP1-DD5B3C1B42",
+        "REQ-MP1-727ECAB78C"
+      ],
+      "master_plan_sources": [
+        "01-EVERYTHING-WE-ARE-KEEPING.md"
+      ],
+      "master_plan_default": "Preserve local process detection only when it improves meeting workflow without sending process data externally or producing disruptive false positives.",
+      "mandatory_default": "Preserve local process detection only when it improves meeting workflow without sending process data externally or producing disruptive false positives.",
+      "deviation_condition": "Representative local tests show unacceptable false positives, platform fragility, privacy cost or no meaningful workflow benefit.",
+      "evidence_to_collect": [
+        "Exercise supported and unrelated process fixtures, start/stop churn, permission failures, notification rate limits, disabled setting, no-network observation and platform-unavailable states."
+      ],
+      "exact_current_implementation_locations": [
+        "codebase/main/features/meetings/meetingProcessDetector.js",
+        "codebase/main/features/meetings/meetingDetectionEngine.js",
+        "codebase/main/desktop/windowManager.js::meeting notifications"
+      ],
+      "test_method": "Exercise supported and unrelated process fixtures, start/stop churn, permission failures, notification rate limits, disabled setting, no-network observation and platform-unavailable states.",
+      "comparison_dimensions": [
+        "precision",
+        "false positives",
+        "privacy",
+        "platform support",
+        "resource use",
+        "notification behavior",
+        "user control"
+      ],
+      "decision_owner": "Meeting workflow and platform integration",
+      "decision_phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "fallback": "Keep manual meeting start and local notifications; disable automatic detection by default where evidence is insufficient.",
+      "threshold_rule": "Do not invent an arbitrary numeric threshold. Record observed data and use only a threshold already mandated by the Master Plan, a documented platform constraint, a licence/safety requirement, or a user-approved product limit.",
+      "allowed_outcomes": [
+        "DEFAULT",
+        "DEVIATION"
+      ],
+      "conditional_preservation_rule": "Do not delete or disable the conditional capability merely to simplify packaging; select the Master default unless the evidence package proves the deviation condition.",
+      "downstream_tasks_by_outcome": {
+        "DEFAULT": "TASK-OUT-MEETING-DETECTION-DEFAULT",
+        "DEVIATION": "TASK-OUT-MEETING-DETECTION-DEVIATION"
+      },
+      "decision_task_id": "TASK-DEC-MEETING-DETECTION",
+      "planning_status": "COMPLETE PACKAGE - FUTURE EVIDENCE AND DECISION PENDING"
+    },
+    {
+      "decision_package_id": "DEC-NOTE-TEMPLATES",
+      "capability_id": "CAP-NOTE-TEMPLATES",
+      "title": "Local note templates",
+      "master_requirement_ids": [
+        "REQ-MP1-E8BCAAF24E",
+        "REQ-MP1-727ECAB78C"
+      ],
+      "master_plan_sources": [
+        "01-EVERYTHING-WE-ARE-KEEPING.md"
+      ],
+      "master_plan_default": "Do not add templates unless user workflows and a simple local data model demonstrate value without reintroducing remote AI or generic abstraction.",
+      "mandatory_default": "Do not add templates unless user workflows and a simple local data model demonstrate value without reintroducing remote AI or generic abstraction.",
+      "deviation_condition": "Existing notes can support a small local template schema and real workflows show repeatable value with safe export, backup and migration.",
+      "evidence_to_collect": [
+        "Prototype only after evidence; verify create/apply/edit/delete, rich-text integrity, backup/restore, migration, exact search and no remote-generation path."
+      ],
+      "exact_current_implementation_locations": [
+        "codebase/renderer/features/notes/",
+        "codebase/main/infrastructure/persistence/database.js::notes",
+        "codebase/preload/index.js::notes API"
+      ],
+      "test_method": "Prototype only after evidence; verify create/apply/edit/delete, rich-text integrity, backup/restore, migration, exact search and no remote-generation path.",
+      "comparison_dimensions": [
+        "workflow demand",
+        "schema simplicity",
+        "editor integrity",
+        "search",
+        "backup/restore",
+        "remote-AI exclusion"
+      ],
+      "decision_owner": "Notes organisation",
+      "decision_phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "fallback": "Keep existing local notes without templates; current static evidence does not prove a template implementation.",
+      "threshold_rule": "Do not invent an arbitrary numeric threshold. Record observed data and use only a threshold already mandated by the Master Plan, a documented platform constraint, a licence/safety requirement, or a user-approved product limit.",
+      "allowed_outcomes": [
+        "DEFAULT",
+        "DEVIATION"
+      ],
+      "conditional_preservation_rule": "Do not delete or disable the conditional capability merely to simplify packaging; select the Master default unless the evidence package proves the deviation condition.",
+      "downstream_tasks_by_outcome": {
+        "DEFAULT": "TASK-OUT-NOTE-TEMPLATES-DEFAULT",
+        "DEVIATION": "TASK-OUT-NOTE-TEMPLATES-DEVIATION"
+      },
+      "decision_task_id": "TASK-DEC-NOTE-TEMPLATES",
+      "planning_status": "COMPLETE PACKAGE - FUTURE EVIDENCE AND DECISION PENDING"
+    },
+    {
+      "decision_package_id": "DEC-PORTABLE-WINDOWS",
+      "capability_id": "CAP-PORTABLE-WINDOWS",
+      "title": "Portable Windows build",
+      "master_requirement_ids": [
+        "REQ-MP1-F8E37530EF",
+        "REQ-MP1-727ECAB78C"
+      ],
+      "master_plan_sources": [
+        "01-EVERYTHING-WE-ARE-KEEPING.md"
+      ],
+      "master_plan_default": "Preserve the configured portable target until real packaging evidence determines whether it is supportable alongside the required installer.",
+      "mandatory_default": "Preserve the configured portable target until real packaging evidence determines whether it is supportable alongside the required installer.",
+      "deviation_condition": "The portable artifact fails data-location, native helper, model, update-removal, licence, offline or supportability requirements and the required installer remains fully proven.",
+      "evidence_to_collect": [
+        "Build at the verified checkpoint, inspect contents, launch on a clean offline Windows account, verify writable data placement, all helpers/models, uninstall independence and no external traffic."
+      ],
+      "exact_current_implementation_locations": [
+        "codebase/electron-builder.json::win.target portable",
+        "codebase/main/index.js::userData",
+        "codebase/resources/",
+        "codebase/packaging/windows/"
+      ],
+      "test_method": "Build at the verified checkpoint, inspect contents, launch on a clean offline Windows account, verify writable data placement, all helpers/models, uninstall independence and no external traffic.",
+      "comparison_dimensions": [
+        "artifact integrity",
+        "data location",
+        "native helpers",
+        "model assets",
+        "offline launch",
+        "support burden",
+        "installer parity"
+      ],
+      "decision_owner": "Windows packaging",
+      "decision_phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "fallback": "Release the proven NSIS installer only while keeping portable configuration evidence for later review.",
+      "threshold_rule": "Do not invent an arbitrary numeric threshold. Record observed data and use only a threshold already mandated by the Master Plan, a documented platform constraint, a licence/safety requirement, or a user-approved product limit.",
+      "allowed_outcomes": [
+        "DEFAULT",
+        "DEVIATION"
+      ],
+      "conditional_preservation_rule": "Do not delete or disable the conditional capability merely to simplify packaging; select the Master default unless the evidence package proves the deviation condition.",
+      "downstream_tasks_by_outcome": {
+        "DEFAULT": "TASK-OUT-PORTABLE-WINDOWS-DEFAULT",
+        "DEVIATION": "TASK-OUT-PORTABLE-WINDOWS-DEVIATION"
+      },
+      "decision_task_id": "TASK-DEC-PORTABLE-WINDOWS",
+      "planning_status": "COMPLETE PACKAGE - FUTURE EVIDENCE AND DECISION PENDING"
+    },
+    {
+      "decision_package_id": "DEC-MACOS-LINUX",
+      "capability_id": "CAP-MACOS-LINUX",
+      "title": "macOS and Linux source and CI verification",
+      "master_requirement_ids": [
+        "REQ-MP1-8960D08ADB",
+        "REQ-MP1-C6E11ADAB3",
+        "REQ-MP1-727ECAB78C"
+      ],
+      "master_plan_sources": [
+        "01-EVERYTHING-WE-ARE-KEEPING.md"
+      ],
+      "master_plan_default": "Preserve platform source, build configuration and CI/static coverage; record unavailable physical hardware honestly without blocking the Windows release unless an explicit gate applies.",
+      "mandatory_default": "Preserve platform source, build configuration and CI/static coverage; record unavailable physical hardware honestly without blocking the Windows release unless an explicit gate applies.",
+      "deviation_condition": "Specific platform code is proven dead or unrecoverable only after ownership, build references, licence and replacement evidence satisfy preservation and deletion gates.",
+      "evidence_to_collect": [
+        "Run applicable type/static/unit/CI builds on target runners; on physical hardware record permission, hotkey, microphone, system-audio, paste and packaged offline results or HARDWARE UNAVAILABLE."
+      ],
+      "exact_current_implementation_locations": [
+        "codebase/native/helpers/macos/",
+        "codebase/native/helpers/linux/",
+        "codebase/packaging/macos/",
+        "codebase/packaging/linux/",
+        "codebase/electron-builder.json::mac/linux"
+      ],
+      "test_method": "Run applicable type/static/unit/CI builds on target runners; on physical hardware record permission, hotkey, microphone, system-audio, paste and packaged offline results or HARDWARE UNAVAILABLE.",
+      "comparison_dimensions": [
+        "source preservation",
+        "configuration",
+        "CI availability",
+        "native build",
+        "permissions",
+        "hardware evidence",
+        "Windows-gate applicability"
+      ],
+      "decision_owner": "Cross-platform source and release governance",
+      "decision_phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "fallback": "Preserve source/configuration and mark unexecuted hardware checks HARDWARE UNAVAILABLE; do not claim a platform pass.",
+      "threshold_rule": "Do not invent an arbitrary numeric threshold. Record observed data and use only a threshold already mandated by the Master Plan, a documented platform constraint, a licence/safety requirement, or a user-approved product limit.",
+      "allowed_outcomes": [
+        "DEFAULT",
+        "DEVIATION"
+      ],
+      "conditional_preservation_rule": "Do not delete or disable the conditional capability merely to simplify packaging; select the Master default unless the evidence package proves the deviation condition.",
+      "downstream_tasks_by_outcome": {
+        "DEFAULT": "TASK-OUT-MACOS-LINUX-DEFAULT",
+        "DEVIATION": "TASK-OUT-MACOS-LINUX-DEVIATION"
+      },
+      "decision_task_id": "TASK-DEC-MACOS-LINUX",
+      "planning_status": "COMPLETE PACKAGE - FUTURE EVIDENCE AND DECISION PENDING"
+    }
+  ]
+}

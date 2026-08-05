@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "mode": "READ-ONLY AUDIT",
+  "findings": [
+    {
+      "id": "PONY-001",
+      "path": "codebase/main/ipc/ipcHandlers.js",
+      "anchor": "registerIpcHandlers",
+      "category": "proven multi-responsibility monolith",
+      "evidence": "3,842 lines, 177 unique handler channels, 28 lint warnings across the main process audit; registrations span persistence, audio, meetings, notes, models, and shell.",
+      "owner": "Electron IPC boundary",
+      "target_owner": "Capability-owned IPC modules behind one registration facade",
+      "risk": "HIGH",
+      "blast_radius": "renderer/preload/main contracts and most retained workflows",
+      "permitted": "KEEP AND REORGANISE after complete caller/handler mapping",
+      "prerequisite": "Characterisation tests and real renderer/preload/main round trips",
+      "tests": [
+        "IPC contract inventory",
+        "real IPC round trips",
+        "typecheck"
+      ],
+      "decision": "ACCEPTED",
+      "reason": "Multiple responsibilities are proven; size alone is not the reason.",
+      "task": "TASK-22"
+    },
+    {
+      "id": "PONY-002",
+      "path": "codebase/main/infrastructure/persistence/database.js",
+      "anchor": "Database",
+      "category": "proven multi-responsibility monolith",
+      "evidence": "2,248 lines contain schema creation, four migrations, repositories/queries, backup/search/speaker/data maintenance responsibilities.",
+      "owner": "SQLite persistence",
+      "target_owner": "Persistence capabilities with a temporary compatibility facade",
+      "risk": "CRITICAL",
+      "blast_radius": "all durable user data and most IPC workflows",
+      "permitted": "KEEP AND REORGANISE only after migration and integrity fixtures",
+      "prerequisite": "Disposable real databases, backup/checksum evidence, characterisation tests",
+      "tests": [
+        "real SQLite fixtures",
+        "migration interruption",
+        "foreign-key integrity"
+      ],
+      "decision": "ACCEPTED",
+      "reason": "Responsibilities are independently evidenced; no schema rewrite is authorised.",
+      "task": "TASK-22"
+    },
+    {
+      "id": "PONY-003",
+      "path": "codebase/renderer/features/meetings/meetingRecordingStore.ts",
+      "anchor": "meetingRecordingStore",
+      "category": "state/service concentration",
+      "evidence": "1,099 lines coordinate capture, session state, transcription, recovery, IPC, and lifecycle behaviour.",
+      "owner": "Meeting recording",
+      "target_owner": "Meeting capability modules with one store contract",
+      "risk": "HIGH",
+      "blast_radius": "recording, recovery, transcription, renderer state",
+      "permitted": "KEEP AND REORGANISE after workflow proof",
+      "prerequisite": "Recording/recovery characterisation tests",
+      "tests": [
+        "recording state transitions",
+        "recovery fixture",
+        "real IPC round trip"
+      ],
+      "decision": "DEFERRED",
+      "reason": "Likely valuable, but native/audio lifecycle proof must precede decomposition.",
+      "task": "TASK-22"
+    },
+    {
+      "id": "PONY-004",
+      "path": "codebase/renderer/features/notes/components/PersonalNotesView.tsx",
+      "anchor": "PersonalNotesView",
+      "category": "UI responsibility concentration",
+      "evidence": "1,062 lines combine navigation, editing, folders/tags, search, and interaction state.",
+      "owner": "Personal notes",
+      "target_owner": "Notes feature with cohesive components",
+      "risk": "MEDIUM",
+      "blast_radius": "personal notes workflow",
+      "permitted": "KEEP AND REORGANISE after behaviour tests",
+      "prerequisite": "Notes workflow characterisation",
+      "tests": [
+        "notes create/edit/search/folder/tag workflow"
+      ],
+      "decision": "DEFERRED",
+      "reason": "Split boundaries require runtime interaction evidence, not line-count preference.",
+      "task": "TASK-22"
+    },
+    {
+      "id": "PONY-005",
+      "path": "codebase/main/features/dictation/clipboard.js",
+      "anchor": "clipboard integration",
+      "category": "large platform-sensitive module",
+      "evidence": "1,924 lines, but behaviour is concentrated around reliable cross-platform clipboard/paste handling.",
+      "owner": "Clipboard integration",
+      "target_owner": "Clipboard integration",
+      "risk": "HIGH",
+      "blast_radius": "primary dictation delivery path",
+      "permitted": "Preserve unless multiple responsibilities are proven",
+      "prerequisite": "Real Windows paste matrix",
+      "tests": [
+        "Windows paste integration"
+      ],
+      "decision": "REJECTED",
+      "reason": "Large size does not prove a safer decomposition; platform fallbacks are intentional complexity.",
+      "task": null
+    },
+    {
+      "id": "PONY-006",
+      "path": "codebase/main/features/dictation/hotkeyManager.js",
+      "anchor": "HotkeyManager",
+      "category": "large platform-sensitive module",
+      "evidence": "1,192 lines implement global hotkey modes, recovery, and native platform behaviour.",
+      "owner": "Global hotkey",
+      "target_owner": "Global hotkey",
+      "risk": "HIGH",
+      "blast_radius": "dictation activation",
+      "permitted": "Preserve unless callers and platform responsibilities prove a coherent extraction",
+      "prerequisite": "Real global-hotkey hardware/OS workflow",
+      "tests": [
+        "Windows hotkey registration and recovery"
+      ],
+      "decision": "REJECTED",
+      "reason": "No aesthetic split; native lifecycle cohesion outweighs file size.",
+      "task": null
+    },
+    {
+      "id": "PONY-007",
+      "path": "codebase/build-output/",
+      "anchor": "generated packaged copies",
+      "category": "generated files tracked beside source",
+      "evidence": "212 generated/build-output files polluted the initial source-symbol graph; one packaged onnxWorker.js exactly duplicates source.",
+      "owner": "Windows packaging",
+      "target_owner": "Generated build outputs outside source authority",
+      "risk": "LOW",
+      "blast_radius": "repository size and graph accuracy, not runtime source",
+      "permitted": "Remove generated outputs only after packaging provenance is captured",
+      "prerequisite": "Git/provenance recovery and reproducible package proof",
+      "tests": [
+        "Windows package reproduction"
+      ],
+      "decision": "ACCEPTED",
+      "reason": "Generated artifacts must remain inventoried but are not authoritative source nodes.",
+      "task": "TASK-24"
+    },
+    {
+      "id": "PONY-008",
+      "path": "codebase/main/index.js",
+      "anchor": "hotkey-listening-mode-changed",
+      "category": "dead IPC candidate",
+      "evidence": "One registered main-process channel had no direct ipcRenderer caller in static extraction; event direction/dynamic use remains possible.",
+      "owner": "Electron IPC boundary",
+      "target_owner": "Electron IPC boundary",
+      "risk": "MEDIUM",
+      "blast_radius": "hotkey settings/listening state",
+      "permitted": "Delete only after dynamic/runtime proof and all seven gates",
+      "prerequisite": "Runtime event trace and preload contract check",
+      "tests": [
+        "hotkey settings IPC round trip"
+      ],
+      "decision": "DEFERRED",
+      "reason": "A static no-caller result is a review candidate, never deletion authority.",
+      "task": "TASK-07"
+    },
+    {
+      "id": "PONY-009",
+      "path": "codebase/package.json",
+      "anchor": "dependencies and devDependencies",
+      "category": "unused dependency audit",
+      "evidence": "All 36 direct dependencies and 21 devDependencies have source/config string references; this is not runtime-use proof but yields no zero-reference deletion candidate.",
+      "owner": "Repository infrastructure",
+      "target_owner": "Capability-owned dependencies",
+      "risk": "MEDIUM",
+      "blast_radius": "build, package, native compatibility",
+      "permitted": "Remove only after retained-consumer and package evidence",
+      "prerequisite": "Task-by-task dependency reachability",
+      "tests": [
+        "typecheck",
+        "unit tests",
+        "production build",
+        "packaged launch"
+      ],
+      "decision": "REJECTED",
+      "reason": "No dependency is removable from reference counting alone.",
+      "task": null
+    },
+    {
+      "id": "PONY-010",
+      "path": "codebase/renderer/shared/",
+      "anchor": "shared",
+      "category": "generic dumping-ground candidate",
+      "evidence": "Contains cross-feature UI primitives, types, hooks, and utilities; static location alone does not prove misownership.",
+      "owner": "Renderer application",
+      "target_owner": "Cross-feature primitives or proven capability owner",
+      "risk": "MEDIUM",
+      "blast_radius": "renderer-wide imports",
+      "permitted": "Move only symbols with proven single-capability ownership",
+      "prerequisite": "Importer and call-site mapping",
+      "tests": [
+        "typecheck",
+        "affected renderer workflows"
+      ],
+      "decision": "DEFERRED",
+      "reason": "Shared code is not automatically waste; per-symbol ownership must drive moves.",
+      "task": "TASK-23"
+    },
+    {
+      "id": "PONY-011",
+      "path": "codebase/renderer/assets/logo.svg",
+      "anchor": "Mnemora Logo",
+      "category": "dead asset candidate",
+      "evidence": "Graphify semantic extraction found the asset, while TypeScript/compiler-assisted and repository reference mapping found no active source, build, or packaging consumer.",
+      "owner": "Renderer application",
+      "target_owner": "Renderer assets only if a retained consumer is proven",
+      "risk": "LOW",
+      "blast_radius": "branding resource only; potential hidden packaging/legal reference",
+      "permitted": "Remove only after packaging, legal, dynamic-path, and final reference gates",
+      "prerequisite": "Seven-gate asset deletion proof",
+      "tests": [
+        "renderer build",
+        "Windows package resource inspection"
+      ],
+      "decision": "DEFERRED",
+      "reason": "No active reference is evidence for review, not deletion authority.",
+      "task": "TASK-24"
+    },
+    {
+      "id": "PONY-012",
+      "path": "codebase/renderer/features/meetings/meetingRecordingStore.ts",
+      "anchor": "meetingRecordingStore.ts ↔ transcriptSpeakerState.ts",
+      "category": "circular dependency",
+      "evidence": "TypeScript compiler module resolution plus Tarjan SCC proves a two-file bidirectional import cycle across 455 resolved local edges.",
+      "owner": "Meeting recording",
+      "target_owner": "Meeting capability with one directional speaker-state contract",
+      "risk": "HIGH",
+      "blast_radius": "meeting recording state, transcript speaker assignments, renderer updates",
+      "permitted": "Break the cycle inside the coherent meeting/monolith batch without duplicating state logic",
+      "prerequisite": "Meeting recording and speaker-state characterisation tests",
+      "tests": [
+        "meeting store state transitions",
+        "speaker assignment workflow",
+        "typecheck"
+      ],
+      "decision": "ACCEPTED",
+      "reason": "The cycle is compiler-resolved and crosses two proven responsibilities; task 22 owns the safe extraction boundary.",
+      "task": "TASK-22"
+    }
+  ]
+}

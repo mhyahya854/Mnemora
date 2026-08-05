@@ -1,0 +1,370 @@
+{
+  "languages": [
+    {
+      "code": "auto",
+      "label": "Auto-detect",
+      "flag": "🌐",
+      "whisper": false
+    },
+    {
+      "code": "af",
+      "label": "Afrikaans",
+      "flag": "🇿🇦",
+      "whisper": true
+    },
+    {
+      "code": "ar",
+      "label": "Arabic",
+      "flag": "🇸🇦",
+      "whisper": true
+    },
+    {
+      "code": "hy",
+      "label": "Armenian",
+      "flag": "🇦🇲",
+      "whisper": true
+    },
+    {
+      "code": "az",
+      "label": "Azerbaijani",
+      "flag": "🇦🇿",
+      "whisper": true
+    },
+    {
+      "code": "be",
+      "label": "Belarusian",
+      "flag": "🇧🇾",
+      "whisper": true
+    },
+    {
+      "code": "bs",
+      "label": "Bosnian",
+      "flag": "🇧🇦",
+      "whisper": true
+    },
+    {
+      "code": "bg",
+      "label": "Bulgarian",
+      "flag": "🇧🇬",
+      "whisper": true
+    },
+    {
+      "code": "ca",
+      "label": "Catalan",
+      "flag": "🇪🇸",
+      "whisper": true
+    },
+    {
+      "code": "zh-CN",
+      "label": "Chinese (Simplified)",
+      "flag": "🇨🇳",
+      "whisper": true
+    },
+    {
+      "code": "zh-TW",
+      "label": "Chinese (Traditional)",
+      "flag": "🇹🇼",
+      "whisper": true
+    },
+    {
+      "code": "hr",
+      "label": "Croatian",
+      "flag": "🇭🇷",
+      "whisper": true
+    },
+    {
+      "code": "cs",
+      "label": "Czech",
+      "flag": "🇨🇿",
+      "whisper": true
+    },
+    {
+      "code": "da",
+      "label": "Danish",
+      "flag": "🇩🇰",
+      "whisper": true
+    },
+    {
+      "code": "nl",
+      "label": "Dutch",
+      "flag": "🇳🇱",
+      "whisper": true
+    },
+    {
+      "code": "en-US",
+      "label": "English (US)",
+      "flag": "🇺🇸",
+      "whisper": true
+    },
+    {
+      "code": "en-GB",
+      "label": "English (UK)",
+      "flag": "🇬🇧",
+      "whisper": true
+    },
+    {
+      "code": "et",
+      "label": "Estonian",
+      "flag": "🇪🇪",
+      "whisper": true
+    },
+    {
+      "code": "fi",
+      "label": "Finnish",
+      "flag": "🇫🇮",
+      "whisper": true
+    },
+    {
+      "code": "fr",
+      "label": "French",
+      "flag": "🇫🇷",
+      "whisper": true
+    },
+    {
+      "code": "gl",
+      "label": "Galician",
+      "flag": "🇪🇸",
+      "whisper": true
+    },
+    {
+      "code": "de",
+      "label": "German",
+      "flag": "🇩🇪",
+      "whisper": true
+    },
+    {
+      "code": "el",
+      "label": "Greek",
+      "flag": "🇬🇷",
+      "whisper": true
+    },
+    {
+      "code": "he",
+      "label": "Hebrew",
+      "flag": "🇮🇱",
+      "whisper": true
+    },
+    {
+      "code": "hi",
+      "label": "Hindi",
+      "flag": "🇮🇳",
+      "whisper": true
+    },
+    {
+      "code": "hu",
+      "label": "Hungarian",
+      "flag": "🇭🇺",
+      "whisper": true
+    },
+    {
+      "code": "is",
+      "label": "Icelandic",
+      "flag": "🇮🇸",
+      "whisper": true
+    },
+    {
+      "code": "id",
+      "label": "Indonesian",
+      "flag": "🇮🇩",
+      "whisper": true
+    },
+    {
+      "code": "it",
+      "label": "Italian",
+      "flag": "🇮🇹",
+      "whisper": true
+    },
+    {
+      "code": "ja",
+      "label": "Japanese",
+      "flag": "🇯🇵",
+      "whisper": true
+    },
+    {
+      "code": "kn",
+      "label": "Kannada",
+      "flag": "🇮🇳",
+      "whisper": true
+    },
+    {
+      "code": "kk",
+      "label": "Kazakh",
+      "flag": "🇰🇿",
+      "whisper": true
+    },
+    {
+      "code": "ko",
+      "label": "Korean",
+      "flag": "🇰🇷",
+      "whisper": true
+    },
+    {
+      "code": "lv",
+      "label": "Latvian",
+      "flag": "🇱🇻",
+      "whisper": true
+    },
+    {
+      "code": "lt",
+      "label": "Lithuanian",
+      "flag": "🇱🇹",
+      "whisper": true
+    },
+    {
+      "code": "mk",
+      "label": "Macedonian",
+      "flag": "🇲🇰",
+      "whisper": true
+    },
+    {
+      "code": "ms",
+      "label": "Malay",
+      "flag": "🇲🇾",
+      "whisper": true
+    },
+    {
+      "code": "mt",
+      "label": "Maltese",
+      "flag": "🇲🇹",
+      "whisper": false
+    },
+    {
+      "code": "mr",
+      "label": "Marathi",
+      "flag": "🇮🇳",
+      "whisper": true
+    },
+    {
+      "code": "mi",
+      "label": "Maori",
+      "flag": "🇳🇿",
+      "whisper": true
+    },
+    {
+      "code": "ne",
+      "label": "Nepali",
+      "flag": "🇳🇵",
+      "whisper": true
+    },
+    {
+      "code": "no",
+      "label": "Norwegian",
+      "flag": "🇳🇴",
+      "whisper": true
+    },
+    {
+      "code": "fa",
+      "label": "Persian",
+      "flag": "🇮🇷",
+      "whisper": true
+    },
+    {
+      "code": "pl",
+      "label": "Polish",
+      "flag": "🇵🇱",
+      "whisper": true
+    },
+    {
+      "code": "pt",
+      "label": "Portuguese",
+      "flag": "🇵🇹",
+      "whisper": true
+    },
+    {
+      "code": "ro",
+      "label": "Romanian",
+      "flag": "🇷🇴",
+      "whisper": true
+    },
+    {
+      "code": "ru",
+      "label": "Russian",
+      "flag": "🇷🇺",
+      "whisper": true
+    },
+    {
+      "code": "sr",
+      "label": "Serbian",
+      "flag": "🇷🇸",
+      "whisper": true
+    },
+    {
+      "code": "sk",
+      "label": "Slovak",
+      "flag": "🇸🇰",
+      "whisper": true
+    },
+    {
+      "code": "sl",
+      "label": "Slovenian",
+      "flag": "🇸🇮",
+      "whisper": true
+    },
+    {
+      "code": "es",
+      "label": "Spanish",
+      "flag": "🇪🇸",
+      "whisper": true
+    },
+    {
+      "code": "sw",
+      "label": "Swahili",
+      "flag": "🇰🇪",
+      "whisper": true
+    },
+    {
+      "code": "sv",
+      "label": "Swedish",
+      "flag": "🇸🇪",
+      "whisper": true
+    },
+    {
+      "code": "tl",
+      "label": "Tagalog",
+      "flag": "🇵🇭",
+      "whisper": true
+    },
+    {
+      "code": "ta",
+      "label": "Tamil",
+      "flag": "🇮🇳",
+      "whisper": true
+    },
+    {
+      "code": "th",
+      "label": "Thai",
+      "flag": "🇹🇭",
+      "whisper": true
+    },
+    {
+      "code": "tr",
+      "label": "Turkish",
+      "flag": "🇹🇷",
+      "whisper": true
+    },
+    {
+      "code": "uk",
+      "label": "Ukrainian",
+      "flag": "🇺🇦",
+      "whisper": true
+    },
+    {
+      "code": "ur",
+      "label": "Urdu",
+      "flag": "🇵🇰",
+      "whisper": true
+    },
+    {
+      "code": "vi",
+      "label": "Vietnamese",
+      "flag": "🇻🇳",
+      "whisper": true
+    },
+    {
+      "code": "cy",
+      "label": "Welsh",
+      "flag": "🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+      "whisper": true
+    }
+  ]
+}

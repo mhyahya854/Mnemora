@@ -1,0 +1,1 @@
+codebase/resources/bin/whisper-models/ggml-base.bin filter=lfs diff=lfs merge=lfs -text

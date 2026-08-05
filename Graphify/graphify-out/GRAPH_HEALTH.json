@@ -1,0 +1,131 @@
+{
+  "node_count": 3651,
+  "raw_edge_count": 6963,
+  "non_object_edges": 0,
+  "missing_endpoint_edges": 0,
+  "dangling_endpoint_edges": 0,
+  "self_loop_edges": 0,
+  "valid_candidate_edges": 6963,
+  "exact_duplicate_edges": 0,
+  "directed_unique_endpoint_pairs": 6856,
+  "directed_same_endpoint_collapsed_edges": 107,
+  "undirected_unique_endpoint_pairs": 6852,
+  "undirected_same_endpoint_collapsed_edges": 111,
+  "same_endpoint_group_count": 107,
+  "relation_variant_groups": 100,
+  "source_file_variant_groups": 0,
+  "source_location_variant_groups": 2,
+  "context_variant_groups": 7,
+  "post_build_graph_type": "Graph",
+  "post_build_node_count": 3641,
+  "post_build_edge_count": 6837,
+  "post_build_error": "",
+  "producer_suppression": {
+    "path": "C:\\Users\\mhyah\\Downloads\\Code\\Mnemora\\Graphify\\graphify-out\\.graphify_extract.json",
+    "total_sites": 0,
+    "sites": [],
+    "error": ""
+  },
+  "examples": [
+    {
+      "source": "ext_codebase_main_desktop_windowconfig_js",
+      "target": "c_users_mhyah_downloads_code_mnemora_codebase_main_desktop_windowconfig_windowpositionutil",
+      "edge_count": 2,
+      "relations": [
+        "contains",
+        "indirect_call"
+      ],
+      "source_files": [
+        "codebase/main/desktop/windowConfig.js"
+      ],
+      "source_locations": [
+        "L148",
+        "L232"
+      ],
+      "contexts": [
+        "",
+        "collection"
+      ]
+    },
+    {
+      "source": "ext_codebase_main_features_dictation_correctionlearner_js",
+      "target": "c_users_mhyah_downloads_code_mnemora_codebase_main_features_dictation_correctionlearner_extractcorrections",
+      "edge_count": 2,
+      "relations": [
+        "contains",
+        "indirect_call"
+      ],
+      "source_files": [
+        "codebase/main/features/dictation/correctionLearner.js"
+      ],
+      "source_locations": [
+        "L137",
+        "L179"
+      ],
+      "contexts": [
+        "",
+        "collection"
+      ]
+    },
+    {
+      "source": "ext_codebase_main_features_dictation_hotkeylist_js",
+      "target": "c_users_mhyah_downloads_code_mnemora_codebase_main_features_dictation_hotkeylist_parsehotkeylist",
+      "edge_count": 2,
+      "relations": [
+        "contains",
+        "indirect_call"
+      ],
+      "source_files": [
+        "codebase/main/features/dictation/hotkeyList.js"
+      ],
+      "source_locations": [
+        "L17",
+        "L50"
+      ],
+      "contexts": [
+        "",
+        "collection"
+      ]
+    },
+    {
+      "source": "ext_codebase_main_features_dictation_hotkeylist_js",
+      "target": "c_users_mhyah_downloads_code_mnemora_codebase_main_features_dictation_hotkeylist_serializehotkeylist",
+      "edge_count": 2,
+      "relations": [
+        "contains",
+        "indirect_call"
+      ],
+      "source_files": [
+        "codebase/main/features/dictation/hotkeyList.js"
+      ],
+      "source_locations": [
+        "L45",
+        "L51"
+      ],
+      "contexts": [
+        "",
+        "collection"
+      ]
+    },
+    {
+      "source": "ext_codebase_main_features_dictation_smartspacing_js",
+      "target": "c_users_mhyah_downloads_code_mnemora_codebase_main_features_dictation_smartspacing_applysmartspacing",
+      "edge_count": 2,
+      "relations": [
+        "contains",
+        "indirect_call"
+      ],
+      "source_files": [
+        "codebase/main/features/dictation/smartSpacing.js"
+      ],
+      "source_locations": [
+        "L29",
+        "L8"
+      ],
+      "contexts": [
+        "",
+        "collection"
+      ]
+    }
+  ]
+}

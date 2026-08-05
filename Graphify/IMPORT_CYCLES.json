@@ -1,0 +1,89 @@
+{
+  "analyzer": "TypeScript compiler module resolution + Tarjan SCC",
+  "generated_at": "2026-07-28T10:29:30.226Z",
+  "files": 267,
+  "import_specifiers": 1105,
+  "resolved_local_edges": 455,
+  "unresolved_relative_imports": [],
+  "non_code_asset_references": [
+    {
+      "from": "codebase/main/features/meetings/liveSpeakerIdentifier.js",
+      "specifier": "../../../shared/config/speakerDetection.json",
+      "target": "codebase/shared/config/speakerDetection.json"
+    },
+    {
+      "from": "codebase/main/features/transcription/whisper.js",
+      "specifier": "./modelRegistryData.json",
+      "target": "codebase/main/features/transcription/modelRegistryData.json"
+    },
+    {
+      "from": "codebase/main/features/transcription/whisperVadConfig.js",
+      "specifier": "../../../shared/config/whisperVad.json",
+      "target": "codebase/shared/config/whisperVad.json"
+    },
+    {
+      "from": "codebase/main/infrastructure/runtime/i18nMain.js",
+      "specifier": "../../../shared/i18n/en/translation.json",
+      "target": "codebase/shared/i18n/en/translation.json"
+    },
+    {
+      "from": "codebase/main/ipc/ipcHandlers.js",
+      "specifier": "../../shared/config/speakerDetection.json",
+      "target": "codebase/shared/config/speakerDetection.json"
+    },
+    {
+      "from": "codebase/renderer/app/components/ControlPanelSidebar.tsx",
+      "specifier": "../../assets/icon.png",
+      "target": "codebase/renderer/assets/icon.png"
+    },
+    {
+      "from": "codebase/renderer/app/main.jsx",
+      "specifier": "./index.css",
+      "target": "codebase/renderer/app/index.css"
+    },
+    {
+      "from": "codebase/renderer/features/dictation/App.jsx",
+      "specifier": "../../app/index.css",
+      "target": "codebase/renderer/app/index.css"
+    },
+    {
+      "from": "codebase/renderer/features/meetings/meetingRecordingStore.ts",
+      "specifier": "../../../shared/config/speakerDetection.json",
+      "target": "codebase/shared/config/speakerDetection.json"
+    },
+    {
+      "from": "codebase/renderer/features/settings/settingsStore.ts",
+      "specifier": "../../../shared/config/whisperVad.json",
+      "target": "codebase/shared/config/whisperVad.json"
+    },
+    {
+      "from": "codebase/renderer/features/transcription/components/LanguageSelector.tsx",
+      "specifier": "../languageRegistry.json",
+      "target": "codebase/renderer/features/transcription/languageRegistry.json"
+    },
+    {
+      "from": "codebase/renderer/shared/i18n.ts",
+      "specifier": "../../shared/i18n/en/translation.json",
+      "target": "codebase/shared/i18n/en/translation.json"
+    }
+  ],
+  "cycles": [
+    {
+      "id": "CYCLE-001",
+      "files": [
+        "codebase/renderer/features/meetings/meetingRecordingStore.ts",
+        "codebase/renderer/features/meetings/transcriptSpeakerState.ts"
+      ],
+      "edges": [
+        {
+          "from": "codebase/renderer/features/meetings/transcriptSpeakerState.ts",
+          "to": "codebase/renderer/features/meetings/meetingRecordingStore.ts"
+        },
+        {
+          "from": "codebase/renderer/features/meetings/meetingRecordingStore.ts",
+          "to": "codebase/renderer/features/meetings/transcriptSpeakerState.ts"
+        }
+      ]
+    }
+  ]
+}

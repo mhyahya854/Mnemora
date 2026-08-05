@@ -1,0 +1,289 @@
+{
+  "schema_version": 3,
+  "generated_at": "2026-08-02T09:12:01.515369Z",
+  "scope": "Graphify authorities, reports, tools and immutable Master Plan; genuine graphify-out evidence excluded and separately preserved",
+  "self_excluded": true,
+  "file_count": 56,
+  "files": [
+    {
+      "path": "CAPABILITY_REGISTRY.json",
+      "size_bytes": 1453607,
+      "sha256": "E165466D3A8C1D6E67818177EBAD74DF8EB8BA361C6859281B7B5A09EE405C13"
+    },
+    {
+      "path": "CAPABILITY_REGISTRY.md",
+      "size_bytes": 25679,
+      "sha256": "F5DEA42135E768AC86EFC78F65A5143845451E578453B5BACE8016FB05268F52"
+    },
+    {
+      "path": "CIRCULAR_DEPENDENCIES.md",
+      "size_bytes": 940,
+      "sha256": "96DC343B4CC3271415388231F7226991CD1427AA9E2DB5C8B5C4D223C6C543F9"
+    },
+    {
+      "path": "COMPLETION_TRACKER.md",
+      "size_bytes": 2388,
+      "sha256": "31022B0B7E52FB7AE4DB6BD60AA5388E1AF20EAEC2A840BBA2633142CAA6EBD8"
+    },
+    {
+      "path": "CONDITIONAL_DECISION_PACKAGES.json",
+      "size_bytes": 33425,
+      "sha256": "A60464F2E7DD9CC8FD0C627592AAA56614E98B10ADAD13944B844C4D8F63DF4E"
+    },
+    {
+      "path": "CURRENT_ARCHITECTURE.md",
+      "size_bytes": 4827,
+      "sha256": "189F9F7C1896658FFCC5BFBCBBB74769169B839D3A33CCCC0B89F323ED2C3329"
+    },
+    {
+      "path": "DATABASE_AND_DATA_GRAPH.md",
+      "size_bytes": 96780,
+      "sha256": "D7E5FC7DBE24A8A201F92D5B5173D555ABA8B34D255DCD81130590E92C46AD8B"
+    },
+    {
+      "path": "DELETED_ITEMS_LEDGER.md",
+      "size_bytes": 3194,
+      "sha256": "537D21A136CCBB2BC3F57B81730EDD4DBC411DCE18BA2CF2865D63A30B5A26FD"
+    },
+    {
+      "path": "DEPENDENCY_GRAPH.md",
+      "size_bytes": 1286,
+      "sha256": "C94DFA9AFD47A0996CF82A2C7BF32E4BD7895EA97288807E83BE6B3B737EA40A"
+    },
+    {
+      "path": "EXACT_LOCATION_REGISTRY.json",
+      "size_bytes": 2636836,
+      "sha256": "B56272FDA7B41FE1D382DD11875BC743624BB2333D496A882FCCE1FB90D2B9F3"
+    },
+    {
+      "path": "FOLDER_OWNERSHIP_MAP.md",
+      "size_bytes": 3124,
+      "sha256": "A5BE063990A9089A4FA6C851FDADD3C655A58B9C03EA6A3C78036CFB4D6281DE"
+    },
+    {
+      "path": "GRAPH_CONSISTENCY_REPORT.json",
+      "size_bytes": 829,
+      "sha256": "14621BBFDA5CA468C2D8BBDAEC73299E56C22AE3391A3342DF5D8618E7B1B753"
+    },
+    {
+      "path": "GRAPH_CONSISTENCY_REPORT.md",
+      "size_bytes": 233,
+      "sha256": "DB272950934F941C5F1D09C3D31E4EAC644BC06F8BF738A83D9735E6C8F41B10"
+    },
+    {
+      "path": "GRAPHIFY_READINESS_REPORT.md",
+      "size_bytes": 350,
+      "sha256": "7F5A7D3DA4D1416E4DED1905E5E17709AFE7D87A6B2D4B9967416BCB3BA3A886"
+    },
+    {
+      "path": "IMPLEMENTATION_QUEUE.json",
+      "size_bytes": 3052033,
+      "sha256": "45549087F44460ED9775E6C125A227F147FD7C75ADA859E0B5A0C883F972F274"
+    },
+    {
+      "path": "IMPLEMENTATION_QUEUE.md",
+      "size_bytes": 35086,
+      "sha256": "7BB62BEDFD3796D4F2A3CD763C3CC4457555DB75709D683E1367D4D9DB45936C"
+    },
+    {
+      "path": "IMPORT_AND_CALL_MAP.md",
+      "size_bytes": 130202,
+      "sha256": "F3B310D09FF1A4040106FAC8F44AA6B4368CE7097778A51F214BED13D0B8CA1D"
+    },
+    {
+      "path": "IMPORT_CYCLES.json",
+      "size_bytes": 3229,
+      "sha256": "414977A144677800C4AB91AE3E67FE18400882E64ED9E8B31506602CB558F32C"
+    },
+    {
+      "path": "INTERPRETATION_REGISTER.json",
+      "size_bytes": 9999,
+      "sha256": "8FE0A05876DD0AEE1D946696EFFBF9BD58972BA641C43FE28EE6D4E9B5CA73CF"
+    },
+    {
+      "path": "Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
+      "size_bytes": 17082,
+      "sha256": "BDF185A823422BCAA9BFEBA815A6852D8F7A5CD46B64714B2CD1DE3357A67F64"
+    },
+    {
+      "path": "Master Plan/02-EVERYTHING-WE-ARE-DELETING.md",
+      "size_bytes": 14448,
+      "sha256": "76B6EEC15778B1928F2CD9C0F73FA68C9F3363493062E31E0C904E620DE0AAC3"
+    },
+    {
+      "path": "Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+      "size_bytes": 35296,
+      "sha256": "5E076498731C35ACF314904AAB3A39671F7026A166B5E847EFE3CCD4CF07304E"
+    },
+    {
+      "path": "MASTER_REQUIREMENT_REGISTER.json",
+      "size_bytes": 1239785,
+      "sha256": "658BD710558E052BC92A73940E3ACFD2F8EBF7E40B0903E3950E63543970FF1E"
+    },
+    {
+      "path": "MOVE_LEDGER.md",
+      "size_bytes": 1538,
+      "sha256": "8AA5C2AF5382398D42D67109F7241114D73A28DEB1BB73241844E16E8E4DB05A"
+    },
+    {
+      "path": "NATIVE_MODEL_BINARY_GRAPH.md",
+      "size_bytes": 40610,
+      "sha256": "98F7E1248D9D6AEBE3391A4590E06F59AAA4D1200F966CD797C834B799350C88"
+    },
+    {
+      "path": "PLANNING_BASELINE.md",
+      "size_bytes": 6793,
+      "sha256": "7F7DB6F1ABB93B89654723422DE5A44A0B4A6DE710769F0E12B3A9D583E8FA11"
+    },
+    {
+      "path": "PLANNING_COUNTS.md",
+      "size_bytes": 1149,
+      "sha256": "93EFC234C447412F2A5FD789441BC21FC48ECC88F798B3921F757484550C3F3B"
+    },
+    {
+      "path": "PLANNING_VALIDATION_REPORT.json",
+      "size_bytes": 26867,
+      "sha256": "92917FEE0BAA4A0A53EDC68B4080209579F367F733D512D475B3449DE8D341DE"
+    },
+    {
+      "path": "PLANNING_VALIDATION_REPORT.md",
+      "size_bytes": 3244,
+      "sha256": "BF5075447F6708CCEB87335A087818D0ECF68B20614507618AD296C09FF6DD31"
+    },
+    {
+      "path": "PONYTAIL_AUDIT.md",
+      "size_bytes": 696,
+      "sha256": "DA03537D990B6AA5B336DF6263A1C4079CE96E73AC4FD671ECE10432BDD1BBF8"
+    },
+    {
+      "path": "PONYTAIL_FINDINGS.json",
+      "size_bytes": 11521,
+      "sha256": "13A60D54A292CCC98FAE5007FF105095186D869DBE98A99817A6C2AC3BE23341"
+    },
+    {
+      "path": "READINESS_GATE.json",
+      "size_bytes": 383,
+      "sha256": "D0644A4FBBED3AF2FA62944A0170AD63FD3D8508FBA5FC28BF75AF790BE40515"
+    },
+    {
+      "path": "READINESS_GATE.md",
+      "size_bytes": 245,
+      "sha256": "FCC46C847E750D3ACF665CD0DD3E67D6CA691FF5BCA3D562B9FE8BE8AF3167D2"
+    },
+    {
+      "path": "REGRESSION_RESULTS.md",
+      "size_bytes": 792,
+      "sha256": "3E3B1F99A7A869500ECE30BF48BCF99A3D2330539924815F65D6FF7D2A3E61D7"
+    },
+    {
+      "path": "RELEASE_GATE_PLAN.json",
+      "size_bytes": 98561,
+      "sha256": "7F8A94C7B81E6F3FE5A9626BF3B5CF5BBB51964AA6BD0BF45A53062A5C41C9E2"
+    },
+    {
+      "path": "REPLACEMENT_MAP.md",
+      "size_bytes": 5093,
+      "sha256": "AB83868254C8A9214EB17BEA047129182B1314B93CD6FAFD1EABB8C879727A06"
+    },
+    {
+      "path": "REPOSITORY_FILE_INVENTORY.json",
+      "size_bytes": 15528257,
+      "sha256": "B75B44C5D34C3828617270849EDDE1F70DA2DECD0690F78A2B09268C638D5250"
+    },
+    {
+      "path": "REPOSITORY_FINGERPRINT.json",
+      "size_bytes": 62677,
+      "sha256": "2BA09539E645B2B1337A0C6D66B5209D20DA9F96DC35BA91449A6BEF2F685770"
+    },
+    {
+      "path": "REPOSITORY_INVENTORY.md",
+      "size_bytes": 1878,
+      "sha256": "FBB18B329C399B1AA4B327BCE1E44CBBB581FD3AF674240FA25C5D994ECBDFAF"
+    },
+    {
+      "path": "RUN_STATE.md",
+      "size_bytes": 1932,
+      "sha256": "7CEB14101AC8CEB65364EA6308A2A5140D8C90F0C8C960BF76006521F6DDE97A"
+    },
+    {
+      "path": "RUNTIME_CHAIN_MAP.md",
+      "size_bytes": 578479,
+      "sha256": "4888639C0E268589EEB97AF6FE0AFAC1BB18516D69989EA7170B6D43779F5659"
+    },
+    {
+      "path": "START-HERE.md",
+      "size_bytes": 7643,
+      "sha256": "0499DBA9561354F9CEF7CA2A0D896C18C0D090F7A4B0FC1D80133D07F794A1A5"
+    },
+    {
+      "path": "TARGET_ARCHITECTURE.md",
+      "size_bytes": 17341,
+      "sha256": "A4BDF9C94D40F6ADE9246AD7AA702B58B2C2B8BE14FC75628FF03CFBCD5435F1"
+    },
+    {
+      "path": "TEST_MATRIX.json",
+      "size_bytes": 630316,
+      "sha256": "EC721272087A2E3EEAB07DE5216B5C95DE07B28A55B000F4C14FA154E8EE34EA"
+    },
+    {
+      "path": "TEST_MATRIX.md",
+      "size_bytes": 21817,
+      "sha256": "9C850564FC3B033A314E3F3D74E04D997D90B2A28214F3D3983CF3B366149D3D"
+    },
+    {
+      "path": "THIRD_PARTY_CODE_REGISTER.md",
+      "size_bytes": 29443,
+      "sha256": "716791901097EB675E642897CAC459CE9EE6D636705DC4E7581EA959DAF2D2E2"
+    },
+    {
+      "path": "TOOL_EXECUTION_LOG.md",
+      "size_bytes": 5370,
+      "sha256": "009B6EE0FC908483EEB4F39FA22CA5771D0D040C1F833EF8683140A5908EA60C"
+    },
+    {
+      "path": "tools/analyze_import_cycles.cjs",
+      "size_bytes": 4484,
+      "sha256": "A608EF25A64E71C84F95F06FC0A1A529C5ED9001D477DE4F1088F39B84E39BFC"
+    },
+    {
+      "path": "tools/build_knowledge_layer.py",
+      "size_bytes": 149373,
+      "sha256": "BB81D2BF0993C5B53F8DF18D91FAABECDA8FF95C57469D4615C194109D0C481A"
+    },
+    {
+      "path": "tools/complete_planning.py",
+      "size_bytes": 213589,
+      "sha256": "B342022EF818ACF37F099E84B5F340B7C94AA3CB2E1ABEF7D4ED71A9D4D0332E"
+    },
+    {
+      "path": "tools/run_second_graphify_scan.py",
+      "size_bytes": 13774,
+      "sha256": "FA1424893054287EC6BBDFDE9E719F7D3A06C114488C53D3790A6FB3902F4C8B"
+    },
+    {
+      "path": "tools/semantic_rules.py",
+      "size_bytes": 51490,
+      "sha256": "C2858A1D978B0C3CC6129004170856685A430CCA0E40BE5158BC74B8E51C42CC"
+    },
+    {
+      "path": "tools/semantic_validator.py",
+      "size_bytes": 72138,
+      "sha256": "D2EFCC53E3EB2242E28C235AF97C1AF96C5FBF678A5E9F50DEC4A7810B4EB2AE"
+    },
+    {
+      "path": "tools/validate_planning.py",
+      "size_bytes": 198,
+      "sha256": "462679EF4B50D6291B4299DE16103DE8F03FEE537C4BA5BC3A33DD078513A025"
+    },
+    {
+      "path": "tools/verify_knowledge_layer.py",
+      "size_bytes": 18058,
+      "sha256": "B53D35E16ACB4045D582FFAC9252728C61040DE223E5BA7CA9C473DD255C1116"
+    },
+    {
+      "path": "VERIFICATION_AUDIT.json",
+      "size_bytes": 24220,
+      "sha256": "AE5061D20B71E45E86F54F7414BFE646F83A4C91F79A05D4E1E0C13F7EF698B8"
+    }
+  ]
+}

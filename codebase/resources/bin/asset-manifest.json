@@ -1,0 +1,108 @@
+{
+  "formatVersion": 1,
+  "appVersion": "1.7.5",
+  "platform": "win32",
+  "arch": "x64",
+  "assets": [
+    {
+      "path": "whisper-server-win32-x64.exe",
+      "size": 2081792,
+      "sha256": "8c1a4ddc5bfd454bea970942e7756023da1c2016d08621d2ea618b8683fdec04"
+    },
+    {
+      "path": "whisper-models/ggml-base.bin",
+      "size": 147951465,
+      "sha256": "60ed5bc3dd14eea856493d334349b405782ddcaf0028d4b5df4088345fba2efe"
+    },
+    {
+      "path": "qdrant-win32-x64.exe",
+      "size": 85080576,
+      "sha256": "b029d8b1c54ee14b164c93cc60f722ff87dae9f6379f779cd378f5e33b17474e"
+    },
+    {
+      "path": "sherpa-onnx-diarize-win32-x64.exe",
+      "size": 616960,
+      "sha256": "d25bc101c701a2a82fa9f74bf0f80c624ed1064f2433c3ca4bdef8383d0ad0cf"
+    },
+    {
+      "path": "all-MiniLM-L6-v2/model.onnx",
+      "size": 90405214,
+      "sha256": "6fd5d72fe4589f189f8ebc006442dbb529bb7ce38f8082112682524616046452"
+    },
+    {
+      "path": "all-MiniLM-L6-v2/tokenizer.json",
+      "size": 466247,
+      "sha256": "be50c3628f2bf5bb5e3a7f17b1f74611b2561a3a27eeab05e5aa30f411572037"
+    },
+    {
+      "path": "diarization-models/sherpa-onnx-pyannote-segmentation-3-0/model.onnx",
+      "size": 5992913,
+      "sha256": "220ad67ca923bef2fa91f2390c786097bf305bceb5e261d4af67b38e938e1079"
+    },
+    {
+      "path": "diarization-models/3dspeaker_speech_campplus_sv_en_voxceleb_16k.onnx",
+      "size": 29596978,
+      "sha256": "357a834f702b80161e5b981182c038e18553c1f2ca752ed6cec2052365d4129b"
+    },
+    {
+      "path": "diarization-models/silero_vad.onnx",
+      "size": 643854,
+      "sha256": "9e2449e1087496d8d4caba907f23e0bd3f78d91fa552479bb9c23ac09cbb1fd6"
+    },
+    {
+      "path": "whisper-vad/ggml-silero-v5.1.2.bin",
+      "size": 885098,
+      "sha256": "29940d98d42b91fbd05ce489f3ecf7c72f0a42f027e4875919a28fb4c04ea2cf"
+    },
+    {
+      "path": "meeting-aec-helper-win32-x64.exe",
+      "size": 898048,
+      "sha256": "728802049292f3ae1f5cffdabfe42ff4adde299cec619a916fe1ce88c7570b76"
+    },
+    {
+      "path": "nircmd.exe",
+      "size": 119808,
+      "sha256": "2e81e048ab419fdc6e5f4336a951bd282ed6b740048dc38d7673678ee3490cda"
+    },
+    {
+      "path": "windows-fast-paste.exe",
+      "size": 144384,
+      "sha256": "b04ed9e848983532aff4117656df4ea0781c48040f94fc40768bd48bfd222b05"
+    },
+    {
+      "path": "windows-key-listener.exe",
+      "size": 149504,
+      "sha256": "f63ddff574b081efb9e560b4b7d0cb469ab93df77e9a371e552f83203da84655"
+    },
+    {
+      "path": "windows-system-audio-helper.exe",
+      "size": 155648,
+      "sha256": "18537faffbc15350d078f90188e4d0d297c867b0b922413de4dd3e6e105f7108"
+    },
+    {
+      "path": "cargs.dll",
+      "size": 139264,
+      "sha256": "c32ca0d832fbad08180f1cae214a021367b96e66cfd0fa8b91574d307680c9df"
+    },
+    {
+      "path": "onnxruntime.dll",
+      "size": 14186016,
+      "sha256": "dec964ab1ee36cc9b0ae247d13b376627992fc57dec0454354017ab8fd84f1ea"
+    },
+    {
+      "path": "onnxruntime_providers_shared.dll",
+      "size": 22088,
+      "sha256": "a2b3a50956aa75a9879c8472bc7df4f7a8072bcd2db19a1b7d988e7688f293ef"
+    },
+    {
+      "path": "sherpa-onnx-c-api.dll",
+      "size": 4013056,
+      "sha256": "15ee91e675754bae2fc702eb66af9769738b69be77ab0455d5312a6df0f4fcad"
+    },
+    {
+      "path": "sherpa-onnx-cxx-api.dll",
+      "size": 200704,
+      "sha256": "787204f23c337ed93f88fd06019c123897902f1a2b9e3ad61c688c59f8e5f1e4"
+    }
+  ]
+}

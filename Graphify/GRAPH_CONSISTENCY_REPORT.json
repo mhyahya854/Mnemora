@@ -1,0 +1,32 @@
+{
+  "schema_version": 3,
+  "validated_at": "2026-08-02T09:12:01.515369Z",
+  "verdict": "PASS",
+  "requirements": 536,
+  "capabilities": 120,
+  "tasks": 158,
+  "exact_locations": 759,
+  "dependency_graph": {
+    "task_nodes": 158,
+    "dependency_edges": 323,
+    "root_tasks": [
+      "TASK-GOV-001-PROVENANCE-BASELINE"
+    ],
+    "leaf_tasks": [
+      "TASK-REL-11-AUDIT"
+    ],
+    "maximum_dependency_depth": 17,
+    "cycle_count": 0,
+    "topological_order_result": "PASS"
+  },
+  "orphan_counts": {
+    "requirements_without_capability": 0,
+    "capabilities_without_requirement": 0,
+    "capabilities_without_task": 0,
+    "tasks_without_requirement": 0,
+    "tasks_without_capability": 0
+  },
+  "duplicate_requirement_ids": [],
+  "duplicate_capability_ids": [],
+  "duplicate_task_ids": []
+}
