@@ -1,9 +1,8 @@
 {
-  "schema_version": 3,
-  "generated_at": "2026-08-05T16:54:48.794208Z",
-  "scope": "Graphify authorities, reports, tools and immutable Master Plan; genuine graphify-out evidence excluded and separately preserved",
+  "schema_version": 4,
+  "scope": "Tracked Graphify authorities, reports, tools and immutable Master Plan; genuine graphify-out evidence excluded and separately preserved; transient and non-tracked entries excluded; deterministic (no timestamps)",
   "self_excluded": true,
-  "file_count": 59,
+  "file_count": 63,
   "files": [
     {
       "path": "AUDIT_CODEBASE_BASELINE_SHA256.txt",
@@ -17,8 +16,8 @@
     },
     {
       "path": "CAPABILITY_REGISTRY.json",
-      "size_bytes": 1454547,
-      "sha256": "A8D7CE2CF3768E134DF9F9C5D6546515857869B50C59289D9352DEE170EA4FAB"
+      "size_bytes": 1454497,
+      "sha256": "A6967B5CC21831BC710ADBBF2E1DE86DC9C6A5257C48B39FAB37740CB2DA4317"
     },
     {
       "path": "CAPABILITY_REGISTRY.md",
@@ -32,13 +31,13 @@
     },
     {
       "path": "COMPLETION_TRACKER.md",
-      "size_bytes": 2565,
-      "sha256": "8B2799A81E4290B22422E419FB317C1AAC6518DCD1A68AA327A528E660245B95"
+      "size_bytes": 2986,
+      "sha256": "0E10533C834072963C7AC38B1326AFCD51B0A5C3BCAF5D8E64DE3BEDCE90BB00"
     },
     {
       "path": "CONDITIONAL_DECISION_PACKAGES.json",
-      "size_bytes": 33425,
-      "sha256": "DFBAABCDF24800AB6CE313553D34C14883AEB46E114706FCC6401816CA0DFF63"
+      "size_bytes": 33375,
+      "sha256": "1FFA8DF357BADA23A1800404518C12DA038B5ACD3353A875496A4D1057E80A33"
     },
     {
       "path": "CURRENT_ARCHITECTURE.md",
@@ -62,8 +61,18 @@
     },
     {
       "path": "EXACT_LOCATION_REGISTRY.json",
-      "size_bytes": 2704049,
-      "sha256": "21116DF4F96A3F7C3B38EA13CC272DBAAC4B8ADACB013DD791C66A74AE4FE64E"
+      "size_bytes": 2703999,
+      "sha256": "F1123987640FE40CB6AC8C59CD72FF850514EC43800C5312E43D14B484305929"
+    },
+    {
+      "path": "FINAL-REPOSITORY-RECONCILIATION.json",
+      "size_bytes": 2707,
+      "sha256": "3A84F9829E50FBEFA8CB925B224C6AA9C602E22B898CC1F0F70C9FD3E6F99CB9"
+    },
+    {
+      "path": "FINAL-REPOSITORY-RECONCILIATION.md",
+      "size_bytes": 2820,
+      "sha256": "924703A3F2C78D25DD28428A2CFEFFC525D4D045E84630DCB787D8FDDCF430A9"
     },
     {
       "path": "FOLDER_OWNERSHIP_MAP.md",
@@ -72,8 +81,8 @@
     },
     {
       "path": "GRAPH_CONSISTENCY_REPORT.json",
-      "size_bytes": 829,
-      "sha256": "6A56F32FD24A7B9996BF874D8E42F223D557A746FBD7CEC7E274040C12202C99"
+      "size_bytes": 779,
+      "sha256": "0AF5C167451B0123ECA44E64537D39D8E221D057A368DC2C2C56ACB98DEAA083"
     },
     {
       "path": "GRAPH_CONSISTENCY_REPORT.md",
@@ -87,8 +96,8 @@
     },
     {
       "path": "IMPLEMENTATION_QUEUE.json",
-      "size_bytes": 3074429,
-      "sha256": "22E9FE052FB0FA352A770A69B475B9AA77A4A971AEDC7654396B4B40D617555E"
+      "size_bytes": 3074379,
+      "sha256": "9D2895D1CB96BDF38AFF2665033F77B7E497612E07C8B74537A4C8AB17CFFF8B"
     },
     {
       "path": "IMPLEMENTATION_QUEUE.md",
@@ -107,8 +116,8 @@
     },
     {
       "path": "INTERPRETATION_REGISTER.json",
-      "size_bytes": 9999,
-      "sha256": "F2BD70567CC8BC3638EFC37AF79F3DA418411548BBE2455A7815A585FBCD641F"
+      "size_bytes": 9949,
+      "sha256": "05F64E1E22AAC60403D2B090B628FC204063FF7195390483C9E43051D1920BE0"
     },
     {
       "path": "Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
@@ -127,8 +136,8 @@
     },
     {
       "path": "MASTER_REQUIREMENT_REGISTER.json",
-      "size_bytes": 1239785,
-      "sha256": "58ED0A23EBBEAC43843784F4FCC136DD72C657349BAD1C5580A517BD23AE339A"
+      "size_bytes": 1239735,
+      "sha256": "624C93A3D41251E5F7F185BC80B11D26E4A422DB71D7F271D6441DB9537A01E1"
     },
     {
       "path": "MOVE_LEDGER.md",
@@ -142,8 +151,8 @@
     },
     {
       "path": "PLANNING_BASELINE.md",
-      "size_bytes": 20589,
-      "sha256": "55AE24D75ED8CE7001E9F4A2D37594E4C282A8CACF1629EC90F36399A93A065F"
+      "size_bytes": 21728,
+      "sha256": "F894F3824EB91C1F08D7BFE87760980CCD66202227E7D0997C1C267B1253D02B"
     },
     {
       "path": "PLANNING_COUNTS.md",
@@ -152,13 +161,13 @@
     },
     {
       "path": "PLANNING_VALIDATION_REPORT.json",
-      "size_bytes": 26867,
-      "sha256": "B6949B3982F8031AEA30EBCBEAD945E4B395F738D91826D591D8809598BCFFBF"
+      "size_bytes": 31568,
+      "sha256": "6C6FDCA47D96B31BFE749B1E5D15E3BE32E1055474B131B9F64BC73BF0E0F17A"
     },
     {
       "path": "PLANNING_VALIDATION_REPORT.md",
-      "size_bytes": 3244,
-      "sha256": "BF5075447F6708CCEB87335A087818D0ECF68B20614507618AD296C09FF6DD31"
+      "size_bytes": 3867,
+      "sha256": "220C5CE1B6AA24EEB08E9C414126A2F2E761A7C1459AF93B10F87FF556317727"
     },
     {
       "path": "PONYTAIL_AUDIT.md",
@@ -172,8 +181,8 @@
     },
     {
       "path": "READINESS_GATE.json",
-      "size_bytes": 383,
-      "sha256": "EB672F480686C305030D16FEEBDF7624036D3BE905D19272B9AED7C0513CE8D0"
+      "size_bytes": 333,
+      "sha256": "8E4C618A0E3F8E0E13F88AE4BFA2C2383D4BE769F68EF26E1F506EADA48086D9"
     },
     {
       "path": "READINESS_GATE.md",
@@ -187,8 +196,8 @@
     },
     {
       "path": "RELEASE_GATE_PLAN.json",
-      "size_bytes": 98561,
-      "sha256": "588BD7B6AB1D13541C69B604A4B19B0DF9994A0514BB313B586D95512335B301"
+      "size_bytes": 98511,
+      "sha256": "865336DBD11D726EB3691A5B5F8B3C481060B389CB9CC36AD66D9E25D31B1198"
     },
     {
       "path": "REPLACEMENT_MAP.md",
@@ -197,8 +206,8 @@
     },
     {
       "path": "REPOSITORY_FILE_INVENTORY.json",
-      "size_bytes": 15528257,
-      "sha256": "3B80968369CA1469FBADCB6FF4E7B7428E73113C794E7FF5FCEA765BC0C77E60"
+      "size_bytes": 15528207,
+      "sha256": "5EB8A18AED45B149573A891748794F31431B8520ECC23C7661B8D0E5E24C320C"
     },
     {
       "path": "REPOSITORY_FINGERPRINT.json",
@@ -207,13 +216,13 @@
     },
     {
       "path": "REPOSITORY_INVENTORY.md",
-      "size_bytes": 1905,
-      "sha256": "7AE70C3DE9B4A9A094AD61119C7EBC5586535D6E7428AA380B4D25A3E7CB5DA1"
+      "size_bytes": 1993,
+      "sha256": "2DFB66D839A7FB9C4498EC700E72A2471D742DBD87043FA6B7023A90298041F4"
     },
     {
       "path": "RUN_STATE.md",
-      "size_bytes": 2028,
-      "sha256": "F338C2BCEE75F202F4126571FC7E1CB02275A1C915A3B77EF261E24D31276296"
+      "size_bytes": 2085,
+      "sha256": "8B9576A74AEFEE1905D5C67FA309CD74FF2791C12C46FCCD754A71469E1E2EFF"
     },
     {
       "path": "RUNTIME_CHAIN_MAP.md",
@@ -222,8 +231,8 @@
     },
     {
       "path": "START-HERE.md",
-      "size_bytes": 8291,
-      "sha256": "5893300CBB5725A3C95BD16A1E074E9785350896D5FEE732868328664041C52D"
+      "size_bytes": 8322,
+      "sha256": "6F7B27F52D57D829C96588EA34B02FA8052ACA7E4AC4ED995726ED6EBC61B302"
     },
     {
       "path": "TARGET_ARCHITECTURE.md",
@@ -232,8 +241,8 @@
     },
     {
       "path": "TEST_MATRIX.json",
-      "size_bytes": 630316,
-      "sha256": "F89725834345BBCF15C70A622BF0417E84CE6A35A0EC9ECEB6C9E7FA813A2B19"
+      "size_bytes": 630266,
+      "sha256": "9EE34BE63425D82487F731C168A83657884A0BF26C7EFD189D93B421DD587E64"
     },
     {
       "path": "TEST_MATRIX.md",
@@ -251,11 +260,6 @@
       "sha256": "009B6EE0FC908483EEB4F39FA22CA5771D0D040C1F833EF8683140A5908EA60C"
     },
     {
-      "path": "tools/__pycache__/semantic_rules.cpython-311.pyc",
-      "size_bytes": 35037,
-      "sha256": "DF16BBA9B521DB027C7FAEE9049A70083D5DC9CAF252574801102EF53F592E79"
-    },
-    {
       "path": "tools/analyze_import_cycles.cjs",
       "size_bytes": 4484,
       "sha256": "A608EF25A64E71C84F95F06FC0A1A529C5ED9001D477DE4F1088F39B84E39BFC"
@@ -267,8 +271,13 @@
     },
     {
       "path": "tools/complete_planning.py",
-      "size_bytes": 216585,
-      "sha256": "E27366E6B1C190A511ACA001B74010E559ED12AE7A43F08C2833EFB4E0C18A1C"
+      "size_bytes": 216774,
+      "sha256": "3D7C60D16C8414551CAF96F29978893BB22C7D78FB8F917140B69E537DA925FC"
+    },
+    {
+      "path": "tools/reconcile_evidence.py",
+      "size_bytes": 5874,
+      "sha256": "A0478A5CDD1C64882E3E5A58792B5BBC61A6BAF997D37769AAD7B8021558AF3B"
     },
     {
       "path": "tools/run_second_graphify_scan.py",
@@ -282,8 +291,8 @@
     },
     {
       "path": "tools/semantic_validator.py",
-      "size_bytes": 72419,
-      "sha256": "34A22F02BE4283A3F5FB24896EA949CC6A264FE0AA3FB5030883B7095E41C8A6"
+      "size_bytes": 98543,
+      "sha256": "97B3E749D89219435077692FEF6D27EC7ACD3F36F8A3BE40775832BFF8B6F85D"
     },
     {
       "path": "tools/validate_planning.py",
@@ -296,9 +305,19 @@
       "sha256": "B53D35E16ACB4045D582FFAC9252728C61040DE223E5BA7CA9C473DD255C1116"
     },
     {
+      "path": "TRACKED_CODEBASE_BASELINE_SHA256.txt",
+      "size_bytes": 40081,
+      "sha256": "A500B0D0A7CAC3A6EB236BBEBA59C949AC38D88A886E7A6F717E1320797CE3BE"
+    },
+    {
+      "path": "TRACKED_CODEBASE_FINAL_SHA256.txt",
+      "size_bytes": 40081,
+      "sha256": "A500B0D0A7CAC3A6EB236BBEBA59C949AC38D88A886E7A6F717E1320797CE3BE"
+    },
+    {
       "path": "VERIFICATION_AUDIT.json",
-      "size_bytes": 24220,
-      "sha256": "A91E44103FDCD171F708326CAFB28B085DC27EAE054BD1C87E8C9FA358CF0F60"
+      "size_bytes": 28922,
+      "sha256": "6012C24D5E35AA81BD9303207AC6315713BF9202CCDA45B583FD2B3C1AFE17F3"
     }
   ]
 }

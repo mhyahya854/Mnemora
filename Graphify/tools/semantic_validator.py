@@ -15,7 +15,6 @@ import json
 import re
 import subprocess
 import sys
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -26,7 +25,6 @@ ROOT = Path(__file__).resolve().parents[2]
 G = ROOT / "Graphify"
 CB = ROOT / "codebase"
 MP = G / "Master Plan"
-STAMP = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 MASTER_HASHES = {
     "01-EVERYTHING-WE-ARE-KEEPING.md": "BDF185A823422BCAA9BFEBA815A6852D8F7A5CD46B64714B2CD1DE3357A67F64",
     "02-EVERYTHING-WE-ARE-DELETING.md": "76B6EEC15778B1928F2CD9C0F73FA68C9F3363493062E31E0C904E620DE0AAC3",
@@ -84,6 +82,139 @@ def load(name: str) -> Any:
 
 def dump(name: str, value: Any) -> None:
     (G / name).write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+TRANSIENT_MANIFEST_PARTS = {"__pycache__", ".pytest_cache", ".mypy_cache", ".ruff_cache", ".git"}
+TRANSIENT_MANIFEST_SUFFIXES = (".pyc", ".pyo", ".swp", ".swo", ".tmp", ".log", "~")
+VERIFIER_OUTPUT_FILES = {
+    "Graphify/FINAL-REPOSITORY-RECONCILIATION.json",
+    "Graphify/FINAL-REPOSITORY-RECONCILIATION.md",
+    "Graphify/PLANNING_VALIDATION_REPORT.json",
+    "Graphify/PLANNING_VALIDATION_REPORT.md",
+    "Graphify/VERIFICATION_AUDIT.json",
+    "Graphify/READINESS_GATE.json",
+    "Graphify/READINESS_GATE.md",
+    "Graphify/GRAPH_CONSISTENCY_REPORT.json",
+    "Graphify/GRAPH_CONSISTENCY_REPORT.md",
+    "Graphify/GRAPHIFY_READINESS_REPORT.md",
+    "Graphify/GRAPHIFY_OUTPUT_MANIFEST.json",
+}
+
+
+def git(args: list[str]) -> str:
+    """Read-only git helper returning trimmed stdout (empty string on failure)."""
+    try:
+        result = subprocess.run(["git", *args], cwd=ROOT, capture_output=True, text=True, encoding="utf-8", errors="replace")
+        if result.returncode == 0:
+            return result.stdout.strip()
+    except Exception:
+        pass
+    return ""
+
+
+def git_blob_sha256(rel_path: str) -> str:
+    """Canonical SHA-256 of committed blob content (line-ending independent)."""
+    try:
+        result = subprocess.run(["git", "cat-file", "blob", f"HEAD:{rel_path}"], cwd=ROOT, capture_output=True)
+        if result.returncode == 0:
+            return hashlib.sha256(result.stdout).hexdigest().upper()
+    except Exception:
+        pass
+    return sha256(ROOT / rel_path)
+
+
+def parse_manifest(path: Path) -> tuple[dict[str, str], list[str]]:
+    """Parse HASH\\tpath manifest lines into a normalized path -> SHA-256 mapping.
+
+    Normalization: forward slashes, no leading ./, no duplicate separators,
+    no unresolved . or .. components. Duplicate paths and case-insensitive
+    collisions are reported as errors rather than silently merged.
+    """
+    mapping: dict[str, str] = {}
+    lower_to_norm: dict[str, str] = {}
+    errors: list[str] = []
+    if not path.is_file():
+        return mapping, [f"{path.name}: missing manifest"]
+    for number, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        if not line.strip():
+            errors.append(f"{path.name}:{number}: blank entry")
+            continue
+        if "\t" not in line:
+            errors.append(f"{path.name}:{number}: malformed entry (missing tab)")
+            continue
+        digest, _, raw_path = line.partition("\t")
+        raw_path = raw_path.strip()
+        if not re.fullmatch(r"[0-9A-Fa-f]{64}", digest):
+            errors.append(f"{path.name}:{number}: invalid SHA-256 value {digest!r}")
+        if not raw_path:
+            errors.append(f"{path.name}:{number}: blank path")
+            continue
+        parts = [part for part in raw_path.replace("\\", "/").split("/") if part not in ("", ".")]
+        if any(part == ".." for part in parts):
+            errors.append(f"{path.name}:{number}: unresolved parent component {raw_path!r}")
+            continue
+        norm = "/".join(parts)
+        if not norm or norm.startswith("/") or ":" in norm.split("/", 1)[0] or len(norm) > 512:
+            errors.append(f"{path.name}:{number}: invalid path {raw_path!r}")
+            continue
+        key = norm.lower()
+        if key in lower_to_norm:
+            if lower_to_norm[key] != norm:
+                errors.append(f"{path.name}:{number}: case-insensitive collision {lower_to_norm[key]!r} vs {norm!r}")
+            elif mapping.get(norm) != digest.upper():
+                errors.append(f"{path.name}:{number}: duplicate path with conflicting hash {norm!r}")
+            else:
+                errors.append(f"{path.name}:{number}: duplicate path {norm!r}")
+            continue
+        lower_to_norm[key] = norm
+        mapping[norm] = digest.upper()
+    return mapping, errors
+
+
+def current_tracked_codebase_mapping() -> tuple[dict[str, str], list[str]]:
+    """Canonical tracked mapping: SHA-256 of each git blob under codebase/."""
+    mapping: dict[str, str] = {}
+    errors: list[str] = []
+    result = subprocess.run(["git", "ls-files", "-s", "-z", "--", "codebase"], cwd=ROOT, capture_output=True)
+    if result.returncode != 0:
+        return mapping, ["git ls-files -- codebase failed"]
+    for raw in result.stdout.decode("utf-8", errors="replace").split("\0"):
+        if not raw:
+            continue
+        parts = raw.split(" ", 2)
+        if len(parts) < 3 or "\t" not in parts[2]:
+            continue
+        blob_sha, path = parts[1], parts[2].split("\t", 1)[1]
+        blob_out = subprocess.run(["git", "cat-file", "blob", blob_sha], cwd=ROOT, capture_output=True)
+        if blob_out.returncode != 0:
+            errors.append(f"cannot read tracked blob for {path}")
+            continue
+        mapping[path.replace("\\", "/")] = hashlib.sha256(blob_out.stdout).hexdigest().upper()
+    return mapping, errors
+
+
+def graphify_tracked_set() -> set[str]:
+    return {line for line in git(["ls-files"]).splitlines() if line.startswith("Graphify/")}
+
+
+def build_graphify_output_manifest() -> tuple[list[dict[str, Any]], list[str]]:
+    """Deterministic Graphify output manifest: sorted tracked files, transient excluded."""
+    tracked = graphify_tracked_set()
+    entries: list[dict[str, Any]] = []
+    errors: list[str] = []
+    for path in sorted(G.rglob("*")):
+        if not path.is_file():
+            continue
+        rel = path.relative_to(G).as_posix()
+        if "graphify-out" in path.parts or path.name == "GRAPHIFY_OUTPUT_MANIFEST.json":
+            continue
+        if set(path.parts) & TRANSIENT_MANIFEST_PARTS or rel.endswith(TRANSIENT_MANIFEST_SUFFIXES):
+            continue
+        if f"Graphify/{rel}" not in tracked:
+            errors.append(f"untracked Graphify file present: {rel}")
+            continue
+        entries.append({"path": rel, "size_bytes": path.stat().st_size, "sha256": sha256(path)})
+    return entries, errors
 
 
 def write(name: str, value: str) -> None:
@@ -579,40 +710,75 @@ def third_party_register_errors() -> list[str]:
 
 
 def inventory_integrity(inventory: dict[str, Any], full_hash: bool) -> tuple[list[str], dict[str, Any]]:
+    """Canonical tracked-codebase parity plus a separately labeled local-only full-tree audit.
+
+    Tracked parity uses git blob content (line-ending independent and reproducible
+    from any clean clone). The full local tree audit (node_modules, build-output,
+    caches) runs only when the complete local dependency tree is present and is
+    explicitly reported as LOCAL ONLY - NOT GITHUB-VERIFIED.
+    """
     errors: list[str] = []
-    baseline = {item["path"]: item for item in inventory["files"] if item["path"].startswith("codebase/")}
-    actual_paths = sorted(path for path in CB.rglob("*") if path.is_file())
-    actual = {path.relative_to(ROOT).as_posix(): path for path in actual_paths}
-    if set(actual) != set(baseline):
-        for path in sorted(set(actual) - set(baseline))[:100]: errors.append(f"Unexpected codebase file: {path}")
-        for path in sorted(set(baseline) - set(actual))[:100]: errors.append(f"Missing codebase file: {path}")
-    comparable = 0
-    path_size_only = 0
-    full_manifest: list[str] = []
-    for path, absolute in actual.items():
-        entry = baseline.get(path)
-        if not entry: continue
-        size = absolute.stat().st_size
-        if size != entry.get("size_bytes"): errors.append(f"Codebase size changed: {path}")
-        current_hash = None
-        if entry.get("sha256") or full_hash:
-            current_hash = sha256(absolute)
-        if entry.get("sha256"):
-            comparable += 1
-            if current_hash != entry["sha256"]: errors.append(f"Comparable codebase SHA-256 changed: {path}")
-        else:
-            path_size_only += 1
-        if full_hash:
-            full_manifest.append(f"{path}\0{current_hash}")
-    full_fingerprint = hashlib.sha256("\n".join(full_manifest).encode("utf-8")).hexdigest().upper() if full_hash else None
+    baseline_manifest = G / "TRACKED_CODEBASE_BASELINE_SHA256.txt"
+    final_manifest = G / "TRACKED_CODEBASE_FINAL_SHA256.txt"
+    baseline_map, baseline_errors = parse_manifest(baseline_manifest)
+    final_map, final_errors = parse_manifest(final_manifest)
+    current_map, current_errors = current_tracked_codebase_mapping()
+    errors.extend(baseline_errors + final_errors + current_errors)
+    added = sorted((set(final_map) | set(current_map)) - set(baseline_map))
+    removed = sorted(set(baseline_map) - (set(final_map) & set(current_map)))
+    changed = sorted(path for path in set(baseline_map) & set(final_map) & set(current_map) if not (baseline_map[path] == final_map[path] == current_map[path]))
+    if added: errors.append(f"Tracked codebase manifest added paths: {added[:20]}")
+    if removed: errors.append(f"Tracked codebase manifest missing paths: {removed[:20]}")
+    if changed: errors.append(f"Tracked codebase manifest changed hashes: {changed[:20]}")
     evidence = {
-        "baseline_codebase_files": len(baseline), "current_codebase_files": len(actual),
-        "comparable_pre_and_post_sha256_files": comparable,
-        "path_and_size_only_files": path_size_only,
-        "post_run_full_sha256_fingerprint": full_fingerprint,
-        "equivalent_pre_run_full_sha256_fingerprint_available": False,
-        "claim_limit": "Only comparable-hash files are proven byte-identical. Path/size-only files are not cryptographic equality proof. A post-run full fingerprint without an equivalent pre-run full fingerprint is a current-state checkpoint, not full before/after proof.",
+        "tracked_codebase_file_count": len(current_map),
+        "tracked_baseline_entries": len(baseline_map),
+        "tracked_final_entries": len(final_map),
+        "tracked_unchanged": sum(1 for path, digest in baseline_map.items() if final_map.get(path) == digest == current_map.get(path)),
+        "tracked_added": len(added),
+        "tracked_removed": len(removed),
+        "tracked_changed": len(changed),
+        "tracked_manifest_errors": len(baseline_errors) + len(final_errors) + len(current_errors),
+        "claim": "Tracked codebase parity is verified from git blob content and is reproducible from any clean clone.",
     }
+    local_full_tree = (CB / "node_modules").is_dir()
+    if local_full_tree:
+        baseline = {item["path"]: item for item in inventory["files"] if item["path"].startswith("codebase/")}
+        actual_paths = sorted(path for path in CB.rglob("*") if path.is_file())
+        actual = {path.relative_to(ROOT).as_posix(): path for path in actual_paths}
+        if set(actual) != set(baseline):
+            for path in sorted(set(actual) - set(baseline))[:100]: errors.append(f"LOCAL ONLY - unexpected codebase file: {path}")
+            for path in sorted(set(baseline) - set(actual))[:100]: errors.append(f"LOCAL ONLY - missing codebase file: {path}")
+        comparable = 0
+        path_size_only = 0
+        full_manifest: list[str] = []
+        for path, absolute in actual.items():
+            entry = baseline.get(path)
+            if not entry: continue
+            size = absolute.stat().st_size
+            if size != entry.get("size_bytes"): errors.append(f"LOCAL ONLY - codebase size changed: {path}")
+            current_hash = None
+            if entry.get("sha256") or full_hash:
+                current_hash = sha256(absolute)
+            if entry.get("sha256"):
+                comparable += 1
+                if current_hash != entry["sha256"]: errors.append(f"LOCAL ONLY - comparable codebase SHA-256 changed: {path}")
+            else:
+                path_size_only += 1
+            if full_hash:
+                full_manifest.append(f"{path}\0{current_hash}")
+        full_fingerprint = hashlib.sha256("\n".join(full_manifest).encode("utf-8")).hexdigest().upper() if full_hash else None
+        evidence.update({
+            "local_full_tree_audit": "RUN - LOCAL ONLY (ignored dependencies/build output are not GitHub-verified)",
+            "local_baseline_codebase_files": len(baseline),
+            "local_current_codebase_files": len(actual),
+            "local_comparable_pre_and_post_sha256_files": comparable,
+            "local_path_and_size_only_files": path_size_only,
+            "local_post_run_full_sha256_fingerprint": full_fingerprint,
+            "local_claim_limit": "Only comparable-hash files are proven byte-identical. Path/size-only files are not cryptographic equality proof. A post-run full fingerprint without an equivalent pre-run full fingerprint is a current-state checkpoint, not full before/after proof.",
+        })
+    else:
+        evidence["local_full_tree_audit"] = "SKIPPED - clean clone (full local dependency tree absent); tracked parity above is the GitHub-verifiable claim"
     return errors, evidence
 
 
@@ -650,17 +816,191 @@ def negative_fixture_errors() -> list[str]:
     return failures
 
 
+def manifest_pair_stats(baseline: Path, final: Path) -> dict[str, Any]:
+    baseline_map, baseline_errors = parse_manifest(baseline)
+    final_map, final_errors = parse_manifest(final)
+    combined_errors = baseline_errors + final_errors
+    duplicates = sum(1 for error in combined_errors if "duplicate" in error or "collision" in error)
+    return {
+        "baseline_entries": len(baseline_map),
+        "final_entries": len(final_map),
+        "unchanged": sum(1 for path, digest in baseline_map.items() if final_map.get(path) == digest),
+        "added": len(set(final_map) - set(baseline_map)),
+        "missing": len(set(baseline_map) - set(final_map)),
+        "changed": sum(1 for path in set(baseline_map) & set(final_map) if baseline_map[path] != final_map[path]),
+        "duplicates": duplicates,
+        "malformed": len(combined_errors) - duplicates,
+        "mappings_identical": baseline_map == final_map and not combined_errors,
+    }
+
+
+def reconciliation_fields(integrity_evidence: dict[str, Any], checks: list[dict[str, Any]], verdict: str, pre_run_status: str, manifest_entries: list[dict[str, Any]]) -> dict[str, Any]:
+    historical_base = G / "AUDIT_CODEBASE_BASELINE_SHA256.txt"
+    historical_final = G / "AUDIT_CODEBASE_FINAL_SHA256.txt"
+    canonical_base = G / "TRACKED_CODEBASE_BASELINE_SHA256.txt"
+    canonical_final = G / "TRACKED_CODEBASE_FINAL_SHA256.txt"
+
+    def raw_sha(path: Path) -> str | None:
+        return sha256(path) if path.is_file() else None
+
+    historical = manifest_pair_stats(historical_base, historical_final)
+    canonical = manifest_pair_stats(canonical_base, canonical_final)
+    current_map, current_errors = current_tracked_codebase_mapping()
+    canonical_final_map, _ = parse_manifest(canonical_final)
+    tracked_files = [line for line in git(["ls-files"]).splitlines() if line]
+    lfs_lines = [line for line in git(["lfs", "ls-files", "-l"]).splitlines() if line]
+    return {
+        "schema_version": 1,
+        "scope": "FINAL REPOSITORY RECONCILIATION - tracked Git parity, Git LFS verification and separate local-only inventory claims",
+        "repository_url": git(["remote", "get-url", "origin"]) or "unknown",
+        "default_branch": git(["symbolic-ref", "--short", "refs/remotes/origin/HEAD"]).removeprefix("origin/") or "main",
+        "branch": git(["branch", "--show-current"]) or "",
+        "verified_commit_sha": git(["rev-parse", "HEAD"]),
+        "verified_tree_sha": git(["rev-parse", "HEAD^{tree}"]),
+        "tracked_file_count": len(tracked_files),
+        "tracked_codebase_file_count": len(current_map),
+        "lfs_file_count": len(lfs_lines),
+        "master_plan_sha256": {name: git_blob_sha256(f"Graphify/Master Plan/{name}") for name in MASTER_HASHES},
+        "historical_manifests": {
+            "raw_baseline_sha256": raw_sha(historical_base),
+            "raw_final_sha256": raw_sha(historical_final),
+            "raw_files_byte_identical": raw_sha(historical_base) == raw_sha(historical_final),
+            **historical,
+        },
+        "canonical_manifests": {
+            "raw_baseline_sha256": raw_sha(canonical_base),
+            "raw_final_sha256": raw_sha(canonical_final),
+            "raw_files_byte_identical": raw_sha(canonical_base) == raw_sha(canonical_final),
+            **canonical,
+            "current_mapping_identical_to_final": current_map == canonical_final_map and not current_errors,
+        },
+        "transient_exclusions": sorted(TRANSIENT_MANIFEST_PARTS | set(TRANSIENT_MANIFEST_SUFFIXES)),
+        "output_manifest_entries": len(manifest_entries),
+        "validator": {
+            "gate_count": len(checks),
+            "passed": sum(1 for item in checks if item["status"] == "PASS"),
+            "failed": sum(1 for item in checks if item["status"] == "FAIL"),
+            "verdict": verdict,
+            "commands": [
+                "python -B Graphify/tools/semantic_validator.py --self-test-only",
+                "python -B Graphify/tools/validate_planning.py",
+                "python -B Graphify/tools/validate_planning.py --full-codebase",
+            ],
+        },
+        "local_full_tree_audit": integrity_evidence.get("local_full_tree_audit"),
+        "pre_run_working_tree": "CLEAN" if not pre_run_status else "DIRTY",
+        "implementation_status": "NOT STARTED",
+        "release_status": "NOT EVALUATED",
+    }
+
+
+def render_reconciliation_md(computed: dict[str, Any]) -> str:
+    lines = [
+        "# Final Repository Reconciliation",
+        "",
+        "This report is machine-generated from the reconciliation validator. Tracked Git parity, Git LFS verification and local-only inventory claims are reported separately; GitHub parity applies only to tracked and Git LFS-managed content.",
+        "",
+        "## Repository identity",
+        "",
+        f"- Repository URL: `{computed['repository_url']}`",
+        f"- Default branch: `{computed['default_branch']}`",
+        f"- Branch at verification: `{computed['branch']}`",
+        f"- Verified commit: `{computed['verified_commit_sha']}`",
+        f"- Verified tree: `{computed['verified_tree_sha']}`",
+        f"- Tracked file count: {computed['tracked_file_count']}",
+        f"- Tracked codebase file count: {computed['tracked_codebase_file_count']}",
+        f"- Git LFS file count: {computed['lfs_file_count']}",
+        "",
+        "## Protected content",
+        "",
+    ]
+    for name, digest in computed["master_plan_sha256"].items():
+        lines.append(f"- `Master Plan/{name}`: `{digest}` (canonical git blob content)")
+    lines += [
+        "",
+        "## Historical full-tree manifests (LOCAL ONLY - NOT GITHUB-VERIFIED)",
+        "",
+        f"- Raw baseline SHA-256: `{computed['historical_manifests']['raw_baseline_sha256']}`",
+        f"- Raw final SHA-256: `{computed['historical_manifests']['raw_final_sha256']}`",
+        f"- Raw files byte-identical: {computed['historical_manifests']['raw_files_byte_identical']}",
+        f"- Normalized baseline entries: {computed['historical_manifests']['baseline_entries']}",
+        f"- Normalized final entries: {computed['historical_manifests']['final_entries']}",
+        f"- Added: {computed['historical_manifests']['added']}; missing: {computed['historical_manifests']['missing']}; changed: {computed['historical_manifests']['changed']}; duplicates: {computed['historical_manifests']['duplicates']}; malformed: {computed['historical_manifests']['malformed']}",
+        f"- Normalized path-to-SHA-256 mappings identical: {computed['historical_manifests']['mappings_identical']}",
+        "",
+        "## Canonical tracked manifests (GitHub-verifiable)",
+        "",
+        f"- Raw baseline SHA-256: `{computed['canonical_manifests']['raw_baseline_sha256']}`",
+        f"- Raw final SHA-256: `{computed['canonical_manifests']['raw_final_sha256']}`",
+        f"- Raw files byte-identical: {computed['canonical_manifests']['raw_files_byte_identical']}",
+        f"- Normalized baseline entries: {computed['canonical_manifests']['baseline_entries']}",
+        f"- Normalized final entries: {computed['canonical_manifests']['final_entries']}",
+        f"- Added: {computed['canonical_manifests']['added']}; missing: {computed['canonical_manifests']['missing']}; changed: {computed['canonical_manifests']['changed']}; duplicates: {computed['canonical_manifests']['duplicates']}; malformed: {computed['canonical_manifests']['malformed']}",
+        f"- Normalized path-to-SHA-256 mappings identical: {computed['canonical_manifests']['mappings_identical']}",
+        f"- Current git mapping identical to final manifest: {computed['canonical_manifests']['current_mapping_identical_to_final']}",
+        "",
+        "## Transient exclusions",
+        "",
+        f"- Excluded categories: {', '.join(computed['transient_exclusions'])}",
+        f"- Graphify output-manifest entries: {computed['output_manifest_entries']}",
+        "",
+        "## Validation",
+        "",
+        f"- Gate count: {computed['validator']['gate_count']}; passed: {computed['validator']['passed']}; failed: {computed['validator']['failed']}; verdict: {computed['validator']['verdict']}",
+        f"- Commands: {', '.join(computed['validator']['commands'])}",
+        "",
+        "## Local-only inventory audit",
+        "",
+        f"- {computed['local_full_tree_audit']}",
+        "",
+        "## Working tree",
+        "",
+        f"- Pre-run working tree: {computed['pre_run_working_tree']}",
+        "",
+        "## Status",
+        "",
+        f"- Implementation: {computed['implementation_status']}; release: {computed['release_status']}",
+    ]
+    return "\n".join(lines)
+
+
+def write_reconciliation_report(computed: dict[str, Any]) -> None:
+    """Write the reconciliation report, preserving a valid report that already describes HEAD^ (report-only delivery commit)."""
+    json_path = G / "FINAL-REPOSITORY-RECONCILIATION.json"
+    committed: dict[str, Any] | None = None
+    if json_path.is_file():
+        try:
+            committed = json.loads(json_path.read_text(encoding="utf-8"))
+        except Exception:
+            committed = None
+    preserve = False
+    if committed:
+        head = computed.get("verified_commit_sha", "")
+        parent = git(["rev-parse", "HEAD^"])
+        sha_ok = committed.get("verified_commit_sha") == head
+        if not sha_ok and parent and committed.get("verified_commit_sha") == parent:
+            sha_ok = True
+        stable_keys = [key for key in computed if key not in {"verified_commit_sha", "verified_tree_sha"}]
+        if sha_ok and all(committed.get(key) == computed[key] for key in stable_keys):
+            preserve = True
+    if not preserve:
+        dump("FINAL-REPOSITORY-RECONCILIATION.json", computed)
+        write("FINAL-REPOSITORY-RECONCILIATION.md", render_reconciliation_md(computed))
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--full-codebase", action="store_true", help="Hash every current codebase file for a post-run fingerprint; only baseline-hashed files are comparable.")
     parser.add_argument("--skip-reproducibility", action="store_true")
     parser.add_argument("--self-test-only", action="store_true")
+    parser.add_argument("--allow-dirty", action="store_true", help="Skip the pre-run clean-working-tree gate (development runs before committing).")
     args = parser.parse_args()
     if args.self_test_only:
         errors = negative_fixture_errors()
         print(json.dumps({"negative_fixture_count": 14, "status": "PASS" if not errors else "FAIL", "errors": errors}, indent=2))
         return 0 if not errors else 1
 
+    pre_run_status = git(["status", "--porcelain"])
     reproducibility_errors: list[str] = []
     before_fingerprint = semantic_authority_fingerprint()
     generator_stdout = "SKIPPED"
@@ -691,8 +1031,9 @@ def main() -> int:
     location_ids = {item["id"] for item in locations}
     checks = Checks()
 
-    hash_errors = [f"{name}: expected {expected}, got {sha256(MP / name)}" for name, expected in MASTER_HASHES.items() if sha256(MP / name) != expected]
-    checks.add("SEM-001-MASTER-HASH", "Master Plan hash integrity", hash_errors, {name: sha256(MP / name) for name in MASTER_HASHES})
+    manifest_entries, manifest_scan_errors = build_graphify_output_manifest()
+    hash_errors = [f"{name}: expected {expected}, got {git_blob_sha256(f'Graphify/Master Plan/{name}')}" for name, expected in MASTER_HASHES.items() if git_blob_sha256(f"Graphify/Master Plan/{name}") != expected]
+    checks.add("SEM-001-MASTER-HASH", "Master Plan hash integrity (canonical git blob content)", hash_errors, {name: git_blob_sha256(f"Graphify/Master Plan/{name}") for name in MASTER_HASHES})
     checks.add("SEM-002-REQUIREMENT-SOURCE", "Requirement source and line reconciliation", requirement_source_errors(requirements), {"requirements": len(requirements)})
     classification_errors = []
     valid_types = {"Product requirement", "Preservation requirement", "Deletion requirement", "Architecture requirement", "Data-safety requirement", "Migration requirement", "Offline requirement", "Platform requirement", "Packaging requirement", "Testing requirement", "Planning-governance requirement", "Git/provenance requirement", "Legal/licensing requirement", "Conditional decision requirement", "Final release requirement"}
@@ -845,6 +1186,89 @@ def main() -> int:
     checks.add("SEM-035-DATA-OFFLINE-WINDOWS", "Data safety, offline, and Windows release planning", final_domain_errors)
     checks.add("SEM-036-KNOWN-NEGATIVES", "Known-negative validator fixtures", negative_fixture_errors(), {"fixture_count": 14})
 
+    # SEM-037: transient and non-tracked Graphify output-manifest detection
+    transient_errors = list(manifest_scan_errors)
+    committed_out = load("GRAPHIFY_OUTPUT_MANIFEST.json")
+    tracked_graphify = graphify_tracked_set()
+    for entry in committed_out.get("files", []):
+        rel = str(entry.get("path", ""))
+        if set(rel.split("/")) & TRANSIENT_MANIFEST_PARTS or rel.endswith(TRANSIENT_MANIFEST_SUFFIXES):
+            transient_errors.append(f"committed output manifest contains transient entry: {rel}")
+        if rel and f"Graphify/{rel}" not in tracked_graphify:
+            transient_errors.append(f"committed output manifest contains non-tracked entry: {rel}")
+    checks.add("SEM-037-TRANSIENT-OUTPUT-MANIFEST", "Transient and non-tracked Graphify output-manifest detection", transient_errors, {"committed_output_manifest_entries": len(committed_out.get("files", [])), "regenerated_output_manifest_entries": len(manifest_entries), "tracked_graphify_files": len(tracked_graphify)})
+
+    # SEM-038: canonical tracked manifest structure and equality
+    canonical_base_map, canonical_base_errors = parse_manifest(G / "TRACKED_CODEBASE_BASELINE_SHA256.txt")
+    canonical_final_map, canonical_final_errors = parse_manifest(G / "TRACKED_CODEBASE_FINAL_SHA256.txt")
+    canonical_current_map, canonical_current_errors = current_tracked_codebase_mapping()
+    canonical_struct_errors = list(canonical_base_errors + canonical_final_errors + canonical_current_errors)
+    canonical_added = sorted((set(canonical_final_map) | set(canonical_current_map)) - set(canonical_base_map))
+    canonical_missing = sorted(set(canonical_base_map) - (set(canonical_final_map) & set(canonical_current_map)))
+    canonical_changed = sorted(path for path in set(canonical_base_map) & set(canonical_final_map) & set(canonical_current_map) if not (canonical_base_map[path] == canonical_final_map[path] == canonical_current_map[path]))
+    if canonical_added: canonical_struct_errors.append(f"canonical manifest added paths: {canonical_added[:20]}")
+    if canonical_missing: canonical_struct_errors.append(f"canonical manifest missing paths: {canonical_missing[:20]}")
+    if canonical_changed: canonical_struct_errors.append(f"canonical manifest changed hashes: {canonical_changed[:20]}")
+    canonical_stats = manifest_pair_stats(G / "TRACKED_CODEBASE_BASELINE_SHA256.txt", G / "TRACKED_CODEBASE_FINAL_SHA256.txt")
+    checks.add("SEM-038-CANONICAL-MANIFEST-COMPARISON", "Canonical tracked manifest structure and equality", canonical_struct_errors, {"canonical_stats": canonical_stats, "current_mapping_identical_to_final": canonical_current_map == canonical_final_map and not canonical_current_errors})
+
+    # SEM-039: manifest honesty (raw-file vs normalized-mapping claims)
+    honesty_errors = []
+    historical_stats = manifest_pair_stats(G / "AUDIT_CODEBASE_BASELINE_SHA256.txt", G / "AUDIT_CODEBASE_FINAL_SHA256.txt")
+    hist_raw_base = sha256(G / "AUDIT_CODEBASE_BASELINE_SHA256.txt")
+    hist_raw_final = sha256(G / "AUDIT_CODEBASE_FINAL_SHA256.txt")
+    if not historical_stats["mappings_identical"]:
+        honesty_errors.append("historical full-tree manifests differ after normalization")
+    rec_doc = load("FINAL-REPOSITORY-RECONCILIATION.json") if (G / "FINAL-REPOSITORY-RECONCILIATION.json").is_file() else {}
+    canonical_raw_base = sha256(G / "TRACKED_CODEBASE_BASELINE_SHA256.txt")
+    canonical_raw_final = sha256(G / "TRACKED_CODEBASE_FINAL_SHA256.txt")
+    historical_expected = {"raw_baseline_sha256": hist_raw_base, "raw_final_sha256": hist_raw_final, "raw_files_byte_identical": hist_raw_base == hist_raw_final, **historical_stats}
+    if rec_doc.get("historical_manifests") != historical_expected:
+        honesty_errors.append("FINAL-REPOSITORY-RECONCILIATION.json historical-manifest fields disagree with computed values")
+    canonical_expected = {"raw_baseline_sha256": canonical_raw_base, "raw_final_sha256": canonical_raw_final, "raw_files_byte_identical": canonical_raw_base == canonical_raw_final, **canonical_stats, "current_mapping_identical_to_final": canonical_current_map == canonical_final_map and not canonical_current_errors}
+    if rec_doc.get("canonical_manifests") != canonical_expected:
+        honesty_errors.append("FINAL-REPOSITORY-RECONCILIATION.json canonical-manifest fields disagree with computed values")
+    checks.add("SEM-039-MANIFEST-HONESTY", "Raw-file versus normalized-mapping honesty", honesty_errors, {"historical": {"raw_baseline_sha256": hist_raw_base, "raw_final_sha256": hist_raw_final, "raw_files_byte_identical": hist_raw_base == hist_raw_final, **historical_stats}, "canonical": canonical_expected})
+
+    # SEM-040: protected Master Plan and tracked codebase content
+    protected_errors = []
+    for name, expected in MASTER_HASHES.items():
+        actual = git_blob_sha256(f"Graphify/Master Plan/{name}")
+        if actual != expected:
+            protected_errors.append(f"Master Plan {name}: canonical blob hash changed ({actual} != {expected})")
+    if canonical_added or canonical_missing or canonical_changed:
+        protected_errors.append("tracked codebase canonical manifests changed")
+    checks.add("SEM-040-PROTECTED-CONTENT", "Protected Master Plan and tracked codebase content unchanged", protected_errors, {"master_plan_sha256": {name: git_blob_sha256(f"Graphify/Master Plan/{name}") for name in MASTER_HASHES}, "tracked_codebase_manifest_unchanged": not (canonical_added or canonical_missing or canonical_changed)})
+
+    # SEM-041: final repository reconciliation report consistency
+    reconciliation_errors = []
+    rec_path = G / "FINAL-REPOSITORY-RECONCILIATION.json"
+    if not rec_path.is_file():
+        reconciliation_errors.append("FINAL-REPOSITORY-RECONCILIATION.json is absent")
+        committed_rec: dict[str, Any] = {}
+    else:
+        committed_rec = json.loads(rec_path.read_text(encoding="utf-8"))
+    computed_rec = reconciliation_fields(integrity_evidence, checks.items, "PENDING", pre_run_status, manifest_entries)
+    stable_keys = [key for key in computed_rec if key not in {"verified_commit_sha", "verified_tree_sha", "validator"}]
+    for key in stable_keys:
+        if committed_rec.get(key) != computed_rec[key]:
+            reconciliation_errors.append(f"FINAL-REPOSITORY-RECONCILIATION.json {key} disagrees with computed value")
+    rec_sha = str(committed_rec.get("verified_commit_sha", ""))
+    head_sha = computed_rec["verified_commit_sha"]
+    parent_sha = git(["rev-parse", "HEAD^"])
+    sha_ok = (rec_sha == parent_sha) if parent_sha else (rec_sha == head_sha)
+    if not sha_ok:
+        reconciliation_errors.append("FINAL-REPOSITORY-RECONCILIATION.json verified commit does not equal the parent commit (or HEAD when HEAD has no parent)")
+    if rec_sha and git(["rev-parse", f"{rec_sha}^{{tree}}"]) != str(committed_rec.get("verified_tree_sha", "")):
+        reconciliation_errors.append("FINAL-REPOSITORY-RECONCILIATION.json verified tree SHA does not match the verified commit")
+    checks.add("SEM-041-RECONCILIATION-REPORT", "Final repository reconciliation report consistency", reconciliation_errors, {"report_present": rec_path.is_file(), "verified_commit_reconciles": bool(sha_ok), "stable_fields_match": not any("disagrees" in error for error in reconciliation_errors)})
+
+    # SEM-042: pre-run tracked working tree cleanliness
+    clean_errors = []
+    if pre_run_status and not args.allow_dirty:
+        clean_errors.append(f"pre-run working tree is not clean:\n{pre_run_status[:800]}")
+    checks.add("SEM-042-REPO-CLEAN-PRERUN", "Pre-run tracked working tree cleanliness", clean_errors, {"pre_run_clean": not bool(pre_run_status), "gate_skipped_by_allow_dirty": bool(args.allow_dirty)})
+
     failed = [item for item in checks.items if item["status"] == "FAIL"]
     verdict = "PASS" if not failed else "FAIL"
     statement = "SEMANTIC GRAPHIFY PLANNING COMPLETE — IMPLEMENTATION NOT STARTED" if verdict == "PASS" else "SEMANTIC GRAPHIFY PLANNING INCOMPLETE — CONTINUE WORKING"
@@ -855,7 +1279,7 @@ def main() -> int:
         if item["check_id"] in {"SEM-005-PROTECTED-SEPARATION", "SEM-018-TOPOLOGICAL-ORDER", "SEM-019-PHASE-WAVE", "SEM-028-DUPLICATE-AUTHORITY", "SEM-030-COUNTS", "SEM-034-HANDOFF"}
     )
     report = {
-        "schema_version": 4, "validated_at": STAMP, "scope": "DERIVED GRAPHIFY PLANNING ONLY - IMPLEMENTATION NOT STARTED",
+        "schema_version": 5, "scope": "DERIVED GRAPHIFY PLANNING ONLY - IMPLEMENTATION NOT STARTED",
         "verdict": verdict, "completion_statement": statement, "total_checks": len(checks.items),
         "passed_checks": len(checks.items) - len(failed), "failed_checks": len(failed), "checks": checks.items,
         "counts": {"requirements": len(requirements), "requirements_by_master_plan": expected_counts["by_master_plan_file"], "requirements_by_classification": expected_counts["by_classification"], "capabilities": len(capabilities), "exact_locations": len(locations), "tasks": len(tasks), "deletion_tasks": sum(task.get("task_kind") == "DELETION" for task in tasks), "conditional_packages": len(packages), "release_gates": len(release_gates)},
@@ -865,7 +1289,7 @@ def main() -> int:
         "unmapped_requirement_count": orphan_counts["requirements_without_capability"],
         "placeholder_count": placeholder_count, "contradiction_count": contradiction_count,
         "orphans": orphan_counts, "codebase_integrity_evidence": integrity_evidence,
-        "master_plan_hashes": {name: sha256(MP / name) for name in MASTER_HASHES},
+        "master_plan_hashes": {name: git_blob_sha256(f"Graphify/Master Plan/{name}") for name in MASTER_HASHES},
         "implementation_status": "NOT STARTED", "release_status": "NOT EVALUATED",
     }
     dump("PLANNING_VALIDATION_REPORT.json", report)
@@ -874,19 +1298,16 @@ def main() -> int:
     if failed:
         lines.extend(["", "## Failures", ""] + [f"- `{item['check_id']}`: {error}" for item in failed for error in item["errors"][:20]])
     write("PLANNING_VALIDATION_REPORT.md", "\n".join(lines))
-    dump("VERIFICATION_AUDIT.json", {"schema_version": 3, "verified_at": STAMP, "scope": report["scope"], "verdict": verdict, "checks": checks.items, "codebase_integrity_evidence": integrity_evidence, "implementation_status": "NOT STARTED", "release_status": "NOT EVALUATED"})
-    readiness = {"schema_version": 3, "validated_at": STAMP, "planning_verdict": verdict, "completion_statement": statement, "implementation_status": "NOT STARTED", "release_status": "NOT EVALUATED", "failed_planning_checks": [item["check_id"] for item in failed], "exact_first_task_id": "TASK-GOV-001-PROVENANCE-BASELINE"}
+    dump("VERIFICATION_AUDIT.json", {"schema_version": 4, "scope": report["scope"], "verdict": verdict, "checks": checks.items, "codebase_integrity_evidence": integrity_evidence, "implementation_status": "NOT STARTED", "release_status": "NOT EVALUATED"})
+    readiness = {"schema_version": 4, "planning_verdict": verdict, "completion_statement": statement, "implementation_status": "NOT STARTED", "release_status": "NOT EVALUATED", "failed_planning_checks": [item["check_id"] for item in failed], "exact_first_task_id": "TASK-GOV-001-PROVENANCE-BASELINE"}
     dump("READINESS_GATE.json", readiness)
     write("READINESS_GATE.md", f"# Readiness Gate\n\n{statement}\n\nSemantic planning validator: **{verdict}**. Implementation: **NOT STARTED**. Release: **NOT EVALUATED**. Exact first task: `TASK-GOV-001-PROVENANCE-BASELINE`.\n")
-    consistency = {"schema_version": 3, "validated_at": STAMP, "verdict": verdict, "requirements": len(requirements), "capabilities": len(capabilities), "tasks": len(tasks), "exact_locations": len(locations), "dependency_graph": graph_metrics, "orphan_counts": orphan_counts, "duplicate_requirement_ids": duplicates(item["stable_requirement_id"] for item in requirements), "duplicate_capability_ids": duplicates(item["id"] for item in capabilities), "duplicate_task_ids": duplicates(item["stable_task_id"] for item in tasks)}
+    consistency = {"schema_version": 4, "verdict": verdict, "requirements": len(requirements), "capabilities": len(capabilities), "tasks": len(tasks), "exact_locations": len(locations), "dependency_graph": graph_metrics, "orphan_counts": orphan_counts, "duplicate_requirement_ids": duplicates(item["stable_requirement_id"] for item in requirements), "duplicate_capability_ids": duplicates(item["id"] for item in capabilities), "duplicate_task_ids": duplicates(item["stable_task_id"] for item in tasks)}
     dump("GRAPH_CONSISTENCY_REPORT.json", consistency)
     write("GRAPH_CONSISTENCY_REPORT.md", f"# Graph Consistency Report\n\nSemantic planning graph verdict: **{verdict}**. Requirements: {len(requirements)}; capabilities: {len(capabilities)}; tasks: {len(tasks)}; dependency edges: {graph_metrics['dependency_edges']}; cycles: {graph_metrics['cycle_count']}; orphans: {sum(orphan_counts.values())}. This is planning consistency, not application execution proof.\n")
     write("GRAPHIFY_READINESS_REPORT.md", f"# Graphify Readiness Report\n\n{statement}\n\nThe deterministic structural and semantic planning validator reports **{verdict}**. No implementation, application test, build, package, installer, offline launch, hardware workflow, final Graphify rescan, Ponytail pass, or release approval is claimed.\n")
-    manifest_files = []
-    for path in sorted(G.rglob("*")):
-        if path.is_file() and "graphify-out" not in path.parts and path.name != "GRAPHIFY_OUTPUT_MANIFEST.json":
-            manifest_files.append({"path": path.relative_to(G).as_posix(), "size_bytes": path.stat().st_size, "sha256": sha256(path)})
-    dump("GRAPHIFY_OUTPUT_MANIFEST.json", {"schema_version": 3, "generated_at": STAMP, "scope": "Graphify authorities, reports, tools and immutable Master Plan; genuine graphify-out evidence excluded and separately preserved", "self_excluded": True, "file_count": len(manifest_files), "files": manifest_files})
+    dump("GRAPHIFY_OUTPUT_MANIFEST.json", {"schema_version": 4, "scope": "Tracked Graphify authorities, reports, tools and immutable Master Plan; genuine graphify-out evidence excluded and separately preserved; transient and non-tracked entries excluded; deterministic (no timestamps)", "self_excluded": True, "file_count": len(manifest_entries), "files": manifest_entries})
+    write_reconciliation_report(reconciliation_fields(integrity_evidence, checks.items, verdict, pre_run_status, manifest_entries))
     print(json.dumps({"verdict": verdict, "checks": f"{report['passed_checks']}/{report['total_checks']}", "requirements": len(requirements), "capabilities": len(capabilities), "tasks": len(tasks), "exact_locations": len(locations), "dependency_graph": graph_metrics, "failed": [item["check_id"] for item in failed]}, indent=2, ensure_ascii=False))
     return 0 if verdict == "PASS" else 1
 

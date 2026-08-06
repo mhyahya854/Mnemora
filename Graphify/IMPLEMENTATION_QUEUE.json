@@ -1,7 +1,6 @@
 {
   "schema_version": 3,
   "authority": "Single machine-readable implementation task authority",
-  "generated_at": "2026-08-05T16:54:49.133648Z",
   "implementation_status": "NOT STARTED",
   "exact_first_task_id": "TASK-GOV-001-PROVENANCE-BASELINE",
   "task_count": 158,

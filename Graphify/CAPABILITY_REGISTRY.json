@@ -1,7 +1,6 @@
 {
   "schema_version": 2,
   "authority": "Single derived capability authority; runtime_chain retains genuine Graphify/static-analysis evidence and must not be interpreted as execution proof",
-  "generated_at": "2026-08-05T16:54:49.133648Z",
   "capability_count": 120,
   "decision_counts": {
     "ADD": 5,

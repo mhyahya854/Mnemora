@@ -2,7 +2,7 @@
 
 ## Root and provenance
 
-- Root: `C:\Users\mhyah\Downloads\Code\Mnemora`.
+- Root: the Git worktree root discovered by `git rev-parse --show-toplevel` (machine-specific absolute path intentionally not embedded).
 - Current application folder: `codebase/`; planned `Codebase` spelling is not a completed move.
 - Derived planning folder: `Graphify/`.
 - Git: present; details are in `RUN_STATE.md` and the 2026-08-05 audit baseline in `PLANNING_BASELINE.md`.

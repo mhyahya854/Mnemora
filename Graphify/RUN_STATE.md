@@ -3,9 +3,9 @@
 ## Current checkpoint
 
 - Mode: final derived-planning completion; application implementation not started.
-- Repository root: `C:\Users\mhyah\Downloads\Code\Mnemora`.
-- Current application root: `C:\Users\mhyah\Downloads\Code\Mnemora\codebase` (lowercase path is authoritative current evidence).
-- Git: present at the repository root (branch `graphify-semantic-audit`); branch, commit, staged, unstaged, deleted and untracked states are verified at implementation time by `TASK-GOV-001-PROVENANCE-BASELINE` and recorded in the audit baseline.
+- Repository root: the Git worktree root discovered by `git rev-parse --show-toplevel` (machine-specific absolute path intentionally not embedded).
+- Current application root: `codebase/` (lowercase path is authoritative current evidence).
+- Git: present at the repository root (branch `graphify-final-reconciliation`); branch, commit, staged, unstaged, deleted and untracked states are verified at implementation time by `TASK-GOV-001-PROVENANCE-BASELINE` and recorded in the audit baseline.
 - Provenance fallback: `REPOSITORY_FILE_INVENTORY.json` plus `REPOSITORY_FINGERPRINT.json`; future implementation begins with `TASK-GOV-001-PROVENANCE-BASELINE`.
 - Immutable Master Plan files: verified against the SHA-256 values below before derived generation.
 - Application writes in this planning run: none authorized.

@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "scope": "FINAL REPOSITORY RECONCILIATION - tracked Git parity, Git LFS verification and separate local-only inventory claims",
+  "repository_url": "git@github.com:mhyahya854/Mnemora.git",
+  "default_branch": "main",
+  "branch": "graphify-final-reconciliation",
+  "verified_commit_sha": "cd30ff4b3579e36446b50f90f57bfd3e8058bb1b",
+  "verified_tree_sha": "1f33a55eca847c6b0ba1dad05453d5e5a9678d97",
+  "tracked_file_count": 425,
+  "tracked_codebase_file_count": 346,
+  "lfs_file_count": 1,
+  "master_plan_sha256": {
+    "01-EVERYTHING-WE-ARE-KEEPING.md": "BDF185A823422BCAA9BFEBA815A6852D8F7A5CD46B64714B2CD1DE3357A67F64",
+    "02-EVERYTHING-WE-ARE-DELETING.md": "76B6EEC15778B1928F2CD9C0F73FA68C9F3363493062E31E0C904E620DE0AAC3",
+    "03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md": "5E076498731C35ACF314904AAB3A39671F7026A166B5E847EFE3CCD4CF07304E"
+  },
+  "historical_manifests": {
+    "raw_baseline_sha256": "201FC0BDAE689102ED823385C8F8EFEAB1A3739C65EAB8743398DFE94F8D0006",
+    "raw_final_sha256": "6AA22642525633E6E59E51FB1EB281D4AAE78602B15FAF7744E7FF9B1EF4CF6C",
+    "raw_files_byte_identical": false,
+    "baseline_entries": 24839,
+    "final_entries": 24839,
+    "unchanged": 24839,
+    "added": 0,
+    "missing": 0,
+    "changed": 0,
+    "duplicates": 0,
+    "malformed": 0,
+    "mappings_identical": true
+  },
+  "canonical_manifests": {
+    "raw_baseline_sha256": "A500B0D0A7CAC3A6EB236BBEBA59C949AC38D88A886E7A6F717E1320797CE3BE",
+    "raw_final_sha256": "A500B0D0A7CAC3A6EB236BBEBA59C949AC38D88A886E7A6F717E1320797CE3BE",
+    "raw_files_byte_identical": true,
+    "baseline_entries": 346,
+    "final_entries": 346,
+    "unchanged": 346,
+    "added": 0,
+    "missing": 0,
+    "changed": 0,
+    "duplicates": 0,
+    "malformed": 0,
+    "mappings_identical": true,
+    "current_mapping_identical_to_final": true
+  },
+  "transient_exclusions": [
+    ".git",
+    ".log",
+    ".mypy_cache",
+    ".pyc",
+    ".pyo",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".swo",
+    ".swp",
+    ".tmp",
+    "__pycache__",
+    "~"
+  ],
+  "output_manifest_entries": 63,
+  "validator": {
+    "gate_count": 42,
+    "passed": 41,
+    "failed": 1,
+    "verdict": "FAIL",
+    "commands": [
+      "python -B Graphify/tools/semantic_validator.py --self-test-only",
+      "python -B Graphify/tools/validate_planning.py",
+      "python -B Graphify/tools/validate_planning.py --full-codebase"
+    ]
+  },
+  "local_full_tree_audit": "RUN - LOCAL ONLY (ignored dependencies/build output are not GitHub-verified)",
+  "pre_run_working_tree": "DIRTY",
+  "implementation_status": "NOT STARTED",
+  "release_status": "NOT EVALUATED"
+}

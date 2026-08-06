@@ -16,15 +16,15 @@ This is the single authoritative entry point for a future implementation run. Im
 
 ## Scope and editable boundaries
 
-- Repository root: `C:\Users\mhyah\Downloads\Code\Mnemora`.
-- Current application root: `C:\Users\mhyah\Downloads\Code\Mnemora\codebase`; the lowercase path remains authoritative until a future casing-safe move task is executed.
+- Repository root: the Git worktree root discovered by `git rev-parse --show-toplevel` (machine-specific absolute path intentionally not embedded).
+- Current application root: `codebase/`; the lowercase path remains authoritative until a future casing-safe move task is executed.
 - Current repository state: Git is present at the repository root. The semantic planning audit is performed on the `graphify-semantic-audit` branch and is fast-forward-integrated into `main` by the audit-run completion step; the generation-time branch is recorded in `RUN_STATE.md`.
 - The completed run represented here edited only `Graphify/`. A future implementation run may edit application-owned files only when the active queue task names them under `files_expected_to_change`; the three Master Plan files and every task's `files_forbidden_from_changing` remain immutable boundaries.
 - Installed dependencies, generated output, user databases, recordings, notes, transcripts, exports and backups are never implementation targets. Destructive tests use disposable verified copies.
 
 ## State-inspection commands
 
-Run from `C:\Users\mhyah\Downloads\Code\Mnemora` before taking implementation authority:
+Run from the repository root before taking implementation authority:
 
 ```powershell
 Get-FileHash -Algorithm SHA256 -LiteralPath 'Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md','Graphify/Master Plan/02-EVERYTHING-WE-ARE-DELETING.md','Graphify/Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md'

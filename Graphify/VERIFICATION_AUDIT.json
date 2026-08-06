@@ -1,12 +1,11 @@
 {
-  "schema_version": 3,
-  "verified_at": "2026-08-05T16:54:48.794208Z",
+  "schema_version": 4,
   "scope": "DERIVED GRAPHIFY PLANNING ONLY - IMPLEMENTATION NOT STARTED",
-  "verdict": "PASS",
+  "verdict": "FAIL",
   "checks": [
     {
       "check_id": "SEM-001-MASTER-HASH",
-      "name": "Master Plan hash integrity",
+      "name": "Master Plan hash integrity (canonical git blob content)",
       "status": "PASS",
       "error_count": 0,
       "errors": [],
@@ -652,13 +651,22 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "baseline_codebase_files": 24839,
-        "current_codebase_files": 24839,
-        "comparable_pre_and_post_sha256_files": 346,
-        "path_and_size_only_files": 24493,
-        "post_run_full_sha256_fingerprint": null,
-        "equivalent_pre_run_full_sha256_fingerprint_available": false,
-        "claim_limit": "Only comparable-hash files are proven byte-identical. Path/size-only files are not cryptographic equality proof. A post-run full fingerprint without an equivalent pre-run full fingerprint is a current-state checkpoint, not full before/after proof."
+        "tracked_codebase_file_count": 346,
+        "tracked_baseline_entries": 346,
+        "tracked_final_entries": 346,
+        "tracked_unchanged": 346,
+        "tracked_added": 0,
+        "tracked_removed": 0,
+        "tracked_changed": 0,
+        "tracked_manifest_errors": 0,
+        "claim": "Tracked codebase parity is verified from git blob content and is reproducible from any clean clone.",
+        "local_full_tree_audit": "RUN - LOCAL ONLY (ignored dependencies/build output are not GitHub-verified)",
+        "local_baseline_codebase_files": 24839,
+        "local_current_codebase_files": 24839,
+        "local_comparable_pre_and_post_sha256_files": 346,
+        "local_path_and_size_only_files": 24493,
+        "local_post_run_full_sha256_fingerprint": null,
+        "local_claim_limit": "Only comparable-hash files are proven byte-identical. Path/size-only files are not cryptographic equality proof. A post-run full fingerprint without an equivalent pre-run full fingerprint is a current-state checkpoint, not full before/after proof."
       }
     },
     {
@@ -686,16 +694,137 @@
       "details": {
         "fixture_count": 14
       }
+    },
+    {
+      "check_id": "SEM-037-TRANSIENT-OUTPUT-MANIFEST",
+      "name": "Transient and non-tracked Graphify output-manifest detection",
+      "status": "PASS",
+      "error_count": 0,
+      "errors": [],
+      "details": {
+        "committed_output_manifest_entries": 63,
+        "regenerated_output_manifest_entries": 63,
+        "tracked_graphify_files": 77
+      }
+    },
+    {
+      "check_id": "SEM-038-CANONICAL-MANIFEST-COMPARISON",
+      "name": "Canonical tracked manifest structure and equality",
+      "status": "PASS",
+      "error_count": 0,
+      "errors": [],
+      "details": {
+        "canonical_stats": {
+          "baseline_entries": 346,
+          "final_entries": 346,
+          "unchanged": 346,
+          "added": 0,
+          "missing": 0,
+          "changed": 0,
+          "duplicates": 0,
+          "malformed": 0,
+          "mappings_identical": true
+        },
+        "current_mapping_identical_to_final": true
+      }
+    },
+    {
+      "check_id": "SEM-039-MANIFEST-HONESTY",
+      "name": "Raw-file versus normalized-mapping honesty",
+      "status": "PASS",
+      "error_count": 0,
+      "errors": [],
+      "details": {
+        "historical": {
+          "raw_baseline_sha256": "201FC0BDAE689102ED823385C8F8EFEAB1A3739C65EAB8743398DFE94F8D0006",
+          "raw_final_sha256": "6AA22642525633E6E59E51FB1EB281D4AAE78602B15FAF7744E7FF9B1EF4CF6C",
+          "raw_files_byte_identical": false,
+          "baseline_entries": 24839,
+          "final_entries": 24839,
+          "unchanged": 24839,
+          "added": 0,
+          "missing": 0,
+          "changed": 0,
+          "duplicates": 0,
+          "malformed": 0,
+          "mappings_identical": true
+        },
+        "canonical": {
+          "raw_baseline_sha256": "A500B0D0A7CAC3A6EB236BBEBA59C949AC38D88A886E7A6F717E1320797CE3BE",
+          "raw_final_sha256": "A500B0D0A7CAC3A6EB236BBEBA59C949AC38D88A886E7A6F717E1320797CE3BE",
+          "raw_files_byte_identical": true,
+          "baseline_entries": 346,
+          "final_entries": 346,
+          "unchanged": 346,
+          "added": 0,
+          "missing": 0,
+          "changed": 0,
+          "duplicates": 0,
+          "malformed": 0,
+          "mappings_identical": true,
+          "current_mapping_identical_to_final": true
+        }
+      }
+    },
+    {
+      "check_id": "SEM-040-PROTECTED-CONTENT",
+      "name": "Protected Master Plan and tracked codebase content unchanged",
+      "status": "PASS",
+      "error_count": 0,
+      "errors": [],
+      "details": {
+        "master_plan_sha256": {
+          "01-EVERYTHING-WE-ARE-KEEPING.md": "BDF185A823422BCAA9BFEBA815A6852D8F7A5CD46B64714B2CD1DE3357A67F64",
+          "02-EVERYTHING-WE-ARE-DELETING.md": "76B6EEC15778B1928F2CD9C0F73FA68C9F3363493062E31E0C904E620DE0AAC3",
+          "03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md": "5E076498731C35ACF314904AAB3A39671F7026A166B5E847EFE3CCD4CF07304E"
+        },
+        "tracked_codebase_manifest_unchanged": true
+      }
+    },
+    {
+      "check_id": "SEM-041-RECONCILIATION-REPORT",
+      "name": "Final repository reconciliation report consistency",
+      "status": "FAIL",
+      "error_count": 2,
+      "errors": [
+        "FINAL-REPOSITORY-RECONCILIATION.json pre_run_working_tree disagrees with computed value",
+        "FINAL-REPOSITORY-RECONCILIATION.json verified commit does not equal the parent commit (or HEAD when HEAD has no parent)"
+      ],
+      "details": {
+        "report_present": true,
+        "verified_commit_reconciles": false,
+        "stable_fields_match": false
+      }
+    },
+    {
+      "check_id": "SEM-042-REPO-CLEAN-PRERUN",
+      "name": "Pre-run tracked working tree cleanliness",
+      "status": "PASS",
+      "error_count": 0,
+      "errors": [],
+      "details": {
+        "pre_run_clean": false,
+        "gate_skipped_by_allow_dirty": true
+      }
     }
   ],
   "codebase_integrity_evidence": {
-    "baseline_codebase_files": 24839,
-    "current_codebase_files": 24839,
-    "comparable_pre_and_post_sha256_files": 346,
-    "path_and_size_only_files": 24493,
-    "post_run_full_sha256_fingerprint": null,
-    "equivalent_pre_run_full_sha256_fingerprint_available": false,
-    "claim_limit": "Only comparable-hash files are proven byte-identical. Path/size-only files are not cryptographic equality proof. A post-run full fingerprint without an equivalent pre-run full fingerprint is a current-state checkpoint, not full before/after proof."
+    "tracked_codebase_file_count": 346,
+    "tracked_baseline_entries": 346,
+    "tracked_final_entries": 346,
+    "tracked_unchanged": 346,
+    "tracked_added": 0,
+    "tracked_removed": 0,
+    "tracked_changed": 0,
+    "tracked_manifest_errors": 0,
+    "claim": "Tracked codebase parity is verified from git blob content and is reproducible from any clean clone.",
+    "local_full_tree_audit": "RUN - LOCAL ONLY (ignored dependencies/build output are not GitHub-verified)",
+    "local_baseline_codebase_files": 24839,
+    "local_current_codebase_files": 24839,
+    "local_comparable_pre_and_post_sha256_files": 346,
+    "local_path_and_size_only_files": 24493,
+    "local_post_run_full_sha256_fingerprint": null,
+    "local_claim_limit": "Only comparable-hash files are proven byte-identical. Path/size-only files are not cryptographic equality proof. A post-run full fingerprint without an equivalent pre-run full fingerprint is a current-state checkpoint, not full before/after proof."
   },
   "implementation_status": "NOT STARTED",
   "release_status": "NOT EVALUATED"

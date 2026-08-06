@@ -13,7 +13,6 @@ import collections
 import hashlib
 import json
 import re
-from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Iterable
 
@@ -35,7 +34,6 @@ ROOT = Path(__file__).resolve().parents[2]
 G = ROOT / "Graphify"
 CB = ROOT / "codebase"
 MP = G / "Master Plan"
-STAMP = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 MASTER_FILES = [
     ("MP1", MP / "01-EVERYTHING-WE-ARE-KEEPING.md"),
     ("MP2", MP / "02-EVERYTHING-WE-ARE-DELETING.md"),
@@ -2018,7 +2016,6 @@ requirement_counts = {
 requirement_register = {
     "schema_version": 1,
     "authority": "Single machine-readable derived requirement authority subordinate to the three immutable Master Plan files",
-    "generated_at": STAMP,
     "master_plan_sha256": {path.name: EXPECTED_MASTER_HASHES[code] for code, path in MASTER_FILES},
     "normalization_rule": "One coherent independently verifiable paragraph, top-level list item with nested clauses, table row, or architecture block; classification-only bullets are inherited and not emitted as noise.",
     "counts": requirement_counts,
@@ -2029,7 +2026,6 @@ requirement_register = {
 capability_register = {
     "schema_version": 2,
     "authority": "Single derived capability authority; runtime_chain retains genuine Graphify/static-analysis evidence and must not be interpreted as execution proof",
-    "generated_at": STAMP,
     "capability_count": len(capabilities),
     "decision_counts": dict(sorted(collections.Counter(cap["decision"] for cap in capabilities).items())),
     "capabilities": capabilities,
@@ -2039,7 +2035,6 @@ capability_register = {
 implementation_queue = {
     "schema_version": 3,
     "authority": "Single machine-readable implementation task authority",
-    "generated_at": STAMP,
     "implementation_status": "NOT STARTED",
     "exact_first_task_id": "TASK-GOV-001-PROVENANCE-BASELINE",
     "task_count": len(tasks),
@@ -2198,7 +2193,6 @@ for item in exact_entries:
 exact_registry = {
     "schema_version": 3,
     "authority": "Authoritative exact-location registry; no Markdown mirror is authoritative",
-    "generated_at": STAMP,
     "provenance": "Rebuilt from immutable Master Plan authority, reviewed capability-domain rules, verified current symbols or content hashes, and context-dispositioned deletion evidence. Genuine prior Graphify/static analysis informed review; no graph node ID is invented.",
     "entry_count": len(exact_entries),
     "required_fields": exact_required_fields,
@@ -2238,7 +2232,6 @@ for record in test_records:
 test_matrix = {
     "schema_version": 3,
     "authority": "Planning-only test and evidence contract authority",
-    "generated_at": STAMP,
     "test_contract_count": len(test_records),
     "executed_in_this_run": 0,
     "verified_package_scripts": {name: package_scripts[name] for name in ("test", "typecheck", "lint", "build", "build:win", "pack", "dist", "verify:offline-assets", "i18n:check") if name in package_scripts},
@@ -2255,7 +2248,7 @@ test_matrix = {
 inventory_files = [entry for entry in inventory_doc.get("files", []) if entry.get("path") != "Graphify.zip"]
 inventory_fingerprint = hashlib.sha256("\n".join(f"{item['path']}\0{item.get('sha256', '')}" for item in inventory_files).encode("utf-8")).hexdigest().upper()
 repository_file_inventory = {
-    "schema_version": 2, "fingerprint": inventory_fingerprint, "generated_at": STAMP,
+    "schema_version": 2, "fingerprint": inventory_fingerprint,
     "scope": "Current codebase files plus the three immutable Master Plan sources; derived Graphify artifacts are validated separately",
     "file_count": len(inventory_files), "files": inventory_files,
 }
@@ -2285,10 +2278,10 @@ for gate in RELEASE_GATES:
 
 
 write_json("MASTER_REQUIREMENT_REGISTER.json", requirement_register)
-write_json("INTERPRETATION_REGISTER.json", {"schema_version": 1, "authority": "Derived interpretations subordinate to immutable Master Plan", "generated_at": STAMP, "interpretation_count": len(INTERPRETATIONS), "unresolved_conflict_count": 0, "interpretations": INTERPRETATIONS})
+write_json("INTERPRETATION_REGISTER.json", {"schema_version": 1, "authority": "Derived interpretations subordinate to immutable Master Plan", "interpretation_count": len(INTERPRETATIONS), "unresolved_conflict_count": 0, "interpretations": INTERPRETATIONS})
 write_json("CAPABILITY_REGISTRY.json", capability_register)
-write_json("CONDITIONAL_DECISION_PACKAGES.json", {"schema_version": 1, "authority": "Complete evidence-driven conditional decision packages", "generated_at": STAMP, "package_count": len(decision_packages), "packages": decision_packages})
-write_json("RELEASE_GATE_PLAN.json", {"schema_version": 1, "authority": "Strict Release Conjunction planning authority", "generated_at": STAMP, "release_status": "NOT EVALUATED - IMPLEMENTATION NOT STARTED", "gate_count": len(RELEASE_GATES), "gates": RELEASE_GATES})
+write_json("CONDITIONAL_DECISION_PACKAGES.json", {"schema_version": 1, "authority": "Complete evidence-driven conditional decision packages", "package_count": len(decision_packages), "packages": decision_packages})
+write_json("RELEASE_GATE_PLAN.json", {"schema_version": 1, "authority": "Strict Release Conjunction planning authority", "release_status": "NOT EVALUATED - IMPLEMENTATION NOT STARTED", "gate_count": len(RELEASE_GATES), "gates": RELEASE_GATES})
 write_json("IMPLEMENTATION_QUEUE.json", implementation_queue)
 write_json("EXACT_LOCATION_REGISTRY.json", exact_registry)
 write_json("TEST_MATRIX.json", test_matrix)
@@ -2323,15 +2316,15 @@ This is the single authoritative entry point for a future implementation run. Im
 
 ## Scope and editable boundaries
 
-- Repository root: `{ROOT}`.
-- Current application root: `{CB}`; the lowercase path remains authoritative until a future casing-safe move task is executed.
+- Repository root: the Git worktree root discovered by `git rev-parse --show-toplevel` (machine-specific absolute path intentionally not embedded).
+- Current application root: `codebase/`; the lowercase path remains authoritative until a future casing-safe move task is executed.
 - Current repository state: Git is present at the repository root. The semantic planning audit is performed on the `graphify-semantic-audit` branch and is fast-forward-integrated into `main` by the audit-run completion step; the generation-time branch is recorded in `RUN_STATE.md`.
 - The completed run represented here edited only `Graphify/`. A future implementation run may edit application-owned files only when the active queue task names them under `files_expected_to_change`; the three Master Plan files and every task's `files_forbidden_from_changing` remain immutable boundaries.
 - Installed dependencies, generated output, user databases, recordings, notes, transcripts, exports and backups are never implementation targets. Destructive tests use disposable verified copies.
 
 ## State-inspection commands
 
-Run from `{ROOT}` before taking implementation authority:
+Run from the repository root before taking implementation authority:
 
 ```powershell
 Get-FileHash -Algorithm SHA256 -LiteralPath 'Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md','Graphify/Master Plan/02-EVERYTHING-WE-ARE-DELETING.md','Graphify/Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md'
@@ -2411,8 +2404,8 @@ write_text("RUN_STATE.md", f"""# Run State
 ## Current checkpoint
 
 - Mode: final derived-planning completion; application implementation not started.
-- Repository root: `{ROOT}`.
-- Current application root: `{CB}` (lowercase path is authoritative current evidence).
+- Repository root: the Git worktree root discovered by `git rev-parse --show-toplevel` (machine-specific absolute path intentionally not embedded).
+- Current application root: `codebase/` (lowercase path is authoritative current evidence).
 {git_state_line}
 - Provenance fallback: `REPOSITORY_FILE_INVENTORY.json` plus `REPOSITORY_FINGERPRINT.json`; future implementation begins with `TASK-GOV-001-PROVENANCE-BASELINE`.
 - Immutable Master Plan files: verified against the SHA-256 values below before derived generation.
@@ -2506,11 +2499,11 @@ write_text("COMPLETION_TRACKER.md", f"""# Completion Tracker
 
 ## Planning checkpoint
 
-The derived model contains {len(requirements)} normalized requirements, {len(capabilities)} capabilities, {len(tasks)} implementation tasks ({implementation_queue['deletion_task_count']} deletion tasks), {len(decision_packages)} conditional packages, {len(RELEASE_GATES)} release gates and {len(exact_entries)} exact-location entries. Deterministic completion is controlled by `tools/validate_planning.py` and `PLANNING_VALIDATION_REPORT.json`; typed totals here are generated from the authorities. The 2026-08-05 independent semantic audit verified 36/36 deterministic gates (including generator reproducibility), reconciled the registries with the generator, recorded real Git provenance, and confirmed byte-for-byte Master Plan and codebase immutability.
+The derived model contains {len(requirements)} normalized requirements, {len(capabilities)} capabilities, {len(tasks)} implementation tasks ({implementation_queue['deletion_task_count']} deletion tasks), {len(decision_packages)} conditional packages, {len(RELEASE_GATES)} release gates and {len(exact_entries)} exact-location entries. Deterministic completion is controlled by `tools/validate_planning.py` and `PLANNING_VALIDATION_REPORT.json`; typed totals here are generated from the authorities. The deterministic validator enforces the complete gate suite recorded in `PLANNING_VALIDATION_REPORT.json` (the current gate count and verdict are authoritative there), including generator reproducibility. Historical audit and reconciliation records live in `PLANNING_BASELINE.md` and `FINAL-REPOSITORY-RECONCILIATION.md`.
 
 ## Planning Completion Conjunction
 
-{markdown_table(["Gate", "State on 2026-08-05", "Deterministic authority"], [[index, "PASS", authority] for index, authority in enumerate([
+{markdown_table(["Gate", "State (authoritative in validation report)", "Deterministic authority"], [[index, "PASS (see report)", authority] for index, authority in enumerate([
     'Master hashes and exact source-line coverage', 'Stable requirement records', 'Requirement-to-capability coverage', 'Named product-scope capability completeness',
     'Protected retained scope separated from deletion', 'Capability ownership and runtime chains', 'Exact-location path/symbol reconciliation and vendor restrictions', 'Deletion dispositions, false-positive exclusions, and seven interlocks',
     'Real semantic task dependencies, DAG, and topological order', 'Phase, wave, and order agreement', 'Complete task contracts without vague language', 'Test-command validity and existing-versus-planned distinction',
@@ -2521,7 +2514,7 @@ The derived model contains {len(requirements)} normalized requirements, {len(cap
 
 ## Application and release status
 
-Implementation, application tests, builds, packaging, installation, offline launch, final Graphify scan, final simplification audit and release approval are all pending future execution. Planning completeness never changes those statuses. The 2026-08-05 audit recorded a full codebase SHA-256 manifest baseline and verified no codebase path changed during the planning audit.
+Implementation, application tests, builds, packaging, installation, offline launch, final Graphify scan, final simplification audit and release approval are all pending future execution. Planning completeness never changes those statuses. Historical full-tree manifest evidence is preserved in `PLANNING_BASELINE.md`; precise tracked/Git, Git LFS and local-only inventory claims are in `FINAL-REPOSITORY-RECONCILIATION.md`.
 """)
 
 
@@ -2529,7 +2522,7 @@ write_text("REPOSITORY_INVENTORY.md", f"""# Repository Inventory
 
 ## Root and provenance
 
-- Root: `{ROOT}`.
+- Root: the Git worktree root discovered by `git rev-parse --show-toplevel` (machine-specific absolute path intentionally not embedded).
 - Current application folder: `codebase/`; planned `Codebase` spelling is not a completed move.
 - Derived planning folder: `Graphify/`.
 - {inventory_git_line}

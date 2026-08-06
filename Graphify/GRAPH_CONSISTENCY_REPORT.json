@@ -1,7 +1,6 @@
 {
-  "schema_version": 3,
-  "validated_at": "2026-08-05T16:54:48.794208Z",
-  "verdict": "PASS",
+  "schema_version": 4,
+  "verdict": "FAIL",
   "requirements": 536,
   "capabilities": 120,
   "tasks": 158,

@@ -17,5 +17,9 @@ Graphify/.graphify_semantic_new.json
 Graphify/.graphify_uncached.txt
 
 *.pyc
+*.pyo
+__pycache__/
+.pytest_cache/
+.mypy_cache/
 Thumbs.db
 .DS_Store

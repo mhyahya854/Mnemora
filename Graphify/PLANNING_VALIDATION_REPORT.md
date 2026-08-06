@@ -1,12 +1,12 @@
 # Semantic Planning Validation Report
 
-SEMANTIC GRAPHIFY PLANNING COMPLETE — IMPLEMENTATION NOT STARTED
+SEMANTIC GRAPHIFY PLANNING INCOMPLETE — CONTINUE WORKING
 
-Checks: **36/36 passed**. Implementation: **NOT STARTED**. Release: **NOT EVALUATED**.
+Checks: **41/42 passed**. Implementation: **NOT STARTED**. Release: **NOT EVALUATED**.
 
 | Gate | Result | Errors |
 | --- | --- | ---: |
-| SEM-001-MASTER-HASH - Master Plan hash integrity | PASS | 0 |
+| SEM-001-MASTER-HASH - Master Plan hash integrity (canonical git blob content) | PASS | 0 |
 | SEM-002-REQUIREMENT-SOURCE - Requirement source and line reconciliation | PASS | 0 |
 | SEM-003-REQUIREMENT-CLASSIFICATION - Semantic requirement classifications | PASS | 0 |
 | SEM-004-NAMED-CAPABILITIES - Named product-scope capability completeness | PASS | 0 |
@@ -42,3 +42,14 @@ Checks: **36/36 passed**. Implementation: **NOT STARTED**. Release: **NOT EVALUA
 | SEM-034-HANDOFF - Authoritative implementation handoff consistency | PASS | 0 |
 | SEM-035-DATA-OFFLINE-WINDOWS - Data safety, offline, and Windows release planning | PASS | 0 |
 | SEM-036-KNOWN-NEGATIVES - Known-negative validator fixtures | PASS | 0 |
+| SEM-037-TRANSIENT-OUTPUT-MANIFEST - Transient and non-tracked Graphify output-manifest detection | PASS | 0 |
+| SEM-038-CANONICAL-MANIFEST-COMPARISON - Canonical tracked manifest structure and equality | PASS | 0 |
+| SEM-039-MANIFEST-HONESTY - Raw-file versus normalized-mapping honesty | PASS | 0 |
+| SEM-040-PROTECTED-CONTENT - Protected Master Plan and tracked codebase content unchanged | PASS | 0 |
+| SEM-041-RECONCILIATION-REPORT - Final repository reconciliation report consistency | FAIL | 2 |
+| SEM-042-REPO-CLEAN-PRERUN - Pre-run tracked working tree cleanliness | PASS | 0 |
+
+## Failures
+
+- `SEM-041-RECONCILIATION-REPORT`: FINAL-REPOSITORY-RECONCILIATION.json pre_run_working_tree disagrees with computed value
+- `SEM-041-RECONCILIATION-REPORT`: FINAL-REPOSITORY-RECONCILIATION.json verified commit does not equal the parent commit (or HEAD when HEAD has no parent)
