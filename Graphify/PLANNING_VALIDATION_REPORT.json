@@ -1,11 +1,11 @@
 {
   "schema_version": 5,
   "scope": "DERIVED GRAPHIFY PLANNING ONLY - IMPLEMENTATION NOT STARTED",
-  "verdict": "PASS",
-  "completion_statement": "SEMANTIC GRAPHIFY PLANNING COMPLETE — IMPLEMENTATION NOT STARTED",
+  "verdict": "FAIL",
+  "completion_statement": "SEMANTIC GRAPHIFY PLANNING INCOMPLETE — CONTINUE WORKING",
   "total_checks": 42,
-  "passed_checks": 42,
-  "failed_checks": 0,
+  "passed_checks": 41,
+  "failed_checks": 1,
   "checks": [
     {
       "check_id": "SEM-001-MASTER-HASH",
@@ -788,13 +788,15 @@
     {
       "check_id": "SEM-041-RECONCILIATION-REPORT",
       "name": "Final repository reconciliation report consistency",
-      "status": "PASS",
-      "error_count": 0,
-      "errors": [],
+      "status": "FAIL",
+      "error_count": 1,
+      "errors": [
+        "FINAL-REPOSITORY-RECONCILIATION.json pre_run_working_tree disagrees with computed value"
+      ],
       "details": {
         "report_present": true,
         "verified_commit_reconciles": true,
-        "stable_fields_match": true
+        "stable_fields_match": false
       }
     },
     {
@@ -804,8 +806,8 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "pre_run_clean": true,
-        "gate_skipped_by_allow_dirty": false
+        "pre_run_clean": false,
+        "gate_skipped_by_allow_dirty": true
       }
     }
   ],

@@ -26,9 +26,9 @@ from semantic_validator import (
     build_graphify_output_manifest,
     current_tracked_codebase_mapping,
     git,
+    git_blob_sha256,
     manifest_pair_stats,
     parse_manifest,
-    sha256,
 )
 
 
@@ -64,15 +64,15 @@ def cmd_compare(args: argparse.Namespace) -> int:
     canonical_final_map, _ = parse_manifest(G / "TRACKED_CODEBASE_FINAL_SHA256.txt")
     result = {
         "historical_full_tree_manifests": {
-            "raw_baseline_sha256": sha256(G / "AUDIT_CODEBASE_BASELINE_SHA256.txt"),
-            "raw_final_sha256": sha256(G / "AUDIT_CODEBASE_FINAL_SHA256.txt"),
-            "raw_files_byte_identical": sha256(G / "AUDIT_CODEBASE_BASELINE_SHA256.txt") == sha256(G / "AUDIT_CODEBASE_FINAL_SHA256.txt"),
+            "raw_baseline_sha256": git_blob_sha256("Graphify/AUDIT_CODEBASE_BASELINE_SHA256.txt"),
+            "raw_final_sha256": git_blob_sha256("Graphify/AUDIT_CODEBASE_FINAL_SHA256.txt"),
+            "raw_files_byte_identical": git_blob_sha256("Graphify/AUDIT_CODEBASE_BASELINE_SHA256.txt") == git_blob_sha256("Graphify/AUDIT_CODEBASE_FINAL_SHA256.txt"),
             **historical,
         },
         "canonical_tracked_manifests": {
-            "raw_baseline_sha256": sha256(G / "TRACKED_CODEBASE_BASELINE_SHA256.txt"),
-            "raw_final_sha256": sha256(G / "TRACKED_CODEBASE_FINAL_SHA256.txt"),
-            "raw_files_byte_identical": sha256(G / "TRACKED_CODEBASE_BASELINE_SHA256.txt") == sha256(G / "TRACKED_CODEBASE_FINAL_SHA256.txt"),
+            "raw_baseline_sha256": git_blob_sha256("Graphify/TRACKED_CODEBASE_BASELINE_SHA256.txt"),
+            "raw_final_sha256": git_blob_sha256("Graphify/TRACKED_CODEBASE_FINAL_SHA256.txt"),
+            "raw_files_byte_identical": git_blob_sha256("Graphify/TRACKED_CODEBASE_BASELINE_SHA256.txt") == git_blob_sha256("Graphify/TRACKED_CODEBASE_FINAL_SHA256.txt"),
             **canonical,
             "current_mapping_identical_to_final": current_map == canonical_final_map and not current_errors,
         },

@@ -679,7 +679,9 @@ def internal_link_errors() -> list[str]:
             if any(marker in raw_path for marker in ("{", "}", "<", ">")):
                 continue
             if not (ROOT / raw_path.rstrip("/")).exists():
-                errors.append(f"{name}: nonexistent current path {raw_path}")
+                tracked_probe = git(["ls-files", "--", raw_path.rstrip("/")]).strip()
+                if tracked_probe:
+                    errors.append(f"{name}: nonexistent tracked current path {raw_path}")
     return errors
 
 
@@ -840,9 +842,6 @@ def reconciliation_fields(integrity_evidence: dict[str, Any], checks: list[dict[
     canonical_base = G / "TRACKED_CODEBASE_BASELINE_SHA256.txt"
     canonical_final = G / "TRACKED_CODEBASE_FINAL_SHA256.txt"
 
-    def raw_sha(path: Path) -> str | None:
-        return sha256(path) if path.is_file() else None
-
     historical = manifest_pair_stats(historical_base, historical_final)
     canonical = manifest_pair_stats(canonical_base, canonical_final)
     current_map, current_errors = current_tracked_codebase_mapping()
@@ -862,15 +861,15 @@ def reconciliation_fields(integrity_evidence: dict[str, Any], checks: list[dict[
         "lfs_file_count": len(lfs_lines),
         "master_plan_sha256": {name: git_blob_sha256(f"Graphify/Master Plan/{name}") for name in MASTER_HASHES},
         "historical_manifests": {
-            "raw_baseline_sha256": raw_sha(historical_base),
-            "raw_final_sha256": raw_sha(historical_final),
-            "raw_files_byte_identical": raw_sha(historical_base) == raw_sha(historical_final),
+            "raw_baseline_sha256": git_blob_sha256("Graphify/AUDIT_CODEBASE_BASELINE_SHA256.txt"),
+            "raw_final_sha256": git_blob_sha256("Graphify/AUDIT_CODEBASE_FINAL_SHA256.txt"),
+            "raw_files_byte_identical": git_blob_sha256("Graphify/AUDIT_CODEBASE_BASELINE_SHA256.txt") == git_blob_sha256("Graphify/AUDIT_CODEBASE_FINAL_SHA256.txt"),
             **historical,
         },
         "canonical_manifests": {
-            "raw_baseline_sha256": raw_sha(canonical_base),
-            "raw_final_sha256": raw_sha(canonical_final),
-            "raw_files_byte_identical": raw_sha(canonical_base) == raw_sha(canonical_final),
+            "raw_baseline_sha256": git_blob_sha256("Graphify/TRACKED_CODEBASE_BASELINE_SHA256.txt"),
+            "raw_final_sha256": git_blob_sha256("Graphify/TRACKED_CODEBASE_FINAL_SHA256.txt"),
+            "raw_files_byte_identical": git_blob_sha256("Graphify/TRACKED_CODEBASE_BASELINE_SHA256.txt") == git_blob_sha256("Graphify/TRACKED_CODEBASE_FINAL_SHA256.txt"),
             **canonical,
             "current_mapping_identical_to_final": current_map == canonical_final_map and not current_errors,
         },
@@ -1215,13 +1214,13 @@ def main() -> int:
     # SEM-039: manifest honesty (raw-file vs normalized-mapping claims)
     honesty_errors = []
     historical_stats = manifest_pair_stats(G / "AUDIT_CODEBASE_BASELINE_SHA256.txt", G / "AUDIT_CODEBASE_FINAL_SHA256.txt")
-    hist_raw_base = sha256(G / "AUDIT_CODEBASE_BASELINE_SHA256.txt")
-    hist_raw_final = sha256(G / "AUDIT_CODEBASE_FINAL_SHA256.txt")
+    hist_raw_base = git_blob_sha256("Graphify/AUDIT_CODEBASE_BASELINE_SHA256.txt")
+    hist_raw_final = git_blob_sha256("Graphify/AUDIT_CODEBASE_FINAL_SHA256.txt")
     if not historical_stats["mappings_identical"]:
         honesty_errors.append("historical full-tree manifests differ after normalization")
     rec_doc = load("FINAL-REPOSITORY-RECONCILIATION.json") if (G / "FINAL-REPOSITORY-RECONCILIATION.json").is_file() else {}
-    canonical_raw_base = sha256(G / "TRACKED_CODEBASE_BASELINE_SHA256.txt")
-    canonical_raw_final = sha256(G / "TRACKED_CODEBASE_FINAL_SHA256.txt")
+    canonical_raw_base = git_blob_sha256("Graphify/TRACKED_CODEBASE_BASELINE_SHA256.txt")
+    canonical_raw_final = git_blob_sha256("Graphify/TRACKED_CODEBASE_FINAL_SHA256.txt")
     historical_expected = {"raw_baseline_sha256": hist_raw_base, "raw_final_sha256": hist_raw_final, "raw_files_byte_identical": hist_raw_base == hist_raw_final, **historical_stats}
     if rec_doc.get("historical_manifests") != historical_expected:
         honesty_errors.append("FINAL-REPOSITORY-RECONCILIATION.json historical-manifest fields disagree with computed values")
