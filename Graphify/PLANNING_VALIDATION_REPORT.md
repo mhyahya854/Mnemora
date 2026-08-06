@@ -46,10 +46,9 @@ Checks: **41/42 passed**. Implementation: **NOT STARTED**. Release: **NOT EVALUA
 | SEM-038-CANONICAL-MANIFEST-COMPARISON - Canonical tracked manifest structure and equality | PASS | 0 |
 | SEM-039-MANIFEST-HONESTY - Raw-file versus normalized-mapping honesty | PASS | 0 |
 | SEM-040-PROTECTED-CONTENT - Protected Master Plan and tracked codebase content unchanged | PASS | 0 |
-| SEM-041-RECONCILIATION-REPORT - Final repository reconciliation report consistency | FAIL | 2 |
+| SEM-041-RECONCILIATION-REPORT - Final repository reconciliation report consistency | FAIL | 1 |
 | SEM-042-REPO-CLEAN-PRERUN - Pre-run tracked working tree cleanliness | PASS | 0 |
 
 ## Failures
 
 - `SEM-041-RECONCILIATION-REPORT`: FINAL-REPOSITORY-RECONCILIATION.json pre_run_working_tree disagrees with computed value
-- `SEM-041-RECONCILIATION-REPORT`: FINAL-REPOSITORY-RECONCILIATION.json verified commit does not equal the parent commit (or HEAD when HEAD has no parent)
