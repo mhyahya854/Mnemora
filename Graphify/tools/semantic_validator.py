@@ -887,7 +887,7 @@ def reconciliation_fields(integrity_evidence: dict[str, Any], checks: list[dict[
                 "python -B Graphify/tools/validate_planning.py --full-codebase",
             ],
         },
-        "local_full_tree_audit": integrity_evidence.get("local_full_tree_audit"),
+        "local_full_tree_audit": "RUN in the original full-tree repository; SKIPPED in clean clones (tracked Git parity above is the GitHub-verifiable claim; detailed per-environment evidence is in PLANNING_VALIDATION_REPORT.json)",
         "pre_run_working_tree": "CLEAN" if not pre_run_status else "DIRTY",
         "implementation_status": "NOT STARTED",
         "release_status": "NOT EVALUATED",

@@ -1,11 +1,11 @@
 {
   "schema_version": 5,
   "scope": "DERIVED GRAPHIFY PLANNING ONLY - IMPLEMENTATION NOT STARTED",
-  "verdict": "PASS",
-  "completion_statement": "SEMANTIC GRAPHIFY PLANNING COMPLETE — IMPLEMENTATION NOT STARTED",
+  "verdict": "FAIL",
+  "completion_statement": "SEMANTIC GRAPHIFY PLANNING INCOMPLETE — CONTINUE WORKING",
   "total_checks": 42,
-  "passed_checks": 42,
-  "failed_checks": 0,
+  "passed_checks": 41,
+  "failed_checks": 1,
   "checks": [
     {
       "check_id": "SEM-001-MASTER-HASH",
@@ -669,7 +669,7 @@
         "local_current_codebase_files": 24839,
         "local_comparable_pre_and_post_sha256_files": 346,
         "local_path_and_size_only_files": 24493,
-        "local_post_run_full_sha256_fingerprint": "9A284F7106FC272B440EA7B10C155AAAAC483990851DFE829C659B82918725A0",
+        "local_post_run_full_sha256_fingerprint": null,
         "local_claim_limit": "Only comparable-hash files are proven byte-identical. Path/size-only files are not cryptographic equality proof. A post-run full fingerprint without an equivalent pre-run full fingerprint is a current-state checkpoint, not full before/after proof."
       }
     },
@@ -788,13 +788,16 @@
     {
       "check_id": "SEM-041-RECONCILIATION-REPORT",
       "name": "Final repository reconciliation report consistency",
-      "status": "PASS",
-      "error_count": 0,
-      "errors": [],
+      "status": "FAIL",
+      "error_count": 2,
+      "errors": [
+        "FINAL-REPOSITORY-RECONCILIATION.json local_full_tree_audit disagrees with computed value",
+        "FINAL-REPOSITORY-RECONCILIATION.json pre_run_working_tree disagrees with computed value"
+      ],
       "details": {
         "report_present": true,
         "verified_commit_reconciles": true,
-        "stable_fields_match": true
+        "stable_fields_match": false
       }
     },
     {
@@ -804,8 +807,8 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "pre_run_clean": true,
-        "gate_skipped_by_allow_dirty": false
+        "pre_run_clean": false,
+        "gate_skipped_by_allow_dirty": true
       }
     }
   ],
@@ -890,7 +893,7 @@
     "local_current_codebase_files": 24839,
     "local_comparable_pre_and_post_sha256_files": 346,
     "local_path_and_size_only_files": 24493,
-    "local_post_run_full_sha256_fingerprint": "9A284F7106FC272B440EA7B10C155AAAAC483990851DFE829C659B82918725A0",
+    "local_post_run_full_sha256_fingerprint": null,
     "local_claim_limit": "Only comparable-hash files are proven byte-identical. Path/size-only files are not cryptographic equality proof. A post-run full fingerprint without an equivalent pre-run full fingerprint is a current-state checkpoint, not full before/after proof."
   },
   "master_plan_hashes": {
