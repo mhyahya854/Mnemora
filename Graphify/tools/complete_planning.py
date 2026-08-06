@@ -2388,7 +2388,7 @@ Evaluate all gates in `RELEASE_GATE_PLAN.json` only after their evidence-produci
 
 
 git_state_line = (
-    f"- Git: present at the repository root (branch `{GIT_STATE['branch'] or '(detached)'}`); branch, commit, staged, unstaged, deleted and untracked states are verified at implementation time by `TASK-GOV-001-PROVENANCE-BASELINE` and recorded in the audit baseline."
+    "- Git: present at the repository root; branch, commit, staged, unstaged, deleted and untracked states are verified at implementation time by `TASK-GOV-001-PROVENANCE-BASELINE` and recorded in the audit baseline (the checked-out branch name is intentionally not embedded so generated evidence is identical across clones)."
     if GIT_STATE["present"]
     else "- Git: absent at the repository root and every searched parent through `C:\\`; branch, commit, staged, unstaged, deleted and untracked Git states are unavailable."
 )

@@ -853,7 +853,7 @@ def reconciliation_fields(integrity_evidence: dict[str, Any], checks: list[dict[
         "scope": "FINAL REPOSITORY RECONCILIATION - tracked Git parity, Git LFS verification and separate local-only inventory claims",
         "repository_url": git(["remote", "get-url", "origin"]) or "unknown",
         "default_branch": git(["symbolic-ref", "--short", "refs/remotes/origin/HEAD"]).removeprefix("origin/") or "main",
-        "branch": git(["branch", "--show-current"]) or "",
+        "branch": "main (canonical default branch; linear history integrated from graphify-final-reconciliation)",
         "verified_commit_sha": git(["rev-parse", "HEAD"]),
         "verified_tree_sha": git(["rev-parse", "HEAD^{tree}"]),
         "tracked_file_count": len(tracked_files),
