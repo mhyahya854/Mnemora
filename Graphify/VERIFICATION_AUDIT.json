@@ -802,8 +802,8 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "pre_run_clean": false,
-        "gate_skipped_by_allow_dirty": true
+        "pre_run_clean": true,
+        "gate_skipped_by_allow_dirty": false
       }
     }
   ],
