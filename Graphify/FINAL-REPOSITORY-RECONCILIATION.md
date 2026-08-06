@@ -7,8 +7,8 @@ This report is machine-generated from the reconciliation validator. Tracked Git 
 - Repository URL: `git@github.com:mhyahya854/Mnemora.git`
 - Default branch: `main`
 - Branch at verification: `graphify-final-reconciliation`
-- Verified commit: `b788b45774eed04f80c2ffe53cfe2f658206e901`
-- Verified tree: `088bb30970fdc8b9f33b4558e7fc9ef04fadf902`
+- Verified commit: `aaf3662bba3d2c040119fad8a1ff02159644d2df`
+- Verified tree: `eb5c08f63cf1f44a1548d6e282786b4af5f7f4ac`
 - Tracked file count: 425
 - Tracked codebase file count: 346
 - Git LFS file count: 1
@@ -47,7 +47,7 @@ This report is machine-generated from the reconciliation validator. Tracked Git 
 
 ## Validation
 
-- Gate count: 42; passed: 41; failed: 1; verdict: FAIL
+- Gate count: 42; passed: 42; failed: 0; verdict: PASS
 - Commands: python -B Graphify/tools/semantic_validator.py --self-test-only, python -B Graphify/tools/validate_planning.py, python -B Graphify/tools/validate_planning.py --full-codebase
 
 ## Local-only inventory audit
