@@ -789,9 +789,8 @@
       "check_id": "SEM-041-RECONCILIATION-REPORT",
       "name": "Final repository reconciliation report consistency",
       "status": "FAIL",
-      "error_count": 2,
+      "error_count": 1,
       "errors": [
-        "FINAL-REPOSITORY-RECONCILIATION.json branch disagrees with computed value",
         "FINAL-REPOSITORY-RECONCILIATION.json pre_run_working_tree disagrees with computed value"
       ],
       "details": {
@@ -807,8 +806,8 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "pre_run_clean": false,
-        "gate_skipped_by_allow_dirty": true
+        "pre_run_clean": true,
+        "gate_skipped_by_allow_dirty": false
       }
     }
   ],
