@@ -4,8 +4,8 @@
   "repository_url": "git@github.com:mhyahya854/Mnemora.git",
   "default_branch": "main",
   "branch": "graphify-final-reconciliation",
-  "verified_commit_sha": "4742b1c94dae6094e4049231a3a33ccc4e543dfa",
-  "verified_tree_sha": "9b7b157b0686ea59110bc81eae62df10e45d6ad1",
+  "verified_commit_sha": "b788b45774eed04f80c2ffe53cfe2f658206e901",
+  "verified_tree_sha": "088bb30970fdc8b9f33b4558e7fc9ef04fadf902",
   "tracked_file_count": 425,
   "tracked_codebase_file_count": 346,
   "lfs_file_count": 1,
@@ -70,7 +70,7 @@
     ]
   },
   "local_full_tree_audit": "RUN in the original full-tree repository; SKIPPED in clean clones (tracked Git parity above is the GitHub-verifiable claim; detailed per-environment evidence is in PLANNING_VALIDATION_REPORT.json)",
-  "pre_run_working_tree": "DIRTY",
+  "pre_run_working_tree": "CLEAN",
   "implementation_status": "NOT STARTED",
   "release_status": "NOT EVALUATED"
 }
