@@ -4,8 +4,8 @@
   "repository_url": "git@github.com:mhyahya854/Mnemora.git",
   "default_branch": "main",
   "branch": "main (canonical default branch; linear history integrated from graphify-final-reconciliation)",
-  "verified_commit_sha": "14df75dd6a8d8591a233958d1bc8359ebf01dd45",
-  "verified_tree_sha": "c083f9930ad3492811ed2a518c3cafc3677e487b",
+  "verified_commit_sha": "d505884d3f6587ba1736dc77d9d2ef36d7aa47c8",
+  "verified_tree_sha": "d1f224d996ddc3ff1d282b1a54068f153d42a184",
   "tracked_file_count": 427,
   "tracked_codebase_file_count": 346,
   "lfs_file_count": 1,
@@ -60,9 +60,9 @@
   "output_manifest_entries": 65,
   "validator": {
     "gate_count": 43,
-    "passed": 42,
-    "failed": 1,
-    "verdict": "FAIL",
+    "passed": 43,
+    "failed": 0,
+    "verdict": "PASS",
     "commands": [
       "python -B Graphify/tools/semantic_validator.py --self-test-only",
       "python -B Graphify/tools/validate_planning.py",
