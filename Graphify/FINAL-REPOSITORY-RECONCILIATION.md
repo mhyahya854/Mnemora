@@ -7,8 +7,8 @@ This report is machine-generated from the reconciliation validator. Tracked Git 
 - Repository URL: `git@github.com:mhyahya854/Mnemora.git`
 - Default branch: `main`
 - Branch at verification: `main (canonical default branch; linear history integrated from graphify-final-reconciliation)`
-- Verified commit: `5ed0e52c9c52ebbf2329caff5cfd71af4b3e7237`
-- Verified tree: `d841bb9465b94039705d946e8f0785987b313e3a`
+- Verified commit: `fb1696091cf8d15ada87d5d4331bafce2973caa7`
+- Verified tree: `a02f3d56717a80db9d2cc096fe9308d767e836c3`
 - Tracked file count: 433
 - Tracked codebase file count: 346
 - Git LFS file count: 1
@@ -56,7 +56,7 @@ This report is machine-generated from the reconciliation validator. Tracked Git 
 
 ## Working tree
 
-- Pre-run working tree: DIRTY
+- Pre-run working tree: CLEAN
 
 ## Status
 
