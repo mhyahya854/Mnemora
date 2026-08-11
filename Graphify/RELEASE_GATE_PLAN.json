@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "authority": "Strict Release Conjunction planning authority",
-  "release_status": "NOT EVALUATED - IMPLEMENTATION NOT STARTED",
+  "release_status": "NOT EVALUATED",
   "gate_count": 12,
   "gates": [
     {

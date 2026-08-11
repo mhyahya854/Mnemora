@@ -2,14 +2,15 @@
 
 ## Current checkpoint
 
-- Mode: final derived-planning completion; application implementation not started.
+- Mode: validated derived planning with durable implementation execution state.
 - Repository root: the Git worktree root discovered by `git rev-parse --show-toplevel` (machine-specific absolute path intentionally not embedded).
 - Current application root: `codebase/` (lowercase path is authoritative current evidence).
 - Git: present at the repository root; branch, commit, staged, unstaged, deleted and untracked states are verified at implementation time by `TASK-GOV-001-PROVENANCE-BASELINE` and recorded in the audit baseline (the checked-out branch name is intentionally not embedded so generated evidence is identical across clones).
-- Provenance fallback: `REPOSITORY_FILE_INVENTORY.json` plus `REPOSITORY_FINGERPRINT.json`; future implementation begins with `TASK-GOV-001-PROVENANCE-BASELINE`.
+- Provenance fallback: `REPOSITORY_FILE_INVENTORY.json` plus `REPOSITORY_FINGERPRINT.json`; the immutable execution root is `TASK-GOV-001-PROVENANCE-BASELINE`.
 - Immutable Master Plan files: verified against the SHA-256 values below before derived generation.
-- Application writes in this planning run: none authorized.
-- Implementation, test, build, package, installer, offline-launch and release status: not started / not evaluated.
+- Implementation status: `NOT STARTED`; task counts: `{"BLOCKED": 0, "COMPLETE": 0, "NOT APPLICABLE": 0, "NOT STARTED": 158}`.
+- Latest terminal task checkpoint: `NONE`.
+- Release status: not evaluated by task execution state.
 
 ## Planning authorities
 
@@ -24,7 +25,7 @@
 
 ## Resume pointer
 
-Read `START-HERE.md`. The exact first future implementation task is `TASK-GOV-001-PROVENANCE-BASELINE` at ordering index 1. Re-run `python Graphify/tools/validate_planning.py` before execution.
+Read `START-HERE.md`. The current next task is `TASK-GOV-001-PROVENANCE-BASELINE` with disposition `NOT STARTED`; `BLOCKED` is a stop barrier, never a skip condition. Re-run `python -B Graphify/tools/validate_planning.py` before execution.
 
 ## Master Plan hashes
 

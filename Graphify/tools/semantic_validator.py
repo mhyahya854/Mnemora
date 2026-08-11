@@ -18,6 +18,7 @@ import sys
 from pathlib import Path
 from typing import Any, Iterable
 
+from execution_state import execution_state_contract, execution_state_errors, select_next_task, summarize_execution_state
 from semantic_rules import PRODUCT_SCOPE_CAPS, REMOVAL_CAPS, VENDOR_OR_GENERATED_MARKERS
 
 
@@ -65,6 +66,7 @@ TASK_FIELDS = {
     "packaging_impact", "offline_verification_impact", "targeted_verification", "real_integration_verification",
     "broader_regression_verification", "rollback_or_recovery_strategy", "required_evidence_artifacts",
     "acceptance_criteria", "completion_criteria", "stop_conditions", "risk_classification", "ordering_rationale",
+    "execution_state",
 }
 
 
@@ -815,6 +817,18 @@ def negative_fixture_errors() -> list[str]:
     if not all(item["dependencies"] == [f"T{index-1}"] for index, item in enumerate(sequential, 1) if index > 1): failures.append("Sequential-chain fixture was not rejected")
     governance_test = {"capability_id": "CAP-PROVENANCE", "reference_status": "TEST TO CREATE", "test_path": "codebase/tests/integration/git.test.js"}
     if not (governance_test["capability_id"] == "CAP-PROVENANCE" and governance_test["reference_status"] == "TEST TO CREATE"): failures.append("Governance synthetic-test fixture was not rejected")
+    execution_tasks = [
+        {"stable_task_id": "NEG-TASK-1", "ordering_index": 1, "semantic_dependencies": [], "required_evidence_artifacts": ["Graphify/evidence/neg/task-1.json"], "execution_state": {"disposition": "NOT STARTED", "evidence_references": [], "checkpoint_identity": None, "blocked_reason": None, "not_applicable_basis": None}},
+        {"stable_task_id": "NEG-TASK-2", "ordering_index": 2, "semantic_dependencies": ["NEG-TASK-1"], "required_evidence_artifacts": ["Graphify/evidence/neg/task-2.json"], "execution_state": {"disposition": "NOT STARTED", "evidence_references": [], "checkpoint_identity": None, "blocked_reason": None, "not_applicable_basis": None}},
+    ]
+    invalid_disposition = copy.deepcopy(execution_tasks); invalid_disposition[0]["execution_state"]["disposition"] = "DONE"
+    if not execution_state_errors(invalid_disposition): failures.append("Unknown execution-disposition fixture was not rejected")
+    false_complete = copy.deepcopy(execution_tasks); false_complete[0]["execution_state"]["disposition"] = "COMPLETE"
+    if not execution_state_errors(false_complete): failures.append("Evidence-free COMPLETE fixture was not rejected")
+    invalid_dependency = copy.deepcopy(execution_tasks); invalid_dependency[1]["execution_state"] = {"disposition": "COMPLETE", "evidence_references": ["Graphify/evidence/neg/task-2.json"], "checkpoint_identity": "NEG-CHECKPOINT", "blocked_reason": None, "not_applicable_basis": None}
+    if not execution_state_errors(invalid_dependency): failures.append("Dependency-invalid COMPLETE fixture was not rejected")
+    blocked = copy.deepcopy(execution_tasks); blocked[0]["execution_state"] = {"disposition": "BLOCKED", "evidence_references": [], "checkpoint_identity": None, "blocked_reason": "Required external permission is unavailable", "not_applicable_basis": None}
+    if (select_next_task(blocked) or {}).get("stable_task_id") != "NEG-TASK-1": failures.append("BLOCKED next-task fixture was skipped")
     return failures
 
 
@@ -836,7 +850,7 @@ def manifest_pair_stats(baseline: Path, final: Path) -> dict[str, Any]:
     }
 
 
-def reconciliation_fields(integrity_evidence: dict[str, Any], checks: list[dict[str, Any]], verdict: str, pre_run_status: str, manifest_entries: list[dict[str, Any]]) -> dict[str, Any]:
+def reconciliation_fields(integrity_evidence: dict[str, Any], checks: list[dict[str, Any]], verdict: str, pre_run_status: str, manifest_entries: list[dict[str, Any]], implementation_status: str) -> dict[str, Any]:
     historical_base = G / "AUDIT_CODEBASE_BASELINE_SHA256.txt"
     historical_final = G / "AUDIT_CODEBASE_FINAL_SHA256.txt"
     canonical_base = G / "TRACKED_CODEBASE_BASELINE_SHA256.txt"
@@ -888,7 +902,7 @@ def reconciliation_fields(integrity_evidence: dict[str, Any], checks: list[dict[
         },
         "local_full_tree_audit": "RUN in the original full-tree repository; SKIPPED in clean clones (tracked Git parity above is the GitHub-verifiable claim; detailed per-environment evidence is in PLANNING_VALIDATION_REPORT.json)",
         "pre_run_working_tree": "CLEAN" if not pre_run_status else "DIRTY",
-        "implementation_status": "NOT STARTED",
+        "implementation_status": implementation_status,
         "release_status": "NOT EVALUATED",
     }
 
@@ -996,7 +1010,7 @@ def main() -> int:
     args = parser.parse_args()
     if args.self_test_only:
         errors = negative_fixture_errors()
-        print(json.dumps({"negative_fixture_count": 14, "status": "PASS" if not errors else "FAIL", "errors": errors}, indent=2))
+        print(json.dumps({"negative_fixture_count": 18, "status": "PASS" if not errors else "FAIL", "errors": errors}, indent=2))
         return 0 if not errors else 1
 
     pre_run_status = git(["status", "--porcelain"])
@@ -1018,6 +1032,15 @@ def main() -> int:
     cap_doc = load("CAPABILITY_REGISTRY.json"); capabilities = cap_doc["capabilities"]
     loc_doc = load("EXACT_LOCATION_REGISTRY.json"); locations = loc_doc["entries"]
     task_doc = load("IMPLEMENTATION_QUEUE.json"); tasks = task_doc["tasks"]
+    execution_errors = execution_state_errors(tasks, ROOT)
+    execution_summary = summarize_execution_state(tasks)
+    for field in ("implementation_status", "execution_state_counts", "terminal_task_count", "next_task_id", "next_task_disposition", "latest_checkpoint_identity"):
+        if task_doc.get(field) != execution_summary[field]:
+            execution_errors.append(f"Queue {field} does not derive from per-task execution state")
+    if task_doc.get("execution_state_contract") != execution_state_contract():
+        execution_errors.append("Queue execution_state_contract does not match the validator schema")
+    if task_doc.get("schema_version") != 4:
+        execution_errors.append("Implementation queue schema_version must be 4")
     test_doc = load("TEST_MATRIX.json")
     conditional_doc = load("CONDITIONAL_DECISION_PACKAGES.json"); packages = conditional_doc["packages"]
     release_doc = load("RELEASE_GATE_PLAN.json"); release_gates = release_doc["gates"]
@@ -1167,10 +1190,11 @@ def main() -> int:
     handoff_errors = []
     start = (G / "START-HERE.md").read_text(encoding="utf-8")
     if task_doc.get("exact_first_task_id") != "TASK-GOV-001-PROVENANCE-BASELINE" or tasks[0]["stable_task_id"] != "TASK-GOV-001-PROVENANCE-BASELINE": handoff_errors.append("First task authority mismatch")
+    if task_doc.get("next_task_id") and task_doc["next_task_id"] not in start: handoff_errors.append("START-HERE omits the derived next task")
     for phase in sorted({task["phase"] for task in tasks}):
         if phase not in start: handoff_errors.append(f"START-HERE omits {phase}")
     for phrase in (
-        "implementation has not started", "codebase", "semantic_dependencies", "RELEASE_GATE_PLAN.json",
+        "execution_state", "next_task_id", "codebase", "semantic_dependencies", "RELEASE_GATE_PLAN.json",
         "CONDITIONAL_DECISION_PACKAGES.json", "files_expected_to_change", "files_forbidden_from_changing",
         "State-inspection commands", "Conditional decisions and task completion", "Git/hash checkpoint",
         "false-completion", "NOT APPLICABLE", "HARDWARE UNAVAILABLE",
@@ -1183,7 +1207,7 @@ def main() -> int:
     if not {"TASK-CAP-NETWORK-POLICY", "TASK-CAP-OFFLINE-FIRST-LAUNCH", "TASK-REL-09-OFFLINE"}.issubset(task_ids): final_domain_errors.append("Offline implementation/proof task set incomplete")
     if not {"TASK-CAP-PACKAGING", "TASK-CAP-WINDOWS-INSTALLER", "TASK-REL-10-WINDOWS-RELEASE"}.issubset(task_ids): final_domain_errors.append("Windows build/package/install/launch task set incomplete")
     checks.add("SEM-035-DATA-OFFLINE-WINDOWS", "Data safety, offline, and Windows release planning", final_domain_errors)
-    checks.add("SEM-036-KNOWN-NEGATIVES", "Known-negative validator fixtures", negative_fixture_errors(), {"fixture_count": 14})
+    checks.add("SEM-036-KNOWN-NEGATIVES", "Known-negative validator fixtures", negative_fixture_errors(), {"fixture_count": 18})
 
     # SEM-037: transient and non-tracked Graphify output-manifest detection
     transient_errors = list(manifest_scan_errors)
@@ -1247,7 +1271,7 @@ def main() -> int:
         committed_rec: dict[str, Any] = {}
     else:
         committed_rec = json.loads(rec_path.read_text(encoding="utf-8"))
-    computed_rec = reconciliation_fields(integrity_evidence, checks.items, "PENDING", pre_run_status, manifest_entries)
+    computed_rec = reconciliation_fields(integrity_evidence, checks.items, "PENDING", pre_run_status, manifest_entries, execution_summary["implementation_status"])
     stable_keys = [key for key in computed_rec if key not in {"verified_commit_sha", "verified_tree_sha", "validator"}]
     for key in stable_keys:
         if committed_rec.get(key) != computed_rec[key]:
@@ -1267,10 +1291,12 @@ def main() -> int:
     if pre_run_status and not args.allow_dirty:
         clean_errors.append(f"pre-run working tree is not clean:\n{pre_run_status[:800]}")
     checks.add("SEM-042-REPO-CLEAN-PRERUN", "Pre-run tracked working tree cleanliness", clean_errors, {"pre_run_clean": not bool(pre_run_status), "gate_skipped_by_allow_dirty": bool(args.allow_dirty)})
+    checks.add("SEM-043-EXECUTION-STATE", "Durable task execution state, evidence, dependencies, and selector", execution_errors, execution_summary)
 
     failed = [item for item in checks.items if item["status"] == "FAIL"]
     verdict = "PASS" if not failed else "FAIL"
-    statement = "SEMANTIC GRAPHIFY PLANNING COMPLETE — IMPLEMENTATION NOT STARTED" if verdict == "PASS" else "SEMANTIC GRAPHIFY PLANNING INCOMPLETE — CONTINUE WORKING"
+    implementation_status = execution_summary["implementation_status"]
+    statement = f"SEMANTIC GRAPHIFY PLANNING COMPLETE - IMPLEMENTATION {implementation_status}" if verdict == "PASS" else "SEMANTIC GRAPHIFY PLANNING INCOMPLETE - CONTINUE WORKING"
     disposition_counts = collections.Counter(candidate["reviewed_disposition"] for task in tasks if task.get("task_kind") == "DELETION" for candidate in task.get("static_analysis_candidates", []))
     placeholder_count = len(vague_errors)
     contradiction_count = sum(
@@ -1278,7 +1304,7 @@ def main() -> int:
         if item["check_id"] in {"SEM-005-PROTECTED-SEPARATION", "SEM-018-TOPOLOGICAL-ORDER", "SEM-019-PHASE-WAVE", "SEM-028-DUPLICATE-AUTHORITY", "SEM-030-COUNTS", "SEM-034-HANDOFF"}
     )
     report = {
-        "schema_version": 5, "scope": "DERIVED GRAPHIFY PLANNING ONLY - IMPLEMENTATION NOT STARTED",
+        "schema_version": 6, "scope": "DERIVED GRAPHIFY PLANNING WITH VALIDATED DURABLE TASK EXECUTION STATE",
         "verdict": verdict, "completion_statement": statement, "total_checks": len(checks.items),
         "passed_checks": len(checks.items) - len(failed), "failed_checks": len(failed), "checks": checks.items,
         "counts": {"requirements": len(requirements), "requirements_by_master_plan": expected_counts["by_master_plan_file"], "requirements_by_classification": expected_counts["by_classification"], "capabilities": len(capabilities), "exact_locations": len(locations), "tasks": len(tasks), "deletion_tasks": sum(task.get("task_kind") == "DELETION" for task in tasks), "conditional_packages": len(packages), "release_gates": len(release_gates)},
@@ -1289,23 +1315,24 @@ def main() -> int:
         "placeholder_count": placeholder_count, "contradiction_count": contradiction_count,
         "orphans": orphan_counts, "codebase_integrity_evidence": integrity_evidence,
         "master_plan_hashes": {name: git_blob_sha256(f"Graphify/Master Plan/{name}") for name in MASTER_HASHES},
-        "implementation_status": "NOT STARTED", "release_status": "NOT EVALUATED",
+        "implementation_status": implementation_status, "release_status": "NOT EVALUATED",
+        "execution_state": execution_summary,
     }
     dump("PLANNING_VALIDATION_REPORT.json", report)
-    lines = ["# Semantic Planning Validation Report", "", statement, "", f"Checks: **{report['passed_checks']}/{report['total_checks']} passed**. Implementation: **NOT STARTED**. Release: **NOT EVALUATED**.", "", "| Gate | Result | Errors |", "| --- | --- | ---: |"]
+    lines = ["# Semantic Planning Validation Report", "", statement, "", f"Checks: **{report['passed_checks']}/{report['total_checks']} passed**. Implementation: **{implementation_status}**. Release: **NOT EVALUATED**. Next task: **{execution_summary['next_task_id']}**.", "", "| Gate | Result | Errors |", "| --- | --- | ---: |"]
     lines.extend(f"| {item['check_id']} - {item['name']} | {item['status']} | {item['error_count']} |" for item in checks.items)
     if failed:
         lines.extend(["", "## Failures", ""] + [f"- `{item['check_id']}`: {error}" for item in failed for error in item["errors"][:20]])
     write("PLANNING_VALIDATION_REPORT.md", "\n".join(lines))
-    dump("VERIFICATION_AUDIT.json", {"schema_version": 4, "scope": report["scope"], "verdict": verdict, "checks": checks.items, "codebase_integrity_evidence": integrity_evidence, "implementation_status": "NOT STARTED", "release_status": "NOT EVALUATED"})
-    readiness = {"schema_version": 4, "planning_verdict": verdict, "completion_statement": statement, "implementation_status": "NOT STARTED", "release_status": "NOT EVALUATED", "failed_planning_checks": [item["check_id"] for item in failed], "exact_first_task_id": "TASK-GOV-001-PROVENANCE-BASELINE"}
+    dump("VERIFICATION_AUDIT.json", {"schema_version": 5, "scope": report["scope"], "verdict": verdict, "checks": checks.items, "codebase_integrity_evidence": integrity_evidence, "implementation_status": implementation_status, "execution_state": execution_summary, "release_status": "NOT EVALUATED"})
+    readiness = {"schema_version": 5, "planning_verdict": verdict, "completion_statement": statement, "implementation_status": implementation_status, "release_status": "NOT EVALUATED", "failed_planning_checks": [item["check_id"] for item in failed], "exact_first_task_id": "TASK-GOV-001-PROVENANCE-BASELINE", "next_task_id": execution_summary["next_task_id"], "next_task_disposition": execution_summary["next_task_disposition"]}
     dump("READINESS_GATE.json", readiness)
-    write("READINESS_GATE.md", f"# Readiness Gate\n\n{statement}\n\nSemantic planning validator: **{verdict}**. Implementation: **NOT STARTED**. Release: **NOT EVALUATED**. Exact first task: `TASK-GOV-001-PROVENANCE-BASELINE`.\n")
+    write("READINESS_GATE.md", f"# Readiness Gate\n\n{statement}\n\nSemantic planning validator: **{verdict}**. Implementation: **{implementation_status}**. Release: **NOT EVALUATED**. Execution root: `TASK-GOV-001-PROVENANCE-BASELINE`. Current next task: `{execution_summary['next_task_id']}` ({execution_summary['next_task_disposition']}).\n")
     consistency = {"schema_version": 4, "verdict": verdict, "requirements": len(requirements), "capabilities": len(capabilities), "tasks": len(tasks), "exact_locations": len(locations), "dependency_graph": graph_metrics, "orphan_counts": orphan_counts, "duplicate_requirement_ids": duplicates(item["stable_requirement_id"] for item in requirements), "duplicate_capability_ids": duplicates(item["id"] for item in capabilities), "duplicate_task_ids": duplicates(item["stable_task_id"] for item in tasks)}
     dump("GRAPH_CONSISTENCY_REPORT.json", consistency)
     write("GRAPH_CONSISTENCY_REPORT.md", f"# Graph Consistency Report\n\nSemantic planning graph verdict: **{verdict}**. Requirements: {len(requirements)}; capabilities: {len(capabilities)}; tasks: {len(tasks)}; dependency edges: {graph_metrics['dependency_edges']}; cycles: {graph_metrics['cycle_count']}; orphans: {sum(orphan_counts.values())}. This is planning consistency, not application execution proof.\n")
-    write("GRAPHIFY_READINESS_REPORT.md", f"# Graphify Readiness Report\n\n{statement}\n\nThe deterministic structural and semantic planning validator reports **{verdict}**. No implementation, application test, build, package, installer, offline launch, hardware workflow, final Graphify rescan, Ponytail pass, or release approval is claimed.\n")
-    write_reconciliation_report(reconciliation_fields(integrity_evidence, checks.items, verdict, pre_run_status, manifest_entries))
+    write("GRAPHIFY_READINESS_REPORT.md", f"# Graphify Readiness Report\n\n{statement}\n\nThe deterministic structural and semantic planning validator reports **{verdict}**. Implementation truth is limited to validated queue dispositions and their evidence/checkpoint references; no additional application, package, hardware, audit, or release proof is inferred.\n")
+    write_reconciliation_report(reconciliation_fields(integrity_evidence, checks.items, verdict, pre_run_status, manifest_entries, implementation_status))
     final_manifest_entries, _final_manifest_scan_errors = build_graphify_output_manifest()
     dump("GRAPHIFY_OUTPUT_MANIFEST.json", {"schema_version": 4, "scope": "Tracked Graphify authorities, reports, tools and immutable Master Plan; genuine graphify-out evidence excluded and separately preserved; transient and non-tracked entries excluded; deterministic (no timestamps)", "self_excluded": True, "file_count": len(final_manifest_entries), "files": final_manifest_entries})
     print(json.dumps({"verdict": verdict, "checks": f"{report['passed_checks']}/{report['total_checks']}", "requirements": len(requirements), "capabilities": len(capabilities), "tasks": len(tasks), "exact_locations": len(locations), "dependency_graph": graph_metrics, "failed": [item["check_id"] for item in failed]}, indent=2, ensure_ascii=False))

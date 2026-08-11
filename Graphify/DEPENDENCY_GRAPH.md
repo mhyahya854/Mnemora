@@ -1,6 +1,6 @@
 # Implementation Dependency Graph
 
-This is the planning task DAG derived from `IMPLEMENTATION_QUEUE.json`. Genuine code-relationship evidence remains under `graphify-out/`; it is distinct from this implementation-order graph. No application task has been executed.
+This is the planning task DAG derived from `IMPLEMENTATION_QUEUE.json`. Genuine code-relationship evidence remains under `graphify-out/`; it is distinct from this implementation-order graph. Execution truth is recorded only in each queue task's validated `execution_state`.
 
 - Task nodes: 158
 - Semantic dependency edges: 323

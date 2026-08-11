@@ -1,7 +1,7 @@
 {
-  "schema_version": 4,
-  "scope": "DERIVED GRAPHIFY PLANNING ONLY - IMPLEMENTATION NOT STARTED",
-  "verdict": "PASS",
+  "schema_version": 5,
+  "scope": "DERIVED GRAPHIFY PLANNING WITH VALIDATED DURABLE TASK EXECUTION STATE",
+  "verdict": "FAIL",
   "checks": [
     {
       "check_id": "SEM-001-MASTER-HASH",
@@ -631,8 +631,8 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "before": "79FDDDA6A85B76C057C8002D9A0E480F8722F97C87EE980D50D58783A5BC04C4",
-        "after": "79FDDDA6A85B76C057C8002D9A0E480F8722F97C87EE980D50D58783A5BC04C4",
+        "before": "F7A2BC16E0A045040E7737B99D54FFA35C217AA6D2E2098675000793C3823FC1",
+        "after": "F7A2BC16E0A045040E7737B99D54FFA35C217AA6D2E2098675000793C3823FC1",
         "generator_stdout": "{\n  \"requirements\": 536,\n  \"capabilities\": 120,\n  \"tasks\": 158,\n  \"deletion_tasks\": 31,\n  \"conditional_packages\": 11,\n  \"release_gates\": 12,\n  \"exact_locations\": 780\n}"
       }
     },
@@ -692,15 +692,18 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "fixture_count": 14
+        "fixture_count": 18
       }
     },
     {
       "check_id": "SEM-037-TRANSIENT-OUTPUT-MANIFEST",
       "name": "Transient and non-tracked Graphify output-manifest detection",
-      "status": "PASS",
-      "error_count": 0,
-      "errors": [],
+      "status": "FAIL",
+      "error_count": 2,
+      "errors": [
+        "untracked Graphify file present: tools/execution_state.py",
+        "untracked Graphify file present: tools/test_execution_state.py"
+      ],
       "details": {
         "committed_output_manifest_entries": 63,
         "regenerated_output_manifest_entries": 63,
@@ -784,13 +787,15 @@
     {
       "check_id": "SEM-041-RECONCILIATION-REPORT",
       "name": "Final repository reconciliation report consistency",
-      "status": "PASS",
-      "error_count": 0,
-      "errors": [],
+      "status": "FAIL",
+      "error_count": 1,
+      "errors": [
+        "FINAL-REPOSITORY-RECONCILIATION.json pre_run_working_tree disagrees with computed value"
+      ],
       "details": {
         "report_present": true,
         "verified_commit_reconciles": true,
-        "stable_fields_match": true
+        "stable_fields_match": false
       }
     },
     {
@@ -800,8 +805,28 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "pre_run_clean": true,
-        "gate_skipped_by_allow_dirty": false
+        "pre_run_clean": false,
+        "gate_skipped_by_allow_dirty": true
+      }
+    },
+    {
+      "check_id": "SEM-043-EXECUTION-STATE",
+      "name": "Durable task execution state, evidence, dependencies, and selector",
+      "status": "PASS",
+      "error_count": 0,
+      "errors": [],
+      "details": {
+        "implementation_status": "NOT STARTED",
+        "execution_state_counts": {
+          "NOT STARTED": 158,
+          "COMPLETE": 0,
+          "NOT APPLICABLE": 0,
+          "BLOCKED": 0
+        },
+        "terminal_task_count": 0,
+        "next_task_id": "TASK-GOV-001-PROVENANCE-BASELINE",
+        "next_task_disposition": "NOT STARTED",
+        "latest_checkpoint_identity": null
       }
     }
   ],
@@ -824,5 +849,18 @@
     "local_claim_limit": "Only comparable-hash files are proven byte-identical. Path/size-only files are not cryptographic equality proof. A post-run full fingerprint without an equivalent pre-run full fingerprint is a current-state checkpoint, not full before/after proof."
   },
   "implementation_status": "NOT STARTED",
+  "execution_state": {
+    "implementation_status": "NOT STARTED",
+    "execution_state_counts": {
+      "NOT STARTED": 158,
+      "COMPLETE": 0,
+      "NOT APPLICABLE": 0,
+      "BLOCKED": 0
+    },
+    "terminal_task_count": 0,
+    "next_task_id": "TASK-GOV-001-PROVENANCE-BASELINE",
+    "next_task_disposition": "NOT STARTED",
+    "latest_checkpoint_identity": null
+  },
   "release_status": "NOT EVALUATED"
 }

@@ -1,6 +1,6 @@
 # Mnemora implementation handoff
 
-This is the single authoritative entry point for a future implementation run. Implementation has not started. The current application root is the lowercase `codebase/` folder; `Codebase/` is only a future target named by the Master Plan. The derived planning is subordinate to all three immutable Master Plan files. Application tests, builds, packaging, installation, offline launch, final audits, and release approval were not executed in this planning run.
+This is the single authoritative entry point for an implementation run. Implementation has not started; every task remains NOT STARTED. The current application root is the lowercase `codebase/` folder; `Codebase/` is only a future target named by the Master Plan. The derived planning is subordinate to all three immutable Master Plan files. Planning generation never turns a planning contract into implementation evidence.
 
 ## Authority order
 
@@ -35,11 +35,11 @@ python -B Graphify/tools/validate_planning.py --full-codebase
 
 If Git is still absent, record that exact result; do not treat the Git command failure as permission to mutate. Follow `TASK-GOV-001-PROVENANCE-BASELINE` and the Master Plan's hash-checkpoint fallback.
 
-## Exact first implementation task
+## Execution root and current next task
 
 `TASK-GOV-001-PROVENANCE-BASELINE`
 
-Start with ordering index 1 in `IMPLEMENTATION_QUEUE.json`. Establish Git or the Master Plan-permitted recoverable hash checkpoint before any application mutation. Do not begin a later task merely because its files appear familiar.
+The immutable execution root is ordering index 1 in `IMPLEMENTATION_QUEUE.json`. The current derived `next_task_id` is `TASK-GOV-001-PROVENANCE-BASELINE` with disposition `NOT STARTED`. Establish Git or the Master Plan-permitted recoverable hash checkpoint before any application mutation. Do not begin a later task merely because its files appear familiar.
 
 ## Dependency-safe phase and wave sequence
 
@@ -59,16 +59,35 @@ Start with ordering index 1 in `IMPLEMENTATION_QUEUE.json`. Establish Git or the
 
 1. Read every line of all three Master Plan files and verify the hashes below.
 2. Run `python Graphify/tools/validate_planning.py` from the Mnemora root. Stop on any failure.
-3. Read `RUN_STATE.md`, then locate the first queue task whose implementation disposition is neither `COMPLETE` nor evidence-linked `NOT APPLICABLE`.
-4. Confirm all dependency task evidence references the same commit/hash checkpoint.
-5. Execute exactly one recoverable capability batch, save every required artifact, rerun planning validation, and update statuses without changing the Master Plan.
+3. Read `RUN_STATE.md` and `IMPLEMENTATION_QUEUE.json`; use the derived `next_task_id`, which is the first ordering-index task that is neither `COMPLETE` nor evidence-linked `NOT APPLICABLE` and whose semantic dependencies are terminal.
+4. If that task is `BLOCKED`, stop on it. The selector never skips a blocked next task. Otherwise confirm all dependency task evidence has a valid checkpoint identity.
+5. Execute exactly one recoverable capability batch, save every required artifact, write its `execution_state`, rerun planning validation, and do not change the Master Plan.
 6. Never use a planning-complete status as implementation or release evidence.
+
+## Durable execution-state protocol
+
+`IMPLEMENTATION_QUEUE.json` remains the single task authority. Planning fields are regenerated task definitions. The nested `execution_state` object is mutable implementation state and is preserved by stable task ID across deterministic generation:
+
+```json
+{
+  "disposition": "NOT STARTED | COMPLETE | NOT APPLICABLE | BLOCKED",
+  "evidence_references": [],
+  "checkpoint_identity": null,
+  "blocked_reason": null,
+  "not_applicable_basis": null
+}
+```
+
+- `COMPLETE` requires terminal semantic dependencies, every required evidence reference, existing evidence files, and a checkpoint identity.
+- `NOT APPLICABLE` requires terminal semantic dependencies, evidence, a checkpoint identity, and the exact Master Plan or conditional-decision reachability basis.
+- `BLOCKED` requires a reason and remains the selected task; optional evidence and checkpoint fields must appear together.
+- `NOT STARTED` carries no execution evidence. The queue's top-level status, counts, checkpoint and next-task pointer are derived from task state and validated against it.
 
 ## Conditional decisions and task completion
 
 For each record in `CONDITIONAL_DECISION_PACKAGES.json`, collect the named evidence at its decision phase, record the selected `DEFAULT` or `DEVIATION` outcome with artifact paths and checkpoint identity, execute only that outcome's downstream task, and mark the unreachable sibling task `NOT APPLICABLE` with the authorizing decision record. Do not invent thresholds or delete a package merely to simplify packaging.
 
-A task becomes `COMPLETE` only after its preconditions and `semantic_dependencies` are complete, every required artifact exists, exact locations are reconciled, commands/manual methods have saved results, acceptance and completion criteria pass, and no stop condition is active. Update `IMPLEMENTATION_QUEUE.json`, `EXACT_LOCATION_REGISTRY.json`, `RUN_STATE.md`, and the linked evidence atomically at one Git/hash checkpoint; regenerate Markdown views instead of hand-editing a competing status.
+A task becomes `COMPLETE` only after its preconditions and `semantic_dependencies` are terminal, every required artifact exists, exact locations are reconciled, commands/manual methods have saved results, acceptance and completion criteria pass, and no stop condition is active. Write the task's durable `execution_state` and linked evidence at one Git/hash checkpoint; deterministic generation reconciles `EXACT_LOCATION_REGISTRY.json`, derives `RUN_STATE.md`, and regenerates Markdown views without replacing task state.
 
 ## Provenance and false-completion controls
 

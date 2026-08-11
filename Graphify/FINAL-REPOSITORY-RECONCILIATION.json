@@ -4,8 +4,8 @@
   "repository_url": "git@github.com:mhyahya854/Mnemora.git",
   "default_branch": "main",
   "branch": "main (canonical default branch; linear history integrated from graphify-final-reconciliation)",
-  "verified_commit_sha": "9ba89baaa1ee19be65845e940900f1ab05dea548",
-  "verified_tree_sha": "f9c03ffa636d01cd9035abf1ee0e1075059021de",
+  "verified_commit_sha": "f6dc591766c8af56d132237649ec7ce3badf09a0",
+  "verified_tree_sha": "189f36bd744163c528b1f30d6d5de2b393c00486",
   "tracked_file_count": 425,
   "tracked_codebase_file_count": 346,
   "lfs_file_count": 1,
@@ -59,10 +59,10 @@
   ],
   "output_manifest_entries": 63,
   "validator": {
-    "gate_count": 42,
-    "passed": 42,
-    "failed": 0,
-    "verdict": "PASS",
+    "gate_count": 43,
+    "passed": 41,
+    "failed": 2,
+    "verdict": "FAIL",
     "commands": [
       "python -B Graphify/tools/semantic_validator.py --self-test-only",
       "python -B Graphify/tools/validate_planning.py",
@@ -70,7 +70,7 @@
     ]
   },
   "local_full_tree_audit": "RUN in the original full-tree repository; SKIPPED in clean clones (tracked Git parity above is the GitHub-verifiable claim; detailed per-environment evidence is in PLANNING_VALIDATION_REPORT.json)",
-  "pre_run_working_tree": "CLEAN",
+  "pre_run_working_tree": "DIRTY",
   "implementation_status": "NOT STARTED",
   "release_status": "NOT EVALUATED"
 }

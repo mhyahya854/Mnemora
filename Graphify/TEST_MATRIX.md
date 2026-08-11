@@ -1,6 +1,6 @@
 # Test Matrix
 
-Planning-only view. `TEST_MATRIX.json` contains 158 exact test contracts. Zero tests were executed in this planning run, and no row is a pass result.
+Planning-contract view. `TEST_MATRIX.json` contains 158 exact test contracts. A row here is never execution proof; task evidence and checkpoint references live in the authoritative queue execution state.
 
 | Test contract | Task | Capability | Phase | Status |
 | --- | --- | --- | --- | --- |

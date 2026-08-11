@@ -1,7 +1,6 @@
 {
-  "schema_version": 3,
+  "schema_version": 4,
   "authority": "Single machine-readable implementation task authority",
-  "implementation_status": "NOT STARTED",
   "exact_first_task_id": "TASK-GOV-001-PROVENANCE-BASELINE",
   "task_count": 158,
   "deletion_task_count": 31,
@@ -332,7 +331,14 @@
       "wave": "WAVE-01",
       "ordering_rationale": "This is the exact first implementation task because every later mutation, migration, deletion and rollback requires recoverable provenance.",
       "execution_order": 1,
-      "ordering_index": 1
+      "ordering_index": 1,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-DATA-SAFETY",
@@ -682,7 +688,14 @@
       "wave": "WAVE-02",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 2,
-      "ordering_index": 2
+      "ordering_index": 2,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-DATABASE",
@@ -1045,7 +1058,14 @@
       "wave": "WAVE-02",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 3,
-      "ordering_index": 3
+      "ordering_index": 3,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-BACKUP",
@@ -1350,7 +1370,14 @@
       "wave": "WAVE-02",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 4,
-      "ordering_index": 4
+      "ordering_index": 4,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-DELETION-GOVERNANCE",
@@ -1639,7 +1666,14 @@
       "wave": "WAVE-02",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 5,
-      "ordering_index": 5
+      "ordering_index": 5,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-EXACT-LOCATION",
@@ -1887,7 +1921,14 @@
       "wave": "WAVE-02",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 6,
-      "ordering_index": 6
+      "ordering_index": 6,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-IMPLEMENTATION-GOVERNANCE",
@@ -2370,7 +2411,14 @@
       "wave": "WAVE-02",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 7,
-      "ordering_index": 7
+      "ordering_index": 7,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-IPC",
@@ -2596,7 +2644,14 @@
       "wave": "WAVE-02",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 8,
-      "ordering_index": 8
+      "ordering_index": 8,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-LEGACY-MIGRATION",
@@ -2906,7 +2961,14 @@
       "wave": "WAVE-02",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 9,
-      "ordering_index": 9
+      "ordering_index": 9,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-PLANNING-GOVERNANCE",
@@ -3193,7 +3255,14 @@
       "wave": "WAVE-02",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 10,
-      "ordering_index": 10
+      "ordering_index": 10,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-RESTORE",
@@ -3436,7 +3505,14 @@
       "wave": "WAVE-02",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 11,
-      "ordering_index": 11
+      "ordering_index": 11,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-TESTING",
@@ -3689,7 +3765,14 @@
       "wave": "WAVE-02",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 12,
-      "ordering_index": 12
+      "ordering_index": 12,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-GOV-002-CHARACTERIZATION-GATE",
@@ -4212,7 +4295,14 @@
       "wave": "WAVE-02Z",
       "ordering_rationale": "A phase gate depends on every task in its own phase and is the sole prerequisite barrier for the next phase; it is not an administrative PASS substitute.",
       "execution_order": 13,
-      "ordering_index": 13
+      "ordering_index": 13,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-AEC",
@@ -4554,7 +4644,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 14,
-      "ordering_index": 14
+      "ordering_index": 14,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-APP-SHELL",
@@ -4851,7 +4948,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 15,
-      "ordering_index": 15
+      "ordering_index": 15,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-AUDIO",
@@ -5064,7 +5168,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 16,
-      "ordering_index": 16
+      "ordering_index": 16,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-DIARIZATION",
@@ -5379,7 +5490,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 17,
-      "ordering_index": 17
+      "ordering_index": 17,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-DICTATION",
@@ -6055,7 +6173,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 18,
-      "ordering_index": 18
+      "ordering_index": 18,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-HOTKEY",
@@ -6387,7 +6512,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 19,
-      "ordering_index": 19
+      "ordering_index": 19,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-MEETING",
@@ -6689,7 +6821,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 20,
-      "ordering_index": 20
+      "ordering_index": 20,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-MICROPHONE",
@@ -6926,7 +7065,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 21,
-      "ordering_index": 21
+      "ordering_index": 21,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-MODEL-DISCOVERY",
@@ -7170,7 +7316,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 22,
-      "ordering_index": 22
+      "ordering_index": 22,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-MODEL-PACK",
@@ -7433,7 +7586,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 23,
-      "ordering_index": 23
+      "ordering_index": 23,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-MODELS",
@@ -7661,7 +7821,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 24,
-      "ordering_index": 24
+      "ordering_index": 24,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-NETWORK-POLICY",
@@ -7895,7 +8062,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 25,
-      "ordering_index": 25
+      "ordering_index": 25,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-NOTES",
@@ -8286,7 +8460,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 26,
-      "ordering_index": 26
+      "ordering_index": 26,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-ONBOARDING",
@@ -8498,7 +8679,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 27,
-      "ordering_index": 27
+      "ordering_index": 27,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-RENDERER",
@@ -8741,7 +8929,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 28,
-      "ordering_index": 28
+      "ordering_index": 28,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-SEARCH-EXACT",
@@ -9009,7 +9204,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 29,
-      "ordering_index": 29
+      "ordering_index": 29,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-SEARCH-SEMANTIC",
@@ -9298,7 +9500,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 30,
-      "ordering_index": 30
+      "ordering_index": 30,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-SETTINGS",
@@ -9549,7 +9758,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 31,
-      "ordering_index": 31
+      "ordering_index": 31,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-SYSTEM-AUDIO",
@@ -9835,7 +10051,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 32,
-      "ordering_index": 32
+      "ordering_index": 32,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-TRANSCRIPTION",
@@ -10129,7 +10352,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 33,
-      "ordering_index": 33
+      "ordering_index": 33,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-VAD",
@@ -10350,7 +10580,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 34,
-      "ordering_index": 34
+      "ordering_index": 34,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-WHISPER",
@@ -10646,7 +10883,14 @@
       "wave": "WAVE-03",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 35,
-      "ordering_index": 35
+      "ordering_index": 35,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-GOV-003-DECOUPLING-GATE",
@@ -11200,7 +11444,14 @@
       "wave": "WAVE-03Z",
       "ordering_rationale": "A phase gate depends on every task in its own phase and is the sole prerequisite barrier for the next phase; it is not an administrative PASS substitute.",
       "execution_order": 36,
-      "ordering_index": 36
+      "ordering_index": 36,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-ACCOUNTS",
@@ -11765,7 +12016,14 @@
         }
       ],
       "execution_order": 37,
-      "ordering_index": 37
+      "ordering_index": 37,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-ACTION-ITEM-EXTRACTION",
@@ -12101,7 +12359,14 @@
         }
       ],
       "execution_order": 38,
-      "ordering_index": 38
+      "ordering_index": 38,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-ACTIVE-OPENWHISPR-IDENTITY",
@@ -13004,7 +13269,14 @@
         }
       ],
       "execution_order": 39,
-      "ordering_index": 39
+      "ordering_index": 39,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-AI-AGENTS",
@@ -13383,7 +13655,14 @@
         }
       ],
       "execution_order": 40,
-      "ordering_index": 40
+      "ordering_index": 40,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-AI-REWRITING",
@@ -13719,7 +13998,14 @@
         }
       ],
       "execution_order": 41,
-      "ordering_index": 41
+      "ordering_index": 41,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-ANALYTICS",
@@ -14151,7 +14437,14 @@
         }
       ],
       "execution_order": 42,
-      "ordering_index": 42
+      "ordering_index": 42,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-API-KEYS",
@@ -14989,7 +15282,14 @@
         }
       ],
       "execution_order": 43,
-      "ordering_index": 43
+      "ordering_index": 43,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-AUTHENTICATION",
@@ -15600,7 +15900,14 @@
         }
       ],
       "execution_order": 44,
-      "ordering_index": 44
+      "ordering_index": 44,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-AUTOMATIC-UPDATER",
@@ -15973,7 +16280,14 @@
         }
       ],
       "execution_order": 45,
-      "ordering_index": 45
+      "ordering_index": 45,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-BILLING",
@@ -16455,7 +16769,14 @@
         }
       ],
       "execution_order": 46,
-      "ordering_index": 46
+      "ordering_index": 46,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-CALENDAR",
@@ -16902,7 +17223,14 @@
         }
       ],
       "execution_order": 47,
-      "ordering_index": 47
+      "ordering_index": 47,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-CHAT",
@@ -17238,7 +17566,14 @@
         }
       ],
       "execution_order": 48,
-      "ordering_index": 48
+      "ordering_index": 48,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-CLOUD-SYNCHRONISATION",
@@ -17602,7 +17937,14 @@
         }
       ],
       "execution_order": 49,
-      "ordering_index": 49
+      "ordering_index": 49,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-HOSTED-AI",
@@ -18188,7 +18530,14 @@
         }
       ],
       "execution_order": 50,
-      "ordering_index": 50
+      "ordering_index": 50,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-HOSTED-TRANSCRIPTION",
@@ -18634,7 +18983,14 @@
         }
       ],
       "execution_order": 51,
-      "ordering_index": 51
+      "ordering_index": 51,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-INVITATIONS",
@@ -19015,7 +19371,14 @@
         }
       ],
       "execution_order": 52,
-      "ordering_index": 52
+      "ordering_index": 52,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-LOCAL-GENERATIVE-AI",
@@ -19405,7 +19768,14 @@
         }
       ],
       "execution_order": 53,
-      "ordering_index": 53
+      "ordering_index": 53,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-MCP",
@@ -19810,7 +20180,14 @@
         }
       ],
       "execution_order": 54,
-      "ordering_index": 54
+      "ordering_index": 54,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-ORGANISATIONS",
@@ -20272,7 +20649,14 @@
         }
       ],
       "execution_order": 55,
-      "ordering_index": 55
+      "ordering_index": 55,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-PUBLIC-API",
@@ -20692,7 +21076,14 @@
         }
       ],
       "execution_order": 56,
-      "ordering_index": 56
+      "ordering_index": 56,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-REFERRALS",
@@ -21187,7 +21578,14 @@
         }
       ],
       "execution_order": 57,
-      "ordering_index": 57
+      "ordering_index": 57,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-RUNTIME-EXTERNAL-LINKS",
@@ -21547,7 +21945,14 @@
         }
       ],
       "execution_order": 58,
-      "ordering_index": 58
+      "ordering_index": 58,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-RUNTIME-EXTERNAL-NETWORKING",
@@ -21902,7 +22307,14 @@
         }
       ],
       "execution_order": 59,
-      "ordering_index": 59
+      "ordering_index": 59,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-RUNTIME-MODEL-DOWNLOADS",
@@ -22512,7 +22924,14 @@
         }
       ],
       "execution_order": 60,
-      "ordering_index": 60
+      "ordering_index": 60,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-SHARING",
@@ -22944,7 +23363,14 @@
         }
       ],
       "execution_order": 61,
-      "ordering_index": 61
+      "ordering_index": 61,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-SUMMARISATION",
@@ -23334,7 +23760,14 @@
         }
       ],
       "execution_order": 62,
-      "ordering_index": 62
+      "ordering_index": 62,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-TEAMS",
@@ -23765,7 +24198,14 @@
         }
       ],
       "execution_order": 63,
-      "ordering_index": 63
+      "ordering_index": 63,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-TELEMETRY",
@@ -24099,7 +24539,14 @@
         }
       ],
       "execution_order": 64,
-      "ordering_index": 64
+      "ordering_index": 64,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-UPGRADE-SYSTEMS",
@@ -24828,7 +25275,14 @@
         }
       ],
       "execution_order": 65,
-      "ordering_index": 65
+      "ordering_index": 65,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-USAGE-QUOTAS",
@@ -25289,7 +25743,14 @@
         }
       ],
       "execution_order": 66,
-      "ordering_index": 66
+      "ordering_index": 66,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEL-WORKSPACES",
@@ -25672,7 +26133,14 @@
         }
       ],
       "execution_order": 67,
-      "ordering_index": 67
+      "ordering_index": 67,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-GOV-004-REMOVAL-GATE",
@@ -26259,7 +26727,14 @@
       "wave": "WAVE-04Z",
       "ordering_rationale": "A phase gate depends on every task in its own phase and is the sole prerequisite barrier for the next phase; it is not an administrative PASS substitute.",
       "execution_order": 68,
-      "ordering_index": 68
+      "ordering_index": 68,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-AUDIO-MIXING",
@@ -26472,7 +26947,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 69,
-      "ordering_index": 69
+      "ordering_index": 69,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-CLIPBOARD",
@@ -26706,7 +27188,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 70,
-      "ordering_index": 70
+      "ordering_index": 70,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-EXPORT",
@@ -26919,7 +27408,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 71,
-      "ordering_index": 71
+      "ordering_index": 71,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-FFMPEG",
@@ -27164,7 +27660,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 72,
-      "ordering_index": 72
+      "ordering_index": 72,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-FOLDERS",
@@ -27425,7 +27928,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 73,
-      "ordering_index": 73
+      "ordering_index": 73,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-I18N",
@@ -27624,7 +28134,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 74,
-      "ordering_index": 74
+      "ordering_index": 74,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-IMPORT",
@@ -27848,7 +28365,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 75,
-      "ordering_index": 75
+      "ordering_index": 75,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-IMPORT-AUDIO",
@@ -28072,7 +28596,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 76,
-      "ordering_index": 76
+      "ordering_index": 76,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-IMPORT-EXPORT",
@@ -28313,7 +28844,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 77,
-      "ordering_index": 77
+      "ordering_index": 77,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-IMPORT-VIDEO",
@@ -28537,7 +29075,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 78,
-      "ordering_index": 78
+      "ordering_index": 78,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-LINKED-NOTES",
@@ -28784,7 +29329,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 79,
-      "ordering_index": 79
+      "ordering_index": 79,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-LINKED-PLAYBACK",
@@ -29011,7 +29563,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 80,
-      "ordering_index": 80
+      "ordering_index": 80,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-MEETING-NOTES",
@@ -29260,7 +29819,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 81,
-      "ordering_index": 81
+      "ordering_index": 81,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-MICROPHONE-DICTATION",
@@ -29515,7 +30081,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 82,
-      "ordering_index": 82
+      "ordering_index": 82,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-MICROPHONE-SELECTION",
@@ -29738,7 +30311,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 83,
-      "ordering_index": 83
+      "ordering_index": 83,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-MINILM",
@@ -29976,7 +30556,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 84,
-      "ordering_index": 84
+      "ordering_index": 84,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-NOTIFICATIONS",
@@ -30203,7 +30790,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 85,
-      "ordering_index": 85
+      "ordering_index": 85,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-OFFLINE-FIRST-LAUNCH",
@@ -30386,7 +30980,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 86,
-      "ordering_index": 86
+      "ordering_index": 86,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-PERSONAL-NOTES",
@@ -30634,7 +31235,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 87,
-      "ordering_index": 87
+      "ordering_index": 87,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-PLAYBACK",
@@ -30872,7 +31480,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 88,
-      "ordering_index": 88
+      "ordering_index": 88,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-PROCESSING-JOBS",
@@ -31043,7 +31658,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 89,
-      "ordering_index": 89
+      "ordering_index": 89,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-RECORDING-OVERLAY",
@@ -31294,7 +31916,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 90,
-      "ordering_index": 90
+      "ordering_index": 90,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-RECOVERY",
@@ -31525,7 +32154,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 91,
-      "ordering_index": 91
+      "ordering_index": 91,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-SEGMENTS",
@@ -31794,7 +32430,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 92,
-      "ordering_index": 92
+      "ordering_index": 92,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-SNIPPETS",
@@ -32061,7 +32704,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 93,
-      "ordering_index": 93
+      "ordering_index": 93,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-SPEAKER-EMBEDDINGS",
@@ -32295,7 +32945,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 94,
-      "ordering_index": 94
+      "ordering_index": 94,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-SPEAKER-LABELS",
@@ -32507,7 +33164,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 95,
-      "ordering_index": 95
+      "ordering_index": 95,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-SPEAKER-NAMING",
@@ -32732,7 +33396,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 96,
-      "ordering_index": 96
+      "ordering_index": 96,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-SPEAKER-PERSISTENCE",
@@ -32958,7 +33629,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 97,
-      "ordering_index": 97
+      "ordering_index": 97,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-SPEAKER-RENAMING",
@@ -33183,7 +33861,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 98,
-      "ordering_index": 98
+      "ordering_index": 98,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-TAGS",
@@ -33433,7 +34118,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 99,
-      "ordering_index": 99
+      "ordering_index": 99,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-TRANSCRIPT-EDIT",
@@ -33683,7 +34375,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 100,
-      "ordering_index": 100
+      "ordering_index": 100,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-TRANSCRIPT-HISTORY",
@@ -33931,7 +34630,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 101,
-      "ordering_index": 101
+      "ordering_index": 101,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-TRAY",
@@ -34130,7 +34836,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 102,
-      "ordering_index": 102
+      "ordering_index": 102,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-WINDOW-LIFECYCLE",
@@ -34366,7 +35079,14 @@
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 103,
-      "ordering_index": 103
+      "ordering_index": 103,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEC-KEYRING",
@@ -34569,7 +35289,14 @@
         "TASK-OUT-KEYRING-DEVIATION"
       ],
       "execution_order": 104,
-      "ordering_index": 104
+      "ordering_index": 104,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEC-KYSELY",
@@ -34772,7 +35499,14 @@
         "TASK-OUT-KYSELY-DEVIATION"
       ],
       "execution_order": 105,
-      "ordering_index": 105
+      "ordering_index": 105,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEC-LOOPBACK-WEBSOCKETS",
@@ -35000,7 +35734,14 @@
         "TASK-OUT-LOOPBACK-WEBSOCKETS-DEVIATION"
       ],
       "execution_order": 106,
-      "ordering_index": 106
+      "ordering_index": 106,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEC-MACOS-LINUX",
@@ -35294,7 +36035,14 @@
         "TASK-OUT-MACOS-LINUX-DEVIATION"
       ],
       "execution_order": 107,
-      "ordering_index": 107
+      "ordering_index": 107,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEC-MEETING-DETECTION",
@@ -35575,7 +36323,14 @@
         "TASK-OUT-MEETING-DETECTION-DEVIATION"
       ],
       "execution_order": 108,
-      "ordering_index": 108
+      "ordering_index": 108,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEC-NOTE-TEMPLATES",
@@ -35778,7 +36533,14 @@
         "TASK-OUT-NOTE-TEMPLATES-DEVIATION"
       ],
       "execution_order": 109,
-      "ordering_index": 109
+      "ordering_index": 109,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEC-PARAKEET",
@@ -35988,7 +36750,14 @@
         "TASK-OUT-PARAKEET-DEVIATION"
       ],
       "execution_order": 110,
-      "ordering_index": 110
+      "ordering_index": 110,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEC-PORTABLE-WINDOWS",
@@ -36221,7 +36990,14 @@
         "TASK-OUT-PORTABLE-WINDOWS-DEVIATION"
       ],
       "execution_order": 111,
-      "ordering_index": 111
+      "ordering_index": 111,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEC-QDRANT",
@@ -36519,7 +37295,14 @@
         "TASK-OUT-QDRANT-DEVIATION"
       ],
       "execution_order": 112,
-      "ordering_index": 112
+      "ordering_index": 112,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEC-SHERPA-ONNX",
@@ -36826,7 +37609,14 @@
         "TASK-OUT-SHERPA-ONNX-DEVIATION"
       ],
       "execution_order": 113,
-      "ordering_index": 113
+      "ordering_index": 113,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-DEC-VOICE-FINGERPRINTING",
@@ -37087,7 +37877,14 @@
         "TASK-OUT-VOICE-FINGERPRINTING-DEVIATION"
       ],
       "execution_order": 114,
-      "ordering_index": 114
+      "ordering_index": 114,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-KEYRING-DEFAULT",
@@ -37262,7 +38059,14 @@
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 115,
-      "ordering_index": 115
+      "ordering_index": 115,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-KYSELY-DEFAULT",
@@ -37437,7 +38241,14 @@
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 116,
-      "ordering_index": 116
+      "ordering_index": 116,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-LOOPBACK-WEBSOCKETS-DEFAULT",
@@ -37635,7 +38446,14 @@
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 117,
-      "ordering_index": 117
+      "ordering_index": 117,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-MACOS-LINUX-DEFAULT",
@@ -37899,7 +38717,14 @@
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 118,
-      "ordering_index": 118
+      "ordering_index": 118,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-MEETING-DETECTION-DEFAULT",
@@ -38150,7 +38975,14 @@
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 119,
-      "ordering_index": 119
+      "ordering_index": 119,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-NOTE-TEMPLATES-DEFAULT",
@@ -38325,7 +39157,14 @@
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 120,
-      "ordering_index": 120
+      "ordering_index": 120,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-PARAKEET-DEFAULT",
@@ -38503,7 +39342,14 @@
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 121,
-      "ordering_index": 121
+      "ordering_index": 121,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-PORTABLE-WINDOWS-DEFAULT",
@@ -38706,7 +39552,14 @@
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 122,
-      "ordering_index": 122
+      "ordering_index": 122,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-QDRANT-DEFAULT",
@@ -38972,7 +39825,14 @@
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 123,
-      "ordering_index": 123
+      "ordering_index": 123,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-SHERPA-ONNX-DEFAULT",
@@ -39249,7 +40109,14 @@
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 124,
-      "ordering_index": 124
+      "ordering_index": 124,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-VOICE-FINGERPRINTING-DEFAULT",
@@ -39480,7 +40347,14 @@
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 125,
-      "ordering_index": 125
+      "ordering_index": 125,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-KEYRING-DEVIATION",
@@ -39655,7 +40529,14 @@
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 126,
-      "ordering_index": 126
+      "ordering_index": 126,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-KYSELY-DEVIATION",
@@ -39830,7 +40711,14 @@
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 127,
-      "ordering_index": 127
+      "ordering_index": 127,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-LOOPBACK-WEBSOCKETS-DEVIATION",
@@ -40028,7 +40916,14 @@
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 128,
-      "ordering_index": 128
+      "ordering_index": 128,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-MACOS-LINUX-DEVIATION",
@@ -40292,7 +41187,14 @@
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 129,
-      "ordering_index": 129
+      "ordering_index": 129,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-MEETING-DETECTION-DEVIATION",
@@ -40543,7 +41445,14 @@
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 130,
-      "ordering_index": 130
+      "ordering_index": 130,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-NOTE-TEMPLATES-DEVIATION",
@@ -40718,7 +41627,14 @@
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 131,
-      "ordering_index": 131
+      "ordering_index": 131,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-PARAKEET-DEVIATION",
@@ -40896,7 +41812,14 @@
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 132,
-      "ordering_index": 132
+      "ordering_index": 132,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-PORTABLE-WINDOWS-DEVIATION",
@@ -41099,7 +42022,14 @@
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 133,
-      "ordering_index": 133
+      "ordering_index": 133,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-QDRANT-DEVIATION",
@@ -41365,7 +42295,14 @@
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 134,
-      "ordering_index": 134
+      "ordering_index": 134,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-SHERPA-ONNX-DEVIATION",
@@ -41642,7 +42579,14 @@
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 135,
-      "ordering_index": 135
+      "ordering_index": 135,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-OUT-VOICE-FINGERPRINTING-DEVIATION",
@@ -41873,7 +42817,14 @@
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
       "execution_order": 136,
-      "ordering_index": 136
+      "ordering_index": 136,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-GOV-005-CAPABILITY-GATE",
@@ -42496,7 +43447,14 @@
       "wave": "WAVE-05Z",
       "ordering_rationale": "A phase gate depends on every task in its own phase and is the sole prerequisite barrier for the next phase; it is not an administrative PASS substitute.",
       "execution_order": 137,
-      "ordering_index": 137
+      "ordering_index": 137,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-LEGAL",
@@ -42712,7 +43670,14 @@
       "wave": "WAVE-06",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 138,
-      "ordering_index": 138
+      "ordering_index": 138,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-MARKDOWN-GOVERNANCE",
@@ -42913,7 +43878,14 @@
       "wave": "WAVE-06",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 139,
-      "ordering_index": 139
+      "ordering_index": 139,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-NATIVE",
@@ -43141,7 +44113,14 @@
       "wave": "WAVE-06",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 140,
-      "ordering_index": 140
+      "ordering_index": 140,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-PACKAGING",
@@ -43421,7 +44400,14 @@
       "wave": "WAVE-06",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 141,
-      "ordering_index": 141
+      "ordering_index": 141,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-REPOSITORY",
@@ -43772,7 +44758,14 @@
       "wave": "WAVE-06",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 142,
-      "ordering_index": 142
+      "ordering_index": 142,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-SIMPLIFICATION",
@@ -43943,7 +44936,14 @@
       "wave": "WAVE-06",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 143,
-      "ordering_index": 143
+      "ordering_index": 143,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-THIRD-PARTY",
@@ -44150,7 +45150,14 @@
       "wave": "WAVE-06",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 144,
-      "ordering_index": 144
+      "ordering_index": 144,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-CAP-WINDOWS-INSTALLER",
@@ -44384,7 +45391,14 @@
       "wave": "WAVE-06",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
       "execution_order": 145,
-      "ordering_index": 145
+      "ordering_index": 145,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-GOV-006-CONSOLIDATION-GATE",
@@ -44891,7 +45905,14 @@
       "wave": "WAVE-06Z",
       "ordering_rationale": "A phase gate depends on every task in its own phase and is the sole prerequisite barrier for the next phase; it is not an administrative PASS substitute.",
       "execution_order": 146,
-      "ordering_index": 146
+      "ordering_index": 146,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-REL-01-AUTHORITY",
@@ -45148,7 +46169,14 @@
         "Zero unmapped requirements"
       ],
       "execution_order": 147,
-      "ordering_index": 147
+      "ordering_index": 147,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-REL-02-PROVENANCE",
@@ -45405,7 +46433,14 @@
         "No user-work destruction record"
       ],
       "execution_order": 148,
-      "ordering_index": 148
+      "ordering_index": 148,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-REL-03-MAPPING",
@@ -45662,7 +46697,14 @@
         "Final Graphify/static rescan"
       ],
       "execution_order": 149,
-      "ordering_index": 149
+      "ordering_index": 149,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-REL-04-PRESERVATION",
@@ -45919,7 +46961,14 @@
         "Third-party and legal inspection"
       ],
       "execution_order": 150,
-      "ordering_index": 150
+      "ordering_index": 150,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-REL-05-DELETION",
@@ -46176,7 +47225,14 @@
         "Runtime and packaged absence proof"
       ],
       "execution_order": 151,
-      "ordering_index": 151
+      "ordering_index": 151,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-REL-06-CAPABILITY",
@@ -46433,7 +47489,14 @@
         "Broader regression results"
       ],
       "execution_order": 152,
-      "ordering_index": 152
+      "ordering_index": 152,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-REL-07-DATA-SAFETY",
@@ -46690,7 +47753,14 @@
         "Interrupted migration recovery drill"
       ],
       "execution_order": 153,
-      "ordering_index": 153
+      "ordering_index": 153,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-REL-08-REAL-INTEGRATION",
@@ -46947,7 +48017,14 @@
         "Microphone/system-audio/hotkey evidence or explicit hardware status"
       ],
       "execution_order": 154,
-      "ordering_index": 154
+      "ordering_index": 154,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-REL-09-OFFLINE",
@@ -47204,7 +48281,14 @@
         "Owned loopback allow-list evidence"
       ],
       "execution_order": 155,
-      "ordering_index": 155
+      "ordering_index": 155,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-REL-10-WINDOWS-RELEASE",
@@ -47461,7 +48545,14 @@
         "Installed offline launch and packaged-asset inspection"
       ],
       "execution_order": 156,
-      "ordering_index": 156
+      "ordering_index": 156,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-REL-12-HARDWARE",
@@ -47718,7 +48809,14 @@
         "HARDWARE UNAVAILABLE records where applicable"
       ],
       "execution_order": 157,
-      "ordering_index": 157
+      "ordering_index": 157,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     },
     {
       "stable_task_id": "TASK-REL-11-AUDIT",
@@ -47995,7 +49093,49 @@
         "Zero placeholder, contradiction and orphan report"
       ],
       "execution_order": 158,
-      "ordering_index": 158
+      "ordering_index": 158,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
     }
-  ]
+  ],
+  "implementation_status": "NOT STARTED",
+  "execution_state_counts": {
+    "NOT STARTED": 158,
+    "COMPLETE": 0,
+    "NOT APPLICABLE": 0,
+    "BLOCKED": 0
+  },
+  "terminal_task_count": 0,
+  "next_task_id": "TASK-GOV-001-PROVENANCE-BASELINE",
+  "next_task_disposition": "NOT STARTED",
+  "latest_checkpoint_identity": null,
+  "execution_state_contract": {
+    "authority": "Each task's execution_state is durable mutable state; generated task-definition fields remain planning contracts.",
+    "task_id_field": "stable_task_id",
+    "required_fields": [
+      "disposition",
+      "evidence_references",
+      "checkpoint_identity",
+      "blocked_reason",
+      "not_applicable_basis"
+    ],
+    "allowed_dispositions": [
+      "NOT STARTED",
+      "COMPLETE",
+      "NOT APPLICABLE",
+      "BLOCKED"
+    ],
+    "terminal_dispositions": [
+      "COMPLETE",
+      "NOT APPLICABLE"
+    ],
+    "complete_rule": "All semantic dependencies must be terminal; every required_evidence_artifact must be referenced and exist; checkpoint_identity is required.",
+    "not_applicable_rule": "All semantic dependencies must be terminal; evidence_references, checkpoint_identity and not_applicable_basis are required.",
+    "blocked_rule": "blocked_reason is required and the blocked task remains the next task; evidence_references and checkpoint_identity are either both present or both absent."
+  }
 }

@@ -9,6 +9,7 @@ builds, packaging, installers, migrations, or Git mutations.
 
 from __future__ import annotations
 
+import argparse
 import collections
 import hashlib
 import json
@@ -16,6 +17,13 @@ import re
 from pathlib import Path
 from typing import Any, Iterable
 
+from execution_state import (
+    ExecutionStateError,
+    aggregate_implementation_status,
+    apply_queue_summary,
+    merge_execution_states,
+    regenerate_fixture_queue,
+)
 from semantic_rules import (
     CAPABILITY_OWNERS,
     EXACT_LOCATIONS,
@@ -121,6 +129,28 @@ for code, path in MASTER_FILES:
     actual = sha256(path)
     if actual != EXPECTED_MASTER_HASHES[code]:
         raise SystemExit(f"Immutable Master Plan hash mismatch before planning generation: {path} {actual}")
+
+
+def run_fixture_mode() -> bool:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--execution-state-fixture", nargs=2, metavar=("INPUT_QUEUE", "OUTPUT_QUEUE"))
+    parser.add_argument("--fixture-root", type=Path)
+    args = parser.parse_args()
+    if not args.execution_state_fixture:
+        return False
+    if args.fixture_root is None:
+        parser.error("--fixture-root is required with --execution-state-fixture")
+    input_path, output_path = map(Path, args.execution_state_fixture)
+    try:
+        regenerate_fixture_queue(input_path, output_path, args.fixture_root)
+    except ExecutionStateError as error:
+        raise SystemExit(str(error)) from error
+    print(f"Execution-state fixture regenerated: {output_path}")
+    return True
+
+
+if run_fixture_mode():
+    raise SystemExit(0)
 
 
 # Existing capability IDs are preserved. Additions cover Master Plan concepts that
@@ -1047,6 +1077,7 @@ def reviewed_runtime_chain(
 
 
 old_capability_doc = load_json(G / "CAPABILITY_REGISTRY.json")
+existing_implementation_queue = load_json(G / "IMPLEMENTATION_QUEUE.json") if (G / "IMPLEMENTATION_QUEUE.json").is_file() else None
 old_capabilities = old_capability_doc.get("capabilities", old_capability_doc)
 capability_by_id: dict[str, dict[str, Any]] = {item["id"]: dict(item) for item in old_capabilities}
 for item in EXTRA_CAPABILITIES:
@@ -1958,6 +1989,10 @@ for index, task_id in enumerate(topological_ids, 1):
     task["dependents"] = sorted(dependents_by_task.get(task_id, []), key=task_sort_key)
     depth[task_id] = 0 if not task["semantic_dependencies"] else 1 + max(depth[dependency] for dependency in task["semantic_dependencies"])
 tasks = [task_by_id[task_id] for task_id in topological_ids]
+try:
+    execution_summary = merge_execution_states(tasks, existing_implementation_queue, ROOT)
+except ExecutionStateError as error:
+    raise SystemExit(str(error)) from error
 dependency_graph_metrics = {
     "task_nodes": len(tasks),
     "dependency_edges": sum(len(task["semantic_dependencies"]) for task in tasks),
@@ -1978,6 +2013,7 @@ for cap in capabilities:
         first_owned = min(owned_tasks, key=lambda task: task["execution_order"])
         cap["phase"] = first_owned["phase"]
         cap["wave"] = first_owned["wave"]
+    cap["implementation_status"] = aggregate_implementation_status(owned_tasks)
     dependency_caps = unique(
         task_by_id[dependency]["capability_id"]
         for task in owned_tasks
@@ -2033,9 +2069,8 @@ capability_register = {
 
 
 implementation_queue = {
-    "schema_version": 3,
+    "schema_version": 4,
     "authority": "Single machine-readable implementation task authority",
-    "implementation_status": "NOT STARTED",
     "exact_first_task_id": "TASK-GOV-001-PROVENANCE-BASELINE",
     "task_count": len(tasks),
     "deletion_task_count": sum(task["task_kind"] == "DELETION" for task in tasks),
@@ -2046,6 +2081,7 @@ implementation_queue = {
     "dependency_graph_metrics": dependency_graph_metrics,
     "tasks": tasks,
 }
+apply_queue_summary(implementation_queue, execution_summary)
 
 
 # The former registry carried 5,619 heuristic node expansions forward. Rebuild
@@ -2281,7 +2317,7 @@ write_json("MASTER_REQUIREMENT_REGISTER.json", requirement_register)
 write_json("INTERPRETATION_REGISTER.json", {"schema_version": 1, "authority": "Derived interpretations subordinate to immutable Master Plan", "interpretation_count": len(INTERPRETATIONS), "unresolved_conflict_count": 0, "interpretations": INTERPRETATIONS})
 write_json("CAPABILITY_REGISTRY.json", capability_register)
 write_json("CONDITIONAL_DECISION_PACKAGES.json", {"schema_version": 1, "authority": "Complete evidence-driven conditional decision packages", "package_count": len(decision_packages), "packages": decision_packages})
-write_json("RELEASE_GATE_PLAN.json", {"schema_version": 1, "authority": "Strict Release Conjunction planning authority", "release_status": "NOT EVALUATED - IMPLEMENTATION NOT STARTED", "gate_count": len(RELEASE_GATES), "gates": RELEASE_GATES})
+write_json("RELEASE_GATE_PLAN.json", {"schema_version": 1, "authority": "Strict Release Conjunction planning authority", "release_status": "NOT EVALUATED", "gate_count": len(RELEASE_GATES), "gates": RELEASE_GATES})
 write_json("IMPLEMENTATION_QUEUE.json", implementation_queue)
 write_json("EXACT_LOCATION_REGISTRY.json", exact_registry)
 write_json("TEST_MATRIX.json", test_matrix)
@@ -2296,11 +2332,21 @@ phase_rows = []
 for phase in sorted({task["phase"] for task in tasks}):
     phase_tasks = [task for task in tasks if task["phase"] == phase]
     phase_rows.append([phase, min(task["ordering_index"] for task in phase_tasks), max(task["ordering_index"] for task in phase_tasks), len(phase_tasks), ", ".join(unique(task["wave"] for task in phase_tasks))])
+implementation_status = execution_summary["implementation_status"]
+execution_counts = execution_summary["execution_state_counts"]
+next_task_id = execution_summary["next_task_id"]
+next_task_disposition = execution_summary["next_task_disposition"]
+latest_checkpoint_identity = execution_summary["latest_checkpoint_identity"]
+execution_state_sentence = (
+    "Implementation has not started; every task remains NOT STARTED."
+    if implementation_status == "NOT STARTED"
+    else f"Validated implementation state is {implementation_status}; see each task's execution_state for evidence and checkpoint identity."
+)
 
 
 write_text("START-HERE.md", f"""# Mnemora implementation handoff
 
-This is the single authoritative entry point for a future implementation run. Implementation has not started. The current application root is the lowercase `codebase/` folder; `Codebase/` is only a future target named by the Master Plan. The derived planning is subordinate to all three immutable Master Plan files. Application tests, builds, packaging, installation, offline launch, final audits, and release approval were not executed in this planning run.
+This is the single authoritative entry point for an implementation run. {execution_state_sentence} The current application root is the lowercase `codebase/` folder; `Codebase/` is only a future target named by the Master Plan. The derived planning is subordinate to all three immutable Master Plan files. Planning generation never turns a planning contract into implementation evidence.
 
 ## Authority order
 
@@ -2335,11 +2381,11 @@ python -B Graphify/tools/validate_planning.py --full-codebase
 
 If Git is still absent, record that exact result; do not treat the Git command failure as permission to mutate. Follow `TASK-GOV-001-PROVENANCE-BASELINE` and the Master Plan's hash-checkpoint fallback.
 
-## Exact first implementation task
+## Execution root and current next task
 
 `TASK-GOV-001-PROVENANCE-BASELINE`
 
-Start with ordering index 1 in `IMPLEMENTATION_QUEUE.json`. Establish Git or the Master Plan-permitted recoverable hash checkpoint before any application mutation. Do not begin a later task merely because its files appear familiar.
+The immutable execution root is ordering index 1 in `IMPLEMENTATION_QUEUE.json`. The current derived `next_task_id` is `{next_task_id}` with disposition `{next_task_disposition}`. Establish Git or the Master Plan-permitted recoverable hash checkpoint before any application mutation. Do not begin a later task merely because its files appear familiar.
 
 ## Dependency-safe phase and wave sequence
 
@@ -2351,16 +2397,35 @@ Start with ordering index 1 in `IMPLEMENTATION_QUEUE.json`. Establish Git or the
 
 1. Read every line of all three Master Plan files and verify the hashes below.
 2. Run `python Graphify/tools/validate_planning.py` from the Mnemora root. Stop on any failure.
-3. Read `RUN_STATE.md`, then locate the first queue task whose implementation disposition is neither `COMPLETE` nor evidence-linked `NOT APPLICABLE`.
-4. Confirm all dependency task evidence references the same commit/hash checkpoint.
-5. Execute exactly one recoverable capability batch, save every required artifact, rerun planning validation, and update statuses without changing the Master Plan.
+3. Read `RUN_STATE.md` and `IMPLEMENTATION_QUEUE.json`; use the derived `next_task_id`, which is the first ordering-index task that is neither `COMPLETE` nor evidence-linked `NOT APPLICABLE` and whose semantic dependencies are terminal.
+4. If that task is `BLOCKED`, stop on it. The selector never skips a blocked next task. Otherwise confirm all dependency task evidence has a valid checkpoint identity.
+5. Execute exactly one recoverable capability batch, save every required artifact, write its `execution_state`, rerun planning validation, and do not change the Master Plan.
 6. Never use a planning-complete status as implementation or release evidence.
+
+## Durable execution-state protocol
+
+`IMPLEMENTATION_QUEUE.json` remains the single task authority. Planning fields are regenerated task definitions. The nested `execution_state` object is mutable implementation state and is preserved by stable task ID across deterministic generation:
+
+```json
+{{
+  "disposition": "NOT STARTED | COMPLETE | NOT APPLICABLE | BLOCKED",
+  "evidence_references": [],
+  "checkpoint_identity": null,
+  "blocked_reason": null,
+  "not_applicable_basis": null
+}}
+```
+
+- `COMPLETE` requires terminal semantic dependencies, every required evidence reference, existing evidence files, and a checkpoint identity.
+- `NOT APPLICABLE` requires terminal semantic dependencies, evidence, a checkpoint identity, and the exact Master Plan or conditional-decision reachability basis.
+- `BLOCKED` requires a reason and remains the selected task; optional evidence and checkpoint fields must appear together.
+- `NOT STARTED` carries no execution evidence. The queue's top-level status, counts, checkpoint and next-task pointer are derived from task state and validated against it.
 
 ## Conditional decisions and task completion
 
 For each record in `CONDITIONAL_DECISION_PACKAGES.json`, collect the named evidence at its decision phase, record the selected `DEFAULT` or `DEVIATION` outcome with artifact paths and checkpoint identity, execute only that outcome's downstream task, and mark the unreachable sibling task `NOT APPLICABLE` with the authorizing decision record. Do not invent thresholds or delete a package merely to simplify packaging.
 
-A task becomes `COMPLETE` only after its preconditions and `semantic_dependencies` are complete, every required artifact exists, exact locations are reconciled, commands/manual methods have saved results, acceptance and completion criteria pass, and no stop condition is active. Update `IMPLEMENTATION_QUEUE.json`, `EXACT_LOCATION_REGISTRY.json`, `RUN_STATE.md`, and the linked evidence atomically at one Git/hash checkpoint; regenerate Markdown views instead of hand-editing a competing status.
+A task becomes `COMPLETE` only after its preconditions and `semantic_dependencies` are terminal, every required artifact exists, exact locations are reconciled, commands/manual methods have saved results, acceptance and completion criteria pass, and no stop condition is active. Write the task's durable `execution_state` and linked evidence at one Git/hash checkpoint; deterministic generation reconciles `EXACT_LOCATION_REGISTRY.json`, derives `RUN_STATE.md`, and regenerates Markdown views without replacing task state.
 
 ## Provenance and false-completion controls
 
@@ -2403,14 +2468,15 @@ write_text("RUN_STATE.md", f"""# Run State
 
 ## Current checkpoint
 
-- Mode: final derived-planning completion; application implementation not started.
+- Mode: validated derived planning with durable implementation execution state.
 - Repository root: the Git worktree root discovered by `git rev-parse --show-toplevel` (machine-specific absolute path intentionally not embedded).
 - Current application root: `codebase/` (lowercase path is authoritative current evidence).
 {git_state_line}
-- Provenance fallback: `REPOSITORY_FILE_INVENTORY.json` plus `REPOSITORY_FINGERPRINT.json`; future implementation begins with `TASK-GOV-001-PROVENANCE-BASELINE`.
+- Provenance fallback: `REPOSITORY_FILE_INVENTORY.json` plus `REPOSITORY_FINGERPRINT.json`; the immutable execution root is `TASK-GOV-001-PROVENANCE-BASELINE`.
 - Immutable Master Plan files: verified against the SHA-256 values below before derived generation.
-- Application writes in this planning run: none authorized.
-- Implementation, test, build, package, installer, offline-launch and release status: not started / not evaluated.
+- Implementation status: `{implementation_status}`; task counts: `{json.dumps(execution_counts, sort_keys=True)}`.
+- Latest terminal task checkpoint: `{latest_checkpoint_identity or 'NONE'}`.
+- Release status: not evaluated by task execution state.
 
 ## Planning authorities
 
@@ -2425,7 +2491,7 @@ write_text("RUN_STATE.md", f"""# Run State
 
 ## Resume pointer
 
-Read `START-HERE.md`. The exact first future implementation task is `TASK-GOV-001-PROVENANCE-BASELINE` at ordering index 1. Re-run `python Graphify/tools/validate_planning.py` before execution.
+Read `START-HERE.md`. The current next task is `{next_task_id}` with disposition `{next_task_disposition}`; `BLOCKED` is a stop barrier, never a skip condition. Re-run `python -B Graphify/tools/validate_planning.py` before execution.
 
 ## Master Plan hashes
 
@@ -2443,9 +2509,9 @@ write_text("CAPABILITY_REGISTRY.md", f"""# Capability Registry
 
 write_text("IMPLEMENTATION_QUEUE.md", f"""# Implementation Queue
 
-`IMPLEMENTATION_QUEUE.json` is authoritative and contains the complete task contracts. No task was executed during this planning run. The exact first task is `TASK-GOV-001-PROVENANCE-BASELINE`.
+`IMPLEMENTATION_QUEUE.json` is authoritative and contains the complete task contracts plus durable nested execution state. Current implementation status: `{implementation_status}`. Current next task: `{next_task_id}` ({next_task_disposition}).
 
-{markdown_table(["Index", "Task", "Phase", "Wave", "Kind", "Capability", "Dependency", "Status"], [[task['ordering_index'], task['stable_task_id'], task['phase'], task['wave'], task['task_kind'], task['capability_id'], task['dependencies'], task['planning_status']] for task in tasks])}
+{markdown_table(["Index", "Task", "Phase", "Wave", "Kind", "Capability", "Dependency", "Execution disposition"], [[task['ordering_index'], task['stable_task_id'], task['phase'], task['wave'], task['task_kind'], task['capability_id'], task['dependencies'], task['execution_state']['disposition']] for task in tasks])}
 """)
 
 
@@ -2461,7 +2527,7 @@ for phase in sorted({task["phase"] for task in tasks}):
     ])
 write_text("DEPENDENCY_GRAPH.md", f"""# Implementation Dependency Graph
 
-This is the planning task DAG derived from `IMPLEMENTATION_QUEUE.json`. Genuine code-relationship evidence remains under `graphify-out/`; it is distinct from this implementation-order graph. No application task has been executed.
+This is the planning task DAG derived from `IMPLEMENTATION_QUEUE.json`. Genuine code-relationship evidence remains under `graphify-out/`; it is distinct from this implementation-order graph. Execution truth is recorded only in each queue task's validated `execution_state`.
 
 - Task nodes: {dependency_graph_metrics['task_nodes']}
 - Semantic dependency edges: {dependency_graph_metrics['dependency_edges']}
@@ -2479,7 +2545,7 @@ For exact prerequisites and dependents, use each task's `semantic_dependencies` 
 
 write_text("TEST_MATRIX.md", f"""# Test Matrix
 
-Planning-only view. `TEST_MATRIX.json` contains {len(test_records)} exact test contracts. Zero tests were executed in this planning run, and no row is a pass result.
+Planning-contract view. `TEST_MATRIX.json` contains {len(test_records)} exact test contracts. A row here is never execution proof; task evidence and checkpoint references live in the authoritative queue execution state.
 
 {markdown_table(["Test contract", "Task", "Capability", "Phase", "Status"], [[test['test_contract_id'], test['task_id'], test['capability_id'], test['phase'], test['planned_status']] for test in test_records])}
 """)
@@ -2489,7 +2555,7 @@ write_text("DELETED_ITEMS_LEDGER.md", f"""# Deleted Items Ledger
 
 No application item was deleted in this planning run. Each row is a future deletion contract. `IMPLEMENTATION_QUEUE.json` is authoritative for candidate anchors, all 19 architectural layers and the seven Binding Deletion Interlock checks.
 
-{markdown_table(["Capability", "Deletion task", "Static candidates", "Layers", "Interlocks", "Implementation status"], [[cap['id'], task_ids_by_cap[cap['id']], len(removal_candidates.get(cap['id'], [])), len(DELETION_LAYERS), 7, 'NOT STARTED'] for cap in capabilities if cap['id'].startswith('CAP-REMOVE-')])}
+{markdown_table(["Capability", "Deletion task", "Static candidates", "Layers", "Interlocks", "Implementation status"], [[cap['id'], task_ids_by_cap[cap['id']], len(removal_candidates.get(cap['id'], [])), len(DELETION_LAYERS), 7, cap['implementation_status']] for cap in capabilities if cap['id'].startswith('CAP-REMOVE-')])}
 
 An empty static-candidate count never proves absence. The task must trace imports, strings, registrations, runtime behavior and packaged output while preserving historical migrations, legal attribution and permitted legacy compatibility.
 """)
@@ -2514,7 +2580,7 @@ The derived model contains {len(requirements)} normalized requirements, {len(cap
 
 ## Application and release status
 
-Implementation, application tests, builds, packaging, installation, offline launch, final Graphify scan, final simplification audit and release approval are all pending future execution. Planning completeness never changes those statuses. Historical full-tree manifest evidence is preserved in `PLANNING_BASELINE.md`; precise tracked/Git, Git LFS and local-only inventory claims are in `FINAL-REPOSITORY-RECONCILIATION.md`.
+Implementation status is `{implementation_status}` with {execution_summary['terminal_task_count']} terminal tasks; the current next task is `{next_task_id}` ({next_task_disposition}). Planning completeness never changes task dispositions. Application execution evidence is valid only through queue references at the recorded checkpoint. Release approval remains a separate strict conjunction. Historical full-tree manifest evidence is preserved in `PLANNING_BASELINE.md`; precise tracked/Git, Git LFS and local-only inventory claims are in `FINAL-REPOSITORY-RECONCILIATION.md`.
 """)
 
 
