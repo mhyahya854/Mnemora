@@ -698,16 +698,13 @@
     {
       "check_id": "SEM-037-TRANSIENT-OUTPUT-MANIFEST",
       "name": "Transient and non-tracked Graphify output-manifest detection",
-      "status": "FAIL",
-      "error_count": 2,
-      "errors": [
-        "untracked Graphify file present: tools/execution_state.py",
-        "untracked Graphify file present: tools/test_execution_state.py"
-      ],
+      "status": "PASS",
+      "error_count": 0,
+      "errors": [],
       "details": {
         "committed_output_manifest_entries": 63,
-        "regenerated_output_manifest_entries": 63,
-        "tracked_graphify_files": 77
+        "regenerated_output_manifest_entries": 65,
+        "tracked_graphify_files": 79
       }
     },
     {
@@ -788,8 +785,10 @@
       "check_id": "SEM-041-RECONCILIATION-REPORT",
       "name": "Final repository reconciliation report consistency",
       "status": "FAIL",
-      "error_count": 1,
+      "error_count": 3,
       "errors": [
+        "FINAL-REPOSITORY-RECONCILIATION.json tracked_file_count disagrees with computed value",
+        "FINAL-REPOSITORY-RECONCILIATION.json output_manifest_entries disagrees with computed value",
         "FINAL-REPOSITORY-RECONCILIATION.json pre_run_working_tree disagrees with computed value"
       ],
       "details": {
@@ -805,8 +804,8 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "pre_run_clean": false,
-        "gate_skipped_by_allow_dirty": true
+        "pre_run_clean": true,
+        "gate_skipped_by_allow_dirty": false
       }
     },
     {

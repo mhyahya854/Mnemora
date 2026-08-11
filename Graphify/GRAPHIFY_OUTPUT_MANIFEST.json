@@ -2,7 +2,7 @@
   "schema_version": 4,
   "scope": "Tracked Graphify authorities, reports, tools and immutable Master Plan; genuine graphify-out evidence excluded and separately preserved; transient and non-tracked entries excluded; deterministic (no timestamps)",
   "self_excluded": true,
-  "file_count": 63,
+  "file_count": 65,
   "files": [
     {
       "path": "AUDIT_CODEBASE_BASELINE_SHA256.txt",
@@ -67,12 +67,12 @@
     {
       "path": "FINAL-REPOSITORY-RECONCILIATION.json",
       "size_bytes": 2891,
-      "sha256": "CC16F08E082D493798375C432F338A1CF7F2ED27FE673C7B7B1CB0C2E0B923FB"
+      "sha256": "6F57AEC9C6483BA9D10C69882B98B888CF85E6192515B18D663663C0E057FB8A"
     },
     {
       "path": "FINAL-REPOSITORY-RECONCILIATION.md",
       "size_bytes": 3004,
-      "sha256": "1572F3139F9C3921F784CDF2B5826581316F47C0756ED158376EAA5BEAA12E3F"
+      "sha256": "0EA077B956BFE797A07D3A32AC35F128220E28573E3AB90B18841AC4629FD70A"
     },
     {
       "path": "FOLDER_OWNERSHIP_MAP.md",
@@ -161,13 +161,13 @@
     },
     {
       "path": "PLANNING_VALIDATION_REPORT.json",
-      "size_bytes": 32793,
-      "sha256": "664C5D2FFAEEB680BF1B648FB179A52C21D663E56A22FB90DCC644EE0A22526C"
+      "size_bytes": 32842,
+      "sha256": "16285BD57B923A2562EB88A79C4B6557245C9E6DDC8AF110167B172F29FDCCE6"
     },
     {
       "path": "PLANNING_VALIDATION_REPORT.md",
-      "size_bytes": 4357,
-      "sha256": "F73C01FDC9000C108FC9C58FE2A53DDE8850326089AADBB350EC08D3EB3BFE1D"
+      "size_bytes": 4405,
+      "sha256": "2A4E6FE9C7752CE77BBB5BBCCFDC6A8EB91B4414D6BB54A86DEC380FD858B496"
     },
     {
       "path": "PONYTAIL_AUDIT.md",
@@ -181,8 +181,8 @@
     },
     {
       "path": "READINESS_GATE.json",
-      "size_bytes": 504,
-      "sha256": "BF8F7C429843EF375317ACDE17F1EF74C4F14A8E0A3D0145EB2F78D2B171E65E"
+      "size_bytes": 462,
+      "sha256": "882B634FF54FCEFCA5425C33CE5066F57B125CCD7340CA735D53ED0E22952255"
     },
     {
       "path": "READINESS_GATE.md",
@@ -275,6 +275,11 @@
       "sha256": "73B641FAC6DE5D6FE80A98D19F28B720B2D950B96D79258010F7C0909D7C760A"
     },
     {
+      "path": "tools/execution_state.py",
+      "size_bytes": 13697,
+      "sha256": "F8E2AE45CF699E03A8488C47CD2FA530BEEA40C640506DBA733686ACED2FD359"
+    },
+    {
       "path": "tools/reconcile_evidence.py",
       "size_bytes": 5995,
       "sha256": "64ABF5BB8C7F0148213EECC036179EC9B169290246DCB23ECBFD3035EAF60353"
@@ -293,6 +298,11 @@
       "path": "tools/semantic_validator.py",
       "size_bytes": 103028,
       "sha256": "492C0F1776F624206D21B195902F7B090BC3B4A2483C0C04274CF4E4EFCF0662"
+    },
+    {
+      "path": "tools/test_execution_state.py",
+      "size_bytes": 6742,
+      "sha256": "3848250943BFE94CECFB9D71BF7BC12192F8F3DA82E8DFC8EE005DBCD6288920"
     },
     {
       "path": "tools/validate_planning.py",
@@ -316,8 +326,8 @@
     },
     {
       "path": "VERIFICATION_AUDIT.json",
-      "size_bytes": 30157,
-      "sha256": "20C3426D3BDA2B95A9F35EB94ECACDF6CB0596C332A9DEB51F2A3175F1F0D57F"
+      "size_bytes": 30206,
+      "sha256": "AE3B712665877D45C65195E8560822DFCC377958AD0727122CB2B10B54D4A11F"
     }
   ]
 }

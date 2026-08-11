@@ -5,7 +5,6 @@
   "implementation_status": "NOT STARTED",
   "release_status": "NOT EVALUATED",
   "failed_planning_checks": [
-    "SEM-037-TRANSIENT-OUTPUT-MANIFEST",
     "SEM-041-RECONCILIATION-REPORT"
   ],
   "exact_first_task_id": "TASK-GOV-001-PROVENANCE-BASELINE",
