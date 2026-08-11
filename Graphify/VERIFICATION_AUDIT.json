@@ -1,7 +1,7 @@
 {
   "schema_version": 5,
   "scope": "DERIVED GRAPHIFY PLANNING WITH VALIDATED DURABLE TASK EXECUTION STATE",
-  "verdict": "PASS",
+  "verdict": "FAIL",
   "checks": [
     {
       "check_id": "SEM-001-MASTER-HASH",
@@ -665,7 +665,7 @@
         "local_current_codebase_files": 24839,
         "local_comparable_pre_and_post_sha256_files": 346,
         "local_path_and_size_only_files": 24493,
-        "local_post_run_full_sha256_fingerprint": "9A284F7106FC272B440EA7B10C155AAAAC483990851DFE829C659B82918725A0",
+        "local_post_run_full_sha256_fingerprint": null,
         "local_claim_limit": "Only comparable-hash files are proven byte-identical. Path/size-only files are not cryptographic equality proof. A post-run full fingerprint without an equivalent pre-run full fingerprint is a current-state checkpoint, not full before/after proof."
       }
     },
@@ -784,12 +784,14 @@
     {
       "check_id": "SEM-041-RECONCILIATION-REPORT",
       "name": "Final repository reconciliation report consistency",
-      "status": "PASS",
-      "error_count": 0,
-      "errors": [],
+      "status": "FAIL",
+      "error_count": 1,
+      "errors": [
+        "FINAL-REPOSITORY-RECONCILIATION.json verified commit does not equal the parent commit (or HEAD when HEAD has no parent)"
+      ],
       "details": {
         "report_present": true,
-        "verified_commit_reconciles": true,
+        "verified_commit_reconciles": false,
         "stable_fields_match": true
       }
     },
@@ -840,7 +842,7 @@
     "local_current_codebase_files": 24839,
     "local_comparable_pre_and_post_sha256_files": 346,
     "local_path_and_size_only_files": 24493,
-    "local_post_run_full_sha256_fingerprint": "9A284F7106FC272B440EA7B10C155AAAAC483990851DFE829C659B82918725A0",
+    "local_post_run_full_sha256_fingerprint": null,
     "local_claim_limit": "Only comparable-hash files are proven byte-identical. Path/size-only files are not cryptographic equality proof. A post-run full fingerprint without an equivalent pre-run full fingerprint is a current-state checkpoint, not full before/after proof."
   },
   "implementation_status": "IN PROGRESS",
