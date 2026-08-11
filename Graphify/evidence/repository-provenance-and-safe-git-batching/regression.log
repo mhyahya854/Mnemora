@@ -5,5 +5,7 @@ COMMAND=python -B Graphify/tools/validate_planning.py --full-codebase
 FIRST_CLEAN_EXIT_CODE=1
 FIRST_CLEAN_RESULT=42/43; only SEM-041-RECONCILIATION-REPORT remained because the committed report still recorded the pre-commit DIRTY state
 FULL_CODEBASE_FINGERPRINT=9A284F7106FC272B440EA7B10C155AAAAC483990851DFE829C659B82918725A0
-FINAL_CLEAN_EXIT_CODE=PENDING
-RESULT=PENDING FINAL CLEAN VERIFICATION
+FINAL_CLEAN_COMMAND=python -B Graphify/tools/validate_planning.py --full-codebase
+FINAL_CLEAN_EXIT_CODE=0
+FINAL_CLEAN_RESULT=PASS checks=43/43 requirements=536 capabilities=120 tasks=158 exact_locations=780
+RESULT=PASS

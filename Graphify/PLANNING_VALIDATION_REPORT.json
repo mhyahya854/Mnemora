@@ -669,7 +669,7 @@
         "local_current_codebase_files": 24839,
         "local_comparable_pre_and_post_sha256_files": 346,
         "local_path_and_size_only_files": 24493,
-        "local_post_run_full_sha256_fingerprint": null,
+        "local_post_run_full_sha256_fingerprint": "9A284F7106FC272B440EA7B10C155AAAAC483990851DFE829C659B82918725A0",
         "local_claim_limit": "Only comparable-hash files are proven byte-identical. Path/size-only files are not cryptographic equality proof. A post-run full fingerprint without an equivalent pre-run full fingerprint is a current-state checkpoint, not full before/after proof."
       }
     },
@@ -910,7 +910,7 @@
     "local_current_codebase_files": 24839,
     "local_comparable_pre_and_post_sha256_files": 346,
     "local_path_and_size_only_files": 24493,
-    "local_post_run_full_sha256_fingerprint": null,
+    "local_post_run_full_sha256_fingerprint": "9A284F7106FC272B440EA7B10C155AAAAC483990851DFE829C659B82918725A0",
     "local_claim_limit": "Only comparable-hash files are proven byte-identical. Path/size-only files are not cryptographic equality proof. A post-run full fingerprint without an equivalent pre-run full fingerprint is a current-state checkpoint, not full before/after proof."
   },
   "master_plan_hashes": {
