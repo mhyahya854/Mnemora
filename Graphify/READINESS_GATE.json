@@ -1,11 +1,13 @@
 {
   "schema_version": 5,
-  "planning_verdict": "PASS",
-  "completion_statement": "SEMANTIC GRAPHIFY PLANNING COMPLETE - IMPLEMENTATION NOT STARTED",
-  "implementation_status": "NOT STARTED",
+  "planning_verdict": "FAIL",
+  "completion_statement": "SEMANTIC GRAPHIFY PLANNING INCOMPLETE - CONTINUE WORKING",
+  "implementation_status": "IN PROGRESS",
   "release_status": "NOT EVALUATED",
-  "failed_planning_checks": [],
+  "failed_planning_checks": [
+    "SEM-041-RECONCILIATION-REPORT"
+  ],
   "exact_first_task_id": "TASK-GOV-001-PROVENANCE-BASELINE",
-  "next_task_id": "TASK-GOV-001-PROVENANCE-BASELINE",
+  "next_task_id": "TASK-CAP-DATA-SAFETY",
   "next_task_disposition": "NOT STARTED"
 }

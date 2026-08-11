@@ -1,0 +1,6 @@
+TASK_ID=TASK-GOV-001-PROVENANCE-BASELINE
+BOUNDARY=Full Graphify planning/state and codebase reconciliation.
+WORKING_DIRECTORY=C:/Users/mhyah/Downloads/Code/Mnemora
+COMMAND=python -B Graphify/tools/validate_planning.py --full-codebase
+EXIT_CODE=PENDING
+RESULT=PENDING FINAL VERIFICATION

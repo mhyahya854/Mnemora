@@ -1993,6 +1993,45 @@ try:
     execution_summary = merge_execution_states(tasks, existing_implementation_queue, ROOT)
 except ExecutionStateError as error:
     raise SystemExit(str(error)) from error
+
+# Once the provenance root task is complete, its Git location is implementation
+# evidence rather than a planned addition. Keep that fact in the generated queue,
+# capability registry, and exact-location registry instead of reverting it on the
+# next deterministic planning regeneration.
+provenance_state = first["execution_state"]
+if provenance_state["disposition"] == "COMPLETE":
+    if not GIT_STATE["present"]:
+        raise SystemExit("Completed provenance task requires .git/ at the repository root")
+    provenance_checkpoint = provenance_state["checkpoint_identity"]
+    provenance_anchor = ".git/::owned::cap-provenance"
+    first.update({
+        "presence_absence_status": "PRESENT - VERIFIED COMPLETE",
+        "implementation_gap": "No provenance gap at the verified implementation checkpoint.",
+        "current_paths": [".git/"],
+        "current_symbols": [provenance_anchor],
+        "current_locations": [
+            {"path": ".git/", "status": "PRESENT - VERIFIED AT IMPLEMENTATION CHECKPOINT", "symbols": ["owned::cap-provenance"]},
+            {"path": "Graphify/REPOSITORY_FILE_INVENTORY.json", "status": "VERIFIED BASELINE", "symbols": ["source_authoritative entries"]},
+        ],
+        "target_locations": [
+            {"path": ".git/", "symbol": "owned::cap-provenance", "status": "VERIFIED COMPLETE"},
+            {"path": "Graphify/RUN_STATE.md", "symbol": "verified implementation checkpoint", "status": f"RECORDED - {provenance_checkpoint}"},
+        ],
+    })
+    first_cap.update({
+        "planning_status": "IMPLEMENTATION COMPLETE - EVIDENCE LINKED",
+        "presence_status": "PRESENT - VERIFIED COMPLETE",
+        "implementation_gap": "No provenance gap at the verified implementation checkpoint.",
+        "current_paths": [".git/"],
+        "current_symbols": [provenance_anchor],
+    })
+    first_cap["runtime_chain"].update({
+        "current_breakage": "None recorded at the verified provenance checkpoint.",
+        "required_change": "Preserve the verified Git provenance boundary for every later task.",
+        "mapping_evidence": provenance_state["evidence_references"],
+        "presence_status": "PRESENT - VERIFIED COMPLETE",
+        "provenance": f"Verified Git repository provenance at {provenance_checkpoint}.",
+    })
 dependency_graph_metrics = {
     "task_nodes": len(tasks),
     "dependency_edges": sum(len(task["semantic_dependencies"]) for task in tasks),
@@ -2185,8 +2224,19 @@ def exact_entry(cap: dict[str, Any], entry_id: str, current_path: str | None, cu
 for cap in capabilities:
     if cap["current_paths"] and cap["id"] not in REMOVAL_CAPS:
         for current_path, current_anchor in zip(cap["current_paths"], cap["current_symbols"]):
-            entry_id = stable_id("REG", cap["id"], current_path, current_anchor, length=16)
-            exact_entries.append(exact_entry(cap, entry_id, current_path, current_anchor, "PRESENT - SEMANTICALLY REVIEWED", location_class(current_path)))
+            entry_id = "REG-CAPABILITY-PROVENANCE" if cap["id"] == "CAP-PROVENANCE" else stable_id("REG", cap["id"], current_path, current_anchor, length=16)
+            entry = exact_entry(cap, entry_id, current_path, current_anchor, "PRESENT - SEMANTICALLY REVIEWED", location_class(current_path))
+            if cap["id"] == "CAP-PROVENANCE" and provenance_state["disposition"] == "COMPLETE":
+                entry.update({
+                    "entity_type": "repository metadata",
+                    "location_class": "CONFIGURATION",
+                    "status": "VERIFIED COMPLETE",
+                    "required_changes": ["Preserve this Git checkpoint and require later mutation batches to record their own recoverable commits."],
+                    "verification_evidence_required": provenance_state["evidence_references"],
+                    "last_planning_verification_checkpoint": provenance_state["checkpoint_identity"],
+                    "notes": "Git presence and the linked evidence bundle reconcile at the recorded implementation checkpoint.",
+                })
+            exact_entries.append(entry)
             existing_exact_ids.add(entry_id)
     elif not cap["current_paths"]:
         entry_id = f"REG-CAPABILITY-{cap['id'].removeprefix('CAP-')}"

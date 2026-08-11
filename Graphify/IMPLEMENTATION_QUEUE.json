@@ -164,10 +164,14 @@
         "Do not initialise a new Git repository merely to satisfy the batching rule before provenance-first Git recovery has been attempted.",
         "Once Git is safely established, subsequent batches must use Git commits rather than hash-only checkpoints."
       ],
-      "presence_absence_status": "PLANNED ADDITION OR CURRENT IMPLEMENTATION NOT PROVEN",
-      "implementation_gap": "Runtime completeness is not claimed by static planning; execute the linked characterization and completion contract.",
-      "current_paths": [],
-      "current_symbols": [],
+      "presence_absence_status": "PRESENT - VERIFIED COMPLETE",
+      "implementation_gap": "No provenance gap at the verified implementation checkpoint.",
+      "current_paths": [
+        ".git/"
+      ],
+      "current_symbols": [
+        ".git/::owned::cap-provenance"
+      ],
       "intended_target_paths": [
         ".git/"
       ],
@@ -177,12 +181,14 @@
       "current_locations": [
         {
           "path": ".git/",
-          "status": "PRESENT AT PLANNING CHECKPOINT",
-          "symbols": []
+          "status": "PRESENT - VERIFIED AT IMPLEMENTATION CHECKPOINT",
+          "symbols": [
+            "owned::cap-provenance"
+          ]
         },
         {
           "path": "Graphify/REPOSITORY_FILE_INVENTORY.json",
-          "status": "PRESENT BASELINE",
+          "status": "VERIFIED BASELINE",
           "symbols": [
             "source_authoritative entries"
           ]
@@ -191,13 +197,13 @@
       "target_locations": [
         {
           "path": ".git/",
-          "symbol": "repository provenance",
-          "status": "PRESENT - PROVENANCE RECORDING REQUIRED AT IMPLEMENTATION START"
+          "symbol": "owned::cap-provenance",
+          "status": "VERIFIED COMPLETE"
         },
         {
           "path": "Graphify/RUN_STATE.md",
           "symbol": "verified implementation checkpoint",
-          "status": "PLANNED UPDATE"
+          "status": "RECORDED - 5ed0e52c9c52ebbf2329caff5cfd71af4b3e7237"
         }
       ],
       "exact_location_registry_refs": [
@@ -333,9 +339,16 @@
       "execution_order": 1,
       "ordering_index": 1,
       "execution_state": {
-        "disposition": "NOT STARTED",
-        "evidence_references": [],
-        "checkpoint_identity": null,
+        "disposition": "COMPLETE",
+        "evidence_references": [
+          "Graphify/evidence/repository-provenance-and-safe-git-batching/pre-change-characterization.json",
+          "Graphify/evidence/repository-provenance-and-safe-git-batching/implementation-delta.json",
+          "Graphify/evidence/repository-provenance-and-safe-git-batching/targeted.log",
+          "Graphify/evidence/repository-provenance-and-safe-git-batching/integration.log",
+          "Graphify/evidence/repository-provenance-and-safe-git-batching/regression.log",
+          "Graphify/evidence/repository-provenance-and-safe-git-batching/offline-or-applicability.json"
+        ],
+        "checkpoint_identity": "5ed0e52c9c52ebbf2329caff5cfd71af4b3e7237",
         "blocked_reason": null,
         "not_applicable_basis": null
       }
@@ -49103,17 +49116,17 @@
       }
     }
   ],
-  "implementation_status": "NOT STARTED",
+  "implementation_status": "IN PROGRESS",
   "execution_state_counts": {
-    "NOT STARTED": 158,
-    "COMPLETE": 0,
+    "NOT STARTED": 157,
+    "COMPLETE": 1,
     "NOT APPLICABLE": 0,
     "BLOCKED": 0
   },
-  "terminal_task_count": 0,
-  "next_task_id": "TASK-GOV-001-PROVENANCE-BASELINE",
+  "terminal_task_count": 1,
+  "next_task_id": "TASK-CAP-DATA-SAFETY",
   "next_task_disposition": "NOT STARTED",
-  "latest_checkpoint_identity": null,
+  "latest_checkpoint_identity": "5ed0e52c9c52ebbf2329caff5cfd71af4b3e7237",
   "execution_state_contract": {
     "authority": "Each task's execution_state is durable mutable state; generated task-definition fields remain planning contracts.",
     "task_id_field": "stable_task_id",

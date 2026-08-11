@@ -21849,8 +21849,8 @@
       "capability_id": "CAP-PROVENANCE",
       "stable_capability_id": "CAP-PROVENANCE",
       "capability_name": "Repository provenance and safe Git batching",
-      "entity_type": "absent - planned addition",
-      "location_class": "ABSENT - PLANNED ADDITION",
+      "entity_type": "repository metadata",
+      "location_class": "CONFIGURATION",
       "master_requirement_ids": [
         "REQ-MP3-227A892D46",
         "REQ-MP3-247E69F75D",
@@ -21909,11 +21909,11 @@
         "REQ-MP3-A58670020E"
       ],
       "decision": "MANDATORY KEEP",
-      "status": "PLANNED ADDITION - IMPLEMENTATION NOT STARTED",
+      "status": "VERIFIED COMPLETE",
       "candidate_disposition": null,
-      "current_path": null,
-      "current_symbol": null,
-      "current_anchor": null,
+      "current_path": ".git/",
+      "current_symbol": "owned::cap-provenance",
+      "current_anchor": ".git/::owned::cap-provenance",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
@@ -21939,19 +21939,21 @@
       "configuration_references": [],
       "tests": [],
       "required_changes": [
-        "Capture pre-change evidence at these exact reviewed locations: PLANNED LOCATION: .git/.",
-        "At the reviewed Repository provenance and safe Git batching locations, trace every listed current anchor and implement only the mapped Master requirement contracts while preserving data, IPC, native, packaging and cleanup behavior applicable to this capability.",
-        "Create or preserve the single owned target .git/::owned::cap-provenance; update only listed callers, registrations, persistence effects, tests and packaging references proven to depend on it.",
-        "Save the focused diff/hash delta and all classified targeted, real-boundary, regression, offline or not-applicable evidence before changing planning status."
+        "Preserve this Git checkpoint and require later mutation batches to record their own recoverable commits."
       ],
       "verification_evidence_required": [
-        "Evidence bundle for TASK-GOV-001-PROVENANCE-BASELINE"
+        "Graphify/evidence/repository-provenance-and-safe-git-batching/pre-change-characterization.json",
+        "Graphify/evidence/repository-provenance-and-safe-git-batching/implementation-delta.json",
+        "Graphify/evidence/repository-provenance-and-safe-git-batching/targeted.log",
+        "Graphify/evidence/repository-provenance-and-safe-git-batching/integration.log",
+        "Graphify/evidence/repository-provenance-and-safe-git-batching/regression.log",
+        "Graphify/evidence/repository-provenance-and-safe-git-batching/offline-or-applicability.json"
       ],
       "phase": "PHASE-01-AUTHORITY-AND-PROVENANCE",
       "wave": "WAVE-01",
-      "last_planning_verification_checkpoint": "CHECKPOINT-SEMANTIC-PLANNING",
+      "last_planning_verification_checkpoint": "5ed0e52c9c52ebbf2329caff5cfd71af4b3e7237",
       "editable_target": true,
-      "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
+      "notes": "Git presence and the linked evidence bundle reconcile at the recorded implementation checkpoint."
     },
     {
       "id": "REG-B61B3E5B1A808044",

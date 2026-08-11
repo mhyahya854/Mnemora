@@ -1,0 +1,9 @@
+TASK_ID=TASK-GOV-001-PROVENANCE-BASELINE
+BOUNDARY=Planning/provenance evidence graph; no application runtime integration is implied.
+WORKING_DIRECTORY=C:/Users/mhyah/Downloads/Code/Mnemora
+COMMAND=python -B Graphify/tools/validate_planning.py
+PRECOMMIT_DEVELOPMENT_COMMAND=python -B Graphify/tools/validate_planning.py --allow-dirty
+PRECOMMIT_DEVELOPMENT_EXIT_CODE=1
+PRECOMMIT_DEVELOPMENT_RESULT=42/43; only SEM-041-RECONCILIATION-REPORT remained because the report checkpoint must be the parent of a committed task state
+FINAL_CLEAN_EXIT_CODE=PENDING
+RESULT=PENDING FINAL CLEAN VERIFICATION

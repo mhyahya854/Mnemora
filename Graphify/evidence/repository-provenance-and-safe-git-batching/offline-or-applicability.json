@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "task_id": "TASK-GOV-001-PROVENANCE-BASELINE",
+  "check": "installed application offline workflow",
+  "status": "NOT APPLICABLE",
+  "authorizing_contract": "IMPLEMENTATION_QUEUE.json#TASK-GOV-001-PROVENANCE-BASELINE.offline_verification_impact",
+  "reachability_evidence": {
+    "task_kind": "GOVERNANCE",
+    "owned_runtime_paths": [],
+    "renderer_entry": [],
+    "preload_exposure": [],
+    "ipc_channels": [],
+    "native_boundaries": [],
+    "target_paths": [
+      ".git/",
+      "Graphify/RUN_STATE.md"
+    ]
+  },
+  "rationale": "The task records repository provenance and has no installed-application runtime path. Final installed offline regression remains owned by its later release proof task; no runtime PASS is claimed here.",
+  "result": "PASS - APPLICABILITY CLASSIFICATION ONLY"
+}

@@ -1,6 +1,6 @@
 # Mnemora implementation handoff
 
-This is the single authoritative entry point for an implementation run. Implementation has not started; every task remains NOT STARTED. The current application root is the lowercase `codebase/` folder; `Codebase/` is only a future target named by the Master Plan. The derived planning is subordinate to all three immutable Master Plan files. Planning generation never turns a planning contract into implementation evidence.
+This is the single authoritative entry point for an implementation run. Validated implementation state is IN PROGRESS; see each task's execution_state for evidence and checkpoint identity. The current application root is the lowercase `codebase/` folder; `Codebase/` is only a future target named by the Master Plan. The derived planning is subordinate to all three immutable Master Plan files. Planning generation never turns a planning contract into implementation evidence.
 
 ## Authority order
 
@@ -39,7 +39,7 @@ If Git is still absent, record that exact result; do not treat the Git command f
 
 `TASK-GOV-001-PROVENANCE-BASELINE`
 
-The immutable execution root is ordering index 1 in `IMPLEMENTATION_QUEUE.json`. The current derived `next_task_id` is `TASK-GOV-001-PROVENANCE-BASELINE` with disposition `NOT STARTED`. Establish Git or the Master Plan-permitted recoverable hash checkpoint before any application mutation. Do not begin a later task merely because its files appear familiar.
+The immutable execution root is ordering index 1 in `IMPLEMENTATION_QUEUE.json`. The current derived `next_task_id` is `TASK-CAP-DATA-SAFETY` with disposition `NOT STARTED`. Establish Git or the Master Plan-permitted recoverable hash checkpoint before any application mutation. Do not begin a later task merely because its files appear familiar.
 
 ## Dependency-safe phase and wave sequence
 

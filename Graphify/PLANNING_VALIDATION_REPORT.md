@@ -1,8 +1,8 @@
 # Semantic Planning Validation Report
 
-SEMANTIC GRAPHIFY PLANNING COMPLETE - IMPLEMENTATION NOT STARTED
+SEMANTIC GRAPHIFY PLANNING INCOMPLETE - CONTINUE WORKING
 
-Checks: **43/43 passed**. Implementation: **NOT STARTED**. Release: **NOT EVALUATED**. Next task: **TASK-GOV-001-PROVENANCE-BASELINE**.
+Checks: **42/43 passed**. Implementation: **IN PROGRESS**. Release: **NOT EVALUATED**. Next task: **TASK-CAP-DATA-SAFETY**.
 
 | Gate | Result | Errors |
 | --- | --- | ---: |
@@ -46,6 +46,12 @@ Checks: **43/43 passed**. Implementation: **NOT STARTED**. Release: **NOT EVALUA
 | SEM-038-CANONICAL-MANIFEST-COMPARISON - Canonical tracked manifest structure and equality | PASS | 0 |
 | SEM-039-MANIFEST-HONESTY - Raw-file versus normalized-mapping honesty | PASS | 0 |
 | SEM-040-PROTECTED-CONTENT - Protected Master Plan and tracked codebase content unchanged | PASS | 0 |
-| SEM-041-RECONCILIATION-REPORT - Final repository reconciliation report consistency | PASS | 0 |
+| SEM-041-RECONCILIATION-REPORT - Final repository reconciliation report consistency | FAIL | 3 |
 | SEM-042-REPO-CLEAN-PRERUN - Pre-run tracked working tree cleanliness | PASS | 0 |
 | SEM-043-EXECUTION-STATE - Durable task execution state, evidence, dependencies, and selector | PASS | 0 |
+
+## Failures
+
+- `SEM-041-RECONCILIATION-REPORT`: FINAL-REPOSITORY-RECONCILIATION.json tracked_file_count disagrees with computed value
+- `SEM-041-RECONCILIATION-REPORT`: FINAL-REPOSITORY-RECONCILIATION.json output_manifest_entries disagrees with computed value
+- `SEM-041-RECONCILIATION-REPORT`: FINAL-REPOSITORY-RECONCILIATION.json verified commit does not equal the parent commit (or HEAD when HEAD has no parent)

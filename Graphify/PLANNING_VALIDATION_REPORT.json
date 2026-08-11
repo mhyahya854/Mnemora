@@ -1,11 +1,11 @@
 {
   "schema_version": 6,
   "scope": "DERIVED GRAPHIFY PLANNING WITH VALIDATED DURABLE TASK EXECUTION STATE",
-  "verdict": "PASS",
-  "completion_statement": "SEMANTIC GRAPHIFY PLANNING COMPLETE - IMPLEMENTATION NOT STARTED",
+  "verdict": "FAIL",
+  "completion_statement": "SEMANTIC GRAPHIFY PLANNING INCOMPLETE - CONTINUE WORKING",
   "total_checks": 43,
-  "passed_checks": 43,
-  "failed_checks": 0,
+  "passed_checks": 42,
+  "failed_checks": 1,
   "checks": [
     {
       "check_id": "SEM-001-MASTER-HASH",
@@ -635,8 +635,8 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "before": "F7A2BC16E0A045040E7737B99D54FFA35C217AA6D2E2098675000793C3823FC1",
-        "after": "F7A2BC16E0A045040E7737B99D54FFA35C217AA6D2E2098675000793C3823FC1",
+        "before": "C13DF907E316DF15A05AB06F56C05A8C38613677F7A501A56BCAF75875B9B3CA",
+        "after": "C13DF907E316DF15A05AB06F56C05A8C38613677F7A501A56BCAF75875B9B3CA",
         "generator_stdout": "{\n  \"requirements\": 536,\n  \"capabilities\": 120,\n  \"tasks\": 158,\n  \"deletion_tasks\": 31,\n  \"conditional_packages\": 11,\n  \"release_gates\": 12,\n  \"exact_locations\": 780\n}"
       }
     },
@@ -707,8 +707,8 @@
       "errors": [],
       "details": {
         "committed_output_manifest_entries": 65,
-        "regenerated_output_manifest_entries": 65,
-        "tracked_graphify_files": 79
+        "regenerated_output_manifest_entries": 68,
+        "tracked_graphify_files": 85
       }
     },
     {
@@ -788,13 +788,17 @@
     {
       "check_id": "SEM-041-RECONCILIATION-REPORT",
       "name": "Final repository reconciliation report consistency",
-      "status": "PASS",
-      "error_count": 0,
-      "errors": [],
+      "status": "FAIL",
+      "error_count": 3,
+      "errors": [
+        "FINAL-REPOSITORY-RECONCILIATION.json tracked_file_count disagrees with computed value",
+        "FINAL-REPOSITORY-RECONCILIATION.json output_manifest_entries disagrees with computed value",
+        "FINAL-REPOSITORY-RECONCILIATION.json verified commit does not equal the parent commit (or HEAD when HEAD has no parent)"
+      ],
       "details": {
         "report_present": true,
-        "verified_commit_reconciles": true,
-        "stable_fields_match": true
+        "verified_commit_reconciles": false,
+        "stable_fields_match": false
       }
     },
     {
@@ -804,8 +808,8 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "pre_run_clean": true,
-        "gate_skipped_by_allow_dirty": false
+        "pre_run_clean": false,
+        "gate_skipped_by_allow_dirty": true
       }
     },
     {
@@ -815,17 +819,17 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "implementation_status": "NOT STARTED",
+        "implementation_status": "IN PROGRESS",
         "execution_state_counts": {
-          "NOT STARTED": 158,
-          "COMPLETE": 0,
+          "NOT STARTED": 157,
+          "COMPLETE": 1,
           "NOT APPLICABLE": 0,
           "BLOCKED": 0
         },
-        "terminal_task_count": 0,
-        "next_task_id": "TASK-GOV-001-PROVENANCE-BASELINE",
+        "terminal_task_count": 1,
+        "next_task_id": "TASK-CAP-DATA-SAFETY",
         "next_task_disposition": "NOT STARTED",
-        "latest_checkpoint_identity": null
+        "latest_checkpoint_identity": "5ed0e52c9c52ebbf2329caff5cfd71af4b3e7237"
       }
     }
   ],
@@ -918,19 +922,19 @@
     "02-EVERYTHING-WE-ARE-DELETING.md": "76B6EEC15778B1928F2CD9C0F73FA68C9F3363493062E31E0C904E620DE0AAC3",
     "03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md": "5E076498731C35ACF314904AAB3A39671F7026A166B5E847EFE3CCD4CF07304E"
   },
-  "implementation_status": "NOT STARTED",
+  "implementation_status": "IN PROGRESS",
   "release_status": "NOT EVALUATED",
   "execution_state": {
-    "implementation_status": "NOT STARTED",
+    "implementation_status": "IN PROGRESS",
     "execution_state_counts": {
-      "NOT STARTED": 158,
-      "COMPLETE": 0,
+      "NOT STARTED": 157,
+      "COMPLETE": 1,
       "NOT APPLICABLE": 0,
       "BLOCKED": 0
     },
-    "terminal_task_count": 0,
-    "next_task_id": "TASK-GOV-001-PROVENANCE-BASELINE",
+    "terminal_task_count": 1,
+    "next_task_id": "TASK-CAP-DATA-SAFETY",
     "next_task_disposition": "NOT STARTED",
-    "latest_checkpoint_identity": null
+    "latest_checkpoint_identity": "5ed0e52c9c52ebbf2329caff5cfd71af4b3e7237"
   }
 }

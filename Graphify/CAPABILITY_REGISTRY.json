@@ -12437,9 +12437,9 @@
         ".git/"
       ],
       "module_owner": "Repository governance",
-      "planning_status": "PLANNING COMPLETE - IMPLEMENTATION EVIDENCE PENDING",
-      "implementation_status": "NOT STARTED",
-      "presence_status": "PLANNED ADDITION OR CURRENT IMPLEMENTATION NOT PROVEN",
+      "planning_status": "IMPLEMENTATION COMPLETE - EVIDENCE LINKED",
+      "implementation_status": "COMPLETE",
+      "presence_status": "PRESENT - VERIFIED COMPLETE",
       "master_requirement_ids": [
         "REQ-MP3-227A892D46",
         "REQ-MP3-247E69F75D",
@@ -12497,8 +12497,12 @@
         "REQ-MP3-A38FCFB153",
         "REQ-MP3-A58670020E"
       ],
-      "current_paths": [],
-      "current_symbols": [],
+      "current_paths": [
+        ".git/"
+      ],
+      "current_symbols": [
+        ".git/::owned::cap-provenance"
+      ],
       "target_symbols": [
         "owned::cap-provenance"
       ],
@@ -12541,15 +12545,22 @@
         "recovery_path": [],
         "failure_cleanup_recovery": [],
         "current_test_coverage": [],
-        "current_breakage": "Implementation status must be established by the linked characterization task; static planning does not claim a runtime result.",
-        "required_change": "Execute only the linked dependency-safe task at the reviewed paths and anchors; preserve all retained behavior and data.",
+        "current_breakage": "None recorded at the verified provenance checkpoint.",
+        "required_change": "Preserve the verified Git provenance boundary for every later task.",
         "target_owner": "Repository governance",
         "intermediate_symbols": [],
-        "mapping_evidence": [],
-        "presence_status": "NO CURRENT IMPLEMENTATION PROVEN",
-        "provenance": "Reviewed static paths plus real symbols or SHA-256 content anchors; not runtime execution evidence."
+        "mapping_evidence": [
+          "Graphify/evidence/repository-provenance-and-safe-git-batching/pre-change-characterization.json",
+          "Graphify/evidence/repository-provenance-and-safe-git-batching/implementation-delta.json",
+          "Graphify/evidence/repository-provenance-and-safe-git-batching/targeted.log",
+          "Graphify/evidence/repository-provenance-and-safe-git-batching/integration.log",
+          "Graphify/evidence/repository-provenance-and-safe-git-batching/regression.log",
+          "Graphify/evidence/repository-provenance-and-safe-git-batching/offline-or-applicability.json"
+        ],
+        "presence_status": "PRESENT - VERIFIED COMPLETE",
+        "provenance": "Verified Git repository provenance at 5ed0e52c9c52ebbf2329caff5cfd71af4b3e7237."
       },
-      "implementation_gap": "Runtime completeness is not claimed by static planning; execute the linked characterization and completion contract.",
+      "implementation_gap": "No provenance gap at the verified implementation checkpoint.",
       "dependencies": [],
       "dependents": [
         "CAP-BACKUP",
