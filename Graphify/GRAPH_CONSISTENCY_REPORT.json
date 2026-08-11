@@ -1,6 +1,6 @@
 {
   "schema_version": 4,
-  "verdict": "FAIL",
+  "verdict": "PASS",
   "requirements": 536,
   "capabilities": 120,
   "tasks": 158,
