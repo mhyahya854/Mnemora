@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "authority": "Complete evidence-driven conditional decision packages",
-  "package_count": 11,
+  "package_count": 12,
   "packages": [
     {
       "decision_package_id": "DEC-QDRANT",
@@ -549,6 +549,52 @@
         "DEVIATION": "TASK-OUT-MACOS-LINUX-DEVIATION"
       },
       "decision_task_id": "TASK-DEC-MACOS-LINUX",
+      "planning_status": "COMPLETE PACKAGE - FUTURE EVIDENCE AND DECISION PENDING"
+    },
+    {
+      "decision_package_id": "DEC-NAS",
+      "capability_id": "CAP-NAS",
+      "title": "NAS and private-LAN data root architecture: local working database with NAS replica/archive versus direct network-filesystem SQLite",
+      "master_requirement_ids": [
+        "REQ-MP1-047F877A85"
+      ],
+      "master_plan_sources": [
+        "01-EVERYTHING-WE-ARE-KEEPING.md"
+      ],
+      "master_plan_default": "Retain local canonical active SQLite database on local disk and provide continuous or on-change replica, backup, and portable asset archival to the user-selected NAS / network-share data root, avoiding network-filesystem SQLite locking bugs and latency corruption.",
+      "mandatory_default": "Retain local canonical active SQLite database on local disk and provide continuous or on-change replica, backup, and portable asset archival to the user-selected NAS / network-share data root, avoiding network-filesystem SQLite locking bugs and latency corruption.",
+      "deviation_condition": "Direct SQLite operation on a NAS / SMB / NFS share is proven safe with verified file locking, multi-instance concurrency protection, atomic write guarantees, latency resilience, and crash/interruption recovery without database corruption.",
+      "evidence_to_collect": [
+        "Execute network-filesystem concurrency, latency, share-disconnection, multi-instance lock collision, and power-cut interruption drills on simulated and real SMB/NFS mounts."
+      ],
+      "exact_current_implementation_locations": [
+        "codebase/main/infrastructure/persistence/database.js",
+        "codebase/main/infrastructure/persistence/localBackup.js"
+      ],
+      "test_method": "Execute network-filesystem concurrency, latency, share-disconnection, multi-instance lock collision, and power-cut interruption drills on simulated and real SMB/NFS mounts.",
+      "comparison_dimensions": [
+        "SQLite locking reliability on SMB/NFS",
+        "concurrency and multi-instance collision safety",
+        "network latency and timeout impact on UI responsiveness",
+        "interrupted write and corruption recovery",
+        "backup placement and restore integrity",
+        "external modification detection",
+        "portable path references across mounts"
+      ],
+      "decision_owner": "SQLite persistence",
+      "decision_phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "fallback": "Enforce local working database with background NAS synchronization, backup, and portable media storage.",
+      "threshold_rule": "Do not invent an arbitrary numeric threshold. Record observed data and use only a threshold already mandated by the Master Plan, a documented platform constraint, a licence/safety requirement, or a user-approved product limit.",
+      "allowed_outcomes": [
+        "DEFAULT",
+        "DEVIATION"
+      ],
+      "conditional_preservation_rule": "Do not delete or disable the conditional capability merely to simplify packaging; select the Master default unless the evidence package proves the deviation condition.",
+      "downstream_tasks_by_outcome": {
+        "DEFAULT": "TASK-OUT-NAS-DEFAULT",
+        "DEVIATION": "TASK-OUT-NAS-DEVIATION"
+      },
+      "decision_task_id": "TASK-DEC-NAS",
       "planning_status": "COMPLETE PACKAGE - FUTURE EVIDENCE AND DECISION PENDING"
     }
   ]

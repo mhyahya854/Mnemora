@@ -2,8 +2,8 @@
 
 This is the planning task DAG derived from `IMPLEMENTATION_QUEUE.json`. Genuine code-relationship evidence remains under `graphify-out/`; it is distinct from this implementation-order graph. Execution truth is recorded only in each queue task's validated `execution_state`.
 
-- Task nodes: 158
-- Semantic dependency edges: 323
+- Task nodes: 162
+- Semantic dependency edges: 335
 - Root task: `TASK-GOV-001-PROVENANCE-BASELINE`
 - Final leaf task: `TASK-REL-11-AUDIT`
 - Maximum dependency depth: 17
@@ -16,8 +16,8 @@ This is the planning task DAG derived from `IMPLEMENTATION_QUEUE.json`. Genuine 
 | PHASE-02-CHARACTERIZATION-AND-DATA-SAFETY | 12 | 31 | 2 | 13 |
 | PHASE-03-DECOUPLING-AND-RETAINED-PROTECTION | 23 | 55 | 14 | 36 |
 | PHASE-04-EXCLUDED-SYSTEM-REMOVAL | 32 | 62 | 37 | 68 |
-| PHASE-05-RETAINED-CAPABILITIES | 69 | 136 | 69 | 137 |
-| PHASE-06-REORGANIZATION-AND-CLEANUP | 9 | 16 | 138 | 146 |
-| PHASE-07-INTEGRATION-AND-RELEASE-EVIDENCE | 12 | 23 | 147 | 158 |
+| PHASE-05-RETAINED-CAPABILITIES | 73 | 148 | 69 | 141 |
+| PHASE-06-REORGANIZATION-AND-CLEANUP | 9 | 16 | 142 | 150 |
+| PHASE-07-INTEGRATION-AND-RELEASE-EVIDENCE | 12 | 23 | 151 | 162 |
 
 For exact prerequisites and dependents, use each task's `semantic_dependencies` and `dependents` fields. `execution_order` is a reproducible linearization for handoff; it does not create dependencies that are absent from the DAG.

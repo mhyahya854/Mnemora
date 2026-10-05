@@ -57,6 +57,8 @@ The target is a fully local Electron desktop application organized by capability
 | CAP-MODEL-DISCOVERY | Local model handling | codebase/main/features/transcription/modelDirUtils.js | owned::cap-model-discovery | MANDATORY KEEP |
 | CAP-MODEL-PACK | Local model handling | codebase/main/features/transcription/downloadUtils.js | owned::cap-model-pack | ADD |
 | CAP-MODELS | Local model handling | codebase/main/features/transcription/modelDirUtils.js | owned::cap-models | KEEP AND REPAIR |
+| CAP-MUTATION-LOG | SQLite persistence | codebase/main/infrastructure/persistence/database.js | DatabaseManager | ADD |
+| CAP-NAS | SQLite persistence | codebase/main/infrastructure/persistence/database.js | DatabaseManager | CONDITIONAL - REQUIRES EVIDENCE |
 | CAP-NATIVE | Platform-native helpers | codebase/native/helpers | platform helper source roots | KEEP AND REPAIR |
 | CAP-NETWORK-POLICY | Runtime network policy | codebase/main/infrastructure/runtime/runtimeNetworkPolicy.js | installRuntimeNetworkPolicy | ADD |
 | CAP-NOTE-TEMPLATES | Notes | codebase/renderer/features/notes/noteTemplates.ts | local note template contract | CONDITIONAL - REQUIRES EVIDENCE |

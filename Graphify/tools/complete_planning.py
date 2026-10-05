@@ -177,6 +177,8 @@ EXTRA_CAPABILITIES: list[dict[str, Any]] = [
     {"id": "CAP-SIMPLIFICATION", "name": "Post-correctness simplification audit", "decision": "KEEP AND REPAIR", "owner": "Architecture governance", "target_paths": ["Graphify/PONYTAIL_AUDIT.md"]},
     {"id": "CAP-MARKDOWN-GOVERNANCE", "name": "Markdown separation", "decision": "MANDATORY KEEP", "owner": "Repository governance", "target_paths": ["Graphify/", "codebase/LICENSE", "codebase/NOTICE", "codebase/THIRD-PARTY-NOTICES"]},
     {"id": "CAP-MODEL-DISCOVERY", "name": "Local model discovery and validation", "decision": "MANDATORY KEEP", "owner": "Local model handling", "target_paths": ["codebase/main/features/transcription/modelDirUtils.js", "codebase/main/features/transcription/modelRegistryData.json"]},
+    {"id": "CAP-NAS", "name": "NAS and private-LAN storage support", "decision": "CONDITIONAL — REQUIRES EVIDENCE", "owner": "SQLite persistence", "target_paths": ["codebase/main/infrastructure/persistence/database.js", "codebase/main/infrastructure/persistence/localBackup.js"]},
+    {"id": "CAP-MUTATION-LOG", "name": "Attributable mutation audit log and external change detection", "decision": "ADD", "owner": "SQLite persistence", "target_paths": ["codebase/main/infrastructure/persistence/database.js", "codebase/main/infrastructure/persistence/mutationAuditLog.js"]},
 ]
 
 
@@ -199,7 +201,7 @@ MP1_SECTION_CAPS: dict[str, list[str]] = {
     "15-local-actions-and-clipboard": ["CAP-CLIPBOARD", "CAP-NOTES", "CAP-DATABASE", "CAP-IMPORT-EXPORT", "CAP-BACKUP"],
     "16-notifications-and-process-detection": ["CAP-NOTIFICATIONS", "CAP-MEETING-DETECTION", "CAP-TRAY"],
     "17-internal-ipc": ["CAP-IPC"],
-    "18-sqlite-and-local-persistence": ["CAP-DATABASE", "CAP-KYSELY", "CAP-KEYRING", "CAP-DATA-SAFETY"],
+    "18-sqlite-and-local-persistence": ["CAP-DATABASE", "CAP-KYSELY", "CAP-KEYRING", "CAP-DATA-SAFETY", "CAP-NAS", "CAP-MUTATION-LOG"],
     "19-import-and-export": ["CAP-IMPORT", "CAP-EXPORT", "CAP-IMPORT-EXPORT", "CAP-BACKUP", "CAP-MARKDOWN-GOVERNANCE"],
     "20-playback": ["CAP-PLAYBACK", "CAP-LINKED-PLAYBACK"],
     "21-settings": ["CAP-SETTINGS", "CAP-MODEL-PACK"],
@@ -207,7 +209,7 @@ MP1_SECTION_CAPS: dict[str, list[str]] = {
     "23-packaging": ["CAP-PACKAGING", "CAP-WINDOWS-INSTALLER", "CAP-PORTABLE-WINDOWS"],
     "24-tests-and-proof": ["CAP-TESTING", "CAP-RELEASE"],
     "25-preservation-first-policy": ["CAP-IMPLEMENTATION-GOVERNANCE", "CAP-THIRD-PARTY"],
-    "26-conditional-keeps-summary": ["CAP-QDRANT", "CAP-PARAKEET", "CAP-SHERPA-ONNX", "CAP-KYSELY", "CAP-LOOPBACK-WEBSOCKETS", "CAP-KEYRING", "CAP-VOICE-FINGERPRINTING", "CAP-MEETING-DETECTION", "CAP-NOTE-TEMPLATES", "CAP-PORTABLE-WINDOWS", "CAP-MACOS-LINUX"],
+    "26-conditional-keeps-summary": ["CAP-QDRANT", "CAP-PARAKEET", "CAP-SHERPA-ONNX", "CAP-KYSELY", "CAP-LOOPBACK-WEBSOCKETS", "CAP-KEYRING", "CAP-VOICE-FINGERPRINTING", "CAP-MEETING-DETECTION", "CAP-NOTE-TEMPLATES", "CAP-PORTABLE-WINDOWS", "CAP-MACOS-LINUX", "CAP-NAS"],
     "final-keep-acceptance": ["CAP-RELEASE", "CAP-EXACT-LOCATION", "CAP-TESTING"],
 }
 
@@ -945,6 +947,17 @@ CONDITIONAL_SPECS: dict[str, dict[str, Any]] = {
         "phase": "PHASE-05-CONDITIONAL-DECISIONS",
         "fallback": "Preserve source/configuration and mark unexecuted hardware checks HARDWARE UNAVAILABLE; do not claim a platform pass.",
     },
+    "CAP-NAS": {
+        "title": "NAS and private-LAN data root architecture: local working database with NAS replica/archive versus direct network-filesystem SQLite",
+        "default": "Retain local canonical active SQLite database on local disk and provide continuous or on-change replica, backup, and portable asset archival to the user-selected NAS / network-share data root, avoiding network-filesystem SQLite locking bugs and latency corruption.",
+        "deviation": "Direct SQLite operation on a NAS / SMB / NFS share is proven safe with verified file locking, multi-instance concurrency protection, atomic write guarantees, latency resilience, and crash/interruption recovery without database corruption.",
+        "locations": ["codebase/main/infrastructure/persistence/database.js", "codebase/main/infrastructure/persistence/localBackup.js"],
+        "test": "Execute network-filesystem concurrency, latency, share-disconnection, multi-instance lock collision, and power-cut interruption drills on simulated and real SMB/NFS mounts.",
+        "dimensions": ["SQLite locking reliability on SMB/NFS", "concurrency and multi-instance collision safety", "network latency and timeout impact on UI responsiveness", "interrupted write and corruption recovery", "backup placement and restore integrity", "external modification detection", "portable path references across mounts"],
+        "owner": "SQLite persistence",
+        "phase": "PHASE-05-CONDITIONAL-DECISIONS",
+        "fallback": "Enforce local working database with background NAS synchronization, backup, and portable media storage.",
+    },
 }
 
 
@@ -1300,7 +1313,9 @@ def capability_actions(cap: dict[str, Any], expected: list[str]) -> list[str]:
         "CAP-WINDOWS-INSTALLER": "Produce and inspect the configured Windows installer only after production build and packaged assets pass; prove clean install, launch, data location, uninstall/reinstall recovery and offline operation.",
         "CAP-MODEL-PACK": "Define a local archive manifest, pinned engine/model identity, hashes, supported platform/language metadata, traversal protection, non-overwrite install, discovery, rollback and offline import evidence.",
         "CAP-MODEL-DISCOVERY": "Enumerate owned model directories and manifests, validate filenames/versions/hashes before activation, reject missing/corrupt assets, and surface deterministic local errors without runtime downloads.",
-        "CAP-DATA-SAFETY": "Create disposable database, recording, transcript, note, export and backup fixtures; record pre/post counts and hashes; prove backup-before-transform, atomicity, integrity, idempotency, interrupted-operation recovery and non-overwrite rules for every data-changing dependency.",
+        "CAP-DATA-SAFETY": "Create disposable database, recording, transcript, note, export and backup fixtures; record pre/post counts and hashes; prove backup-before-transform, atomicity, integrity, idempotency, interrupted-operation recovery and non-overwrite rules for every data-changing dependency; characterize data root portability, relative path preservation without machine-specific absolute path lock-in, external modification detection, and network-share / NAS data safety boundaries.",
+        "CAP-NAS": "Characterize and prove NAS and network-share data root behavior under DEC-NAS: evaluate network share availability, disconnection handling, reconnection, latency, interrupted writes, SQLite locking on SMB/NFS, one-writer policy, multi-instance protection, and portable relative references.",
+        "CAP-MUTATION-LOG": "Design and verify an append-oriented authoritative mutation audit log and external-change detection service: record actor, identity, timestamp, operation, entity, previous/new hash, and reason; detect and flag external edits to user databases or assets; provide reconciliation workflows.",
         "CAP-DELETION-GOVERNANCE": "For each CAP-REMOVE task reconcile every recorded candidate disposition and all nineteen architectural layers, require BDI-1 through BDI-7 evidence at one checkpoint, and prevent a deletion status while any retained caller, historical migration, legal notice or packaged effect is unresolved.",
         "CAP-EXACT-LOCATION": "Reconcile every EXACT_LOCATION_REGISTRY entry against an existing current path plus verified symbol/content anchor or an explicit absent/planned status; update owner, dependencies, target, tests, phase and checkpoint without creating a competing registry.",
         "CAP-IMPLEMENTATION-GOVERNANCE": "Enforce the topological queue order, one capability batch per recoverable checkpoint, immutable-plan hash checks, task stop conditions, evidence paths and resume state; reject status advancement when dependencies or required proof are incomplete.",
@@ -1940,6 +1955,8 @@ extra_dependencies = {
     "TASK-CAP-NETWORK-POLICY": ["TASK-CAP-IPC"],
     "TASK-CAP-MODEL-DISCOVERY": ["TASK-CAP-DATA-SAFETY"],
     "TASK-CAP-MODEL-PACK": ["TASK-CAP-MODEL-DISCOVERY", "TASK-CAP-DATA-SAFETY"],
+    "TASK-CAP-MUTATION-LOG": ["TASK-CAP-DATABASE", "TASK-CAP-DATA-SAFETY"],
+    "TASK-DEC-NAS": ["TASK-CAP-DATABASE", "TASK-CAP-DATA-SAFETY"],
 }
 for task_id, dependencies in extra_dependencies.items():
     if task_id in task_by_id:
@@ -2396,19 +2413,20 @@ execution_state_sentence = (
 
 write_text("START-HERE.md", f"""# Mnemora implementation handoff
 
-This is the single authoritative entry point for an implementation run. {execution_state_sentence} The current application root is the lowercase `codebase/` folder; `Codebase/` is only a future target named by the Master Plan. The derived planning is subordinate to all three immutable Master Plan files. Planning generation never turns a planning contract into implementation evidence.
+This is the single authoritative entry point for an implementation run. {execution_state_sentence} The current application root is the lowercase `codebase/` folder; `Codebase/` is only a future target named by the Master Plan. The derived planning is subordinate to the Universal App Constitution and all three immutable Master Plan files. Planning generation never turns a planning contract into implementation evidence.
 
 ## Authority order
 
-1. `Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md`
-2. `Master Plan/02-EVERYTHING-WE-ARE-DELETING.md`
-3. `Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md`
-4. `MASTER_REQUIREMENT_REGISTER.json`
-5. `INTERPRETATION_REGISTER.json`
-6. `CAPABILITY_REGISTRY.json`
-7. `EXACT_LOCATION_REGISTRY.json`
-8. `IMPLEMENTATION_QUEUE.json`
-9. `CONDITIONAL_DECISION_PACKAGES.json` and `RELEASE_GATE_PLAN.json`
+1. Universal App Constitution (`UNIVERSAL_APP_CONSTITUTION.md` / `UNIVERSAL_APP_CONSTITUTION.json`, binding cross-app user authority)
+2. `Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md`
+3. `Master Plan/02-EVERYTHING-WE-ARE-DELETING.md`
+4. `Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md`
+5. `MASTER_REQUIREMENT_REGISTER.json`
+6. `INTERPRETATION_REGISTER.json`
+7. `CAPABILITY_REGISTRY.json`
+8. `EXACT_LOCATION_REGISTRY.json`
+9. `IMPLEMENTATION_QUEUE.json`
+10. `CONDITIONAL_DECISION_PACKAGES.json` and `RELEASE_GATE_PLAN.json`
 
 ## Scope and editable boundaries
 

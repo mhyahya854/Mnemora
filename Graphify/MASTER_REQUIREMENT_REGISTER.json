@@ -191,6 +191,8 @@
       "CAP-MODEL-DISCOVERY": 3,
       "CAP-MODEL-PACK": 2,
       "CAP-MODELS": 2,
+      "CAP-MUTATION-LOG": 1,
+      "CAP-NAS": 1,
       "CAP-NATIVE": 3,
       "CAP-NETWORK-POLICY": 8,
       "CAP-NOTE-TEMPLATES": 2,
@@ -379,6 +381,8 @@
         "CAP-MICROPHONE",
         "CAP-MICROPHONE-DICTATION",
         "CAP-MICROPHONE-SELECTION",
+        "CAP-MUTATION-LOG",
+        "CAP-NAS",
         "CAP-PROCESSING-JOBS",
         "CAP-RECORDING-OVERLAY",
         "CAP-SPEAKER-LABELS",
@@ -388,7 +392,7 @@
         "CAP-TRAY",
         "CAP-WINDOW-LIFECYCLE"
       ],
-      "semantic_mapping_basis": "Reviewed source section: Governing Rule; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract",
+      "semantic_mapping_basis": "Reviewed source section: Governing Rule; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract; governing-rule coverage for derived capability contract",
       "applicable_architectural_layers": [
         "renderer/UI",
         "filesystem/data",

@@ -8,18 +8,18 @@
 - Git: present at the repository root; branch, commit, staged, unstaged, deleted and untracked states are verified at implementation time by `TASK-GOV-001-PROVENANCE-BASELINE` and recorded in the audit baseline (the checked-out branch name is intentionally not embedded so generated evidence is identical across clones).
 - Provenance fallback: `REPOSITORY_FILE_INVENTORY.json` plus `REPOSITORY_FINGERPRINT.json`; the immutable execution root is `TASK-GOV-001-PROVENANCE-BASELINE`.
 - Immutable Master Plan files: verified against the SHA-256 values below before derived generation.
-- Implementation status: `IN PROGRESS`; task counts: `{"BLOCKED": 0, "COMPLETE": 1, "NOT APPLICABLE": 0, "NOT STARTED": 157}`.
+- Implementation status: `IN PROGRESS`; task counts: `{"BLOCKED": 0, "COMPLETE": 1, "NOT APPLICABLE": 0, "NOT STARTED": 161}`.
 - Latest terminal task checkpoint: `5ed0e52c9c52ebbf2329caff5cfd71af4b3e7237`.
 - Release status: not evaluated by task execution state.
 
 ## Planning authorities
 
 - Requirements: 536 in `MASTER_REQUIREMENT_REGISTER.json`.
-- Capabilities: 120 in `CAPABILITY_REGISTRY.json`.
-- Exact-location entries: 780 in `EXACT_LOCATION_REGISTRY.json`.
-- Implementation tasks: 158 in `IMPLEMENTATION_QUEUE.json`.
+- Capabilities: 122 in `CAPABILITY_REGISTRY.json`.
+- Exact-location entries: 783 in `EXACT_LOCATION_REGISTRY.json`.
+- Implementation tasks: 162 in `IMPLEMENTATION_QUEUE.json`.
 - Deletion tasks: 31.
-- Conditional decision packages: 11.
+- Conditional decision packages: 12.
 - Strict release gates: 12.
 - Interpretations: 7; unresolved derived conflicts: 0.
 

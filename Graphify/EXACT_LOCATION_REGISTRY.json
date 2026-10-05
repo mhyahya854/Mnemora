@@ -2,7 +2,7 @@
   "schema_version": 3,
   "authority": "Authoritative exact-location registry; no Markdown mirror is authoritative",
   "provenance": "Rebuilt from immutable Master Plan authority, reviewed capability-domain rules, verified current symbols or content hashes, and context-dispositioned deletion evidence. Genuine prior Graphify/static analysis informed review; no graph node ID is invented.",
-  "entry_count": 780,
+  "entry_count": 783,
   "required_fields": [
     "id",
     "stable_capability_id",
@@ -2979,7 +2979,7 @@
       "tests": [],
       "required_changes": [
         "Capture pre-change evidence at these exact reviewed locations: codebase/main/infrastructure/persistence/audioStorage.js.",
-        "Create disposable database, recording, transcript, note, export and backup fixtures; record pre/post counts and hashes; prove backup-before-transform, atomicity, integrity, idempotency, interrupted-operation recovery and non-overwrite rules for every data-changing dependency.",
+        "Create disposable database, recording, transcript, note, export and backup fixtures; record pre/post counts and hashes; prove backup-before-transform, atomicity, integrity, idempotency, interrupted-operation recovery and non-overwrite rules for every data-changing dependency; characterize data root portability, relative path preservation without machine-specific absolute path lock-in, external modification detection, and network-share / NAS data safety boundaries.",
         "Create or preserve the single owned target codebase/main/infrastructure/persistence/database.js::owned::cap-data-safety; update only listed callers, registrations, persistence effects, tests and packaging references proven to depend on it.",
         "Save the focused diff/hash delta and all classified targeted, real-boundary, regression, offline or not-applicable evidence before changing planning status."
       ],
@@ -3077,7 +3077,7 @@
       "tests": [],
       "required_changes": [
         "Capture pre-change evidence at these exact reviewed locations: codebase/main/infrastructure/persistence/dataMigration.js.",
-        "Create disposable database, recording, transcript, note, export and backup fixtures; record pre/post counts and hashes; prove backup-before-transform, atomicity, integrity, idempotency, interrupted-operation recovery and non-overwrite rules for every data-changing dependency.",
+        "Create disposable database, recording, transcript, note, export and backup fixtures; record pre/post counts and hashes; prove backup-before-transform, atomicity, integrity, idempotency, interrupted-operation recovery and non-overwrite rules for every data-changing dependency; characterize data root portability, relative path preservation without machine-specific absolute path lock-in, external modification detection, and network-share / NAS data safety boundaries.",
         "Create or preserve the single owned target codebase/main/infrastructure/persistence/database.js::owned::cap-data-safety; update only listed callers, registrations, persistence effects, tests and packaging references proven to depend on it.",
         "Save the focused diff/hash delta and all classified targeted, real-boundary, regression, offline or not-applicable evidence before changing planning status."
       ],
@@ -3175,7 +3175,7 @@
       "tests": [],
       "required_changes": [
         "Capture pre-change evidence at these exact reviewed locations: codebase/main/infrastructure/persistence/database.js.",
-        "Create disposable database, recording, transcript, note, export and backup fixtures; record pre/post counts and hashes; prove backup-before-transform, atomicity, integrity, idempotency, interrupted-operation recovery and non-overwrite rules for every data-changing dependency.",
+        "Create disposable database, recording, transcript, note, export and backup fixtures; record pre/post counts and hashes; prove backup-before-transform, atomicity, integrity, idempotency, interrupted-operation recovery and non-overwrite rules for every data-changing dependency; characterize data root portability, relative path preservation without machine-specific absolute path lock-in, external modification detection, and network-share / NAS data safety boundaries.",
         "Create or preserve the single owned target codebase/main/infrastructure/persistence/database.js::owned::cap-data-safety; update only listed callers, registrations, persistence effects, tests and packaging references proven to depend on it.",
         "Save the focused diff/hash delta and all classified targeted, real-boundary, regression, offline or not-applicable evidence before changing planning status."
       ],
@@ -3271,7 +3271,7 @@
       "tests": [],
       "required_changes": [
         "Capture pre-change evidence at these exact reviewed locations: codebase/main/infrastructure/persistence/localBackup.js.",
-        "Create disposable database, recording, transcript, note, export and backup fixtures; record pre/post counts and hashes; prove backup-before-transform, atomicity, integrity, idempotency, interrupted-operation recovery and non-overwrite rules for every data-changing dependency.",
+        "Create disposable database, recording, transcript, note, export and backup fixtures; record pre/post counts and hashes; prove backup-before-transform, atomicity, integrity, idempotency, interrupted-operation recovery and non-overwrite rules for every data-changing dependency; characterize data root portability, relative path preservation without machine-specific absolute path lock-in, external modification detection, and network-share / NAS data safety boundaries.",
         "Create or preserve the single owned target codebase/main/infrastructure/persistence/database.js::owned::cap-data-safety; update only listed callers, registrations, persistence effects, tests and packaging references proven to depend on it.",
         "Save the focused diff/hash delta and all classified targeted, real-boundary, regression, offline or not-applicable evidence before changing planning status."
       ],
@@ -3367,7 +3367,7 @@
       ],
       "required_changes": [
         "Capture pre-change evidence at these exact reviewed locations: codebase/tests/unit/persistence/dataMigration.test.js.",
-        "Create disposable database, recording, transcript, note, export and backup fixtures; record pre/post counts and hashes; prove backup-before-transform, atomicity, integrity, idempotency, interrupted-operation recovery and non-overwrite rules for every data-changing dependency.",
+        "Create disposable database, recording, transcript, note, export and backup fixtures; record pre/post counts and hashes; prove backup-before-transform, atomicity, integrity, idempotency, interrupted-operation recovery and non-overwrite rules for every data-changing dependency; characterize data root portability, relative path preservation without machine-specific absolute path lock-in, external modification detection, and network-share / NAS data safety boundaries.",
         "Create or preserve the single owned target codebase/main/infrastructure/persistence/database.js::owned::cap-data-safety; update only listed callers, registrations, persistence effects, tests and packaging references proven to depend on it.",
         "Save the focused diff/hash delta and all classified targeted, real-boundary, regression, offline or not-applicable evidence before changing planning status."
       ],
@@ -3463,7 +3463,7 @@
       ],
       "required_changes": [
         "Capture pre-change evidence at these exact reviewed locations: codebase/tests/unit/persistence/localBackup.test.js.",
-        "Create disposable database, recording, transcript, note, export and backup fixtures; record pre/post counts and hashes; prove backup-before-transform, atomicity, integrity, idempotency, interrupted-operation recovery and non-overwrite rules for every data-changing dependency.",
+        "Create disposable database, recording, transcript, note, export and backup fixtures; record pre/post counts and hashes; prove backup-before-transform, atomicity, integrity, idempotency, interrupted-operation recovery and non-overwrite rules for every data-changing dependency; characterize data root portability, relative path preservation without machine-specific absolute path lock-in, external modification detection, and network-share / NAS data safety boundaries.",
         "Create or preserve the single owned target codebase/main/infrastructure/persistence/database.js::owned::cap-data-safety; update only listed callers, registrations, persistence effects, tests and packaging references proven to depend on it.",
         "Save the focused diff/hash delta and all classified targeted, real-boundary, regression, offline or not-applicable evidence before changing planning status."
       ],
@@ -3559,7 +3559,7 @@
       ],
       "required_changes": [
         "Capture pre-change evidence at these exact reviewed locations: codebase/tests/unit/persistence/localDataDatabase.test.js.",
-        "Create disposable database, recording, transcript, note, export and backup fixtures; record pre/post counts and hashes; prove backup-before-transform, atomicity, integrity, idempotency, interrupted-operation recovery and non-overwrite rules for every data-changing dependency.",
+        "Create disposable database, recording, transcript, note, export and backup fixtures; record pre/post counts and hashes; prove backup-before-transform, atomicity, integrity, idempotency, interrupted-operation recovery and non-overwrite rules for every data-changing dependency; characterize data root portability, relative path preservation without machine-specific absolute path lock-in, external modification detection, and network-share / NAS data safety boundaries.",
         "Create or preserve the single owned target codebase/main/infrastructure/persistence/database.js::owned::cap-data-safety; update only listed callers, registrations, persistence effects, tests and packaging references proven to depend on it.",
         "Save the focused diff/hash delta and all classified targeted, real-boundary, regression, offline or not-applicable evidence before changing planning status."
       ],
@@ -17835,6 +17835,185 @@
       ],
       "phase": "PHASE-03-DECOUPLING-AND-RETAINED-PROTECTION",
       "wave": "WAVE-03",
+      "last_planning_verification_checkpoint": "CHECKPOINT-SEMANTIC-PLANNING",
+      "editable_target": true,
+      "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
+    },
+    {
+      "id": "REG-5DA86D77C008B2DF",
+      "capability_id": "CAP-MUTATION-LOG",
+      "stable_capability_id": "CAP-MUTATION-LOG",
+      "capability_name": "Attributable mutation audit log and external change detection",
+      "entity_type": "database/migration",
+      "location_class": "DATABASE/MIGRATION",
+      "master_requirement_ids": [
+        "REQ-MP1-047F877A85"
+      ],
+      "decision": "ADD",
+      "status": "PRESENT - SEMANTICALLY REVIEWED",
+      "candidate_disposition": null,
+      "current_path": "codebase/main/infrastructure/persistence/database.js",
+      "current_symbol": null,
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_line_start": null,
+      "current_line_end": null,
+      "graphify_node_id": null,
+      "real_graph_or_static_analysis_node_id": null,
+      "current_owner": "SQLite persistence",
+      "target_path": "codebase/main/infrastructure/persistence/database.js",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_owner": "SQLite persistence",
+      "capability_owner": "SQLite persistence",
+      "module_owner": "SQLite persistence",
+      "dependencies": [],
+      "dependents": [],
+      "renderer_entry": [],
+      "preload_exposure": [],
+      "ipc_channel": [],
+      "ipc_handler": [],
+      "service": [
+        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+      ],
+      "database_or_filesystem_effect": [
+        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+      ],
+      "native_dependency": [],
+      "runtime_registration": [],
+      "configuration_references": [],
+      "tests": [],
+      "required_changes": [
+        "Capture pre-change evidence at these exact reviewed locations: codebase/main/infrastructure/persistence/database.js.",
+        "Design and verify an append-oriented authoritative mutation audit log and external-change detection service: record actor, identity, timestamp, operation, entity, previous/new hash, and reason; detect and flag external edits to user databases or assets; provide reconciliation workflows.",
+        "Create or preserve the single owned target codebase/main/infrastructure/persistence/database.js::DatabaseManager; update only listed callers, registrations, persistence effects, tests and packaging references proven to depend on it.",
+        "Save the focused diff/hash delta and all classified targeted, real-boundary, regression, offline or not-applicable evidence before changing planning status."
+      ],
+      "verification_evidence_required": [
+        "Evidence bundle for TASK-CAP-MUTATION-LOG"
+      ],
+      "phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "wave": "WAVE-05",
+      "last_planning_verification_checkpoint": "CHECKPOINT-SEMANTIC-PLANNING",
+      "editable_target": true,
+      "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
+    },
+    {
+      "id": "REG-FE7B983DF6DD3C92",
+      "capability_id": "CAP-NAS",
+      "stable_capability_id": "CAP-NAS",
+      "capability_name": "NAS and private-LAN storage support",
+      "entity_type": "database/migration",
+      "location_class": "DATABASE/MIGRATION",
+      "master_requirement_ids": [
+        "REQ-MP1-047F877A85"
+      ],
+      "decision": "CONDITIONAL - REQUIRES EVIDENCE",
+      "status": "PRESENT - SEMANTICALLY REVIEWED",
+      "candidate_disposition": null,
+      "current_path": "codebase/main/infrastructure/persistence/database.js",
+      "current_symbol": null,
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_line_start": null,
+      "current_line_end": null,
+      "graphify_node_id": null,
+      "real_graph_or_static_analysis_node_id": null,
+      "current_owner": "SQLite persistence",
+      "target_path": "codebase/main/infrastructure/persistence/database.js",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_owner": "SQLite persistence",
+      "capability_owner": "SQLite persistence",
+      "module_owner": "SQLite persistence",
+      "dependencies": [],
+      "dependents": [],
+      "renderer_entry": [],
+      "preload_exposure": [],
+      "ipc_channel": [],
+      "ipc_handler": [],
+      "service": [
+        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+      ],
+      "database_or_filesystem_effect": [
+        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+      ],
+      "native_dependency": [],
+      "runtime_registration": [],
+      "configuration_references": [],
+      "tests": [],
+      "required_changes": [
+        "Capture pre-change evidence at these exact reviewed locations: codebase/main/infrastructure/persistence/database.js.",
+        "Characterize and prove NAS and network-share data root behavior under DEC-NAS: evaluate network share availability, disconnection handling, reconnection, latency, interrupted writes, SQLite locking on SMB/NFS, one-writer policy, multi-instance protection, and portable relative references.",
+        "Create or preserve the single owned target codebase/main/infrastructure/persistence/database.js::DatabaseManager; update only listed callers, registrations, persistence effects, tests and packaging references proven to depend on it.",
+        "Save the focused diff/hash delta and all classified targeted, real-boundary, regression, offline or not-applicable evidence before changing planning status."
+      ],
+      "verification_evidence_required": [
+        "Evidence bundle for TASK-DEC-NAS",
+        "Evidence bundle for TASK-OUT-NAS-DEFAULT",
+        "Evidence bundle for TASK-OUT-NAS-DEVIATION"
+      ],
+      "phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "wave": "WAVE-05C",
+      "last_planning_verification_checkpoint": "CHECKPOINT-SEMANTIC-PLANNING",
+      "editable_target": true,
+      "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
+    },
+    {
+      "id": "REG-78F44D1C53EA6AC9",
+      "capability_id": "CAP-NAS",
+      "stable_capability_id": "CAP-NAS",
+      "capability_name": "NAS and private-LAN storage support",
+      "entity_type": "owned source",
+      "location_class": "OWNED SOURCE",
+      "master_requirement_ids": [
+        "REQ-MP1-047F877A85"
+      ],
+      "decision": "CONDITIONAL - REQUIRES EVIDENCE",
+      "status": "PRESENT - SEMANTICALLY REVIEWED",
+      "candidate_disposition": null,
+      "current_path": "codebase/main/infrastructure/persistence/localBackup.js",
+      "current_symbol": null,
+      "current_anchor": "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+      "current_line_start": null,
+      "current_line_end": null,
+      "graphify_node_id": null,
+      "real_graph_or_static_analysis_node_id": null,
+      "current_owner": "SQLite persistence",
+      "target_path": "codebase/main/infrastructure/persistence/localBackup.js",
+      "target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+      "intended_target_path": "codebase/main/infrastructure/persistence/localBackup.js",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+      "target_owner": "SQLite persistence",
+      "capability_owner": "SQLite persistence",
+      "module_owner": "SQLite persistence",
+      "dependencies": [],
+      "dependents": [],
+      "renderer_entry": [],
+      "preload_exposure": [],
+      "ipc_channel": [],
+      "ipc_handler": [],
+      "service": [
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+      ],
+      "database_or_filesystem_effect": [],
+      "native_dependency": [],
+      "runtime_registration": [],
+      "configuration_references": [],
+      "tests": [],
+      "required_changes": [
+        "Capture pre-change evidence at these exact reviewed locations: codebase/main/infrastructure/persistence/localBackup.js.",
+        "Characterize and prove NAS and network-share data root behavior under DEC-NAS: evaluate network share availability, disconnection handling, reconnection, latency, interrupted writes, SQLite locking on SMB/NFS, one-writer policy, multi-instance protection, and portable relative references.",
+        "Create or preserve the single owned target codebase/main/infrastructure/persistence/database.js::DatabaseManager; update only listed callers, registrations, persistence effects, tests and packaging references proven to depend on it.",
+        "Save the focused diff/hash delta and all classified targeted, real-boundary, regression, offline or not-applicable evidence before changing planning status."
+      ],
+      "verification_evidence_required": [
+        "Evidence bundle for TASK-DEC-NAS",
+        "Evidence bundle for TASK-OUT-NAS-DEFAULT",
+        "Evidence bundle for TASK-OUT-NAS-DEVIATION"
+      ],
+      "phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "wave": "WAVE-05C",
       "last_planning_verification_checkpoint": "CHECKPOINT-SEMANTIC-PLANNING",
       "editable_target": true,
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."

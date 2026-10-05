@@ -2,12 +2,12 @@
   "schema_version": 4,
   "verdict": "PASS",
   "requirements": 536,
-  "capabilities": 120,
-  "tasks": 158,
-  "exact_locations": 780,
+  "capabilities": 122,
+  "tasks": 162,
+  "exact_locations": 783,
   "dependency_graph": {
-    "task_nodes": 158,
-    "dependency_edges": 323,
+    "task_nodes": 162,
+    "dependency_edges": 335,
     "root_tasks": [
       "TASK-GOV-001-PROVENANCE-BASELINE"
     ],

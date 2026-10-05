@@ -101,7 +101,7 @@ def _own(owner: str, ids: Iterable[str]) -> None:
 
 _own("Meeting audio", ["CAP-AEC", "CAP-AUDIO", "CAP-AUDIO-MIXING", "CAP-MICROPHONE", "CAP-SYSTEM-AUDIO"])
 _own("Desktop shell", ["CAP-APP-SHELL", "CAP-NOTIFICATIONS", "CAP-TRAY", "CAP-WINDOW-LIFECYCLE"])
-_own("SQLite persistence", ["CAP-BACKUP", "CAP-DATA-SAFETY", "CAP-DATABASE", "CAP-KYSELY", "CAP-LEGACY-MIGRATION", "CAP-RESTORE"])
+_own("SQLite persistence", ["CAP-BACKUP", "CAP-DATA-SAFETY", "CAP-DATABASE", "CAP-KYSELY", "CAP-LEGACY-MIGRATION", "CAP-RESTORE", "CAP-NAS", "CAP-MUTATION-LOG"])
 _own("Dictation", ["CAP-CLIPBOARD", "CAP-DICTATION", "CAP-HOTKEY", "CAP-MICROPHONE-DICTATION", "CAP-MICROPHONE-SELECTION", "CAP-RECORDING-OVERLAY"])
 _own("Diarization and speakers", ["CAP-DIARIZATION", "CAP-SPEAKER-EMBEDDINGS", "CAP-SPEAKER-LABELS", "CAP-SPEAKER-NAMING", "CAP-SPEAKER-PERSISTENCE", "CAP-SPEAKER-RENAMING", "CAP-VOICE-FINGERPRINTING"])
 _own("Import and export", ["CAP-EXPORT", "CAP-IMPORT", "CAP-IMPORT-AUDIO", "CAP-IMPORT-EXPORT", "CAP-IMPORT-VIDEO"])
@@ -579,7 +579,7 @@ _domains(("meetings",), ["CAP-AEC", "CAP-AUDIO", "CAP-AUDIO-MIXING", "CAP-DIARIZ
 _domains(("transcription",), ["CAP-FFMPEG", "CAP-IMPORT-AUDIO", "CAP-IMPORT-VIDEO", "CAP-MODEL-DISCOVERY", "CAP-MODEL-PACK", "CAP-MODELS", "CAP-PARAKEET", "CAP-SEGMENTS", "CAP-SHERPA-ONNX", "CAP-TRANSCRIPT-EDIT", "CAP-TRANSCRIPT-HISTORY", "CAP-TRANSCRIPTION", "CAP-VAD", "CAP-WHISPER"])
 _domains(("notes",), ["CAP-FOLDERS", "CAP-LINKED-NOTES", "CAP-MEETING-NOTES", "CAP-NOTE-TEMPLATES", "CAP-NOTES", "CAP-PERSONAL-NOTES", "CAP-SNIPPETS", "CAP-TAGS"])
 _domains(("search",), ["CAP-MINILM", "CAP-QDRANT", "CAP-SEARCH-EXACT", "CAP-SEARCH-SEMANTIC"])
-_domains(("persistence",), ["CAP-BACKUP", "CAP-DATA-SAFETY", "CAP-DATABASE", "CAP-LEGACY-MIGRATION", "CAP-RESTORE"])
+_domains(("persistence",), ["CAP-BACKUP", "CAP-DATA-SAFETY", "CAP-DATABASE", "CAP-LEGACY-MIGRATION", "CAP-RESTORE", "CAP-NAS", "CAP-MUTATION-LOG"])
 _domains(("shell",), ["CAP-APP-SHELL", "CAP-NOTIFICATIONS", "CAP-TRAY", "CAP-WINDOW-LIFECYCLE"])
 _domains(("platform",), ["CAP-NATIVE"])
 _domains(("packaging",), ["CAP-PACKAGING", "CAP-PORTABLE-WINDOWS", "CAP-WINDOWS-INSTALLER", "CAP-MACOS-LINUX"])
@@ -626,6 +626,8 @@ TARGET_OVERRIDES = {
     "CAP-MEETING": ("codebase/renderer/features/meetings/meetingRecordingStore.ts", "startRecording"),
     "CAP-MEETING-NOTES": ("codebase/renderer/features/notes/components/NoteEditor.tsx", "NoteEditor"),
     "CAP-MINILM": ("codebase/main/features/search/localEmbeddings.js", "LocalEmbeddings"),
+    "CAP-MUTATION-LOG": ("codebase/main/infrastructure/persistence/database.js", "DatabaseManager"),
+    "CAP-NAS": ("codebase/main/infrastructure/persistence/database.js", "DatabaseManager"),
     "CAP-NATIVE": ("codebase/native/helpers", "platform helper source roots"),
     "CAP-NETWORK-POLICY": ("codebase/main/infrastructure/runtime/runtimeNetworkPolicy.js", "installRuntimeNetworkPolicy"),
     "CAP-NOTES": ("codebase/renderer/features/notes/components/NoteEditor.tsx", "NoteEditor"),

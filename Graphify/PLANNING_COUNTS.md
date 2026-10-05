@@ -32,9 +32,9 @@ This navigation report is generated from the machine authorities. It is not an i
 
 ## Other totals
 
-- Capabilities: 120
-- Implementation tasks: 158
+- Capabilities: 122
+- Implementation tasks: 162
 - Deletion tasks: 31
-- Conditional decision packages: 11
+- Conditional decision packages: 12
 - Release gates: 12
-- Exact-location entries: 780
+- Exact-location entries: 783

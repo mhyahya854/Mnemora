@@ -2,16 +2,16 @@
   "schema_version": 4,
   "authority": "Single machine-readable implementation task authority",
   "exact_first_task_id": "TASK-GOV-001-PROVENANCE-BASELINE",
-  "task_count": 158,
+  "task_count": 162,
   "deletion_task_count": 31,
-  "conditional_decision_task_count": 11,
+  "conditional_decision_task_count": 12,
   "release_proof_task_count": 12,
   "phase_counts": {
     "PHASE-01-AUTHORITY-AND-PROVENANCE": 1,
     "PHASE-02-CHARACTERIZATION-AND-DATA-SAFETY": 12,
     "PHASE-03-DECOUPLING-AND-RETAINED-PROTECTION": 23,
     "PHASE-04-EXCLUDED-SYSTEM-REMOVAL": 32,
-    "PHASE-05-RETAINED-CAPABILITIES": 69,
+    "PHASE-05-RETAINED-CAPABILITIES": 73,
     "PHASE-06-REORGANIZATION-AND-CLEANUP": 9,
     "PHASE-07-INTEGRATION-AND-RELEASE-EVIDENCE": 12
   },
@@ -23,18 +23,18 @@
     "WAVE-03Z": 1,
     "WAVE-04": 31,
     "WAVE-04Z": 1,
-    "WAVE-05": 35,
-    "WAVE-05C": 11,
-    "WAVE-05D": 11,
-    "WAVE-05E": 11,
+    "WAVE-05": 36,
+    "WAVE-05C": 12,
+    "WAVE-05D": 12,
+    "WAVE-05E": 12,
     "WAVE-05Z": 1,
     "WAVE-06": 8,
     "WAVE-06Z": 1,
     "WAVE-07": 12
   },
   "dependency_graph_metrics": {
-    "task_nodes": 158,
-    "dependency_edges": 323,
+    "task_nodes": 162,
+    "dependency_edges": 335,
     "root_tasks": [
       "TASK-GOV-001-PROVENANCE-BASELINE"
     ],
@@ -551,7 +551,9 @@
         "TASK-CAP-LEGACY-MIGRATION",
         "TASK-GOV-002-CHARACTERIZATION-GATE",
         "TASK-CAP-MODEL-DISCOVERY",
-        "TASK-CAP-MODEL-PACK"
+        "TASK-CAP-MODEL-PACK",
+        "TASK-CAP-MUTATION-LOG",
+        "TASK-DEC-NAS"
       ],
       "files_expected_to_change": [
         "codebase/main/infrastructure/persistence/database.js",
@@ -591,7 +593,7 @@
       "packaging_impact": "Inspect electron-builder resources, archive layout, licences and clean installed behavior.",
       "exact_implementation_actions": [
         "Capture pre-change evidence at these exact reviewed locations: codebase/main/infrastructure/persistence/database.js, codebase/main/infrastructure/persistence/localBackup.js, codebase/main/infrastructure/persistence/dataMigration.js, codebase/main/infrastructure/persistence/audioStorage.js, codebase/tests/unit/persistence/localDataDatabase.test.js, codebase/tests/unit/persistence/localBackup.test.js, codebase/tests/unit/persistence/dataMigration.test.js.",
-        "Create disposable database, recording, transcript, note, export and backup fixtures; record pre/post counts and hashes; prove backup-before-transform, atomicity, integrity, idempotency, interrupted-operation recovery and non-overwrite rules for every data-changing dependency.",
+        "Create disposable database, recording, transcript, note, export and backup fixtures; record pre/post counts and hashes; prove backup-before-transform, atomicity, integrity, idempotency, interrupted-operation recovery and non-overwrite rules for every data-changing dependency; characterize data root portability, relative path preservation without machine-specific absolute path lock-in, external modification detection, and network-share / NAS data safety boundaries.",
         "Create or preserve the single owned target codebase/main/infrastructure/persistence/database.js::owned::cap-data-safety; update only listed callers, registrations, persistence effects, tests and packaging references proven to depend on it.",
         "Save the focused diff/hash delta and all classified targeted, real-boundary, regression, offline or not-applicable evidence before changing planning status."
       ],
@@ -923,7 +925,9 @@
         "TASK-GOV-002-CHARACTERIZATION-GATE",
         "TASK-CAP-NOTES",
         "TASK-CAP-SEARCH-EXACT",
-        "TASK-CAP-SEARCH-SEMANTIC"
+        "TASK-CAP-SEARCH-SEMANTIC",
+        "TASK-CAP-MUTATION-LOG",
+        "TASK-DEC-NAS"
       ],
       "files_expected_to_change": [
         "codebase/main/infrastructure/persistence/database.js",
@@ -26606,6 +26610,7 @@
         "TASK-CAP-MICROPHONE-DICTATION",
         "TASK-CAP-MICROPHONE-SELECTION",
         "TASK-CAP-MINILM",
+        "TASK-CAP-MUTATION-LOG",
         "TASK-CAP-NOTIFICATIONS",
         "TASK-CAP-OFFLINE-FIRST-LAUNCH",
         "TASK-CAP-PERSONAL-NOTES",
@@ -26630,6 +26635,7 @@
         "TASK-DEC-LOOPBACK-WEBSOCKETS",
         "TASK-DEC-MACOS-LINUX",
         "TASK-DEC-MEETING-DETECTION",
+        "TASK-DEC-NAS",
         "TASK-DEC-NOTE-TEMPLATES",
         "TASK-DEC-PARAKEET",
         "TASK-DEC-PORTABLE-WINDOWS",
@@ -30579,6 +30585,196 @@
       }
     },
     {
+      "stable_task_id": "TASK-CAP-MUTATION-LOG",
+      "capability_id": "CAP-MUTATION-LOG",
+      "master_requirement_ids": [
+        "REQ-MP1-047F877A85"
+      ],
+      "exact_purpose": "At the mapped paths and symbols, preserve, repair, decouple or add the fully mapped local capability Attributable mutation audit log and external change detection and satisfy every linked Master requirement without reintroducing removed remote systems.",
+      "requirement_contracts": [
+        "This document defines every original capability, implementation, dependency, asset, workflow, and architectural element that Mnemora intends to preserve. A file existing is not proof that a capability is complete. Graphify must map it, locate every implementation layer, separate unwanted coupling, test it, and classify it using these deterministic labels: MANDATORY KEEP KEEP AND REPAIR KEEP AND REORGANISE KEEP AFTER DECOUPLING CONDITIONAL — REQUIRES EVIDENCE OPTIONAL LATER OBSOLETE — REMOVE AFTER VERIFIED REPLACEMENT FORBIDDEN"
+      ],
+      "presence_absence_status": "CURRENT IMPLEMENTATION OR STATIC CANDIDATES MAPPED",
+      "implementation_gap": "Runtime completeness is not claimed by static planning; execute the linked characterization and completion contract.",
+      "current_paths": [
+        "codebase/main/infrastructure/persistence/database.js"
+      ],
+      "current_symbols": [
+        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+      ],
+      "intended_target_paths": [
+        "codebase/main/infrastructure/persistence/database.js"
+      ],
+      "intended_target_symbols": [
+        "DatabaseManager"
+      ],
+      "current_locations": [
+        {
+          "path": "codebase/main/infrastructure/persistence/database.js",
+          "status": "PRESENT",
+          "symbols": [
+            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          ]
+        }
+      ],
+      "target_locations": [
+        {
+          "path": "codebase/main/infrastructure/persistence/database.js",
+          "symbol": "DatabaseManager",
+          "status": "PLANNED TARGET"
+        }
+      ],
+      "exact_location_registry_refs": [
+        "REG-5DA86D77C008B2DF"
+      ],
+      "preconditions": [
+        "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
+        "Immutable Master Plan hashes match the expected values.",
+        "Characterisation evidence exists for Attributable mutation audit log and external change detection at every mapped real boundary before mutation."
+      ],
+      "semantic_dependencies": [
+        "TASK-GOV-004-REMOVAL-GATE",
+        "TASK-CAP-DATABASE",
+        "TASK-CAP-DATA-SAFETY"
+      ],
+      "dependencies": [
+        "TASK-GOV-004-REMOVAL-GATE",
+        "TASK-CAP-DATABASE",
+        "TASK-CAP-DATA-SAFETY"
+      ],
+      "dependents": [
+        "TASK-GOV-005-CAPABILITY-GATE"
+      ],
+      "files_expected_to_change": [
+        "codebase/main/infrastructure/persistence/database.js"
+      ],
+      "files_forbidden_from_changing": [
+        "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
+        "Graphify/Master Plan/02-EVERYTHING-WE-ARE-DELETING.md",
+        "Graphify/Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+        "User databases, recordings, transcripts, notes, exports and backups except disposable verified copies",
+        "Files owned by unrelated capability batches without a recorded dependency expansion"
+      ],
+      "data_impact": "USER DATA BOUNDARY: preserve databases, recordings, transcripts, notes, exports, backups and recoverable source audio; use only disposable verified copies for destructive tests.",
+      "migration_impact": "Disposable-copy migration, backup checksum, integrity, idempotency, interruption and recovery proof required.",
+      "data_and_migration_impact": "DATA-SAFETY INTERLOCK REQUIRED: disposable-copy migration, backup checksum, integrity, idempotency, interruption and recovery proof",
+      "ipc_impact": {
+        "known_channels": [],
+        "contract": "Preserve or explicitly replace renderer, preload, TypeScript and handler contracts together; reject undeclared channels."
+      },
+      "native_impact": {
+        "known_boundaries": [
+          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        ],
+        "contract": "Real native/process cleanup and packaged-path proof required."
+      },
+      "packaging_impact": "Inspect electron-builder resources, archive layout, licences and clean installed behavior.",
+      "exact_implementation_actions": [
+        "Capture pre-change evidence at these exact reviewed locations: codebase/main/infrastructure/persistence/database.js.",
+        "Design and verify an append-oriented authoritative mutation audit log and external-change detection service: record actor, identity, timestamp, operation, entity, previous/new hash, and reason; detect and flag external edits to user databases or assets; provide reconciliation workflows.",
+        "Create or preserve the single owned target codebase/main/infrastructure/persistence/database.js::DatabaseManager; update only listed callers, registrations, persistence effects, tests and packaging references proven to depend on it.",
+        "Save the focused diff/hash delta and all classified targeted, real-boundary, regression, offline or not-applicable evidence before changing planning status."
+      ],
+      "characterisation_tests_required_before_change": [
+        {
+          "test_path": "codebase/tests/integration/attributable-mutation-audit-log-and-external-change-detection.contract.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "boundary": "Create a real Attributable mutation audit log and external change detection characterization at the applicable SQLite, filesystem, Electron, native, process, audio, or model boundary before mutation."
+        }
+      ],
+      "targeted_verification": [
+        {
+          "test_path": "codebase/tests/integration/attributable-mutation-audit-log-and-external-change-detection.contract.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/targeted.log"
+        }
+      ],
+      "real_integration_verification": [
+        {
+          "test_path": "codebase/tests/integration/attributable-mutation-audit-log-and-external-change-detection.real-boundary.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION INTEGRATION TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "boundary": "Exercise the real SQLite/filesystem/Electron/native/process/audio/model or installed boundary named by the evidence type; mocks cannot close this proof.",
+          "evidence": "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/integration.log"
+        }
+      ],
+      "broader_regression_verification": [
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/regression.log"
+        },
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "STATIC/GRAPH AUDIT",
+          "command": "npm run typecheck",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/typecheck.log"
+        },
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "STATIC/GRAPH AUDIT",
+          "command": "npm run lint",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/lint.log"
+        }
+      ],
+      "evidence_types": [
+        "APPLICATION UNIT TEST",
+        "APPLICATION INTEGRATION TEST"
+      ],
+      "offline_verification_impact": "Include this workflow in the final installed offline regression when runtime reachable; record NOT APPLICABLE with reachability evidence only when it is not runtime reachable.",
+      "rollback_or_recovery_strategy": "Before mutation create a focused Git commit when Git exists. If Git is unavailable, save the required pre-batch hashes and reversible file delta. Restore only this task's owned paths; never reset, clean, stash or discard unrelated work. Restore user data only from verified backups after a failed disposable-copy recovery drill.",
+      "required_evidence_artifacts": [
+        "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/pre-change-characterization.json",
+        "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/implementation-delta.json",
+        "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/targeted.log",
+        "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/integration.log",
+        "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/regression.log",
+        "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/offline-or-applicability.json"
+      ],
+      "completion_criteria": [
+        "Every requirement in REQ-MP1-047F877A85 has direct saved evidence or an explicitly permitted conditional disposition.",
+        "All expected paths and symbols are reconciled in EXACT_LOCATION_REGISTRY.json at the same verified checkpoint.",
+        "Targeted, real integration and broader regression commands have saved exit codes and logs; no planning status is substituted for execution proof."
+      ],
+      "acceptance_criteria": [
+        "The declared Attributable mutation audit log and external change detection target and every mapped current anchor reconcile at one verified commit/hash checkpoint.",
+        "All task-specific characterisation, targeted, real-boundary, broader regression and offline/applicability evidence has an exact command or manual method, result, artifact path and honest status.",
+        "No Master requirement is weakened, no unrelated owner is modified, and missing/hardware-dependent proof is reported as BLOCKED or HARDWARE UNAVAILABLE rather than PASS."
+      ],
+      "stop_conditions": [
+        "A Master Plan hash changes or an instruction conflicts with the immutable authority.",
+        "A user-data, migration, native, packaging or unrelated-capability impact appears without the declared dependency and recovery proof.",
+        "Required real evidence cannot be collected; record BLOCKED or HARDWARE UNAVAILABLE rather than weakening the test or claiming completion."
+      ],
+      "risk_classification": "CRITICAL",
+      "task_kind": "CAPABILITY",
+      "planning_status": "IMPLEMENTATION READY - EXECUTION NOT STARTED",
+      "phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "wave": "WAVE-05",
+      "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
+      "execution_order": 85,
+      "ordering_index": 85,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
+    },
+    {
       "stable_task_id": "TASK-CAP-NOTIFICATIONS",
       "capability_id": "CAP-NOTIFICATIONS",
       "master_requirement_ids": [
@@ -30802,8 +30998,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 85,
-      "ordering_index": 85,
+      "execution_order": 86,
+      "ordering_index": 86,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -30992,8 +31188,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 86,
-      "ordering_index": 86,
+      "execution_order": 87,
+      "ordering_index": 87,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -31247,8 +31443,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 87,
-      "ordering_index": 87,
+      "execution_order": 88,
+      "ordering_index": 88,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -31492,8 +31688,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 88,
-      "ordering_index": 88,
+      "execution_order": 89,
+      "ordering_index": 89,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -31670,8 +31866,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 89,
-      "ordering_index": 89,
+      "execution_order": 90,
+      "ordering_index": 90,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -31928,8 +32124,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 90,
-      "ordering_index": 90,
+      "execution_order": 91,
+      "ordering_index": 91,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -32166,8 +32362,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 91,
-      "ordering_index": 91,
+      "execution_order": 92,
+      "ordering_index": 92,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -32442,8 +32638,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 92,
-      "ordering_index": 92,
+      "execution_order": 93,
+      "ordering_index": 93,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -32716,8 +32912,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 93,
-      "ordering_index": 93,
+      "execution_order": 94,
+      "ordering_index": 94,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -32957,8 +33153,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 94,
-      "ordering_index": 94,
+      "execution_order": 95,
+      "ordering_index": 95,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -33176,8 +33372,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 95,
-      "ordering_index": 95,
+      "execution_order": 96,
+      "ordering_index": 96,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -33408,8 +33604,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 96,
-      "ordering_index": 96,
+      "execution_order": 97,
+      "ordering_index": 97,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -33641,8 +33837,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 97,
-      "ordering_index": 97,
+      "execution_order": 98,
+      "ordering_index": 98,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -33873,8 +34069,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 98,
-      "ordering_index": 98,
+      "execution_order": 99,
+      "ordering_index": 99,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -34130,8 +34326,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 99,
-      "ordering_index": 99,
+      "execution_order": 100,
+      "ordering_index": 100,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -34387,8 +34583,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 100,
-      "ordering_index": 100,
+      "execution_order": 101,
+      "ordering_index": 101,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -34642,8 +34838,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 101,
-      "ordering_index": 101,
+      "execution_order": 102,
+      "ordering_index": 102,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -34848,8 +35044,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 102,
-      "ordering_index": 102,
+      "execution_order": 103,
+      "ordering_index": 103,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -35091,8 +35287,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 103,
-      "ordering_index": 103,
+      "execution_order": 104,
+      "ordering_index": 104,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -35301,8 +35497,8 @@
         "TASK-OUT-KEYRING-DEFAULT",
         "TASK-OUT-KEYRING-DEVIATION"
       ],
-      "execution_order": 104,
-      "ordering_index": 104,
+      "execution_order": 105,
+      "ordering_index": 105,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -35511,8 +35707,8 @@
         "TASK-OUT-KYSELY-DEFAULT",
         "TASK-OUT-KYSELY-DEVIATION"
       ],
-      "execution_order": 105,
-      "ordering_index": 105,
+      "execution_order": 106,
+      "ordering_index": 106,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -35746,8 +35942,8 @@
         "TASK-OUT-LOOPBACK-WEBSOCKETS-DEFAULT",
         "TASK-OUT-LOOPBACK-WEBSOCKETS-DEVIATION"
       ],
-      "execution_order": 106,
-      "ordering_index": 106,
+      "execution_order": 107,
+      "ordering_index": 107,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -36047,8 +36243,8 @@
         "TASK-OUT-MACOS-LINUX-DEFAULT",
         "TASK-OUT-MACOS-LINUX-DEVIATION"
       ],
-      "execution_order": 107,
-      "ordering_index": 107,
+      "execution_order": 108,
+      "ordering_index": 108,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -36335,8 +36531,242 @@
         "TASK-OUT-MEETING-DETECTION-DEFAULT",
         "TASK-OUT-MEETING-DETECTION-DEVIATION"
       ],
-      "execution_order": 108,
-      "ordering_index": 108,
+      "execution_order": 109,
+      "ordering_index": 109,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
+    },
+    {
+      "stable_task_id": "TASK-DEC-NAS",
+      "capability_id": "CAP-NAS",
+      "master_requirement_ids": [
+        "REQ-MP1-047F877A85"
+      ],
+      "exact_purpose": "Collect and record the evidence package for NAS and private-LAN data root architecture: local working database with NAS replica/archive versus direct network-filesystem SQLite without making a preference-based product decision; apply the Master default unless the stated deviation condition is proven.",
+      "requirement_contracts": [
+        "This document defines every original capability, implementation, dependency, asset, workflow, and architectural element that Mnemora intends to preserve. A file existing is not proof that a capability is complete. Graphify must map it, locate every implementation layer, separate unwanted coupling, test it, and classify it using these deterministic labels: MANDATORY KEEP KEEP AND REPAIR KEEP AND REORGANISE KEEP AFTER DECOUPLING CONDITIONAL — REQUIRES EVIDENCE OPTIONAL LATER OBSOLETE — REMOVE AFTER VERIFIED REPLACEMENT FORBIDDEN"
+      ],
+      "presence_absence_status": "CURRENT IMPLEMENTATION OR STATIC CANDIDATES MAPPED",
+      "implementation_gap": "Runtime completeness is not claimed by static planning; execute the linked characterization and completion contract.",
+      "current_paths": [
+        "codebase/main/infrastructure/persistence/database.js",
+        "codebase/main/infrastructure/persistence/localBackup.js"
+      ],
+      "current_symbols": [
+        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+      ],
+      "intended_target_paths": [
+        "codebase/main/infrastructure/persistence/database.js"
+      ],
+      "intended_target_symbols": [
+        "DatabaseManager"
+      ],
+      "current_locations": [
+        {
+          "path": "codebase/main/infrastructure/persistence/database.js",
+          "status": "PRESENT",
+          "symbols": [
+            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          ]
+        },
+        {
+          "path": "codebase/main/infrastructure/persistence/localBackup.js",
+          "status": "PRESENT",
+          "symbols": [
+            "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          ]
+        }
+      ],
+      "target_locations": [
+        {
+          "path": "codebase/main/infrastructure/persistence/database.js",
+          "symbol": "DatabaseManager",
+          "status": "PLANNED TARGET"
+        }
+      ],
+      "exact_location_registry_refs": [
+        "REG-FE7B983DF6DD3C92",
+        "REG-78F44D1C53EA6AC9"
+      ],
+      "preconditions": [
+        "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
+        "Immutable Master Plan hashes match the expected values.",
+        "Characterisation evidence exists for NAS and private-LAN storage support at every mapped real boundary before mutation."
+      ],
+      "semantic_dependencies": [
+        "TASK-GOV-004-REMOVAL-GATE",
+        "TASK-CAP-DATABASE",
+        "TASK-CAP-DATA-SAFETY"
+      ],
+      "dependencies": [
+        "TASK-GOV-004-REMOVAL-GATE",
+        "TASK-CAP-DATABASE",
+        "TASK-CAP-DATA-SAFETY"
+      ],
+      "dependents": [
+        "TASK-OUT-NAS-DEFAULT",
+        "TASK-OUT-NAS-DEVIATION",
+        "TASK-GOV-005-CAPABILITY-GATE"
+      ],
+      "files_expected_to_change": [
+        "codebase/main/infrastructure/persistence/database.js",
+        "codebase/main/infrastructure/persistence/localBackup.js"
+      ],
+      "files_forbidden_from_changing": [
+        "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
+        "Graphify/Master Plan/02-EVERYTHING-WE-ARE-DELETING.md",
+        "Graphify/Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+        "User databases, recordings, transcripts, notes, exports and backups except disposable verified copies",
+        "Files owned by unrelated capability batches without a recorded dependency expansion"
+      ],
+      "data_impact": "USER DATA BOUNDARY: preserve databases, recordings, transcripts, notes, exports, backups and recoverable source audio; use only disposable verified copies for destructive tests.",
+      "migration_impact": "Disposable-copy migration, backup checksum, integrity, idempotency, interruption and recovery proof required.",
+      "data_and_migration_impact": "DATA-SAFETY INTERLOCK REQUIRED: disposable-copy migration, backup checksum, integrity, idempotency, interruption and recovery proof",
+      "ipc_impact": {
+        "known_channels": [],
+        "contract": "Preserve or explicitly replace renderer, preload, TypeScript and handler contracts together; reject undeclared channels."
+      },
+      "native_impact": {
+        "known_boundaries": [
+          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        ],
+        "contract": "Real native/process cleanup and packaged-path proof required."
+      },
+      "packaging_impact": "Inspect electron-builder resources, archive layout, licences and clean installed behavior.",
+      "exact_implementation_actions": [
+        "Inspect and anchor every current decision location: codebase/main/infrastructure/persistence/database.js, codebase/main/infrastructure/persistence/localBackup.js.",
+        "Collect the required evidence without selecting an outcome in advance: Execute network-filesystem concurrency, latency, share-disconnection, multi-instance lock collision, and power-cut interruption drills on simulated and real SMB/NFS mounts.",
+        "Compare and record every dimension at the same verified checkpoint: SQLite locking reliability on SMB/NFS, concurrency and multi-instance collision safety, network latency and timeout impact on UI responsiveness, interrupted write and corruption recovery, backup placement and restore integrity, external modification detection, portable path references across mounts.",
+        "Apply the mandatory default unless this exact deviation condition is proven: Direct SQLite operation on a NAS / SMB / NFS share is proven safe with verified file locking, multi-instance concurrency protection, atomic write guarantees, latency resilience, and crash/interruption recovery without database corruption.",
+        "Record DEFAULT SELECTED or DEVIATION SELECTED with the evidence bundle, owner SQLite persistence, and fallback: Enforce local working database with background NAS synchronization, backup, and portable media storage.",
+        "Do not invent a numeric threshold; use only a Master Plan mandate, documented platform constraint, licence/safety requirement, or user-approved product limit."
+      ],
+      "characterisation_tests_required_before_change": [
+        {
+          "test_path": "codebase/tests/integration/nas-and-private-lan-storage-support.contract.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "boundary": "Create a real NAS and private-LAN storage support characterization at the applicable SQLite, filesystem, Electron, native, process, audio, or model boundary before mutation."
+        }
+      ],
+      "targeted_verification": [
+        {
+          "test_path": "codebase/tests/integration/nas-and-private-lan-storage-support.contract.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/targeted.log"
+        }
+      ],
+      "real_integration_verification": [
+        {
+          "test_path": "codebase/tests/integration/nas-and-private-lan-storage-support.real-boundary.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION INTEGRATION TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "boundary": "Exercise the real SQLite/filesystem/Electron/native/process/audio/model or installed boundary named by the evidence type; mocks cannot close this proof.",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/integration.log"
+        }
+      ],
+      "broader_regression_verification": [
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/regression.log"
+        },
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "STATIC/GRAPH AUDIT",
+          "command": "npm run typecheck",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/typecheck.log"
+        },
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "STATIC/GRAPH AUDIT",
+          "command": "npm run lint",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/lint.log"
+        }
+      ],
+      "evidence_types": [
+        "APPLICATION UNIT TEST",
+        "APPLICATION INTEGRATION TEST"
+      ],
+      "offline_verification_impact": "Include this workflow in the final installed offline regression when runtime reachable; record NOT APPLICABLE with reachability evidence only when it is not runtime reachable.",
+      "rollback_or_recovery_strategy": "Before mutation create a focused Git commit when Git exists. If Git is unavailable, save the required pre-batch hashes and reversible file delta. Restore only this task's owned paths; never reset, clean, stash or discard unrelated work. Restore user data only from verified backups after a failed disposable-copy recovery drill.",
+      "required_evidence_artifacts": [
+        "Graphify/evidence/nas-and-private-lan-storage-support/pre-change-characterization.json",
+        "Graphify/evidence/nas-and-private-lan-storage-support/implementation-delta.json",
+        "Graphify/evidence/nas-and-private-lan-storage-support/targeted.log",
+        "Graphify/evidence/nas-and-private-lan-storage-support/integration.log",
+        "Graphify/evidence/nas-and-private-lan-storage-support/regression.log",
+        "Graphify/evidence/nas-and-private-lan-storage-support/offline-or-applicability.json"
+      ],
+      "completion_criteria": [
+        "Every requirement in REQ-MP1-047F877A85 has direct saved evidence or an explicitly permitted conditional disposition.",
+        "All expected paths and symbols are reconciled in EXACT_LOCATION_REGISTRY.json at the same verified checkpoint.",
+        "Targeted, real integration and broader regression commands have saved exit codes and logs; no planning status is substituted for execution proof."
+      ],
+      "acceptance_criteria": [
+        "The declared NAS and private-LAN storage support target and every mapped current anchor reconcile at one verified commit/hash checkpoint.",
+        "All task-specific characterisation, targeted, real-boundary, broader regression and offline/applicability evidence has an exact command or manual method, result, artifact path and honest status.",
+        "No Master requirement is weakened, no unrelated owner is modified, and missing/hardware-dependent proof is reported as BLOCKED or HARDWARE UNAVAILABLE rather than PASS."
+      ],
+      "stop_conditions": [
+        "A Master Plan hash changes or an instruction conflicts with the immutable authority.",
+        "A user-data, migration, native, packaging or unrelated-capability impact appears without the declared dependency and recovery proof.",
+        "Required real evidence cannot be collected; record BLOCKED or HARDWARE UNAVAILABLE rather than weakening the test or claiming completion."
+      ],
+      "risk_classification": "CRITICAL",
+      "task_kind": "CONDITIONAL DECISION",
+      "planning_status": "IMPLEMENTATION READY - EXECUTION NOT STARTED",
+      "phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "wave": "WAVE-05C",
+      "ordering_rationale": "The decision is scheduled after retained boundaries are stable and before either mutually exclusive implementation outcome.",
+      "mandatory_default": "Retain local canonical active SQLite database on local disk and provide continuous or on-change replica, backup, and portable asset archival to the user-selected NAS / network-share data root, avoiding network-filesystem SQLite locking bugs and latency corruption.",
+      "deviation_condition": "Direct SQLite operation on a NAS / SMB / NFS share is proven safe with verified file locking, multi-instance concurrency protection, atomic write guarantees, latency resilience, and crash/interruption recovery without database corruption.",
+      "decision_evidence_to_collect": [
+        "Execute network-filesystem concurrency, latency, share-disconnection, multi-instance lock collision, and power-cut interruption drills on simulated and real SMB/NFS mounts.",
+        "Measured comparison: SQLite locking reliability on SMB/NFS",
+        "Measured comparison: concurrency and multi-instance collision safety",
+        "Measured comparison: network latency and timeout impact on UI responsiveness",
+        "Measured comparison: interrupted write and corruption recovery",
+        "Measured comparison: backup placement and restore integrity",
+        "Measured comparison: external modification detection",
+        "Measured comparison: portable path references across mounts"
+      ],
+      "comparison_dimensions": [
+        "SQLite locking reliability on SMB/NFS",
+        "concurrency and multi-instance collision safety",
+        "network latency and timeout impact on UI responsiveness",
+        "interrupted write and corruption recovery",
+        "backup placement and restore integrity",
+        "external modification detection",
+        "portable path references across mounts"
+      ],
+      "decision_owner": "SQLite persistence",
+      "fallback": "Enforce local working database with background NAS synchronization, backup, and portable media storage.",
+      "threshold_rule": "Do not invent an arbitrary numeric threshold. Record observed data and use only a threshold already mandated by the Master Plan, a documented platform constraint, a licence/safety requirement, or a user-approved product limit.",
+      "permitted_outcome_task_ids": [
+        "TASK-OUT-NAS-DEFAULT",
+        "TASK-OUT-NAS-DEVIATION"
+      ],
+      "execution_order": 110,
+      "ordering_index": 110,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -36545,8 +36975,8 @@
         "TASK-OUT-NOTE-TEMPLATES-DEFAULT",
         "TASK-OUT-NOTE-TEMPLATES-DEVIATION"
       ],
-      "execution_order": 109,
-      "ordering_index": 109,
+      "execution_order": 111,
+      "ordering_index": 111,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -36762,8 +37192,8 @@
         "TASK-OUT-PARAKEET-DEFAULT",
         "TASK-OUT-PARAKEET-DEVIATION"
       ],
-      "execution_order": 110,
-      "ordering_index": 110,
+      "execution_order": 112,
+      "ordering_index": 112,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -37002,8 +37432,8 @@
         "TASK-OUT-PORTABLE-WINDOWS-DEFAULT",
         "TASK-OUT-PORTABLE-WINDOWS-DEVIATION"
       ],
-      "execution_order": 111,
-      "ordering_index": 111,
+      "execution_order": 113,
+      "ordering_index": 113,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -37307,8 +37737,8 @@
         "TASK-OUT-QDRANT-DEFAULT",
         "TASK-OUT-QDRANT-DEVIATION"
       ],
-      "execution_order": 112,
-      "ordering_index": 112,
+      "execution_order": 114,
+      "ordering_index": 114,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -37621,8 +38051,8 @@
         "TASK-OUT-SHERPA-ONNX-DEFAULT",
         "TASK-OUT-SHERPA-ONNX-DEVIATION"
       ],
-      "execution_order": 113,
-      "ordering_index": 113,
+      "execution_order": 115,
+      "ordering_index": 115,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -37889,8 +38319,8 @@
         "TASK-OUT-VOICE-FINGERPRINTING-DEFAULT",
         "TASK-OUT-VOICE-FINGERPRINTING-DEVIATION"
       ],
-      "execution_order": 114,
-      "ordering_index": 114,
+      "execution_order": 116,
+      "ordering_index": 116,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -38071,8 +38501,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 115,
-      "ordering_index": 115,
+      "execution_order": 117,
+      "ordering_index": 117,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -38253,8 +38683,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 116,
-      "ordering_index": 116,
+      "execution_order": 118,
+      "ordering_index": 118,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -38458,8 +38888,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 117,
-      "ordering_index": 117,
+      "execution_order": 119,
+      "ordering_index": 119,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -38729,8 +39159,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 118,
-      "ordering_index": 118,
+      "execution_order": 120,
+      "ordering_index": 120,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -38987,8 +39417,208 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 119,
-      "ordering_index": 119,
+      "execution_order": 121,
+      "ordering_index": 121,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
+    },
+    {
+      "stable_task_id": "TASK-OUT-NAS-DEFAULT",
+      "capability_id": "CAP-NAS",
+      "master_requirement_ids": [
+        "REQ-MP1-047F877A85"
+      ],
+      "exact_purpose": "Execute the mandatory-default outcome for NAS and private-LAN data root architecture: local working database with NAS replica/archive versus direct network-filesystem SQLite: Retain local canonical active SQLite database on local disk and provide continuous or on-change replica, backup, and portable asset archival to the user-selected NAS / network-share data root, avoiding network-filesystem SQLite locking bugs and latency corruption.",
+      "requirement_contracts": [
+        "This document defines every original capability, implementation, dependency, asset, workflow, and architectural element that Mnemora intends to preserve. A file existing is not proof that a capability is complete. Graphify must map it, locate every implementation layer, separate unwanted coupling, test it, and classify it using these deterministic labels: MANDATORY KEEP KEEP AND REPAIR KEEP AND REORGANISE KEEP AFTER DECOUPLING CONDITIONAL — REQUIRES EVIDENCE OPTIONAL LATER OBSOLETE — REMOVE AFTER VERIFIED REPLACEMENT FORBIDDEN"
+      ],
+      "presence_absence_status": "CURRENT IMPLEMENTATION OR STATIC CANDIDATES MAPPED",
+      "implementation_gap": "Runtime completeness is not claimed by static planning; execute the linked characterization and completion contract.",
+      "current_paths": [
+        "codebase/main/infrastructure/persistence/database.js",
+        "codebase/main/infrastructure/persistence/localBackup.js"
+      ],
+      "current_symbols": [
+        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+      ],
+      "intended_target_paths": [
+        "codebase/main/infrastructure/persistence/database.js"
+      ],
+      "intended_target_symbols": [
+        "DatabaseManager"
+      ],
+      "current_locations": [
+        {
+          "path": "codebase/main/infrastructure/persistence/database.js",
+          "status": "PRESENT",
+          "symbols": [
+            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          ]
+        },
+        {
+          "path": "codebase/main/infrastructure/persistence/localBackup.js",
+          "status": "PRESENT",
+          "symbols": [
+            "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          ]
+        }
+      ],
+      "target_locations": [
+        {
+          "path": "codebase/main/infrastructure/persistence/database.js",
+          "symbol": "DatabaseManager",
+          "status": "PLANNED TARGET"
+        }
+      ],
+      "exact_location_registry_refs": [
+        "REG-FE7B983DF6DD3C92",
+        "REG-78F44D1C53EA6AC9"
+      ],
+      "preconditions": [
+        "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
+        "Immutable Master Plan hashes match the expected values.",
+        "Characterisation evidence exists for NAS and private-LAN storage support at every mapped real boundary before mutation.",
+        "TASK-DEC-NAS records DEFAULT SELECTED; otherwise this task receives a NOT APPLICABLE disposition and makes no code change."
+      ],
+      "semantic_dependencies": [
+        "TASK-DEC-NAS"
+      ],
+      "dependencies": [
+        "TASK-DEC-NAS"
+      ],
+      "dependents": [
+        "TASK-GOV-005-CAPABILITY-GATE"
+      ],
+      "files_expected_to_change": [
+        "codebase/main/infrastructure/persistence/database.js",
+        "codebase/main/infrastructure/persistence/localBackup.js"
+      ],
+      "files_forbidden_from_changing": [
+        "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
+        "Graphify/Master Plan/02-EVERYTHING-WE-ARE-DELETING.md",
+        "Graphify/Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+        "User databases, recordings, transcripts, notes, exports and backups except disposable verified copies",
+        "Files owned by unrelated capability batches without a recorded dependency expansion"
+      ],
+      "data_impact": "USER DATA BOUNDARY: preserve databases, recordings, transcripts, notes, exports, backups and recoverable source audio; use only disposable verified copies for destructive tests.",
+      "migration_impact": "Disposable-copy migration, backup checksum, integrity, idempotency, interruption and recovery proof required.",
+      "data_and_migration_impact": "DATA-SAFETY INTERLOCK REQUIRED: disposable-copy migration, backup checksum, integrity, idempotency, interruption and recovery proof",
+      "ipc_impact": {
+        "known_channels": [],
+        "contract": "Preserve or explicitly replace renderer, preload, TypeScript and handler contracts together; reject undeclared channels."
+      },
+      "native_impact": {
+        "known_boundaries": [
+          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        ],
+        "contract": "Real native/process cleanup and packaged-path proof required."
+      },
+      "packaging_impact": "Inspect electron-builder resources, archive layout, licences and clean installed behavior.",
+      "exact_implementation_actions": [
+        "Link the decision evidence from TASK-DEC-NAS and record DEFAULT SELECTED.",
+        "Apply the default exactly: Retain local canonical active SQLite database on local disk and provide continuous or on-change replica, backup, and portable asset archival to the user-selected NAS / network-share data root, avoiding network-filesystem SQLite locking bugs and latency corruption.",
+        "Verify the mapped locations: codebase/main/infrastructure/persistence/database.js, codebase/main/infrastructure/persistence/localBackup.js.",
+        "Execute this evidence method: Execute network-filesystem concurrency, latency, share-disconnection, multi-instance lock collision, and power-cut interruption drills on simulated and real SMB/NFS mounts.",
+        "If the selected outcome fails, stop and restore the verified fallback: Enforce local working database with background NAS synchronization, backup, and portable media storage."
+      ],
+      "characterisation_tests_required_before_change": [
+        {
+          "test_path": "codebase/tests/integration/nas-and-private-lan-storage-support.contract.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "boundary": "Create a real NAS and private-LAN storage support characterization at the applicable SQLite, filesystem, Electron, native, process, audio, or model boundary before mutation."
+        }
+      ],
+      "targeted_verification": [
+        {
+          "test_path": "codebase/tests/integration/nas-and-private-lan-storage-support.contract.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/targeted.log"
+        }
+      ],
+      "real_integration_verification": [
+        {
+          "test_path": "codebase/tests/integration/nas-and-private-lan-storage-support.real-boundary.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION INTEGRATION TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "boundary": "Exercise the real SQLite/filesystem/Electron/native/process/audio/model or installed boundary named by the evidence type; mocks cannot close this proof.",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/integration.log"
+        }
+      ],
+      "broader_regression_verification": [
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/regression.log"
+        },
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "STATIC/GRAPH AUDIT",
+          "command": "npm run typecheck",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/typecheck.log"
+        },
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "STATIC/GRAPH AUDIT",
+          "command": "npm run lint",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/lint.log"
+        }
+      ],
+      "evidence_types": [
+        "APPLICATION UNIT TEST",
+        "APPLICATION INTEGRATION TEST"
+      ],
+      "offline_verification_impact": "Include this workflow in the final installed offline regression when runtime reachable; record NOT APPLICABLE with reachability evidence only when it is not runtime reachable.",
+      "rollback_or_recovery_strategy": "Before mutation create a focused Git commit when Git exists. If Git is unavailable, save the required pre-batch hashes and reversible file delta. Restore only this task's owned paths; never reset, clean, stash or discard unrelated work. Restore user data only from verified backups after a failed disposable-copy recovery drill.",
+      "required_evidence_artifacts": [
+        "Graphify/evidence/nas-and-private-lan-storage-support/pre-change-characterization.json",
+        "Graphify/evidence/nas-and-private-lan-storage-support/implementation-delta.json",
+        "Graphify/evidence/nas-and-private-lan-storage-support/targeted.log",
+        "Graphify/evidence/nas-and-private-lan-storage-support/integration.log",
+        "Graphify/evidence/nas-and-private-lan-storage-support/regression.log",
+        "Graphify/evidence/nas-and-private-lan-storage-support/offline-or-applicability.json"
+      ],
+      "completion_criteria": [
+        "Every requirement in REQ-MP1-047F877A85 has direct saved evidence or an explicitly permitted conditional disposition.",
+        "All expected paths and symbols are reconciled in EXACT_LOCATION_REGISTRY.json at the same verified checkpoint.",
+        "Targeted, real integration and broader regression commands have saved exit codes and logs; no planning status is substituted for execution proof."
+      ],
+      "acceptance_criteria": [
+        "The declared NAS and private-LAN storage support target and every mapped current anchor reconcile at one verified commit/hash checkpoint.",
+        "All task-specific characterisation, targeted, real-boundary, broader regression and offline/applicability evidence has an exact command or manual method, result, artifact path and honest status.",
+        "No Master requirement is weakened, no unrelated owner is modified, and missing/hardware-dependent proof is reported as BLOCKED or HARDWARE UNAVAILABLE rather than PASS."
+      ],
+      "stop_conditions": [
+        "A Master Plan hash changes or an instruction conflicts with the immutable authority.",
+        "A user-data, migration, native, packaging or unrelated-capability impact appears without the declared dependency and recovery proof.",
+        "Required real evidence cannot be collected; record BLOCKED or HARDWARE UNAVAILABLE rather than weakening the test or claiming completion."
+      ],
+      "risk_classification": "CRITICAL",
+      "task_kind": "CONDITIONAL OUTCOME - DEFAULT",
+      "planning_status": "IMPLEMENTATION READY - EXECUTION NOT STARTED",
+      "phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "wave": "WAVE-05D",
+      "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
+      "execution_order": 122,
+      "ordering_index": 122,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -39169,8 +39799,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 120,
-      "ordering_index": 120,
+      "execution_order": 123,
+      "ordering_index": 123,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -39354,8 +39984,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 121,
-      "ordering_index": 121,
+      "execution_order": 124,
+      "ordering_index": 124,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -39564,8 +40194,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 122,
-      "ordering_index": 122,
+      "execution_order": 125,
+      "ordering_index": 125,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -39837,8 +40467,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 123,
-      "ordering_index": 123,
+      "execution_order": 126,
+      "ordering_index": 126,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -40121,8 +40751,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 124,
-      "ordering_index": 124,
+      "execution_order": 127,
+      "ordering_index": 127,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -40359,8 +40989,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05D",
       "ordering_rationale": "Runs only after the decision record selects the Master default; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 125,
-      "ordering_index": 125,
+      "execution_order": 128,
+      "ordering_index": 128,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -40541,8 +41171,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 126,
-      "ordering_index": 126,
+      "execution_order": 129,
+      "ordering_index": 129,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -40723,8 +41353,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 127,
-      "ordering_index": 127,
+      "execution_order": 130,
+      "ordering_index": 130,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -40928,8 +41558,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 128,
-      "ordering_index": 128,
+      "execution_order": 131,
+      "ordering_index": 131,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -41199,8 +41829,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 129,
-      "ordering_index": 129,
+      "execution_order": 132,
+      "ordering_index": 132,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -41457,8 +42087,208 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 130,
-      "ordering_index": 130,
+      "execution_order": 133,
+      "ordering_index": 133,
+      "execution_state": {
+        "disposition": "NOT STARTED",
+        "evidence_references": [],
+        "checkpoint_identity": null,
+        "blocked_reason": null,
+        "not_applicable_basis": null
+      }
+    },
+    {
+      "stable_task_id": "TASK-OUT-NAS-DEVIATION",
+      "capability_id": "CAP-NAS",
+      "master_requirement_ids": [
+        "REQ-MP1-047F877A85"
+      ],
+      "exact_purpose": "Execute the permitted deviation outcome for NAS and private-LAN data root architecture: local working database with NAS replica/archive versus direct network-filesystem SQLite only when the evidence package proves: Direct SQLite operation on a NAS / SMB / NFS share is proven safe with verified file locking, multi-instance concurrency protection, atomic write guarantees, latency resilience, and crash/interruption recovery without database corruption.",
+      "requirement_contracts": [
+        "This document defines every original capability, implementation, dependency, asset, workflow, and architectural element that Mnemora intends to preserve. A file existing is not proof that a capability is complete. Graphify must map it, locate every implementation layer, separate unwanted coupling, test it, and classify it using these deterministic labels: MANDATORY KEEP KEEP AND REPAIR KEEP AND REORGANISE KEEP AFTER DECOUPLING CONDITIONAL — REQUIRES EVIDENCE OPTIONAL LATER OBSOLETE — REMOVE AFTER VERIFIED REPLACEMENT FORBIDDEN"
+      ],
+      "presence_absence_status": "CURRENT IMPLEMENTATION OR STATIC CANDIDATES MAPPED",
+      "implementation_gap": "Runtime completeness is not claimed by static planning; execute the linked characterization and completion contract.",
+      "current_paths": [
+        "codebase/main/infrastructure/persistence/database.js",
+        "codebase/main/infrastructure/persistence/localBackup.js"
+      ],
+      "current_symbols": [
+        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+      ],
+      "intended_target_paths": [
+        "codebase/main/infrastructure/persistence/database.js"
+      ],
+      "intended_target_symbols": [
+        "DatabaseManager"
+      ],
+      "current_locations": [
+        {
+          "path": "codebase/main/infrastructure/persistence/database.js",
+          "status": "PRESENT",
+          "symbols": [
+            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          ]
+        },
+        {
+          "path": "codebase/main/infrastructure/persistence/localBackup.js",
+          "status": "PRESENT",
+          "symbols": [
+            "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          ]
+        }
+      ],
+      "target_locations": [
+        {
+          "path": "codebase/main/infrastructure/persistence/database.js",
+          "symbol": "DatabaseManager",
+          "status": "PLANNED TARGET"
+        }
+      ],
+      "exact_location_registry_refs": [
+        "REG-FE7B983DF6DD3C92",
+        "REG-78F44D1C53EA6AC9"
+      ],
+      "preconditions": [
+        "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
+        "Immutable Master Plan hashes match the expected values.",
+        "Characterisation evidence exists for NAS and private-LAN storage support at every mapped real boundary before mutation.",
+        "TASK-DEC-NAS records DEVIATION SELECTED with evidence satisfying the stated condition; otherwise this task receives a NOT APPLICABLE disposition and makes no code change."
+      ],
+      "semantic_dependencies": [
+        "TASK-DEC-NAS"
+      ],
+      "dependencies": [
+        "TASK-DEC-NAS"
+      ],
+      "dependents": [
+        "TASK-GOV-005-CAPABILITY-GATE"
+      ],
+      "files_expected_to_change": [
+        "codebase/main/infrastructure/persistence/database.js",
+        "codebase/main/infrastructure/persistence/localBackup.js"
+      ],
+      "files_forbidden_from_changing": [
+        "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
+        "Graphify/Master Plan/02-EVERYTHING-WE-ARE-DELETING.md",
+        "Graphify/Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md",
+        "User databases, recordings, transcripts, notes, exports and backups except disposable verified copies",
+        "Files owned by unrelated capability batches without a recorded dependency expansion"
+      ],
+      "data_impact": "USER DATA BOUNDARY: preserve databases, recordings, transcripts, notes, exports, backups and recoverable source audio; use only disposable verified copies for destructive tests.",
+      "migration_impact": "Disposable-copy migration, backup checksum, integrity, idempotency, interruption and recovery proof required.",
+      "data_and_migration_impact": "DATA-SAFETY INTERLOCK REQUIRED: disposable-copy migration, backup checksum, integrity, idempotency, interruption and recovery proof",
+      "ipc_impact": {
+        "known_channels": [],
+        "contract": "Preserve or explicitly replace renderer, preload, TypeScript and handler contracts together; reject undeclared channels."
+      },
+      "native_impact": {
+        "known_boundaries": [
+          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        ],
+        "contract": "Real native/process cleanup and packaged-path proof required."
+      },
+      "packaging_impact": "Inspect electron-builder resources, archive layout, licences and clean installed behavior.",
+      "exact_implementation_actions": [
+        "Link the decision evidence from TASK-DEC-NAS and prove this deviation condition: Direct SQLite operation on a NAS / SMB / NFS share is proven safe with verified file locking, multi-instance concurrency protection, atomic write guarantees, latency resilience, and crash/interruption recovery without database corruption.",
+        "Change only the owned locations: codebase/main/infrastructure/persistence/database.js, codebase/main/infrastructure/persistence/localBackup.js.",
+        "Compare all dimensions without arbitrary thresholds: SQLite locking reliability on SMB/NFS, concurrency and multi-instance collision safety, network latency and timeout impact on UI responsiveness, interrupted write and corruption recovery, backup placement and restore integrity, external modification detection, portable path references across mounts.",
+        "Execute this evidence method: Execute network-filesystem concurrency, latency, share-disconnection, multi-instance lock collision, and power-cut interruption drills on simulated and real SMB/NFS mounts.",
+        "If any required dimension or release gate regresses, restore the verified fallback: Enforce local working database with background NAS synchronization, backup, and portable media storage."
+      ],
+      "characterisation_tests_required_before_change": [
+        {
+          "test_path": "codebase/tests/integration/nas-and-private-lan-storage-support.contract.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "boundary": "Create a real NAS and private-LAN storage support characterization at the applicable SQLite, filesystem, Electron, native, process, audio, or model boundary before mutation."
+        }
+      ],
+      "targeted_verification": [
+        {
+          "test_path": "codebase/tests/integration/nas-and-private-lan-storage-support.contract.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/targeted.log"
+        }
+      ],
+      "real_integration_verification": [
+        {
+          "test_path": "codebase/tests/integration/nas-and-private-lan-storage-support.real-boundary.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION INTEGRATION TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "boundary": "Exercise the real SQLite/filesystem/Electron/native/process/audio/model or installed boundary named by the evidence type; mocks cannot close this proof.",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/integration.log"
+        }
+      ],
+      "broader_regression_verification": [
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/regression.log"
+        },
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "STATIC/GRAPH AUDIT",
+          "command": "npm run typecheck",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/typecheck.log"
+        },
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "STATIC/GRAPH AUDIT",
+          "command": "npm run lint",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/lint.log"
+        }
+      ],
+      "evidence_types": [
+        "APPLICATION UNIT TEST",
+        "APPLICATION INTEGRATION TEST"
+      ],
+      "offline_verification_impact": "Include this workflow in the final installed offline regression when runtime reachable; record NOT APPLICABLE with reachability evidence only when it is not runtime reachable.",
+      "rollback_or_recovery_strategy": "Before mutation create a focused Git commit when Git exists. If Git is unavailable, save the required pre-batch hashes and reversible file delta. Restore only this task's owned paths; never reset, clean, stash or discard unrelated work. Restore user data only from verified backups after a failed disposable-copy recovery drill.",
+      "required_evidence_artifacts": [
+        "Graphify/evidence/nas-and-private-lan-storage-support/pre-change-characterization.json",
+        "Graphify/evidence/nas-and-private-lan-storage-support/implementation-delta.json",
+        "Graphify/evidence/nas-and-private-lan-storage-support/targeted.log",
+        "Graphify/evidence/nas-and-private-lan-storage-support/integration.log",
+        "Graphify/evidence/nas-and-private-lan-storage-support/regression.log",
+        "Graphify/evidence/nas-and-private-lan-storage-support/offline-or-applicability.json"
+      ],
+      "completion_criteria": [
+        "Every requirement in REQ-MP1-047F877A85 has direct saved evidence or an explicitly permitted conditional disposition.",
+        "All expected paths and symbols are reconciled in EXACT_LOCATION_REGISTRY.json at the same verified checkpoint.",
+        "Targeted, real integration and broader regression commands have saved exit codes and logs; no planning status is substituted for execution proof."
+      ],
+      "acceptance_criteria": [
+        "The declared NAS and private-LAN storage support target and every mapped current anchor reconcile at one verified commit/hash checkpoint.",
+        "All task-specific characterisation, targeted, real-boundary, broader regression and offline/applicability evidence has an exact command or manual method, result, artifact path and honest status.",
+        "No Master requirement is weakened, no unrelated owner is modified, and missing/hardware-dependent proof is reported as BLOCKED or HARDWARE UNAVAILABLE rather than PASS."
+      ],
+      "stop_conditions": [
+        "A Master Plan hash changes or an instruction conflicts with the immutable authority.",
+        "A user-data, migration, native, packaging or unrelated-capability impact appears without the declared dependency and recovery proof.",
+        "Required real evidence cannot be collected; record BLOCKED or HARDWARE UNAVAILABLE rather than weakening the test or claiming completion."
+      ],
+      "risk_classification": "CRITICAL",
+      "task_kind": "CONDITIONAL OUTCOME - DEVIATION",
+      "planning_status": "IMPLEMENTATION READY - EXECUTION NOT STARTED",
+      "phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "wave": "WAVE-05E",
+      "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
+      "execution_order": 134,
+      "ordering_index": 134,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -41639,8 +42469,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 131,
-      "ordering_index": 131,
+      "execution_order": 135,
+      "ordering_index": 135,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -41824,8 +42654,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 132,
-      "ordering_index": 132,
+      "execution_order": 136,
+      "ordering_index": 136,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -42034,8 +42864,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 133,
-      "ordering_index": 133,
+      "execution_order": 137,
+      "ordering_index": 137,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -42307,8 +43137,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 134,
-      "ordering_index": 134,
+      "execution_order": 138,
+      "ordering_index": 138,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -42591,8 +43421,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 135,
-      "ordering_index": 135,
+      "execution_order": 139,
+      "ordering_index": 139,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -42829,8 +43659,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05E",
       "ordering_rationale": "Runs only after the decision record selects the permitted deviation; otherwise close as NOT APPLICABLE with the same decision evidence ID.",
-      "execution_order": 136,
-      "ordering_index": 136,
+      "execution_order": 140,
+      "ordering_index": 140,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -43224,6 +44054,7 @@
         "TASK-CAP-MICROPHONE-DICTATION",
         "TASK-CAP-MICROPHONE-SELECTION",
         "TASK-CAP-MINILM",
+        "TASK-CAP-MUTATION-LOG",
         "TASK-CAP-NOTIFICATIONS",
         "TASK-CAP-OFFLINE-FIRST-LAUNCH",
         "TASK-CAP-PERSONAL-NOTES",
@@ -43248,6 +44079,7 @@
         "TASK-DEC-LOOPBACK-WEBSOCKETS",
         "TASK-DEC-MACOS-LINUX",
         "TASK-DEC-MEETING-DETECTION",
+        "TASK-DEC-NAS",
         "TASK-DEC-NOTE-TEMPLATES",
         "TASK-DEC-PARAKEET",
         "TASK-DEC-PORTABLE-WINDOWS",
@@ -43264,6 +44096,8 @@
         "TASK-OUT-MACOS-LINUX-DEVIATION",
         "TASK-OUT-MEETING-DETECTION-DEFAULT",
         "TASK-OUT-MEETING-DETECTION-DEVIATION",
+        "TASK-OUT-NAS-DEFAULT",
+        "TASK-OUT-NAS-DEVIATION",
         "TASK-OUT-NOTE-TEMPLATES-DEFAULT",
         "TASK-OUT-NOTE-TEMPLATES-DEVIATION",
         "TASK-OUT-PARAKEET-DEFAULT",
@@ -43294,6 +44128,7 @@
         "TASK-CAP-MICROPHONE-DICTATION",
         "TASK-CAP-MICROPHONE-SELECTION",
         "TASK-CAP-MINILM",
+        "TASK-CAP-MUTATION-LOG",
         "TASK-CAP-NOTIFICATIONS",
         "TASK-CAP-OFFLINE-FIRST-LAUNCH",
         "TASK-CAP-PERSONAL-NOTES",
@@ -43318,6 +44153,7 @@
         "TASK-DEC-LOOPBACK-WEBSOCKETS",
         "TASK-DEC-MACOS-LINUX",
         "TASK-DEC-MEETING-DETECTION",
+        "TASK-DEC-NAS",
         "TASK-DEC-NOTE-TEMPLATES",
         "TASK-DEC-PARAKEET",
         "TASK-DEC-PORTABLE-WINDOWS",
@@ -43334,6 +44170,8 @@
         "TASK-OUT-MACOS-LINUX-DEVIATION",
         "TASK-OUT-MEETING-DETECTION-DEFAULT",
         "TASK-OUT-MEETING-DETECTION-DEVIATION",
+        "TASK-OUT-NAS-DEFAULT",
+        "TASK-OUT-NAS-DEVIATION",
         "TASK-OUT-NOTE-TEMPLATES-DEFAULT",
         "TASK-OUT-NOTE-TEMPLATES-DEVIATION",
         "TASK-OUT-PARAKEET-DEFAULT",
@@ -43459,8 +44297,8 @@
       "phase": "PHASE-05-RETAINED-CAPABILITIES",
       "wave": "WAVE-05Z",
       "ordering_rationale": "A phase gate depends on every task in its own phase and is the sole prerequisite barrier for the next phase; it is not an administrative PASS substitute.",
-      "execution_order": 137,
-      "ordering_index": 137,
+      "execution_order": 141,
+      "ordering_index": 141,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -43682,8 +44520,8 @@
       "phase": "PHASE-06-REORGANIZATION-AND-CLEANUP",
       "wave": "WAVE-06",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 138,
-      "ordering_index": 138,
+      "execution_order": 142,
+      "ordering_index": 142,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -43890,8 +44728,8 @@
       "phase": "PHASE-06-REORGANIZATION-AND-CLEANUP",
       "wave": "WAVE-06",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 139,
-      "ordering_index": 139,
+      "execution_order": 143,
+      "ordering_index": 143,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -44125,8 +44963,8 @@
       "phase": "PHASE-06-REORGANIZATION-AND-CLEANUP",
       "wave": "WAVE-06",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 140,
-      "ordering_index": 140,
+      "execution_order": 144,
+      "ordering_index": 144,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -44412,8 +45250,8 @@
       "phase": "PHASE-06-REORGANIZATION-AND-CLEANUP",
       "wave": "WAVE-06",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 141,
-      "ordering_index": 141,
+      "execution_order": 145,
+      "ordering_index": 145,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -44770,8 +45608,8 @@
       "phase": "PHASE-06-REORGANIZATION-AND-CLEANUP",
       "wave": "WAVE-06",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 142,
-      "ordering_index": 142,
+      "execution_order": 146,
+      "ordering_index": 146,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -44948,8 +45786,8 @@
       "phase": "PHASE-06-REORGANIZATION-AND-CLEANUP",
       "wave": "WAVE-06",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 143,
-      "ordering_index": 143,
+      "execution_order": 147,
+      "ordering_index": 147,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -45162,8 +46000,8 @@
       "phase": "PHASE-06-REORGANIZATION-AND-CLEANUP",
       "wave": "WAVE-06",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 144,
-      "ordering_index": 144,
+      "execution_order": 148,
+      "ordering_index": 148,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -45403,8 +46241,8 @@
       "phase": "PHASE-06-REORGANIZATION-AND-CLEANUP",
       "wave": "WAVE-06",
       "ordering_rationale": "The task phase is selected from real prerequisites: baseline and data harnesses, retained-boundary protection, excluded-system removal, retained completion, then repository/package consolidation.",
-      "execution_order": 145,
-      "ordering_index": 145,
+      "execution_order": 149,
+      "ordering_index": 149,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -45917,8 +46755,8 @@
       "phase": "PHASE-06-REORGANIZATION-AND-CLEANUP",
       "wave": "WAVE-06Z",
       "ordering_rationale": "A phase gate depends on every task in its own phase and is the sole prerequisite barrier for the next phase; it is not an administrative PASS substitute.",
-      "execution_order": 146,
-      "ordering_index": 146,
+      "execution_order": 150,
+      "ordering_index": 150,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -46181,8 +47019,8 @@
         "Requirement source-line reconciliation",
         "Zero unmapped requirements"
       ],
-      "execution_order": 147,
-      "ordering_index": 147,
+      "execution_order": 151,
+      "ordering_index": 151,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -46445,8 +47283,8 @@
         "Mutation batch checkpoint",
         "No user-work destruction record"
       ],
-      "execution_order": 148,
-      "ordering_index": 148,
+      "execution_order": 152,
+      "ordering_index": 152,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -46709,8 +47547,8 @@
         "Capability-task reconciliation",
         "Final Graphify/static rescan"
       ],
-      "execution_order": 149,
-      "ordering_index": 149,
+      "execution_order": 153,
+      "ordering_index": 153,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -46973,8 +47811,8 @@
         "Before/after retained workflow evidence",
         "Third-party and legal inspection"
       ],
-      "execution_order": 150,
-      "ordering_index": 150,
+      "execution_order": 154,
+      "ordering_index": 154,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -47237,8 +48075,8 @@
         "Full-layer absence ledger",
         "Runtime and packaged absence proof"
       ],
-      "execution_order": 151,
-      "ordering_index": 151,
+      "execution_order": 155,
+      "ordering_index": 155,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -47501,8 +48339,8 @@
         "Real integration workflows",
         "Broader regression results"
       ],
-      "execution_order": 152,
-      "ordering_index": 152,
+      "execution_order": 156,
+      "ordering_index": 156,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -47765,8 +48603,8 @@
         "Integrity and idempotency results",
         "Interrupted migration recovery drill"
       ],
-      "execution_order": 153,
-      "ordering_index": 153,
+      "execution_order": 157,
+      "ordering_index": 157,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -48029,8 +48867,8 @@
         "Child-process/model fixture result",
         "Microphone/system-audio/hotkey evidence or explicit hardware status"
       ],
-      "execution_order": 154,
-      "ordering_index": 154,
+      "execution_order": 158,
+      "ordering_index": 158,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -48293,8 +49131,8 @@
         "External network denial observation",
         "Owned loopback allow-list evidence"
       ],
-      "execution_order": 155,
-      "ordering_index": 155,
+      "execution_order": 159,
+      "ordering_index": 159,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -48557,8 +49395,8 @@
         "Installer hash and clean installation",
         "Installed offline launch and packaged-asset inspection"
       ],
-      "execution_order": 156,
-      "ordering_index": 156,
+      "execution_order": 160,
+      "ordering_index": 160,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -48821,8 +49659,8 @@
         "macOS/Linux CI or static results",
         "HARDWARE UNAVAILABLE records where applicable"
       ],
-      "execution_order": 157,
-      "ordering_index": 157,
+      "execution_order": 161,
+      "ordering_index": 161,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -49105,8 +49943,8 @@
         "Final simplification audit",
         "Zero placeholder, contradiction and orphan report"
       ],
-      "execution_order": 158,
-      "ordering_index": 158,
+      "execution_order": 162,
+      "ordering_index": 162,
       "execution_state": {
         "disposition": "NOT STARTED",
         "evidence_references": [],
@@ -49118,7 +49956,7 @@
   ],
   "implementation_status": "IN PROGRESS",
   "execution_state_counts": {
-    "NOT STARTED": 157,
+    "NOT STARTED": 161,
     "COMPLETE": 1,
     "NOT APPLICABLE": 0,
     "BLOCKED": 0

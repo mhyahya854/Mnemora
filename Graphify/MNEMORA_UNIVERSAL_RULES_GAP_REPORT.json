@@ -1,0 +1,568 @@
+{
+  "schema_version": 1,
+  "authority": "Mnemora Universal Rules Gap Report (Evaluated against UAC-01..UAC-22)",
+  "evaluated_rules_count": 22,
+  "summary": {
+    "satisfied_count": 8,
+    "partial_count": 12,
+    "missing_count": 2,
+    "conflict_count": 0,
+    "not_applicable_count": 0
+  },
+  "critical_gaps": [
+    "UAC-04 (NAS / private-LAN support): Unaddressed network share latency, locking, corruption risks, and share disconnect handling for SQLite on NAS.",
+    "UAC-11 (Mutation audit log / change flagging): Missing append-oriented entity mutation audit log, missing external-change detection, missing reconciliation workflows.",
+    "UAC-03 / UAC-21 (Portable Data Root Sovereignty and Relative References): User data root currently hardcoded to default OS user-data directory; absolute file paths stored in database prevent portable data root relocation."
+  ],
+  "master_plan_conflicts": [],
+  "task_2_affected": true,
+  "task_2_canonical_disposition": "NOT STARTED",
+  "task_2_recovery_branch": "recovery/task-cap-data-safety-blocked",
+  "evaluations": [
+    {
+      "stable_rule_id": "UAC-01",
+      "title": "APPLICATION INDEPENDENCE",
+      "status": "SATISFIED",
+      "evidence_paths": [
+        "codebase/main/index.js",
+        "codebase/package.json",
+        "codebase/tests/integration/offlineFirstLaunch.test.js",
+        "Graphify/tools/semantic_validator.py"
+      ],
+      "evidence_explanation": "Runtime codebase does not import, require, or depend on Hermes, Graphify, or external orchestrators. Core operations (audio capture, transcription, database persistence, search, backup, restore, UI) are local Node.js/Electron/SQLite code. SEM-044 validator checks ban hermes and Graphify imports across all tracked codebase files.",
+      "affected_capability_ids": [
+        "CAP-APP-SHELL",
+        "CAP-DATABASE",
+        "CAP-OFFLINE-FIRST-LAUNCH"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-APP-SHELL",
+        "TASK-CAP-DATABASE",
+        "TASK-CAP-OFFLINE-FIRST-LAUNCH"
+      ],
+      "missing_implementation": null,
+      "queue_change_required": false,
+      "master_plan_conflict": false,
+      "task_2_affected": false
+    },
+    {
+      "stable_rule_id": "UAC-02",
+      "title": "LOCAL-FIRST / OFFLINE-FIRST",
+      "status": "PARTIAL",
+      "evidence_paths": [
+        "codebase/main/infrastructure/runtime/runtimeNetworkPolicy.js",
+        "codebase/main/features/transcription/whisper.js",
+        "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md",
+        "Graphify/Master Plan/02-EVERYTHING-WE-ARE-DELETING.md"
+      ],
+      "evidence_explanation": "Master Plans mandate 100% offline execution and loopback-only binding (127.0.0.1). However, in the current donor codebase baseline (prior to executing Phase 4 deletion tasks), dormant cloud synchronization, remote auth, and telemetry remnants remain in codebase/ pending deletion under BDI interlocks.",
+      "affected_capability_ids": [
+        "CAP-NETWORK-POLICY",
+        "CAP-OFFLINE-FIRST-LAUNCH",
+        "CAP-REMOVE-CLOUD-SYNCHRONISATION",
+        "CAP-REMOVE-EXTERNAL-NETWORKING",
+        "CAP-REMOVE-AUTHENTICATION"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-NETWORK-POLICY",
+        "TASK-CAP-OFFLINE-FIRST-LAUNCH",
+        "TASK-DEL-CLOUD-SYNCHRONISATION",
+        "TASK-DEL-RUNTIME-EXTERNAL-NETWORKING",
+        "TASK-DEL-AUTHENTICATION"
+      ],
+      "missing_implementation": "Execution of Phase 4 deletion tasks to cleanly excise all donor cloud/network code.",
+      "queue_change_required": false,
+      "master_plan_conflict": false,
+      "task_2_affected": false
+    },
+    {
+      "stable_rule_id": "UAC-03",
+      "title": "USER-SELECTED DATA ROOT SOVEREIGNTY",
+      "status": "PARTIAL",
+      "evidence_paths": [
+        "codebase/main/infrastructure/persistence/database.js",
+        "codebase/main/index.js",
+        "codebase/main/features/settings/settingsManager.js"
+      ],
+      "evidence_explanation": "User data is currently anchored to Electron default app.getPath('userData'). There is no mechanism for the user to select or move a custom application data root without data meaning loss. SQLite tables also record absolute paths rather than root-relative portable paths.",
+      "affected_capability_ids": [
+        "CAP-DATA-SAFETY",
+        "CAP-DATABASE",
+        "CAP-SETTINGS"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-DATA-SAFETY",
+        "TASK-CAP-DATABASE",
+        "TASK-CAP-SETTINGS"
+      ],
+      "missing_implementation": "Explicit data-root resolution service, custom data-root configuration UI in settings, relative path resolution for stored assets, and safe migration workflow when moving the data root.",
+      "queue_change_required": true,
+      "master_plan_conflict": false,
+      "task_2_affected": true
+    },
+    {
+      "stable_rule_id": "UAC-04",
+      "title": "NAS / PRIVATE-LAN SUPPORT",
+      "status": "MISSING",
+      "evidence_paths": [
+        "codebase/main/infrastructure/persistence/database.js",
+        "codebase/main/infrastructure/persistence/localBackup.js",
+        "Graphify/CONDITIONAL_DECISION_PACKAGES.json"
+      ],
+      "evidence_explanation": "Current implementation has zero handling for network shares / NAS data roots. SQLite is known to suffer locking failures, latency timeouts, and corruption over network filesystems (SMB/NFS). Share unavailability, reconnection, latency, interrupted writes, and multi-instance concurrency on network drives are completely unaddressed in current code.",
+      "affected_capability_ids": [
+        "CAP-DATA-SAFETY",
+        "CAP-DATABASE",
+        "CAP-NAS"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-DATA-SAFETY",
+        "TASK-DEC-NAS",
+        "TASK-OUT-NAS-DEFAULT",
+        "TASK-OUT-NAS-DEVIATION"
+      ],
+      "missing_implementation": "Technical architecture decision (DEC-NAS) for safe NAS support: separating canonical active SQLite working database locally with continuous or on-change replica/archive to NAS, vs proving direct SQLite-on-NAS with advisory locks. Handling share disconnects, latency, reconnection, one-writer locking, and multi-instance prevention.",
+      "queue_change_required": true,
+      "master_plan_conflict": false,
+      "task_2_affected": true
+    },
+    {
+      "stable_rule_id": "UAC-05",
+      "title": "CROSS-PLATFORM SUPPORT",
+      "status": "PARTIAL",
+      "evidence_paths": [
+        "codebase/native/helpers/macos/mac_meeting_audio_tap.swift",
+        "codebase/native/helpers/linux/audio_portal_monitor.py",
+        "codebase/electron-builder.json",
+        "Graphify/CONDITIONAL_DECISION_PACKAGES.json"
+      ],
+      "evidence_explanation": "Donor macOS and Linux helper source code is preserved in codebase/native/helpers/ under CAP-MACOS-LINUX and DEC-MACOS-LINUX. However, Mnemora first-release milestone is explicitly Windows-first (CAP-WINDOWS-INSTALLER, CAP-PORTABLE-WINDOWS). Cross-platform runtime execution, platform-specific hotkeys, and packaging have not been tested or proven on macOS or Linux.",
+      "affected_capability_ids": [
+        "CAP-MACOS-LINUX",
+        "CAP-WINDOWS-INSTALLER",
+        "CAP-PORTABLE-WINDOWS",
+        "CAP-NATIVE"
+      ],
+      "affected_task_ids": [
+        "TASK-DEC-MACOS-LINUX",
+        "TASK-OUT-MACOS-LINUX-DEFAULT",
+        "TASK-OUT-MACOS-LINUX-DEVIATION",
+        "TASK-CAP-WINDOWS-INSTALLER"
+      ],
+      "missing_implementation": "macOS and Linux build pipelines, packaging scripts, and native helper runtime verification.",
+      "queue_change_required": false,
+      "master_plan_conflict": false,
+      "task_2_affected": false
+    },
+    {
+      "stable_rule_id": "UAC-06",
+      "title": "FEATURE-FIRST MODULAR MONOLITH",
+      "status": "PARTIAL",
+      "evidence_paths": [
+        "codebase/main/features/dictation/",
+        "codebase/renderer/features/notes/",
+        "codebase/main/infrastructure/",
+        "codebase/renderer/shared/"
+      ],
+      "evidence_explanation": "The codebase partially uses a feature-first structure with main/features/ and renderer/features/. However, generic dumping grounds still exist (codebase/main/infrastructure/, codebase/renderer/shared/utils/, etc.) containing mixed responsibilities across features.",
+      "affected_capability_ids": [
+        "CAP-REPOSITORY",
+        "CAP-SIMPLIFICATION"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-REPOSITORY",
+        "TASK-CAP-SIMPLIFICATION"
+      ],
+      "missing_implementation": "Incremental migration of shared utilities to feature ownership during Phase 6 reorganization tasks.",
+      "queue_change_required": true,
+      "master_plan_conflict": false,
+      "task_2_affected": false
+    },
+    {
+      "stable_rule_id": "UAC-07",
+      "title": "HUMAN-READABLE FOLDER CONTRACT",
+      "status": "SATISFIED",
+      "evidence_paths": [
+        "Graphify/FOLDER_OWNERSHIP_MAP.md",
+        "codebase/main/features/",
+        "codebase/renderer/features/",
+        "Graphify/REPOSITORY_INVENTORY.md"
+      ],
+      "evidence_explanation": "All codebase and durable repository directories are self-describing, human-readable, and domain-oriented. Data files use clear folder hierarchies rather than opaque hash trees.",
+      "affected_capability_ids": [
+        "CAP-REPOSITORY",
+        "CAP-DATA-SAFETY"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-REPOSITORY",
+        "TASK-CAP-DATA-SAFETY"
+      ],
+      "missing_implementation": null,
+      "queue_change_required": false,
+      "master_plan_conflict": false,
+      "task_2_affected": false
+    },
+    {
+      "stable_rule_id": "UAC-08",
+      "title": "SMALL-MODEL NAVIGABILITY",
+      "status": "SATISFIED",
+      "evidence_paths": [
+        "Graphify/MASTER_REQUIREMENT_REGISTER.json",
+        "Graphify/CAPABILITY_REGISTRY.json",
+        "Graphify/EXACT_LOCATION_REGISTRY.json",
+        "Graphify/IMPLEMENTATION_QUEUE.json"
+      ],
+      "evidence_explanation": "The repository and planning architecture provide canonical IDs (REQ-*, CAP-*, TASK-*, LOC-*), deterministic cross-references, exact symbol mappings, and bounded scopes so that a 1B-class local model can accurately navigate without speculative guessing.",
+      "affected_capability_ids": [
+        "CAP-PLANNING-GOVERNANCE",
+        "CAP-EXACT-LOCATION"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-PLANNING-GOVERNANCE",
+        "TASK-CAP-EXACT-LOCATION"
+      ],
+      "missing_implementation": null,
+      "queue_change_required": false,
+      "master_plan_conflict": false,
+      "task_2_affected": false
+    },
+    {
+      "stable_rule_id": "UAC-09",
+      "title": "DETERMINISTIC NON-AI CORE",
+      "status": "SATISFIED",
+      "evidence_paths": [
+        "codebase/main/infrastructure/persistence/database.js",
+        "codebase/main/features/transcription/whisper.js",
+        "Graphify/Master Plan/02-EVERYTHING-WE-ARE-DELETING.md"
+      ],
+      "evidence_explanation": "Core persistence, audio capture, state management, hotkeys, and indexing are 100% deterministic code. Speech recognition uses deterministic local Whisper inference (acoustic models only). Generative AI and cloud LLMs are explicitly forbidden from the release.",
+      "affected_capability_ids": [
+        "CAP-DATABASE",
+        "CAP-TRANSCRIPTION",
+        "CAP-REMOVE-LOCAL-GENERATIVE-AI"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-DATABASE",
+        "TASK-CAP-TRANSCRIPTION",
+        "TASK-DEL-LOCAL-GENERATIVE-AI"
+      ],
+      "missing_implementation": null,
+      "queue_change_required": false,
+      "master_plan_conflict": false,
+      "task_2_affected": false
+    },
+    {
+      "stable_rule_id": "UAC-10",
+      "title": "AUTHORIZED MUTATION MODEL",
+      "status": "SATISFIED",
+      "evidence_paths": [
+        "Graphify/IMPLEMENTATION_QUEUE.json",
+        "Graphify/tools/execution_state.py",
+        "Graphify/tools/semantic_validator.py"
+      ],
+      "evidence_explanation": "Codebase mutations are strictly bounded by single-task execution contracts enforcing files_expected_to_change and files_forbidden_from_changing. Application data mutations occur strictly through validated UI and IPC handlers. Arbitrary filesystem mutations are blocked.",
+      "affected_capability_ids": [
+        "CAP-IMPLEMENTATION-GOVERNANCE",
+        "CAP-DATA-SAFETY"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-IMPLEMENTATION-GOVERNANCE",
+        "TASK-CAP-DATA-SAFETY"
+      ],
+      "missing_implementation": null,
+      "queue_change_required": false,
+      "master_plan_conflict": false,
+      "task_2_affected": false
+    },
+    {
+      "stable_rule_id": "UAC-11",
+      "title": "MUTATION AUDIT LOG / CHANGE FLAGGING",
+      "status": "MISSING",
+      "evidence_paths": [
+        "codebase/main/infrastructure/persistence/database.js",
+        "codebase/main/infrastructure/persistence/migrations/001_initial_schema.js"
+      ],
+      "evidence_explanation": "Mnemora currently has application debug logs (electron-log/console), but does NOT have an append-oriented entity mutation audit log recording actor, operation, timestamp, previous hash, resulting hash, and reason. External/unrecognized changes to database or audio files are not detected, flagged, or reconciled.",
+      "affected_capability_ids": [
+        "CAP-DATA-SAFETY",
+        "CAP-DATABASE",
+        "CAP-MUTATION-LOG"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-DATA-SAFETY",
+        "TASK-CAP-MUTATION-LOG"
+      ],
+      "missing_implementation": "Append-oriented mutation audit table/log, file-watcher / hash-check for external modification detection, and conflict reconciliation workflows (inspect diff, keep external, accept app, restore, reject).",
+      "queue_change_required": true,
+      "master_plan_conflict": false,
+      "task_2_affected": true
+    },
+    {
+      "stable_rule_id": "UAC-12",
+      "title": "RECOVERABILITY OVER MAGIC",
+      "status": "PARTIAL",
+      "evidence_paths": [
+        "codebase/main/features/meetings/recordingRecovery.js",
+        "codebase/main/infrastructure/persistence/localBackup.js",
+        "codebase/main/infrastructure/persistence/dataMigration.js"
+      ],
+      "evidence_explanation": "Recording recovery manager exists for interrupted audio. Migration and backup scripts exist in donor code. However, comprehensive transactional copy-before-transform, verified restore, and crash-interruption recovery are scheduled for implementation under TASK-CAP-DATA-SAFETY (which is NOT STARTED).",
+      "affected_capability_ids": [
+        "CAP-DATA-SAFETY",
+        "CAP-BACKUP",
+        "CAP-RESTORE",
+        "CAP-RECOVERY"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-DATA-SAFETY",
+        "TASK-CAP-BACKUP",
+        "TASK-CAP-RESTORE",
+        "TASK-CAP-RECOVERY"
+      ],
+      "missing_implementation": "Implementation of verified copy-before-transform harness in Task 2.",
+      "queue_change_required": false,
+      "master_plan_conflict": false,
+      "task_2_affected": true
+    },
+    {
+      "stable_rule_id": "UAC-13",
+      "title": "ORIGINALS VS DERIVED STATE",
+      "status": "PARTIAL",
+      "evidence_paths": [
+        "codebase/main/features/search/vectorIndex.js",
+        "codebase/main/features/notes/markdownMirror.js",
+        "codebase/main/infrastructure/persistence/database.js"
+      ],
+      "evidence_explanation": "Architecture separates raw audio and notes from derived embeddings and search indexes. Full proof that vector indexes can be cleanly reconstructed from scratch without data loss is scheduled in TASK-CAP-SEARCH-SEMANTIC.",
+      "affected_capability_ids": [
+        "CAP-DATA-SAFETY",
+        "CAP-SEARCH-SEMANTIC",
+        "CAP-NOTES"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-DATA-SAFETY",
+        "TASK-CAP-SEARCH-SEMANTIC",
+        "TASK-CAP-NOTES"
+      ],
+      "missing_implementation": "Index rebuild verification from raw notes and transcripts without data loss.",
+      "queue_change_required": false,
+      "master_plan_conflict": false,
+      "task_2_affected": false
+    },
+    {
+      "stable_rule_id": "UAC-14",
+      "title": "DATABASE / SQLITE SAFETY",
+      "status": "PARTIAL",
+      "evidence_paths": [
+        "codebase/main/infrastructure/persistence/database.js",
+        "codebase/main/infrastructure/persistence/migrations/001_initial_schema.js",
+        "codebase/main/features/notes/markdownMirror.js"
+      ],
+      "evidence_explanation": "SQLite is explicitly retained via Kysely and better-sqlite3. Schema migrations are forward-only. Notes have a Markdown mirror. However, database backup verification, integrity check PRAGMAs, and safe restore harnesses are currently unimplemented pending Task 2.",
+      "affected_capability_ids": [
+        "CAP-DATABASE",
+        "CAP-DATA-SAFETY",
+        "CAP-BACKUP",
+        "CAP-RESTORE",
+        "CAP-KYSELY"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-DATA-SAFETY",
+        "TASK-CAP-DATABASE",
+        "TASK-DEC-KYSELY"
+      ],
+      "missing_implementation": "Verification of complete backups, schema dump exports, and PRAGMA integrity_check.",
+      "queue_change_required": false,
+      "master_plan_conflict": false,
+      "task_2_affected": true
+    },
+    {
+      "stable_rule_id": "UAC-15",
+      "title": "SOURCE / PRIVATE DATA / GIT SEPARATION",
+      "status": "SATISFIED",
+      "evidence_paths": [
+        ".gitignore",
+        "Graphify/tools/semantic_validator.py"
+      ],
+      "evidence_explanation": "Strict .gitignore rules prevent SQLite files, WAL files, private recordings, logs, .env, and build outputs from entering Git. SEM-044 actively validates that no tracked private data files or secrets exist in the git index.",
+      "affected_capability_ids": [
+        "CAP-IMPLEMENTATION-GOVERNANCE",
+        "CAP-DATA-SAFETY"
+      ],
+      "affected_task_ids": [
+        "TASK-GOV-001-PROVENANCE-BASELINE",
+        "TASK-CAP-IMPLEMENTATION-GOVERNANCE"
+      ],
+      "missing_implementation": null,
+      "queue_change_required": false,
+      "master_plan_conflict": false,
+      "task_2_affected": false
+    },
+    {
+      "stable_rule_id": "UAC-16",
+      "title": "REPRODUCIBLE BUILDS",
+      "status": "PARTIAL",
+      "evidence_paths": [
+        "codebase/package.json",
+        "codebase/package-lock.json",
+        "codebase/electron-builder.json"
+      ],
+      "evidence_explanation": "Package dependencies are pinned with package-lock.json. Packaging configuration is defined in electron-builder.json. However, fully offline reproducible native compilation and packaging have not yet been executed or proven on this repository.",
+      "affected_capability_ids": [
+        "CAP-PACKAGING",
+        "CAP-WINDOWS-INSTALLER",
+        "CAP-PORTABLE-WINDOWS"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-PACKAGING",
+        "TASK-CAP-WINDOWS-INSTALLER",
+        "TASK-DEC-PORTABLE-WINDOWS"
+      ],
+      "missing_implementation": "Packaging pipeline execution and artifact verification under Phase 6 packaging tasks.",
+      "queue_change_required": false,
+      "master_plan_conflict": false,
+      "task_2_affected": false
+    },
+    {
+      "stable_rule_id": "UAC-17",
+      "title": "THIRD-PARTY / DONOR PROVENANCE",
+      "status": "PARTIAL",
+      "evidence_paths": [
+        "codebase/LICENSE",
+        "Graphify/THIRD_PARTY_CODE_REGISTER.md"
+      ],
+      "evidence_explanation": "Historical OpenWhispr MIT license and copyright notice are preserved in codebase/LICENSE. All top-level packages are catalogued in Graphify/THIRD_PARTY_CODE_REGISTER.md. Verification of bundled binary licenses (Whisper, FFmpeg, ONNX, Qdrant) is scheduled under TASK-CAP-THIRD-PARTY and TASK-CAP-LEGAL.",
+      "affected_capability_ids": [
+        "CAP-LEGAL",
+        "CAP-THIRD-PARTY"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-LEGAL",
+        "TASK-CAP-THIRD-PARTY"
+      ],
+      "missing_implementation": "Execution of binary license verification tasks.",
+      "queue_change_required": false,
+      "master_plan_conflict": false,
+      "task_2_affected": false
+    },
+    {
+      "stable_rule_id": "UAC-18",
+      "title": "FAIL CLOSED",
+      "status": "PARTIAL",
+      "evidence_paths": [
+        "codebase/main/infrastructure/runtime/runtimeNetworkPolicy.js",
+        "Graphify/tools/execution_state.py"
+      ],
+      "evidence_explanation": "Governance tools fail closed on any ambiguity (blocking execution). Network policy blocks unauthorized egress. However, runtime data safety handlers in application code need verification in Task 2 to ensure corrupt databases or failed writes fail closed without silent data loss.",
+      "affected_capability_ids": [
+        "CAP-DATA-SAFETY",
+        "CAP-NETWORK-POLICY"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-DATA-SAFETY",
+        "TASK-CAP-NETWORK-POLICY"
+      ],
+      "missing_implementation": "Fail-closed error boundaries in Task 2.",
+      "queue_change_required": false,
+      "master_plan_conflict": false,
+      "task_2_affected": true
+    },
+    {
+      "stable_rule_id": "UAC-19",
+      "title": "UI / AI / PROVIDER REPLACEABILITY",
+      "status": "SATISFIED",
+      "evidence_paths": [
+        "codebase/main/features/transcription/whisper.js",
+        "codebase/main/features/search/vectorIndex.js",
+        "codebase/main/infrastructure/persistence/database.js"
+      ],
+      "evidence_explanation": "Domain logic and user data (SQLite, WAV audio, Markdown notes) are fully decoupled from UI frameworks and specific models. Transcription engines can be swapped without touching stored notes or audio archives.",
+      "affected_capability_ids": [
+        "CAP-APP-SHELL",
+        "CAP-TRANSCRIPTION",
+        "CAP-SEARCH-SEMANTIC"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-APP-SHELL",
+        "TASK-CAP-TRANSCRIPTION",
+        "TASK-CAP-SEARCH-SEMANTIC"
+      ],
+      "missing_implementation": null,
+      "queue_change_required": false,
+      "master_plan_conflict": false,
+      "task_2_affected": false
+    },
+    {
+      "stable_rule_id": "UAC-20",
+      "title": "SCHEMA / VERSION SAFETY",
+      "status": "PARTIAL",
+      "evidence_paths": [
+        "codebase/main/infrastructure/persistence/database.js",
+        "codebase/main/infrastructure/persistence/migrations/001_initial_schema.js"
+      ],
+      "evidence_explanation": "Schema migrations use version numbers. Forward migrations are preserved. However, safe fail-closed behavior when encountering unsupported newer schemas (e.g. read-only safe mode or graceful rejection) is scheduled for implementation in TASK-CAP-DATA-SAFETY.",
+      "affected_capability_ids": [
+        "CAP-DATA-SAFETY",
+        "CAP-DATABASE",
+        "CAP-LEGACY-MIGRATION"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-DATA-SAFETY",
+        "TASK-CAP-DATABASE",
+        "TASK-CAP-LEGACY-MIGRATION"
+      ],
+      "missing_implementation": "Newer-schema rejection test in Task 2.",
+      "queue_change_required": false,
+      "master_plan_conflict": false,
+      "task_2_affected": true
+    },
+    {
+      "stable_rule_id": "UAC-21",
+      "title": "STABLE IDS / PORTABLE REFERENCES",
+      "status": "PARTIAL",
+      "evidence_paths": [
+        "codebase/main/infrastructure/persistence/database.js",
+        "Graphify/MASTER_REQUIREMENT_REGISTER.json"
+      ],
+      "evidence_explanation": "Entities use stable IDs. However, current SQLite persistence stores absolute machine file paths for audio recordings. These must be replaced with portable relative references relative to the data root.",
+      "affected_capability_ids": [
+        "CAP-DATABASE",
+        "CAP-DATA-SAFETY",
+        "CAP-NOTES"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-DATA-SAFETY",
+        "TASK-CAP-DATABASE",
+        "TASK-CAP-NOTES"
+      ],
+      "missing_implementation": "Migration of absolute paths to portable relative references.",
+      "queue_change_required": true,
+      "master_plan_conflict": false,
+      "task_2_affected": true
+    },
+    {
+      "stable_rule_id": "UAC-22",
+      "title": "SELF-DESCRIBING PROJECT CONTRACT",
+      "status": "SATISFIED",
+      "evidence_paths": [
+        "Graphify/CAPABILITY_REGISTRY.json",
+        "Graphify/IMPLEMENTATION_QUEUE.json",
+        "Graphify/START-HERE.md",
+        "Graphify/REPOSITORY_FILE_INVENTORY.json"
+      ],
+      "evidence_explanation": "Graphify contains machine-readable contracts describing all entities, schemas, versions, allowed mutations, dependencies, and validation methods without relying on undocumented conversation history.",
+      "affected_capability_ids": [
+        "CAP-PLANNING-GOVERNANCE",
+        "CAP-IMPLEMENTATION-GOVERNANCE"
+      ],
+      "affected_task_ids": [
+        "TASK-CAP-PLANNING-GOVERNANCE",
+        "TASK-CAP-IMPLEMENTATION-GOVERNANCE"
+      ],
+      "missing_implementation": null,
+      "queue_change_required": false,
+      "master_plan_conflict": false,
+      "task_2_affected": false
+    }
+  ]
+}

@@ -140,8 +140,8 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "task_nodes": 158,
-        "dependency_edges": 323,
+        "task_nodes": 162,
+        "dependency_edges": 335,
         "root_tasks": [
           "TASK-GOV-001-PROVENANCE-BASELINE"
         ],
@@ -160,8 +160,8 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "task_nodes": 158,
-        "dependency_edges": 323,
+        "task_nodes": 162,
+        "dependency_edges": 335,
         "root_tasks": [
           "TASK-GOV-001-PROVENANCE-BASELINE"
         ],
@@ -180,8 +180,8 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "task_nodes": 158,
-        "dependency_edges": 323,
+        "task_nodes": 162,
+        "dependency_edges": 335,
         "root_tasks": [
           "TASK-GOV-001-PROVENANCE-BASELINE"
         ],
@@ -229,7 +229,7 @@
       "errors": [],
       "details": {
         "EXISTING TEST": 26,
-        "TEST TO CREATE": 125
+        "TEST TO CREATE": 129
       }
     },
     {
@@ -239,8 +239,8 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "APPLICATION INTEGRATION TEST": 63,
-        "APPLICATION UNIT TEST": 102,
+        "APPLICATION INTEGRATION TEST": 67,
+        "APPLICATION UNIT TEST": 106,
         "AUDIO/HARDWARE TEST": 6,
         "BACKUP/RESTORE TEST": 2,
         "FILESYSTEM TEST": 7,
@@ -255,7 +255,7 @@
         "OFFLINE NETWORK OBSERVATION": 5,
         "PACKAGING/INSTALLER TEST": 8,
         "SQLITE INTEGRATION TEST": 3,
-        "STATIC/GRAPH AUDIT": 158
+        "STATIC/GRAPH AUDIT": 162
       }
     },
     {
@@ -265,7 +265,7 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "packages": 11
+        "packages": 12
       }
     },
     {
@@ -514,6 +514,8 @@
           "CAP-MODEL-DISCOVERY": 3,
           "CAP-MODEL-PACK": 2,
           "CAP-MODELS": 2,
+          "CAP-MUTATION-LOG": 1,
+          "CAP-NAS": 1,
           "CAP-NATIVE": 3,
           "CAP-NETWORK-POLICY": 8,
           "CAP-NOTE-TEMPLATES": 2,
@@ -635,9 +637,9 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "before": "C13DF907E316DF15A05AB06F56C05A8C38613677F7A501A56BCAF75875B9B3CA",
-        "after": "C13DF907E316DF15A05AB06F56C05A8C38613677F7A501A56BCAF75875B9B3CA",
-        "generator_stdout": "{\n  \"requirements\": 536,\n  \"capabilities\": 120,\n  \"tasks\": 158,\n  \"deletion_tasks\": 31,\n  \"conditional_packages\": 11,\n  \"release_gates\": 12,\n  \"exact_locations\": 780\n}"
+        "before": "57595B58433C09DC145064B2B2A91AA6222242041B81C8C5F3EF993CD6A284FE",
+        "after": "57595B58433C09DC145064B2B2A91AA6222242041B81C8C5F3EF993CD6A284FE",
+        "generator_stdout": "{\n  \"requirements\": 536,\n  \"capabilities\": 122,\n  \"tasks\": 162,\n  \"deletion_tasks\": 31,\n  \"conditional_packages\": 12,\n  \"release_gates\": 12,\n  \"exact_locations\": 783\n}"
       }
     },
     {
@@ -706,9 +708,9 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "committed_output_manifest_entries": 70,
-        "regenerated_output_manifest_entries": 70,
-        "tracked_graphify_files": 87
+        "committed_output_manifest_entries": 75,
+        "regenerated_output_manifest_entries": 75,
+        "tracked_graphify_files": 92
       }
     },
     {
@@ -817,7 +819,7 @@
       "details": {
         "implementation_status": "IN PROGRESS",
         "execution_state_counts": {
-          "NOT STARTED": 157,
+          "NOT STARTED": 161,
           "COMPLETE": 1,
           "NOT APPLICABLE": 0,
           "BLOCKED": 0
@@ -864,16 +866,16 @@
       "Product requirement": 55,
       "Testing requirement": 7
     },
-    "capabilities": 120,
-    "exact_locations": 780,
-    "tasks": 158,
+    "capabilities": 122,
+    "exact_locations": 783,
+    "tasks": 162,
     "deletion_tasks": 31,
-    "conditional_packages": 11,
+    "conditional_packages": 12,
     "release_gates": 12
   },
   "dependency_graph": {
-    "task_nodes": 158,
-    "dependency_edges": 323,
+    "task_nodes": 162,
+    "dependency_edges": 335,
     "root_tasks": [
       "TASK-GOV-001-PROVENANCE-BASELINE"
     ],
@@ -934,7 +936,7 @@
   "execution_state": {
     "implementation_status": "IN PROGRESS",
     "execution_state_counts": {
-      "NOT STARTED": 157,
+      "NOT STARTED": 161,
       "COMPLETE": 1,
       "NOT APPLICABLE": 0,
       "BLOCKED": 0

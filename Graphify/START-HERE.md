@@ -1,18 +1,19 @@
 # Mnemora implementation handoff
 
-This is the single authoritative entry point for an implementation run. Validated implementation state is IN PROGRESS; see each task's execution_state for evidence and checkpoint identity. The current application root is the lowercase `codebase/` folder; `Codebase/` is only a future target named by the Master Plan. The derived planning is subordinate to all three immutable Master Plan files. Planning generation never turns a planning contract into implementation evidence.
+This is the single authoritative entry point for an implementation run. Validated implementation state is IN PROGRESS; see each task's execution_state for evidence and checkpoint identity. The current application root is the lowercase `codebase/` folder; `Codebase/` is only a future target named by the Master Plan. The derived planning is subordinate to the Universal App Constitution and all three immutable Master Plan files. Planning generation never turns a planning contract into implementation evidence.
 
 ## Authority order
 
-1. `Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md`
-2. `Master Plan/02-EVERYTHING-WE-ARE-DELETING.md`
-3. `Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md`
-4. `MASTER_REQUIREMENT_REGISTER.json`
-5. `INTERPRETATION_REGISTER.json`
-6. `CAPABILITY_REGISTRY.json`
-7. `EXACT_LOCATION_REGISTRY.json`
-8. `IMPLEMENTATION_QUEUE.json`
-9. `CONDITIONAL_DECISION_PACKAGES.json` and `RELEASE_GATE_PLAN.json`
+1. Universal App Constitution (`UNIVERSAL_APP_CONSTITUTION.md` / `UNIVERSAL_APP_CONSTITUTION.json`, binding cross-app user authority)
+2. `Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md`
+3. `Master Plan/02-EVERYTHING-WE-ARE-DELETING.md`
+4. `Master Plan/03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md`
+5. `MASTER_REQUIREMENT_REGISTER.json`
+6. `INTERPRETATION_REGISTER.json`
+7. `CAPABILITY_REGISTRY.json`
+8. `EXACT_LOCATION_REGISTRY.json`
+9. `IMPLEMENTATION_QUEUE.json`
+10. `CONDITIONAL_DECISION_PACKAGES.json` and `RELEASE_GATE_PLAN.json`
 
 ## Scope and editable boundaries
 
@@ -49,9 +50,9 @@ The immutable execution root is ordering index 1 in `IMPLEMENTATION_QUEUE.json`.
 | PHASE-02-CHARACTERIZATION-AND-DATA-SAFETY | 2 | 13 | 12 | WAVE-02, WAVE-02Z |
 | PHASE-03-DECOUPLING-AND-RETAINED-PROTECTION | 14 | 36 | 23 | WAVE-03, WAVE-03Z |
 | PHASE-04-EXCLUDED-SYSTEM-REMOVAL | 37 | 68 | 32 | WAVE-04, WAVE-04Z |
-| PHASE-05-RETAINED-CAPABILITIES | 69 | 137 | 69 | WAVE-05, WAVE-05C, WAVE-05D, WAVE-05E, WAVE-05Z |
-| PHASE-06-REORGANIZATION-AND-CLEANUP | 138 | 146 | 9 | WAVE-06, WAVE-06Z |
-| PHASE-07-INTEGRATION-AND-RELEASE-EVIDENCE | 147 | 158 | 12 | WAVE-07 |
+| PHASE-05-RETAINED-CAPABILITIES | 69 | 141 | 73 | WAVE-05, WAVE-05C, WAVE-05D, WAVE-05E, WAVE-05Z |
+| PHASE-06-REORGANIZATION-AND-CLEANUP | 142 | 150 | 9 | WAVE-06, WAVE-06Z |
+| PHASE-07-INTEGRATION-AND-RELEASE-EVIDENCE | 151 | 162 | 12 | WAVE-07 |
 
 `semantic_dependencies` is the authoritative prerequisite relation. `execution_order`/`ordering_index` is its deterministic topological handoff order, not an artificial immediate-predecessor chain. A future model may parallelize only tasks whose `semantic_dependencies` are complete and whose files/data boundaries do not overlap. For each conditional package, one outcome is implemented and the other must receive an evidence-linked `NOT APPLICABLE` disposition; neither branch may be silently skipped.
 

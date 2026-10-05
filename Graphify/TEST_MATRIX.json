@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "authority": "Planning-only test and evidence contract authority",
-  "test_contract_count": 158,
+  "test_contract_count": 162,
   "executed_in_this_run": 0,
   "verified_package_scripts": {
     "test": "cross-env ELECTRON_RUN_AS_NODE=1 electron --test \"tests/**/*.test.js\"",
@@ -19,17 +19,17 @@
   "reference_status_totals": {
     "EXISTING TEST": 101,
     "MANUAL/EXTERNAL EVIDENCE": 2,
-    "PACKAGE SCRIPT": 306,
+    "PACKAGE SCRIPT": 318,
     "STATIC VALIDATOR": 222,
-    "TEST TO CREATE": 224
+    "TEST TO CREATE": 236
   },
   "unique_test_path_totals": {
     "EXISTING TEST": 26,
-    "TEST TO CREATE": 125
+    "TEST TO CREATE": 129
   },
   "evidence_type_totals": {
-    "APPLICATION INTEGRATION TEST": 63,
-    "APPLICATION UNIT TEST": 102,
+    "APPLICATION INTEGRATION TEST": 67,
+    "APPLICATION UNIT TEST": 106,
     "AUDIO/HARDWARE TEST": 6,
     "BACKUP/RESTORE TEST": 2,
     "FILESYSTEM TEST": 7,
@@ -44,7 +44,7 @@
     "OFFLINE NETWORK OBSERVATION": 5,
     "PACKAGING/INSTALLER TEST": 8,
     "SQLITE INTEGRATION TEST": 3,
-    "STATIC/GRAPH AUDIT": 158
+    "STATIC/GRAPH AUDIT": 162
   },
   "tests": [
     {
@@ -7738,6 +7738,90 @@
       "final_result": null
     },
     {
+      "test_contract_id": "TEST-CAP-MUTATION-LOG",
+      "task_id": "TASK-CAP-MUTATION-LOG",
+      "capability_id": "CAP-MUTATION-LOG",
+      "master_requirement_ids": [
+        "REQ-MP1-047F877A85"
+      ],
+      "phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "wave": "WAVE-05",
+      "characterisation_before_change": [
+        {
+          "test_path": "codebase/tests/integration/attributable-mutation-audit-log-and-external-change-detection.contract.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "boundary": "Create a real Attributable mutation audit log and external change detection characterization at the applicable SQLite, filesystem, Electron, native, process, audio, or model boundary before mutation."
+        }
+      ],
+      "targeted_verification": [
+        {
+          "test_path": "codebase/tests/integration/attributable-mutation-audit-log-and-external-change-detection.contract.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/targeted.log"
+        }
+      ],
+      "real_integration_verification": [
+        {
+          "test_path": "codebase/tests/integration/attributable-mutation-audit-log-and-external-change-detection.real-boundary.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION INTEGRATION TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "boundary": "Exercise the real SQLite/filesystem/Electron/native/process/audio/model or installed boundary named by the evidence type; mocks cannot close this proof.",
+          "evidence": "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/integration.log"
+        }
+      ],
+      "broader_regression_verification": [
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/regression.log"
+        },
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "STATIC/GRAPH AUDIT",
+          "command": "npm run typecheck",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/typecheck.log"
+        },
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "STATIC/GRAPH AUDIT",
+          "command": "npm run lint",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/lint.log"
+        }
+      ],
+      "offline_verification_impact": "Include this workflow in the final installed offline regression when runtime reachable; record NOT APPLICABLE with reachability evidence only when it is not runtime reachable.",
+      "required_evidence_artifacts": [
+        "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/pre-change-characterization.json",
+        "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/implementation-delta.json",
+        "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/targeted.log",
+        "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/integration.log",
+        "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/regression.log",
+        "Graphify/evidence/attributable-mutation-audit-log-and-external-change-detection/offline-or-applicability.json"
+      ],
+      "evidence_types": [
+        "APPLICATION UNIT TEST",
+        "APPLICATION INTEGRATION TEST",
+        "STATIC/GRAPH AUDIT"
+      ],
+      "reference_counts": {
+        "PACKAGE SCRIPT": 3,
+        "TEST TO CREATE": 3
+      },
+      "planned_status": "PLANNED - NOT EXECUTED",
+      "final_result": null
+    },
+    {
       "test_contract_id": "TEST-CAP-NOTIFICATIONS",
       "task_id": "TASK-CAP-NOTIFICATIONS",
       "capability_id": "CAP-NOTIFICATIONS",
@@ -9813,6 +9897,90 @@
       "final_result": null
     },
     {
+      "test_contract_id": "TEST-DEC-NAS",
+      "task_id": "TASK-DEC-NAS",
+      "capability_id": "CAP-NAS",
+      "master_requirement_ids": [
+        "REQ-MP1-047F877A85"
+      ],
+      "phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "wave": "WAVE-05C",
+      "characterisation_before_change": [
+        {
+          "test_path": "codebase/tests/integration/nas-and-private-lan-storage-support.contract.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "boundary": "Create a real NAS and private-LAN storage support characterization at the applicable SQLite, filesystem, Electron, native, process, audio, or model boundary before mutation."
+        }
+      ],
+      "targeted_verification": [
+        {
+          "test_path": "codebase/tests/integration/nas-and-private-lan-storage-support.contract.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/targeted.log"
+        }
+      ],
+      "real_integration_verification": [
+        {
+          "test_path": "codebase/tests/integration/nas-and-private-lan-storage-support.real-boundary.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION INTEGRATION TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "boundary": "Exercise the real SQLite/filesystem/Electron/native/process/audio/model or installed boundary named by the evidence type; mocks cannot close this proof.",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/integration.log"
+        }
+      ],
+      "broader_regression_verification": [
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/regression.log"
+        },
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "STATIC/GRAPH AUDIT",
+          "command": "npm run typecheck",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/typecheck.log"
+        },
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "STATIC/GRAPH AUDIT",
+          "command": "npm run lint",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/lint.log"
+        }
+      ],
+      "offline_verification_impact": "Include this workflow in the final installed offline regression when runtime reachable; record NOT APPLICABLE with reachability evidence only when it is not runtime reachable.",
+      "required_evidence_artifacts": [
+        "Graphify/evidence/nas-and-private-lan-storage-support/pre-change-characterization.json",
+        "Graphify/evidence/nas-and-private-lan-storage-support/implementation-delta.json",
+        "Graphify/evidence/nas-and-private-lan-storage-support/targeted.log",
+        "Graphify/evidence/nas-and-private-lan-storage-support/integration.log",
+        "Graphify/evidence/nas-and-private-lan-storage-support/regression.log",
+        "Graphify/evidence/nas-and-private-lan-storage-support/offline-or-applicability.json"
+      ],
+      "evidence_types": [
+        "APPLICATION UNIT TEST",
+        "APPLICATION INTEGRATION TEST",
+        "STATIC/GRAPH AUDIT"
+      ],
+      "reference_counts": {
+        "PACKAGE SCRIPT": 3,
+        "TEST TO CREATE": 3
+      },
+      "planned_status": "PLANNED - NOT EXECUTED",
+      "final_result": null
+    },
+    {
       "test_contract_id": "TEST-DEC-NOTE-TEMPLATES",
       "task_id": "TASK-DEC-NOTE-TEMPLATES",
       "capability_id": "CAP-NOTE-TEMPLATES",
@@ -10767,6 +10935,90 @@
       "final_result": null
     },
     {
+      "test_contract_id": "TEST-OUT-NAS-DEFAULT",
+      "task_id": "TASK-OUT-NAS-DEFAULT",
+      "capability_id": "CAP-NAS",
+      "master_requirement_ids": [
+        "REQ-MP1-047F877A85"
+      ],
+      "phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "wave": "WAVE-05D",
+      "characterisation_before_change": [
+        {
+          "test_path": "codebase/tests/integration/nas-and-private-lan-storage-support.contract.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "boundary": "Create a real NAS and private-LAN storage support characterization at the applicable SQLite, filesystem, Electron, native, process, audio, or model boundary before mutation."
+        }
+      ],
+      "targeted_verification": [
+        {
+          "test_path": "codebase/tests/integration/nas-and-private-lan-storage-support.contract.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/targeted.log"
+        }
+      ],
+      "real_integration_verification": [
+        {
+          "test_path": "codebase/tests/integration/nas-and-private-lan-storage-support.real-boundary.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION INTEGRATION TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "boundary": "Exercise the real SQLite/filesystem/Electron/native/process/audio/model or installed boundary named by the evidence type; mocks cannot close this proof.",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/integration.log"
+        }
+      ],
+      "broader_regression_verification": [
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/regression.log"
+        },
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "STATIC/GRAPH AUDIT",
+          "command": "npm run typecheck",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/typecheck.log"
+        },
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "STATIC/GRAPH AUDIT",
+          "command": "npm run lint",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/lint.log"
+        }
+      ],
+      "offline_verification_impact": "Include this workflow in the final installed offline regression when runtime reachable; record NOT APPLICABLE with reachability evidence only when it is not runtime reachable.",
+      "required_evidence_artifacts": [
+        "Graphify/evidence/nas-and-private-lan-storage-support/pre-change-characterization.json",
+        "Graphify/evidence/nas-and-private-lan-storage-support/implementation-delta.json",
+        "Graphify/evidence/nas-and-private-lan-storage-support/targeted.log",
+        "Graphify/evidence/nas-and-private-lan-storage-support/integration.log",
+        "Graphify/evidence/nas-and-private-lan-storage-support/regression.log",
+        "Graphify/evidence/nas-and-private-lan-storage-support/offline-or-applicability.json"
+      ],
+      "evidence_types": [
+        "APPLICATION UNIT TEST",
+        "APPLICATION INTEGRATION TEST",
+        "STATIC/GRAPH AUDIT"
+      ],
+      "reference_counts": {
+        "PACKAGE SCRIPT": 3,
+        "TEST TO CREATE": 3
+      },
+      "planned_status": "PLANNED - NOT EXECUTED",
+      "final_result": null
+    },
+    {
       "test_contract_id": "TEST-OUT-NOTE-TEMPLATES-DEFAULT",
       "task_id": "TASK-OUT-NOTE-TEMPLATES-DEFAULT",
       "capability_id": "CAP-NOTE-TEMPLATES",
@@ -11707,6 +11959,90 @@
         "Graphify/evidence/process-based-meeting-detection/integration.log",
         "Graphify/evidence/process-based-meeting-detection/regression.log",
         "Graphify/evidence/process-based-meeting-detection/offline-or-applicability.json"
+      ],
+      "evidence_types": [
+        "APPLICATION UNIT TEST",
+        "APPLICATION INTEGRATION TEST",
+        "STATIC/GRAPH AUDIT"
+      ],
+      "reference_counts": {
+        "PACKAGE SCRIPT": 3,
+        "TEST TO CREATE": 3
+      },
+      "planned_status": "PLANNED - NOT EXECUTED",
+      "final_result": null
+    },
+    {
+      "test_contract_id": "TEST-OUT-NAS-DEVIATION",
+      "task_id": "TASK-OUT-NAS-DEVIATION",
+      "capability_id": "CAP-NAS",
+      "master_requirement_ids": [
+        "REQ-MP1-047F877A85"
+      ],
+      "phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "wave": "WAVE-05E",
+      "characterisation_before_change": [
+        {
+          "test_path": "codebase/tests/integration/nas-and-private-lan-storage-support.contract.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "boundary": "Create a real NAS and private-LAN storage support characterization at the applicable SQLite, filesystem, Electron, native, process, audio, or model boundary before mutation."
+        }
+      ],
+      "targeted_verification": [
+        {
+          "test_path": "codebase/tests/integration/nas-and-private-lan-storage-support.contract.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/targeted.log"
+        }
+      ],
+      "real_integration_verification": [
+        {
+          "test_path": "codebase/tests/integration/nas-and-private-lan-storage-support.real-boundary.test.js",
+          "reference_status": "TEST TO CREATE",
+          "evidence_type": "APPLICATION INTEGRATION TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "boundary": "Exercise the real SQLite/filesystem/Electron/native/process/audio/model or installed boundary named by the evidence type; mocks cannot close this proof.",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/integration.log"
+        }
+      ],
+      "broader_regression_verification": [
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "APPLICATION UNIT TEST",
+          "command": "npm test",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/regression.log"
+        },
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "STATIC/GRAPH AUDIT",
+          "command": "npm run typecheck",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/typecheck.log"
+        },
+        {
+          "reference_status": "PACKAGE SCRIPT",
+          "evidence_type": "STATIC/GRAPH AUDIT",
+          "command": "npm run lint",
+          "working_directory": "codebase",
+          "evidence": "Graphify/evidence/nas-and-private-lan-storage-support/lint.log"
+        }
+      ],
+      "offline_verification_impact": "Include this workflow in the final installed offline regression when runtime reachable; record NOT APPLICABLE with reachability evidence only when it is not runtime reachable.",
+      "required_evidence_artifacts": [
+        "Graphify/evidence/nas-and-private-lan-storage-support/pre-change-characterization.json",
+        "Graphify/evidence/nas-and-private-lan-storage-support/implementation-delta.json",
+        "Graphify/evidence/nas-and-private-lan-storage-support/targeted.log",
+        "Graphify/evidence/nas-and-private-lan-storage-support/integration.log",
+        "Graphify/evidence/nas-and-private-lan-storage-support/regression.log",
+        "Graphify/evidence/nas-and-private-lan-storage-support/offline-or-applicability.json"
       ],
       "evidence_types": [
         "APPLICATION UNIT TEST",

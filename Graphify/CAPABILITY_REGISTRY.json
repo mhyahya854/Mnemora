@@ -1,10 +1,10 @@
 {
   "schema_version": 2,
   "authority": "Single derived capability authority; runtime_chain retains genuine Graphify/static-analysis evidence and must not be interpreted as execution proof",
-  "capability_count": 120,
+  "capability_count": 122,
   "decision_counts": {
-    "ADD": 5,
-    "CONDITIONAL - REQUIRES EVIDENCE": 11,
+    "ADD": 6,
+    "CONDITIONAL - REQUIRES EVIDENCE": 12,
     "FORBIDDEN": 1,
     "KEEP AND REPAIR": 24,
     "MANDATORY KEEP": 49,
@@ -2372,7 +2372,9 @@
         "CAP-IMPLEMENTATION-GOVERNANCE",
         "CAP-LEGACY-MIGRATION",
         "CAP-MODEL-DISCOVERY",
-        "CAP-MODEL-PACK"
+        "CAP-MODEL-PACK",
+        "CAP-MUTATION-LOG",
+        "CAP-NAS"
       ]
     },
     {
@@ -2930,6 +2932,8 @@
         "CAP-BACKUP",
         "CAP-IMPLEMENTATION-GOVERNANCE",
         "CAP-LEGACY-MIGRATION",
+        "CAP-MUTATION-LOG",
+        "CAP-NAS",
         "CAP-NOTES",
         "CAP-RESTORE",
         "CAP-SEARCH-EXACT",
@@ -5581,6 +5585,7 @@
         "CAP-MICROPHONE-DICTATION",
         "CAP-MICROPHONE-SELECTION",
         "CAP-MINILM",
+        "CAP-MUTATION-LOG",
         "CAP-NOTIFICATIONS",
         "CAP-OFFLINE-FIRST-LAUNCH",
         "CAP-PERSONAL-NOTES",
@@ -5605,6 +5610,7 @@
         "CAP-LOOPBACK-WEBSOCKETS",
         "CAP-MACOS-LINUX",
         "CAP-MEETING-DETECTION",
+        "CAP-NAS",
         "CAP-NOTE-TEMPLATES",
         "CAP-PARAKEET",
         "CAP-PORTABLE-WINDOWS",
@@ -5655,6 +5661,8 @@
         "CAP-MODEL-DISCOVERY",
         "CAP-MODEL-PACK",
         "CAP-MODELS",
+        "CAP-MUTATION-LOG",
+        "CAP-NAS",
         "CAP-NATIVE",
         "CAP-NETWORK-POLICY",
         "CAP-NOTE-TEMPLATES",
@@ -10024,6 +10032,215 @@
       "implementation_gap": "Runtime completeness is not claimed by static planning; execute the linked characterization and completion contract.",
       "dependencies": [
         "CAP-IMPLEMENTATION-GOVERNANCE"
+      ],
+      "dependents": [
+        "CAP-IMPLEMENTATION-GOVERNANCE"
+      ]
+    },
+    {
+      "id": "CAP-MUTATION-LOG",
+      "name": "Attributable mutation audit log and external change detection",
+      "decision": "ADD",
+      "owner": "SQLite persistence",
+      "target_paths": [
+        "codebase/main/infrastructure/persistence/database.js"
+      ],
+      "module_owner": "SQLite persistence",
+      "planning_status": "PLANNING COMPLETE - IMPLEMENTATION EVIDENCE PENDING",
+      "implementation_status": "NOT STARTED",
+      "presence_status": "CURRENT IMPLEMENTATION OR STATIC CANDIDATES MAPPED",
+      "implementation_gap": "Runtime completeness is not claimed by static planning; execute the linked characterization and completion contract.",
+      "master_requirement_ids": [
+        "REQ-MP1-047F877A85"
+      ],
+      "current_paths": [
+        "codebase/main/infrastructure/persistence/database.js"
+      ],
+      "current_symbols": [
+        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+      ],
+      "target_symbols": [
+        "DatabaseManager"
+      ],
+      "conditional_decision_package_id": null,
+      "phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "wave": "WAVE-05",
+      "semantic_review_status": "REVIEWED AGAINST MASTER PLAN AND CURRENT DOMAIN",
+      "semantic_review_basis": "Reviewed capability-domain boundary",
+      "last_planning_verification_checkpoint": "CHECKPOINT-FINAL-PLANNING",
+      "runtime_chain": {
+        "user_action": [
+          "Attributable mutation audit log and external change detection"
+        ],
+        "entry_points": [
+          "codebase/main/infrastructure/persistence/database.js"
+        ],
+        "ui_components": [],
+        "navigation_routes": [],
+        "hooks": [],
+        "stores": [],
+        "hooks_and_stores": [],
+        "preload_exposures": [],
+        "typescript_contracts": [],
+        "ipc_channels": [],
+        "ipc_handlers": [],
+        "main_services_and_handlers": [],
+        "main_symbols": [
+          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        ],
+        "repositories": [
+          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        ],
+        "data_native_or_process_boundary": [
+          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        ],
+        "result_events": [],
+        "renderer_update": [],
+        "tests": [],
+        "runtime_registrations": [],
+        "data_read": [
+          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        ],
+        "data_written": [
+          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        ],
+        "side_effects": [],
+        "failure_path": [],
+        "cleanup_path": [],
+        "recovery_path": [],
+        "failure_cleanup_recovery": [],
+        "current_test_coverage": [],
+        "current_breakage": "Implementation status must be established by the linked characterization task; static planning does not claim a runtime result.",
+        "required_change": "Execute only the linked dependency-safe task at the reviewed paths and anchors; preserve all retained behavior and data.",
+        "target_owner": "SQLite persistence",
+        "intermediate_symbols": [
+          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        ],
+        "mapping_evidence": [
+          "codebase/main/infrastructure/persistence/database.js"
+        ],
+        "presence_status": "REVIEWED CURRENT LOCATIONS",
+        "provenance": "Reviewed static paths plus real symbols or SHA-256 content anchors; not runtime execution evidence."
+      },
+      "implementation_task_ids": [
+        "TASK-CAP-MUTATION-LOG"
+      ],
+      "dependencies": [
+        "CAP-IMPLEMENTATION-GOVERNANCE",
+        "CAP-DATABASE",
+        "CAP-DATA-SAFETY"
+      ],
+      "dependents": [
+        "CAP-IMPLEMENTATION-GOVERNANCE"
+      ]
+    },
+    {
+      "id": "CAP-NAS",
+      "name": "NAS and private-LAN storage support",
+      "decision": "CONDITIONAL - REQUIRES EVIDENCE",
+      "owner": "SQLite persistence",
+      "target_paths": [
+        "codebase/main/infrastructure/persistence/database.js"
+      ],
+      "module_owner": "SQLite persistence",
+      "planning_status": "PLANNING COMPLETE - IMPLEMENTATION EVIDENCE PENDING",
+      "implementation_status": "NOT STARTED",
+      "presence_status": "CURRENT IMPLEMENTATION OR STATIC CANDIDATES MAPPED",
+      "implementation_gap": "Runtime completeness is not claimed by static planning; execute the linked characterization and completion contract.",
+      "master_requirement_ids": [
+        "REQ-MP1-047F877A85"
+      ],
+      "current_paths": [
+        "codebase/main/infrastructure/persistence/database.js",
+        "codebase/main/infrastructure/persistence/localBackup.js"
+      ],
+      "current_symbols": [
+        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+      ],
+      "target_symbols": [
+        "DatabaseManager"
+      ],
+      "conditional_decision_package_id": "DEC-NAS",
+      "phase": "PHASE-05-RETAINED-CAPABILITIES",
+      "wave": "WAVE-05C",
+      "semantic_review_status": "REVIEWED AGAINST MASTER PLAN AND CURRENT DOMAIN",
+      "semantic_review_basis": "Reviewed capability-domain boundary",
+      "last_planning_verification_checkpoint": "CHECKPOINT-FINAL-PLANNING",
+      "runtime_chain": {
+        "user_action": [
+          "NAS and private-LAN storage support"
+        ],
+        "entry_points": [
+          "codebase/main/infrastructure/persistence/database.js",
+          "codebase/main/infrastructure/persistence/localBackup.js"
+        ],
+        "ui_components": [],
+        "navigation_routes": [],
+        "hooks": [],
+        "stores": [],
+        "hooks_and_stores": [],
+        "preload_exposures": [],
+        "typescript_contracts": [],
+        "ipc_channels": [],
+        "ipc_handlers": [],
+        "main_services_and_handlers": [],
+        "main_symbols": [
+          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        ],
+        "repositories": [
+          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        ],
+        "data_native_or_process_boundary": [
+          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        ],
+        "result_events": [],
+        "renderer_update": [],
+        "tests": [],
+        "runtime_registrations": [],
+        "data_read": [
+          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        ],
+        "data_written": [
+          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        ],
+        "side_effects": [],
+        "failure_path": [],
+        "cleanup_path": [],
+        "recovery_path": [
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        ],
+        "failure_cleanup_recovery": [
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        ],
+        "current_test_coverage": [],
+        "current_breakage": "Implementation status must be established by the linked characterization task; static planning does not claim a runtime result.",
+        "required_change": "Execute only the linked dependency-safe task at the reviewed paths and anchors; preserve all retained behavior and data.",
+        "target_owner": "SQLite persistence",
+        "intermediate_symbols": [
+          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        ],
+        "mapping_evidence": [
+          "codebase/main/infrastructure/persistence/database.js",
+          "codebase/main/infrastructure/persistence/localBackup.js"
+        ],
+        "presence_status": "REVIEWED CURRENT LOCATIONS",
+        "provenance": "Reviewed static paths plus real symbols or SHA-256 content anchors; not runtime execution evidence."
+      },
+      "implementation_task_ids": [
+        "TASK-DEC-NAS",
+        "TASK-OUT-NAS-DEFAULT",
+        "TASK-OUT-NAS-DEVIATION"
+      ],
+      "dependencies": [
+        "CAP-IMPLEMENTATION-GOVERNANCE",
+        "CAP-DATABASE",
+        "CAP-DATA-SAFETY"
       ],
       "dependents": [
         "CAP-IMPLEMENTATION-GOVERNANCE"

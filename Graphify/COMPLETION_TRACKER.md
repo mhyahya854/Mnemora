@@ -2,7 +2,7 @@
 
 ## Planning checkpoint
 
-The derived model contains 536 normalized requirements, 120 capabilities, 158 implementation tasks (31 deletion tasks), 11 conditional packages, 12 release gates and 780 exact-location entries. Deterministic completion is controlled by `tools/validate_planning.py` and `PLANNING_VALIDATION_REPORT.json`; typed totals here are generated from the authorities. The deterministic validator enforces the complete gate suite recorded in `PLANNING_VALIDATION_REPORT.json` (the current gate count and verdict are authoritative there), including generator reproducibility. Historical audit and reconciliation records live in `PLANNING_BASELINE.md` and `FINAL-REPOSITORY-RECONCILIATION.md`.
+The derived model contains 536 normalized requirements, 122 capabilities, 162 implementation tasks (31 deletion tasks), 12 conditional packages, 12 release gates and 783 exact-location entries. Deterministic completion is controlled by `tools/validate_planning.py` and `PLANNING_VALIDATION_REPORT.json`; typed totals here are generated from the authorities. The deterministic validator enforces the complete gate suite recorded in `PLANNING_VALIDATION_REPORT.json` (the current gate count and verdict are authoritative there), including generator reproducibility. Historical audit and reconciliation records live in `PLANNING_BASELINE.md` and `FINAL-REPOSITORY-RECONCILIATION.md`.
 
 ## Planning Completion Conjunction
 

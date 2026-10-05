@@ -849,39 +849,177 @@ def inventory_integrity(
     return errors, evidence
 
 
-def universal_constitution_errors(tasks: list[dict[str, Any]] | None = None) -> list[str]:
+def universal_constitution_errors(
+    tasks: list[dict[str, Any]] | None = None,
+    const_json_override: dict[str, Any] | None = None,
+    const_md_override: str | None = None,
+    audit_text_override: str | None = None,
+    gap_json_override: dict[str, Any] | None = None,
+) -> list[str]:
     errors: list[str] = []
-    const_file = G / "UNIVERSAL_APP_CONSTITUTION.md"
-    if not const_file.is_file():
-        errors.append("UNIVERSAL_APP_CONSTITUTION.md is missing")
-    else:
-        text = const_file.read_text(encoding="utf-8", errors="replace")
-        for article in (
-            "Article A:",
-            "Article B:",
-            "Article C:",
-            "Article D:",
-            "Article E:",
-            "Article F:",
-            "Article G:",
-            "Article H:",
-            "Article I:",
-            "Article J:",
-        ):
-            if article not in text:
-                errors.append(f"UNIVERSAL_APP_CONSTITUTION.md missing {article}")
+    all_expected_rules = [f"UAC-{i:02d}" for i in range(1, 23)]
 
-    audit_file = G / "CONSTITUTION_AUDIT.md"
-    if not audit_file.is_file():
-        errors.append("CONSTITUTION_AUDIT.md is missing")
+    # 1. UNIVERSAL_APP_CONSTITUTION.json
+    const_json_path = G / "UNIVERSAL_APP_CONSTITUTION.json"
+    if const_json_override is not None:
+        const_data = const_json_override
+    elif const_json_path.is_file():
+        try:
+            const_data = json.loads(const_json_path.read_text(encoding="utf-8"))
+        except Exception as exc:
+            errors.append(f"UNIVERSAL_APP_CONSTITUTION.json is invalid JSON: {exc}")
+            const_data = None
     else:
-        audit_text = audit_file.read_text(encoding="utf-8", errors="replace")
+        errors.append("UNIVERSAL_APP_CONSTITUTION.json is missing")
+        const_data = None
+
+    if const_data is not None:
+        if "rules" not in const_data or not isinstance(const_data["rules"], list):
+            errors.append("UNIVERSAL_APP_CONSTITUTION.json missing 'rules' list")
+        else:
+            present_rule_ids = [r.get("stable_rule_id") for r in const_data["rules"]]
+            for expected_id in all_expected_rules:
+                if expected_id not in present_rule_ids:
+                    errors.append(f"UNIVERSAL_APP_CONSTITUTION.json missing rule {expected_id}")
+            for r in const_data["rules"]:
+                rid = r.get("stable_rule_id", "UNKNOWN")
+                if rid not in all_expected_rules:
+                    errors.append(f"UNIVERSAL_APP_CONSTITUTION.json has unrecognized or modified stable_rule_id: {rid}")
+                if not r.get("title"):
+                    errors.append(f"UNIVERSAL_APP_CONSTITUTION.json rule {rid} missing title")
+                if not r.get("normative_statement") and not r.get("normative_text"):
+                    errors.append(f"UNIVERSAL_APP_CONSTITUTION.json rule {rid} missing normative text")
+                if not r.get("clauses") or not isinstance(r.get("clauses"), list):
+                    errors.append(f"UNIVERSAL_APP_CONSTITUTION.json rule {rid} missing clauses")
+                if not r.get("applicability"):
+                    errors.append(f"UNIVERSAL_APP_CONSTITUTION.json rule {rid} missing applicability")
+                if not r.get("verification_expectations"):
+                    errors.append(f"UNIVERSAL_APP_CONSTITUTION.json rule {rid} missing verification_expectations")
+
+    # 2. UNIVERSAL_APP_CONSTITUTION.md
+    const_md_path = G / "UNIVERSAL_APP_CONSTITUTION.md"
+    if const_md_override is not None:
+        const_md_text = const_md_override
+    elif const_md_path.is_file():
+        const_md_text = const_md_path.read_text(encoding="utf-8", errors="replace")
+    else:
+        errors.append("UNIVERSAL_APP_CONSTITUTION.md is missing")
+        const_md_text = None
+
+    if const_md_text is not None:
+        for expected_id in all_expected_rules:
+            if expected_id not in const_md_text:
+                errors.append(f"UNIVERSAL_APP_CONSTITUTION.md missing rule {expected_id}")
+        if const_data is not None and "rules" in const_data:
+            for r in const_data["rules"]:
+                rid = r.get("stable_rule_id")
+                rtitle = r.get("title")
+                if rid and rtitle:
+                    if f"{rid} — {rtitle}" not in const_md_text and f"{rid}: {rtitle}" not in const_md_text and f"{rid} - {rtitle}" not in const_md_text:
+                        errors.append(f"UNIVERSAL_APP_CONSTITUTION.md disagrees with JSON for {rid}: title '{rtitle}' not found in heading")
+
+    # 3. CONSTITUTION_AUDIT.md
+    audit_path = G / "CONSTITUTION_AUDIT.md"
+    if audit_text_override is not None:
+        audit_text = audit_text_override
+    elif audit_path.is_file():
+        audit_text = audit_path.read_text(encoding="utf-8", errors="replace")
+    else:
+        errors.append("CONSTITUTION_AUDIT.md is missing")
+        audit_text = None
+
+    if audit_text is not None:
+        for expected_id in all_expected_rules:
+            if expected_id not in audit_text:
+                errors.append(f"CONSTITUTION_AUDIT.md missing evaluation of rule {expected_id}")
         if "ZERO MASTER PLAN CONFLICTS" not in audit_text and "PASS" not in audit_text:
             errors.append("CONSTITUTION_AUDIT.md does not report passing audit")
         for name, expected in MASTER_HASHES.items():
             if expected not in audit_text:
                 errors.append(f"CONSTITUTION_AUDIT.md missing Master Plan hash for {name}")
+        if "6a9858a" not in audit_text and "governance correction" not in audit_text.lower():
+            errors.append("CONSTITUTION_AUDIT.md missing governance correction reference for commit 6a9858a")
 
+    # 4. MNEMORA_UNIVERSAL_RULES_GAP_REPORT.json
+    gap_json_path = G / "MNEMORA_UNIVERSAL_RULES_GAP_REPORT.json"
+    if gap_json_override is not None:
+        gap_data = gap_json_override
+    elif gap_json_path.is_file():
+        try:
+            gap_data = json.loads(gap_json_path.read_text(encoding="utf-8"))
+        except Exception as exc:
+            errors.append(f"MNEMORA_UNIVERSAL_RULES_GAP_REPORT.json is invalid JSON: {exc}")
+            gap_data = None
+    else:
+        errors.append("MNEMORA_UNIVERSAL_RULES_GAP_REPORT.json is missing")
+        gap_data = None
+
+    task_ids = {t.get("stable_task_id") for t in tasks} if tasks else set()
+
+    if gap_data is not None:
+        evals = gap_data.get("evaluations", [])
+        eval_ids = [e.get("stable_rule_id") for e in evals]
+        for expected_id in all_expected_rules:
+            if expected_id not in eval_ids:
+                errors.append(f"MNEMORA_UNIVERSAL_RULES_GAP_REPORT.json missing evaluation for {expected_id}")
+        valid_statuses = {"SATISFIED", "PARTIAL", "MISSING", "CONFLICT", "NOT_APPLICABLE"}
+        for e in evals:
+            rid = e.get("stable_rule_id", "UNKNOWN")
+            st = e.get("status")
+            if st not in valid_statuses:
+                errors.append(f"MNEMORA_UNIVERSAL_RULES_GAP_REPORT.json rule {rid} has invalid status: {st}")
+            if st == "SATISFIED":
+                has_paths = bool(e.get("evidence_paths"))
+                has_expl = bool(e.get("evidence_explanation"))
+                has_refs = bool(e.get("evidence_references"))
+                if not (has_paths or has_expl or has_refs):
+                    errors.append(f"MNEMORA_UNIVERSAL_RULES_GAP_REPORT.json rule {rid} false SATISFIED with no evidence")
+            if st in {"PARTIAL", "MISSING"}:
+                if not e.get("missing_implementation") and not e.get("gap_analysis"):
+                    errors.append(f"MNEMORA_UNIVERSAL_RULES_GAP_REPORT.json rule {rid} missing gap analysis")
+                affected_tasks = e.get("affected_task_ids", [])
+                if task_ids and e.get("queue_change_required", True):
+                    if not affected_tasks:
+                        errors.append(f"MNEMORA_UNIVERSAL_RULES_GAP_REPORT.json rule {rid} has status {st} but no affected_task_ids")
+                    else:
+                        missing_q_tasks = [tid for tid in affected_tasks if tid not in task_ids]
+                        if missing_q_tasks:
+                            errors.append(f"MNEMORA_UNIVERSAL_RULES_GAP_REPORT.json rule {rid} unresolved implementation gap: tasks {missing_q_tasks} missing from queue")
+            if rid == "UAC-11":
+                expl = str(e.get("evidence_explanation", "")).lower()
+                status_str = str(e.get("status", ""))
+                if "silent" in expl and "overwrite" in expl and status_str == "SATISFIED":
+                    errors.append("UAC-11: Silent external mutation cannot be claimed compliant")
+
+    # 5. MNEMORA_UNIVERSAL_RULES_GAP_REPORT.md
+    gap_md_path = G / "MNEMORA_UNIVERSAL_RULES_GAP_REPORT.md"
+    if not gap_md_path.is_file():
+        errors.append("MNEMORA_UNIVERSAL_RULES_GAP_REPORT.md is missing")
+    else:
+        gap_md_text = gap_md_path.read_text(encoding="utf-8", errors="replace")
+        for expected_id in all_expected_rules:
+            if expected_id not in gap_md_text:
+                errors.append(f"MNEMORA_UNIVERSAL_RULES_GAP_REPORT.md missing rule {expected_id}")
+
+    # 6. START-HERE.md authority hierarchy check
+    start_here_path = G / "START-HERE.md"
+    if start_here_path.is_file():
+        start_here_text = start_here_path.read_text(encoding="utf-8", errors="replace")
+        authority_section = ""
+        if "## Authority order" in start_here_text:
+            authority_section = start_here_text.split("## Authority order", 1)[1].split("##", 1)[0]
+        else:
+            authority_section = start_here_text
+        uac_pos = authority_section.find("Universal App Constitution")
+        if uac_pos == -1:
+            uac_pos = authority_section.find("UNIVERSAL_APP_CONSTITUTION")
+        mp_pos = authority_section.find("Master Plan")
+        if uac_pos == -1:
+            errors.append("START-HERE.md missing Universal App Constitution in authority hierarchy")
+        elif mp_pos != -1 and uac_pos > mp_pos:
+            errors.append("START-HERE.md authority hierarchy must place Universal App Constitution at #1 (above Master Plan)")
+
+    # 7. Runtime dependency on Graphify/Hermes
     tracked_codebase = [line for line in git(["ls-files", "--", "codebase"]).splitlines() if line]
     forbidden_import_pattern = re.compile(
         r"""(?:from\s+['"]?(?:Graphify|hermes)|import\s+.*['"]?(?:Graphify|hermes)|require\s*\(\s*['"][^'"]*(?:Graphify|hermes))""",
@@ -896,6 +1034,7 @@ def universal_constitution_errors(tasks: list[dict[str, Any]] | None = None) -> 
             except Exception:
                 pass
 
+    # 8. Tracked secrets and user data
     tracked_all = git(["ls-files"]).splitlines()
     forbidden_secret_names = {".env", ".env.local", ".env.production", "id_rsa", "id_ed25519"}
     forbidden_data_exts = {".sqlite", ".sqlite3", ".db", ".wal", ".m4a", ".mp3", ".wav"}
@@ -979,7 +1118,7 @@ def negative_fixture_errors() -> list[str]:
 
     # 5. Constitution edit without explicit governance process fails
     corrupt_constitution_text = "# Corrupted Constitution\nMissing articles."
-    missing_articles = [art for art in ("Article A:", "Article B:", "Article C:") if art not in corrupt_constitution_text]
+    missing_articles = [art for art in ("UAC-01", "UAC-02", "UAC-03") if art not in corrupt_constitution_text]
     if not missing_articles:
         failures.append("Constitution corruption fixture was not rejected")
 
@@ -1000,6 +1139,78 @@ def negative_fixture_errors() -> list[str]:
     import_forbidden = bool(re.search(r"""(?:from\s+['"]?(?:Graphify|hermes)|import\s+.*['"]?(?:Graphify|hermes)|require\s*\(\s*['"][^'"]*(?:Graphify|hermes))""", sample_runtime_code, re.I))
     if not import_forbidden:
         failures.append("Runtime planning tool dependence fixture was not rejected")
+
+    # Universal App Constitution Negative Fixtures (10 binding governance scenarios):
+    valid_tasks = load("IMPLEMENTATION_QUEUE.json")["tasks"]
+    valid_const_json = json.loads((G / "UNIVERSAL_APP_CONSTITUTION.json").read_text(encoding="utf-8"))
+    valid_const_md = (G / "UNIVERSAL_APP_CONSTITUTION.md").read_text(encoding="utf-8")
+    valid_audit_text = (G / "CONSTITUTION_AUDIT.md").read_text(encoding="utf-8")
+    valid_gap_json = json.loads((G / "MNEMORA_UNIVERSAL_RULES_GAP_REPORT.json").read_text(encoding="utf-8"))
+
+    # UAC Fixture 1: Deleting UAC-04 fails
+    c_no_04 = copy.deepcopy(valid_const_json)
+    c_no_04["rules"] = [r for r in c_no_04["rules"] if r.get("stable_rule_id") != "UAC-04"]
+    if not any("UAC-04" in e for e in universal_constitution_errors(valid_tasks, const_json_override=c_no_04)):
+        failures.append("Deleting UAC-04 fixture was not rejected")
+
+    # UAC Fixture 2: Deleting UAC-06 fails
+    c_no_06 = copy.deepcopy(valid_const_json)
+    c_no_06["rules"] = [r for r in c_no_06["rules"] if r.get("stable_rule_id") != "UAC-06"]
+    if not any("UAC-06" in e for e in universal_constitution_errors(valid_tasks, const_json_override=c_no_06)):
+        failures.append("Deleting UAC-06 fixture was not rejected")
+
+    # UAC Fixture 3: Deleting UAC-11 fails
+    c_no_11 = copy.deepcopy(valid_const_json)
+    c_no_11["rules"] = [r for r in c_no_11["rules"] if r.get("stable_rule_id") != "UAC-11"]
+    if not any("UAC-11" in e for e in universal_constitution_errors(valid_tasks, const_json_override=c_no_11)):
+        failures.append("Deleting UAC-11 fixture was not rejected")
+
+    # UAC Fixture 4: Changing a stable rule ID fails
+    c_mod_id = copy.deepcopy(valid_const_json)
+    c_mod_id["rules"][0]["stable_rule_id"] = "UAC-99"
+    if not any("unrecognized or modified stable_rule_id" in e or "missing rule" in e for e in universal_constitution_errors(valid_tasks, const_json_override=c_mod_id)):
+        failures.append("Changing stable rule ID fixture was not rejected")
+
+    # UAC Fixture 5: Markdown/JSON disagreement fails
+    md_disagree = valid_const_md.replace("UAC-04 — NAS / PRIVATE-LAN SUPPORT", "UAC-04 — MODIFIED DISAGREEING TITLE")
+    if not any("disagrees with JSON" in e for e in universal_constitution_errors(valid_tasks, const_md_override=md_disagree)):
+        failures.append("Markdown/JSON disagreement fixture was not rejected")
+
+    # UAC Fixture 6: Audit omitting a rule fails
+    audit_omit = valid_audit_text.replace("UAC-15", "OMITTED_RULE_15")
+    if not any("missing evaluation of rule UAC-15" in e for e in universal_constitution_errors(valid_tasks, audit_text_override=audit_omit)):
+        failures.append("Audit omitting a rule fixture was not rejected")
+
+    # UAC Fixture 7: False SATISFIED with no evidence fails
+    gap_false_sat = copy.deepcopy(valid_gap_json)
+    for ev in gap_false_sat["evaluations"]:
+        if ev.get("stable_rule_id") == "UAC-01":
+            ev["status"] = "SATISFIED"
+            ev["evidence_paths"] = []
+            ev["evidence_explanation"] = ""
+            ev["evidence_references"] = []
+    if not any("false SATISFIED with no evidence" in e for e in universal_constitution_errors(valid_tasks, gap_json_override=gap_false_sat)):
+        failures.append("False SATISFIED with no evidence fixture was not rejected")
+
+    # UAC Fixture 8: Unresolved implementation gap with no queue coverage fails
+    tasks_without_nas = [t for t in valid_tasks if t.get("stable_task_id") not in {"TASK-DEC-NAS", "TASK-OUT-NAS-DEFAULT", "TASK-OUT-NAS-DEVIATION"}]
+    if not any("missing from queue" in e for e in universal_constitution_errors(tasks_without_nas)):
+        failures.append("Unresolved implementation gap with no queue coverage fixture was not rejected")
+
+    # UAC Fixture 9: Runtime Hermes dependency fails
+    hermes_runtime_code = "import { startSession } from '@hermes/orchestrator';"
+    import_hermes_forbidden = bool(re.search(r"""(?:from\s+['"]?(?:Graphify|hermes)|import\s+.*['"]?(?:Graphify|hermes)|require\s*\(\s*['"][^'"]*(?:Graphify|hermes))""", hermes_runtime_code, re.I))
+    if not import_hermes_forbidden:
+        failures.append("Runtime Hermes dependency fixture was not rejected")
+
+    # UAC Fixture 10: Silent external mutation design claimed compliant fails
+    gap_silent = copy.deepcopy(valid_gap_json)
+    for ev in gap_silent["evaluations"]:
+        if ev.get("stable_rule_id") == "UAC-11":
+            ev["status"] = "SATISFIED"
+            ev["evidence_explanation"] = "Silent overwrite of divergent external modifications is accepted without flagging."
+    if not any("Silent external mutation cannot be claimed compliant" in e for e in universal_constitution_errors(valid_tasks, gap_json_override=gap_silent)):
+        failures.append("Silent external mutation design claimed compliant fixture was not rejected")
 
     return failures
 
@@ -1183,7 +1394,7 @@ def main() -> int:
     args = parser.parse_args()
     if args.self_test_only:
         errors = negative_fixture_errors()
-        print(json.dumps({"negative_fixture_count": 26, "status": "PASS" if not errors else "FAIL", "errors": errors}, indent=2))
+        print(json.dumps({"negative_fixture_count": 36, "status": "PASS" if not errors else "FAIL", "errors": errors}, indent=2))
         return 0 if not errors else 1
 
     pre_run_status = git(["status", "--porcelain"])

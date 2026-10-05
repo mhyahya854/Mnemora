@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "authority": "Universal App Constitution (User-Level Cross-App Authority)",
+  "authority_hierarchy": [
+    "1. Universal App Constitution (User-Level Cross-App Authority)",
+    "2. Mnemora App-Specific Immutable Master Plans",
+    "3. Derived requirements / capabilities / task authorities"
+  ],
+  "amendment_policy": "The Universal App Constitution is a user-level cross-app authority. Future amendments require explicit user authority. Coding models may not silently alter universal rules. The Constitution does not permit a model to casually rewrite an app-specific Master Plan. If a conflict arises between the Constitution and an app-specific Master Plan, STOP AND REPORT THE CONFLICT FOR USER DECISION.",
+  "rule_count": 22,
+  "rules": [
+    {
+      "stable_rule_id": "UAC-01",
+      "title": "APPLICATION INDEPENDENCE",
+      "normative_text": "Every app must function independently without Hermes. Hermes, local AI, cloud AI, or another orchestrator may assist but must never be required for: startup, core workflows, data access, deterministic search, indexing, migrations, backup, restore, recovery, normal UI operation. AI is optional and replaceable.",
+      "clauses": [
+        "Every app must function independently without Hermes or an orchestrator.",
+        "Hermes, local AI, cloud AI, or another orchestrator may assist but must never be required for: startup, core workflows, data access, deterministic search, indexing, migrations, backup, restore, recovery, normal UI operation.",
+        "AI is optional and replaceable."
+      ],
+      "applicability": "All applications, core backend services, and user interfaces across all release milestones.",
+      "verification_expectations": "Codebase imports and runtime execution must prove complete operational capability with zero orchestrator/Hermes packages or processes present."
+    },
+    {
+      "stable_rule_id": "UAC-02",
+      "title": "LOCAL-FIRST / OFFLINE-FIRST",
+      "normative_text": "Core application functionality must work locally and offline. No hidden cloud dependency. No silent network fallback. Mnemora stricter first-release offline policy remains valid.",
+      "clauses": [
+        "Core application functionality must work locally and offline.",
+        "No hidden cloud dependency.",
+        "No silent network fallback.",
+        "Mnemora stricter first-release offline policy remains valid."
+      ],
+      "applicability": "All core workflows including capture, transcription, notes, indexing, and storage.",
+      "verification_expectations": "First launch, recording, search, and editing must pass under total network denial; loopback binding (127.0.0.1) enforced for local sidecars."
+    },
+    {
+      "stable_rule_id": "UAC-03",
+      "title": "USER-SELECTED DATA ROOT SOVEREIGNTY",
+      "normative_text": "Durable user-owned data must live under an explicit, documented, portable application data root wherever technically possible. The app must not scatter canonical user data unpredictably around the machine. Moving the data root must not destroy data meaning. Machine-specific absolute paths must not become durable identity where portable relative references can be used.",
+      "clauses": [
+        "Durable user-owned data must live under an explicit, documented, portable application data root wherever technically possible.",
+        "The app must not scatter canonical user data unpredictably around the machine.",
+        "Moving the data root must not destroy data meaning.",
+        "Machine-specific absolute paths must not become durable identity where portable relative references can be used."
+      ],
+      "applicability": "All persistent storage, user files, media archives, databases, and configuration.",
+      "verification_expectations": "Relocating the user data directory to a new folder or volume preserves all relationships, notes, transcripts, audio links, and database integrity."
+    },
+    {
+      "stable_rule_id": "UAC-04",
+      "title": "NAS / PRIVATE-LAN SUPPORT",
+      "normative_text": "Every applicable app must support NAS/private-LAN usage. For desktop applications this includes, where technically safe: local disk data root, external disk data root, NAS/network-share data root. The design must explicitly handle: share unavailable, reconnection, latency, interrupted writes, atomicity limitations, locking, concurrency, one-writer policy where required, conflict detection, corruption avoidance, recovery, portable paths, backup versus NAS redundancy. For server/headless components, NAS deployment must be supported where the application architecture makes such deployment meaningful. Do not claim NAS support without evidence. NAS support must not require Hermes.",
+      "clauses": [
+        "Every applicable app must support NAS/private-LAN usage.",
+        "For desktop applications this includes, where technically safe: local disk data root, external disk data root, NAS/network-share data root.",
+        "The design must explicitly handle: share unavailable, reconnection, latency, interrupted writes, atomicity limitations, locking, concurrency, one-writer policy where required, conflict detection, corruption avoidance, recovery, portable paths, backup versus NAS redundancy.",
+        "For server/headless components, NAS deployment must be supported where the application architecture makes such deployment meaningful.",
+        "Do not claim NAS support without evidence.",
+        "NAS support must not require Hermes."
+      ],
+      "applicability": "Desktop storage architecture, backup engines, and network-attached storage environments.",
+      "verification_expectations": "Proof of network-share disconnection recovery, locking and one-writer concurrency enforcement, latency tolerance, and corruption avoidance on SMB/NFS mounts."
+    },
+    {
+      "stable_rule_id": "UAC-05",
+      "title": "CROSS-PLATFORM SUPPORT",
+      "normative_text": "Apps must be architected for: Windows, macOS, Linux. A project may release one platform first, but its architecture must not unnecessarily prevent the others. Mnemora Windows-first proof requirement must be evaluated against this rule honestly. Do not automatically call preservation of macOS/Linux source files full cross-platform support.",
+      "clauses": [
+        "Apps must be architected for: Windows, macOS, Linux.",
+        "A project may release one platform first, but its architecture must not unnecessarily prevent the others.",
+        "Mnemora Windows-first proof requirement must be evaluated against this rule honestly.",
+        "Do not automatically call preservation of macOS/Linux source files full cross-platform support."
+      ],
+      "applicability": "Native helpers, application shell, packaging, audio capture, and hotkey subsystems.",
+      "verification_expectations": "Core abstractions must not bind to OS-specific primitives without platform adapters; non-Windows source files preserved; Windows-first release acknowledged honestly as partial."
+    },
+    {
+      "stable_rule_id": "UAC-06",
+      "title": "FEATURE-FIRST MODULAR MONOLITH",
+      "normative_text": "Apps of this type use a FEATURE-FIRST MODULAR-MONOLITH architecture. Feature ownership is primary. Each feature should own, where applicable: feature/ domain/, application/, infrastructure/, ui/, tests/ or the closest idiomatic equivalent for the stack. Shared/global modules must remain genuinely cross-cutting and thin. Avoid giant generic dumping grounds: utils/, helpers/, services/, common/, misc/ unless the contents truly have no feature owner. Do not create microservices without demonstrated necessity. Do not rewrite working code merely to make the tree prettier.",
+      "clauses": [
+        "Apps of this type use a FEATURE-FIRST MODULAR-MONOLITH architecture.",
+        "Feature ownership is primary: each feature should own domain, application, infrastructure, ui, tests where applicable.",
+        "Shared/global modules must remain genuinely cross-cutting and thin.",
+        "Avoid giant generic dumping grounds (utils/, helpers/, services/, common/, misc/) unless contents have no feature owner.",
+        "Do not create microservices without demonstrated necessity.",
+        "Do not rewrite working code merely to make the tree prettier."
+      ],
+      "applicability": "Codebase structural organization and module boundaries.",
+      "verification_expectations": "Feature directories group related logic, IPC, UI, and tests; generic utility folders are audited and incrementally retired via planned queue tasks."
+    },
+    {
+      "stable_rule_id": "UAC-07",
+      "title": "HUMAN-READABLE FOLDER CONTRACT",
+      "normative_text": "Source and durable data structures must be deliberately understandable to humans. Use self-describing: folders, filenames, manifests, schemas, metadata, indexes, relationships. Avoid unnecessary opaque hash-only organization.",
+      "clauses": [
+        "Source and durable data structures must be deliberately understandable to humans.",
+        "Use self-describing folders, filenames, manifests, schemas, metadata, indexes, relationships.",
+        "Avoid unnecessary opaque hash-only organization."
+      ],
+      "applicability": "Repository folder structure, documentation, user data root, and export archives.",
+      "verification_expectations": "Directories and files must use clear semantic names; metadata manifests accompany persisted structures; no purely opaque hash trees for user content."
+    },
+    {
+      "stable_rule_id": "UAC-08",
+      "title": "SMALL-MODEL NAVIGABILITY",
+      "normative_text": "Structure the application and its data so a bounded approximately 1B-class local model can navigate it accurately using explicit tools and metadata. Accuracy should come from: canonical IDs, deterministic indexes, bounded tools, schemas, manifests, provenance, explicit relationships not from requiring a huge cloud model. This does NOT make AI a runtime dependency.",
+      "clauses": [
+        "Structure the application and its data so a bounded approximately 1B-class local model can navigate it accurately using explicit tools and metadata.",
+        "Accuracy must come from: canonical IDs, deterministic indexes, bounded tools, schemas, manifests, provenance, explicit relationships.",
+        "Accuracy must not require a huge cloud model.",
+        "This does NOT make AI a runtime dependency."
+      ],
+      "applicability": "Planning registers, data schemas, IPC contracts, and developer toolkits.",
+      "verification_expectations": "All system entities have stable IDs and deterministic cross-references; explicit tools have bounded parameters and schema-validated outputs."
+    },
+    {
+      "stable_rule_id": "UAC-09",
+      "title": "DETERMINISTIC NON-AI CORE",
+      "normative_text": "Critical application state and mutation logic must be deterministic. AI may assist only within explicit feature boundaries. AI must never be the sole source of truth for deterministic state operations. Mnemora first release still forbids generative AI.",
+      "clauses": [
+        "Critical application state and mutation logic must be deterministic.",
+        "AI may assist only within explicit feature boundaries.",
+        "AI must never be the sole source of truth for deterministic state operations.",
+        "Mnemora first release still forbids generative AI."
+      ],
+      "applicability": "Persistence, state machines, audio pipelines, search execution, and migrations.",
+      "verification_expectations": "Zero generative AI models or LLMs invoked in core operations; speech recognition uses deterministic acoustic models; state transitions are pure deterministic functions."
+    },
+    {
+      "stable_rule_id": "UAC-10",
+      "title": "AUTHORIZED MUTATION MODEL",
+      "normative_text": "Canonical application data may be changed only through: 1. validated user actions through the application or 2. explicitly approved app-specific AI tools/skills with bounded permissions. No arbitrary AI filesystem mutation. No silent mutation outside application contracts.",
+      "clauses": [
+        "Canonical application data may be changed only through validated user actions through the application or explicitly approved app-specific AI tools/skills with bounded permissions.",
+        "No arbitrary AI filesystem mutation.",
+        "No silent mutation outside application contracts."
+      ],
+      "applicability": "All database writes, file edits, configuration changes, and AI tool integrations.",
+      "verification_expectations": "Every mutation passes through typed IPC and validated database manager methods with schema enforcement; arbitrary filesystem write paths rejected."
+    },
+    {
+      "stable_rule_id": "UAC-11",
+      "title": "MUTATION AUDIT LOG / CHANGE FLAGGING",
+      "normative_text": "Every meaningful authoritative mutation must be attributable. Record where applicable: actor, user/tool/AI identity, timestamp, operation, entity, previous version/hash, resulting version/hash, source, reason, evidence/reference. Audit history must be append-oriented and must not be silently rewritten. Unrecognized/external changes to canonical application data must be detected and FLAGGED. The app must not silently overwrite divergent external edits. Where appropriate offer reconciliation: inspect diff, keep external change, accept application version, restore, reject, merge through a validated workflow.",
+      "clauses": [
+        "Every meaningful authoritative mutation must be attributable.",
+        "Record where applicable: actor, user/tool/AI identity, timestamp, operation, entity, previous version/hash, resulting version/hash, source, reason, evidence/reference.",
+        "Audit history must be append-oriented and must not be silently rewritten.",
+        "Unrecognized/external changes to canonical application data must be detected and FLAGGED.",
+        "The app must not silently overwrite divergent external edits.",
+        "Where appropriate offer reconciliation: inspect diff, keep external change, accept application version, restore, reject, merge through a validated workflow."
+      ],
+      "applicability": "Data persistence layer, file storage monitors, and mutation management services.",
+      "verification_expectations": "Append-oriented audit records created on data change; external file alterations detected via watcher/checksum and surfaced to user before any overwriting."
+    },
+    {
+      "stable_rule_id": "UAC-12",
+      "title": "RECOVERABILITY OVER MAGIC",
+      "normative_text": "Prefer operations that are: inspectable, reversible, transactional, recoverable, idempotent. Use as appropriate: atomic writes, journaling, logical deletion, rollback, interruption recovery, backups, tested restore, conflict preservation. No silent data loss.",
+      "clauses": [
+        "Prefer operations that are inspectable, reversible, transactional, recoverable, idempotent.",
+        "Use as appropriate: atomic writes, journaling, logical deletion, rollback, interruption recovery, backups, tested restore, conflict preservation.",
+        "No silent data loss."
+      ],
+      "applicability": "Persistence operations, audio capture, background jobs, and migrations.",
+      "verification_expectations": "Operations use copy-before-transform and atomic renames; simulated crash/power-cut during write or migration rolls back cleanly without data loss."
+    },
+    {
+      "stable_rule_id": "UAC-13",
+      "title": "ORIGINALS VS DERIVED STATE",
+      "normative_text": "Original user artifacts are protected. Derived data should be rebuildable wherever practical. Examples: search indexes, semantic vectors, thumbnails, caches, generated metadata, temporary processing outputs. Derived projections must not become the only irreplaceable copy of user content.",
+      "clauses": [
+        "Original user artifacts are protected.",
+        "Derived data should be rebuildable wherever practical (search indexes, semantic vectors, thumbnails, caches, generated metadata, temporary processing outputs).",
+        "Derived projections must not become the only irreplaceable copy of user content."
+      ],
+      "applicability": "Media files, notes, transcripts, embeddings, vector databases, and cache directories.",
+      "verification_expectations": "Deleting vector indices, thumbnails, or search caches allows full automated regeneration from primary SQLite and audio files."
+    },
+    {
+      "stable_rule_id": "UAC-14",
+      "title": "DATABASE / SQLITE SAFETY",
+      "normative_text": "Mnemora explicitly retains SQLite. Do not remove SQLite to satisfy generic architecture preferences. Instead guarantee: complete backups, documented schema, recoverability, exportability, forward migrations, integrity verification, safe restore, rebuildable derived projections where practical. Audit whether irreplaceable user content exists only inside opaque database state. If filesystem-canonical storage would contradict Mnemora product design, report the conflict rather than silently changing architecture.",
+      "clauses": [
+        "Mnemora explicitly retains SQLite; do not remove SQLite to satisfy generic architecture preferences.",
+        "Guarantee: complete backups, documented schema, recoverability, exportability, forward migrations, integrity verification, safe restore, rebuildable derived projections where practical.",
+        "Audit whether irreplaceable user content exists only inside opaque database state.",
+        "If filesystem-canonical storage would contradict Mnemora product design, report the conflict rather than silently changing architecture."
+      ],
+      "applicability": "Database layer, schema migration framework, and persistence integrity tests.",
+      "verification_expectations": "PRAGMA integrity_check passes; database snapshots create valid verified backup copies; migrations run in transactions; note content mirrored to Markdown."
+    },
+    {
+      "stable_rule_id": "UAC-15",
+      "title": "SOURCE / PRIVATE DATA / GIT SEPARATION",
+      "normative_text": "Maintain explicit separation between: source code, application binaries/builds, private runtime/user data, generated caches, generated evidence, Git history. Private lifetime user archives must never accidentally enter Git. A repository build must not depend on private runtime data.",
+      "clauses": [
+        "Maintain explicit separation between source code, application binaries/builds, private runtime/user data, generated caches, generated evidence, Git history.",
+        "Private lifetime user archives must never accidentally enter Git.",
+        "A repository build must not depend on private runtime data."
+      ],
+      "applicability": "Version control configuration, build scripts, packaging rules, and test harnesses.",
+      "verification_expectations": ".gitignore strictly excludes user databases, logs, audio, secrets, and caches; clean git clone builds reproducibly without local runtime state."
+    },
+    {
+      "stable_rule_id": "UAC-16",
+      "title": "REPRODUCIBLE BUILDS",
+      "normative_text": "Builds must be reproducible from declared inputs. Pin/trace as appropriate: package dependencies, lockfiles, toolchains, native compilers, models, binaries, schemas, migrations, build configuration.",
+      "clauses": [
+        "Builds must be reproducible from declared inputs.",
+        "Pin and trace as appropriate: package dependencies, lockfiles, toolchains, native compilers, models, binaries, schemas, migrations, build configuration."
+      ],
+      "applicability": "Package manifests, lockfiles, compiler toolchains, asset download scripts, and CI.",
+      "verification_expectations": "package-lock.json and electron-builder.json produce functionally reproducible build artifacts from clean checkout with declared dependencies."
+    },
+    {
+      "stable_rule_id": "UAC-17",
+      "title": "THIRD-PARTY / DONOR PROVENANCE",
+      "normative_text": "Every copied or adapted: source component, donor repository, dependency, model, dataset, binary, asset, native helper must have traceable provenance and compatible licensing. Required notices must remain intact.",
+      "clauses": [
+        "Every copied or adapted source component, donor repository, dependency, model, dataset, binary, asset, native helper must have traceable provenance and compatible licensing.",
+        "Required notices must remain intact."
+      ],
+      "applicability": "Third-party libraries, bundled binaries (ffmpeg, whisper, sherpa, qdrant), and donor codebase.",
+      "verification_expectations": "Third-party registry matches all package.json entries; LICENSE and NOTICE files preserve donor copyright notices; binary licenses verified."
+    },
+    {
+      "stable_rule_id": "UAC-18",
+      "title": "FAIL CLOSED",
+      "normative_text": "When authority, state, AI interpretation, provenance, or data safety is uncertain: ASK or BLOCK or SURFACE THE CONFLICT. Do not guess. Do not fabricate evidence. Do not silently fall back to remote/cloud behaviour.",
+      "clauses": [
+        "When authority, state, AI interpretation, provenance, or data safety is uncertain: ASK or BLOCK or SURFACE THE CONFLICT.",
+        "Do not guess.",
+        "Do not fabricate evidence.",
+        "Do not silently fall back to remote/cloud behaviour."
+      ],
+      "applicability": "Error handlers, execution state validator, network policy, and persistence interlocks.",
+      "verification_expectations": "Undefined or corrupt states immediately halt processing and raise explicit errors rather than proceeding with assumptions or silent cloud fallbacks."
+    },
+    {
+      "stable_rule_id": "UAC-19",
+      "title": "UI / AI / PROVIDER REPLACEABILITY",
+      "normative_text": "Domain and user-data architecture must not be inseparably coupled to: one UI, Hermes, one local model, one cloud model, one provider, one orchestration layer. Replacing these must not require destruction or migration loss of user data.",
+      "clauses": [
+        "Domain and user-data architecture must not be inseparably coupled to: one UI, Hermes, one local model, one cloud model, one provider, one orchestration layer.",
+        "Replacing these must not require destruction or migration loss of user data."
+      ],
+      "applicability": "Data schema design, service architecture, and model integration interfaces.",
+      "verification_expectations": "Transcription engines and UI components connect via typed abstraction interfaces; swapping models or frontends does not alter canonical database schema."
+    },
+    {
+      "stable_rule_id": "UAC-20",
+      "title": "SCHEMA / VERSION SAFETY",
+      "normative_text": "Schema changes must preserve semantic meaning. Use explicit forward migrations. Unsupported newer schemas must fail safely. Older software encountering newer data must not silently corrupt it. Read-only safe failure is preferred where practical.",
+      "clauses": [
+        "Schema changes must preserve semantic meaning.",
+        "Use explicit forward migrations.",
+        "Unsupported newer schemas must fail safely.",
+        "Older software encountering newer data must not silently corrupt it.",
+        "Read-only safe failure is preferred where practical."
+      ],
+      "applicability": "Database migration runner, version check gates, and IPC payload validators.",
+      "verification_expectations": "Forward migrations test backward compatibility; encountering higher schema version triggers safe error or read-only mode rather than running older migrations."
+    },
+    {
+      "stable_rule_id": "UAC-21",
+      "title": "STABLE IDS / PORTABLE REFERENCES",
+      "normative_text": "Use stable entity identifiers. Prefer portable relative references. Avoid using absolute machine paths as durable identity. Renaming/moving directories must not destroy logical relationships.",
+      "clauses": [
+        "Use stable entity identifiers.",
+        "Prefer portable relative references.",
+        "Avoid using absolute machine paths as durable identity.",
+        "Renaming/moving directories must not destroy logical relationships."
+      ],
+      "applicability": "Database entity IDs, audio references, notes, folders, and planning tasks.",
+      "verification_expectations": "Entities use UUIDs or canonical alphanumeric IDs; audio file locations stored relative to data root so moving data root preserves playback linkage."
+    },
+    {
+      "stable_rule_id": "UAC-22",
+      "title": "SELF-DESCRIBING PROJECT CONTRACT",
+      "normative_text": "The repository and durable data root must provide sufficient explicit, machine-readable contracts for a human or bounded AI to determine: what exists, what is canonical, what is derived, feature ownership, schema/version, provenance, allowed mutations, validation method, recovery method, relationships, available tools/skills without relying on undocumented conversation history.",
+      "clauses": [
+        "The repository and durable data root must provide sufficient explicit, machine-readable contracts for a human or bounded AI to determine: what exists, what is canonical, what is derived, feature ownership, schema/version, provenance, allowed mutations, validation method, recovery method, relationships, available tools/skills.",
+        "Must not rely on undocumented conversation history."
+      ],
+      "applicability": "Graphify documentation, repository root files, metadata manifests, and schemas.",
+      "verification_expectations": "A clean agent or engineer starting with zero chat context can verify and inspect all project systems using solely the repository contracts and tools."
+    }
+  ]
+}

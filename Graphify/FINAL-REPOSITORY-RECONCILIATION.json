@@ -4,9 +4,9 @@
   "repository_url": "https://github.com/mhyahya854/Mnemora.git",
   "default_branch": "main",
   "branch": "main (canonical default branch; linear history integrated from graphify-final-reconciliation)",
-  "verified_commit_sha": "d977e348223ceb29a828442e908ad76daad52964",
-  "verified_tree_sha": "f0cab69ef4a2ffcca360859b98f2716c0ecd6b70",
-  "tracked_file_count": 435,
+  "verified_commit_sha": "6a9858a060ea7676363731e86950be1273f99d18",
+  "verified_tree_sha": "ca9e039887e8b475e0e877fa2961ed42ee913477",
+  "tracked_file_count": 440,
   "tracked_codebase_file_count": 346,
   "lfs_file_count": 1,
   "master_plan_sha256": {
@@ -57,7 +57,7 @@
     "__pycache__",
     "~"
   ],
-  "output_manifest_entries": 70,
+  "output_manifest_entries": 75,
   "validator": {
     "gate_count": 44,
     "passed": 44,
