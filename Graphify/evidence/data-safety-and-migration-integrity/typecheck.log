@@ -1,0 +1,5 @@
+TASK_ID=TASK-CAP-DATA-SAFETY
+COMMAND=npm run typecheck
+WORKING_DIRECTORY=codebase
+EXIT_CODE=0
+RESULT=PASS TypeScript noEmit

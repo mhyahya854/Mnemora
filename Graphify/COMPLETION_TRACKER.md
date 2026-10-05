@@ -2,7 +2,7 @@
 
 ## Planning checkpoint
 
-The derived model contains 536 normalized requirements, 120 capabilities, 158 implementation tasks (31 deletion tasks), 11 conditional packages, 12 release gates and 780 exact-location entries. Deterministic completion is controlled by `tools/validate_planning.py` and `PLANNING_VALIDATION_REPORT.json`; typed totals here are generated from the authorities. The deterministic validator enforces the complete gate suite recorded in `PLANNING_VALIDATION_REPORT.json` (the current gate count and verdict are authoritative there), including generator reproducibility. Historical audit and reconciliation records live in `PLANNING_BASELINE.md` and `FINAL-REPOSITORY-RECONCILIATION.md`.
+The derived model contains 536 normalized requirements, 120 capabilities, 158 implementation tasks (31 deletion tasks), 11 conditional packages, 12 release gates and 777 exact-location entries. Deterministic completion is controlled by `tools/validate_planning.py` and `PLANNING_VALIDATION_REPORT.json`; typed totals here are generated from the authorities. The deterministic validator enforces the complete gate suite recorded in `PLANNING_VALIDATION_REPORT.json` (the current gate count and verdict are authoritative there), including generator reproducibility. Historical audit and reconciliation records live in `PLANNING_BASELINE.md` and `FINAL-REPOSITORY-RECONCILIATION.md`.
 
 ## Planning Completion Conjunction
 
@@ -33,4 +33,4 @@ The derived model contains 536 normalized requirements, 120 capabilities, 158 im
 
 ## Application and release status
 
-Implementation status is `IN PROGRESS` with 1 terminal tasks; the current next task is `TASK-CAP-DATA-SAFETY` (NOT STARTED). Planning completeness never changes task dispositions. Application execution evidence is valid only through queue references at the recorded checkpoint. Release approval remains a separate strict conjunction. Historical full-tree manifest evidence is preserved in `PLANNING_BASELINE.md`; precise tracked/Git, Git LFS and local-only inventory claims are in `FINAL-REPOSITORY-RECONCILIATION.md`.
+Implementation status is `BLOCKED` with 1 terminal tasks; the current next task is `TASK-CAP-DATA-SAFETY` (BLOCKED). Planning completeness never changes task dispositions. Application execution evidence is valid only through queue references at the recorded checkpoint. Release approval remains a separate strict conjunction. Historical full-tree manifest evidence is preserved in `PLANNING_BASELINE.md`; precise tracked/Git, Git LFS and local-only inventory claims are in `FINAL-REPOSITORY-RECONCILIATION.md`.

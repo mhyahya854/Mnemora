@@ -2,7 +2,7 @@
   "schema_version": 3,
   "authority": "Authoritative exact-location registry; no Markdown mirror is authoritative",
   "provenance": "Rebuilt from immutable Master Plan authority, reviewed capability-domain rules, verified current symbols or content hashes, and context-dispositioned deletion evidence. Genuine prior Graphify/static analysis informed review; no graph node ID is invented.",
-  "entry_count": 780,
+  "entry_count": 777,
   "required_fields": [
     "id",
     "stable_capability_id",
@@ -2023,7 +2023,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-17CD624EC75E42EF",
+      "id": "REG-B00D0D4B11B3EB38",
       "capability_id": "CAP-BACKUP",
       "stable_capability_id": "CAP-BACKUP",
       "capability_name": "Backup",
@@ -2067,16 +2067,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "SQLite persistence",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "SQLite persistence",
       "capability_owner": "SQLite persistence",
       "module_owner": "SQLite persistence",
@@ -2087,10 +2087,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -2112,7 +2112,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-886CDEEA3560B710",
+      "id": "REG-490B9ADFAFCD7BEB",
       "capability_id": "CAP-BACKUP",
       "stable_capability_id": "CAP-BACKUP",
       "capability_name": "Backup",
@@ -2156,16 +2156,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/localBackup.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+      "current_anchor": "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "SQLite persistence",
       "target_path": "codebase/main/infrastructure/persistence/localBackup.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+      "target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
       "intended_target_path": "codebase/main/infrastructure/persistence/localBackup.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
       "target_owner": "SQLite persistence",
       "capability_owner": "SQLite persistence",
       "module_owner": "SQLite persistence",
@@ -2176,7 +2176,7 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
       ],
       "database_or_filesystem_effect": [],
       "native_dependency": [],
@@ -2897,7 +2897,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-E9F29E6AEDD7D2CD",
+      "id": "REG-C18C29581ACE2F46",
       "capability_id": "CAP-DATA-SAFETY",
       "stable_capability_id": "CAP-DATA-SAFETY",
       "capability_name": "Data safety and migration integrity",
@@ -2950,16 +2950,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/audioStorage.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+      "current_anchor": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "SQLite persistence",
       "target_path": "codebase/main/infrastructure/persistence/audioStorage.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+      "target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
       "intended_target_path": "codebase/main/infrastructure/persistence/audioStorage.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
       "target_owner": "SQLite persistence",
       "capability_owner": "SQLite persistence",
       "module_owner": "SQLite persistence",
@@ -2970,7 +2970,7 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
       ],
       "database_or_filesystem_effect": [],
       "native_dependency": [],
@@ -2993,7 +2993,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-EC04C7BA138B18DD",
+      "id": "REG-D9E1D164191B2832",
       "capability_id": "CAP-DATA-SAFETY",
       "stable_capability_id": "CAP-DATA-SAFETY",
       "capability_name": "Data safety and migration integrity",
@@ -3046,16 +3046,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/dataMigration.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+      "current_anchor": "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "SQLite persistence",
       "target_path": "codebase/main/infrastructure/persistence/dataMigration.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+      "target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
       "intended_target_path": "codebase/main/infrastructure/persistence/dataMigration.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
       "target_owner": "SQLite persistence",
       "capability_owner": "SQLite persistence",
       "module_owner": "SQLite persistence",
@@ -3066,10 +3066,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE"
+        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE"
+        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -3091,7 +3091,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-01299E795EA2C54C",
+      "id": "REG-879FEE523EDEC664",
       "capability_id": "CAP-DATA-SAFETY",
       "stable_capability_id": "CAP-DATA-SAFETY",
       "capability_name": "Data safety and migration integrity",
@@ -3144,16 +3144,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "SQLite persistence",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "SQLite persistence",
       "capability_owner": "SQLite persistence",
       "module_owner": "SQLite persistence",
@@ -3164,10 +3164,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -3189,7 +3189,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-FE56D652AA6609D0",
+      "id": "REG-2FE9541A050C0DDD",
       "capability_id": "CAP-DATA-SAFETY",
       "stable_capability_id": "CAP-DATA-SAFETY",
       "capability_name": "Data safety and migration integrity",
@@ -3242,16 +3242,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/localBackup.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+      "current_anchor": "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "SQLite persistence",
       "target_path": "codebase/main/infrastructure/persistence/localBackup.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+      "target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
       "intended_target_path": "codebase/main/infrastructure/persistence/localBackup.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
       "target_owner": "SQLite persistence",
       "capability_owner": "SQLite persistence",
       "module_owner": "SQLite persistence",
@@ -3262,7 +3262,7 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
       ],
       "database_or_filesystem_effect": [],
       "native_dependency": [],
@@ -3285,7 +3285,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-F6564829F3F6DB7E",
+      "id": "REG-F9AEB99A1E2F490E",
       "capability_id": "CAP-DATA-SAFETY",
       "stable_capability_id": "CAP-DATA-SAFETY",
       "capability_name": "Data safety and migration integrity",
@@ -3338,16 +3338,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/tests/unit/persistence/dataMigration.test.js",
       "current_symbol": null,
-      "current_anchor": "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
+      "current_anchor": "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "SQLite persistence",
       "target_path": "codebase/tests/unit/persistence/dataMigration.test.js",
-      "target_symbol": "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
+      "target_symbol": "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
       "intended_target_path": "codebase/tests/unit/persistence/dataMigration.test.js",
-      "intended_target_symbol": "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
+      "intended_target_symbol": "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
       "target_owner": "SQLite persistence",
       "capability_owner": "SQLite persistence",
       "module_owner": "SQLite persistence",
@@ -3477,7 +3477,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-16753AB86C159C46",
+      "id": "REG-4B88A0E99811BE48",
       "capability_id": "CAP-DATA-SAFETY",
       "stable_capability_id": "CAP-DATA-SAFETY",
       "capability_name": "Data safety and migration integrity",
@@ -3530,16 +3530,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
       "current_symbol": null,
-      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "SQLite persistence",
       "target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "intended_target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "target_owner": "SQLite persistence",
       "capability_owner": "SQLite persistence",
       "module_owner": "SQLite persistence",
@@ -3573,7 +3573,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-E908453D839A8531",
+      "id": "REG-CEDF7E29D2F60B0E",
       "capability_id": "CAP-DATABASE",
       "stable_capability_id": "CAP-DATABASE",
       "capability_name": "SQLite",
@@ -3637,16 +3637,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/dataMigration.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+      "current_anchor": "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "SQLite persistence",
       "target_path": "codebase/main/infrastructure/persistence/dataMigration.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+      "target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
       "intended_target_path": "codebase/main/infrastructure/persistence/dataMigration.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
       "target_owner": "SQLite persistence",
       "capability_owner": "SQLite persistence",
       "module_owner": "SQLite persistence",
@@ -3657,10 +3657,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE"
+        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE"
+        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -3682,7 +3682,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-6483FAD758D5DBA6",
+      "id": "REG-C4CB01E818BE96CC",
       "capability_id": "CAP-DATABASE",
       "stable_capability_id": "CAP-DATABASE",
       "capability_name": "SQLite",
@@ -3746,16 +3746,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "SQLite persistence",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "SQLite persistence",
       "capability_owner": "SQLite persistence",
       "module_owner": "SQLite persistence",
@@ -3766,10 +3766,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -3791,7 +3791,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-CE81EF9436F2D3B6",
+      "id": "REG-7D4F1A7ADB95E435",
       "capability_id": "CAP-DATABASE",
       "stable_capability_id": "CAP-DATABASE",
       "capability_name": "SQLite",
@@ -3855,16 +3855,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/localBackup.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+      "current_anchor": "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "SQLite persistence",
       "target_path": "codebase/main/infrastructure/persistence/localBackup.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+      "target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
       "intended_target_path": "codebase/main/infrastructure/persistence/localBackup.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
       "target_owner": "SQLite persistence",
       "capability_owner": "SQLite persistence",
       "module_owner": "SQLite persistence",
@@ -3875,7 +3875,7 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
       ],
       "database_or_filesystem_effect": [],
       "native_dependency": [],
@@ -3898,7 +3898,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-6BBD858724CC02E8",
+      "id": "REG-078525CAA770E834",
       "capability_id": "CAP-DATABASE",
       "stable_capability_id": "CAP-DATABASE",
       "capability_name": "SQLite",
@@ -3962,16 +3962,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/tests/unit/persistence/dataMigration.test.js",
       "current_symbol": null,
-      "current_anchor": "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
+      "current_anchor": "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "SQLite persistence",
       "target_path": "codebase/tests/unit/persistence/dataMigration.test.js",
-      "target_symbol": "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
+      "target_symbol": "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
       "intended_target_path": "codebase/tests/unit/persistence/dataMigration.test.js",
-      "intended_target_symbol": "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
+      "intended_target_symbol": "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
       "target_owner": "SQLite persistence",
       "capability_owner": "SQLite persistence",
       "module_owner": "SQLite persistence",
@@ -4112,7 +4112,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-51E4447C89D2B401",
+      "id": "REG-325A15A4E59DDC4E",
       "capability_id": "CAP-DATABASE",
       "stable_capability_id": "CAP-DATABASE",
       "capability_name": "SQLite",
@@ -4176,16 +4176,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
       "current_symbol": null,
-      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "SQLite persistence",
       "target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "intended_target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "target_owner": "SQLite persistence",
       "capability_owner": "SQLite persistence",
       "module_owner": "SQLite persistence",
@@ -8446,7 +8446,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-FD234FF5C56C928F",
+      "id": "REG-BDF28429D078C72B",
       "capability_id": "CAP-FOLDERS",
       "stable_capability_id": "CAP-FOLDERS",
       "capability_name": "Folders",
@@ -8461,16 +8461,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Notes",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "Notes",
       "capability_owner": "Notes",
       "module_owner": "Notes",
@@ -8481,10 +8481,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -8858,7 +8858,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-C99FFBEC00E67DB0",
+      "id": "REG-F1CF56944111B2C5",
       "capability_id": "CAP-FOLDERS",
       "stable_capability_id": "CAP-FOLDERS",
       "capability_name": "Folders",
@@ -8873,16 +8873,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
       "current_symbol": null,
-      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Notes",
       "target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "intended_target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "target_owner": "Notes",
       "capability_owner": "Notes",
       "module_owner": "Notes",
@@ -10687,7 +10687,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-F22B54770833F341",
+      "id": "REG-90E89E3FDFB908B3",
       "capability_id": "CAP-IMPORT-EXPORT",
       "stable_capability_id": "CAP-IMPORT-EXPORT",
       "capability_name": "Import and export integration",
@@ -10703,16 +10703,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/localBackup.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+      "current_anchor": "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Import and export",
       "target_path": "codebase/main/infrastructure/persistence/localBackup.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+      "target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
       "intended_target_path": "codebase/main/infrastructure/persistence/localBackup.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
       "target_owner": "Import and export",
       "capability_owner": "Import and export",
       "module_owner": "Import and export",
@@ -10723,7 +10723,7 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
       ],
       "database_or_filesystem_effect": [],
       "native_dependency": [],
@@ -11639,7 +11639,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-9E3F6CD64782A275",
+      "id": "REG-E75A8A6E70D9A25F",
       "capability_id": "CAP-LEGACY-MIGRATION",
       "stable_capability_id": "CAP-LEGACY-MIGRATION",
       "capability_name": "Legacy OpenWhispr migration",
@@ -11682,16 +11682,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/dataMigration.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+      "current_anchor": "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "SQLite persistence",
       "target_path": "codebase/main/infrastructure/persistence/dataMigration.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+      "target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
       "intended_target_path": "codebase/main/infrastructure/persistence/dataMigration.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
       "target_owner": "SQLite persistence",
       "capability_owner": "SQLite persistence",
       "module_owner": "SQLite persistence",
@@ -11702,10 +11702,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE"
+        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE"
+        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -11727,7 +11727,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-92361E6D5C19A2E9",
+      "id": "REG-68F2C3DD4C7B2BE0",
       "capability_id": "CAP-LEGACY-MIGRATION",
       "stable_capability_id": "CAP-LEGACY-MIGRATION",
       "capability_name": "Legacy OpenWhispr migration",
@@ -11770,16 +11770,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "SQLite persistence",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "SQLite persistence",
       "capability_owner": "SQLite persistence",
       "module_owner": "SQLite persistence",
@@ -11790,10 +11790,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -11987,7 +11987,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-3CF084773E7DA35F",
+      "id": "REG-949BEAF223A245BB",
       "capability_id": "CAP-LEGACY-MIGRATION",
       "stable_capability_id": "CAP-LEGACY-MIGRATION",
       "capability_name": "Legacy OpenWhispr migration",
@@ -12030,16 +12030,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/tests/unit/persistence/dataMigration.test.js",
       "current_symbol": null,
-      "current_anchor": "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
+      "current_anchor": "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "SQLite persistence",
       "target_path": "codebase/tests/unit/persistence/dataMigration.test.js",
-      "target_symbol": "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
+      "target_symbol": "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
       "intended_target_path": "codebase/tests/unit/persistence/dataMigration.test.js",
-      "intended_target_symbol": "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
+      "intended_target_symbol": "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
       "target_owner": "SQLite persistence",
       "capability_owner": "SQLite persistence",
       "module_owner": "SQLite persistence",
@@ -12073,7 +12073,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-DE1020E51973957E",
+      "id": "REG-6409A23A038F0723",
       "capability_id": "CAP-LEGACY-MIGRATION",
       "stable_capability_id": "CAP-LEGACY-MIGRATION",
       "capability_name": "Legacy OpenWhispr migration",
@@ -12116,16 +12116,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
       "current_symbol": null,
-      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "SQLite persistence",
       "target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "intended_target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "target_owner": "SQLite persistence",
       "capability_owner": "SQLite persistence",
       "module_owner": "SQLite persistence",
@@ -12425,7 +12425,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-39A9F08BEC69CF42",
+      "id": "REG-8A394CDC30F204C5",
       "capability_id": "CAP-LINKED-NOTES",
       "stable_capability_id": "CAP-LINKED-NOTES",
       "capability_name": "Transcript-linked notes",
@@ -12439,16 +12439,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Notes",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "Notes",
       "capability_owner": "Notes",
       "module_owner": "Notes",
@@ -12459,10 +12459,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -12830,7 +12830,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-15A6280DE52500F7",
+      "id": "REG-52BA14116904A0C3",
       "capability_id": "CAP-LINKED-PLAYBACK",
       "stable_capability_id": "CAP-LINKED-PLAYBACK",
       "capability_name": "Transcript-linked playback",
@@ -12845,16 +12845,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/audioStorage.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+      "current_anchor": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Playback",
       "target_path": "codebase/main/infrastructure/persistence/audioStorage.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+      "target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
       "intended_target_path": "codebase/main/infrastructure/persistence/audioStorage.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
       "target_owner": "Playback",
       "capability_owner": "Playback",
       "module_owner": "Playback",
@@ -12865,7 +12865,7 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
       ],
       "database_or_filesystem_effect": [],
       "native_dependency": [],
@@ -13919,7 +13919,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-B11168C251CE9BC6",
+      "id": "REG-B8388589618BA8F6",
       "capability_id": "CAP-MEETING",
       "stable_capability_id": "CAP-MEETING",
       "capability_name": "Meeting recording",
@@ -13938,16 +13938,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/audioStorage.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+      "current_anchor": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Meeting workflow",
       "target_path": "codebase/main/infrastructure/persistence/audioStorage.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+      "target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
       "intended_target_path": "codebase/main/infrastructure/persistence/audioStorage.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
       "target_owner": "Meeting workflow",
       "capability_owner": "Meeting workflow",
       "module_owner": "Meeting workflow",
@@ -13958,7 +13958,7 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
       ],
       "database_or_filesystem_effect": [],
       "native_dependency": [],
@@ -13981,7 +13981,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-15087545799E553F",
+      "id": "REG-06E622BC1ED1A8C5",
       "capability_id": "CAP-MEETING",
       "stable_capability_id": "CAP-MEETING",
       "capability_name": "Meeting recording",
@@ -14000,16 +14000,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Meeting workflow",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "Meeting workflow",
       "capability_owner": "Meeting workflow",
       "module_owner": "Meeting workflow",
@@ -14020,10 +14020,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -14914,7 +14914,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-18F81ED9B6E1B5A3",
+      "id": "REG-EE60BBC3149BABB0",
       "capability_id": "CAP-MEETING-NOTES",
       "stable_capability_id": "CAP-MEETING-NOTES",
       "capability_name": "Meeting notes",
@@ -14929,16 +14929,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Notes",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "Notes",
       "capability_owner": "Notes",
       "module_owner": "Notes",
@@ -14949,10 +14949,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -19331,7 +19331,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-305CE6EF2F30B1DE",
+      "id": "REG-924A04084FAA2CE3",
       "capability_id": "CAP-NOTES",
       "stable_capability_id": "CAP-NOTES",
       "capability_name": "Notes organisation",
@@ -19351,16 +19351,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
       "current_symbol": null,
-      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Notes",
       "target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "intended_target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "target_owner": "Notes",
       "capability_owner": "Notes",
       "module_owner": "Notes",
@@ -20738,7 +20738,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-056B5B1EAF33408C",
+      "id": "REG-0A84286E6AD0CB34",
       "capability_id": "CAP-PERSONAL-NOTES",
       "stable_capability_id": "CAP-PERSONAL-NOTES",
       "capability_name": "Personal notes",
@@ -20752,16 +20752,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Notes",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "Notes",
       "capability_owner": "Notes",
       "module_owner": "Notes",
@@ -20772,10 +20772,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -21086,7 +21086,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-DBED84560CCFE992",
+      "id": "REG-B019088F79083718",
       "capability_id": "CAP-PERSONAL-NOTES",
       "stable_capability_id": "CAP-PERSONAL-NOTES",
       "capability_name": "Personal notes",
@@ -21100,16 +21100,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
       "current_symbol": null,
-      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Notes",
       "target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "intended_target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "target_owner": "Notes",
       "capability_owner": "Notes",
       "module_owner": "Notes",
@@ -21262,7 +21262,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-92206EB57EF09555",
+      "id": "REG-5E11E74227D976DD",
       "capability_id": "CAP-PLAYBACK",
       "stable_capability_id": "CAP-PLAYBACK",
       "capability_name": "Playback",
@@ -21277,16 +21277,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/audioStorage.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+      "current_anchor": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Playback",
       "target_path": "codebase/main/infrastructure/persistence/audioStorage.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+      "target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
       "intended_target_path": "codebase/main/infrastructure/persistence/audioStorage.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
       "target_owner": "Playback",
       "capability_owner": "Playback",
       "module_owner": "Playback",
@@ -21297,7 +21297,7 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
       ],
       "database_or_filesystem_effect": [],
       "native_dependency": [],
@@ -22849,7 +22849,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-41591D7AF8D4580D",
+      "id": "REG-9761000F608D4475",
       "capability_id": "CAP-RECOVERY",
       "stable_capability_id": "CAP-RECOVERY",
       "capability_name": "Recording recovery",
@@ -22865,16 +22865,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/audioStorage.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+      "current_anchor": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Meeting workflow",
       "target_path": "codebase/main/infrastructure/persistence/audioStorage.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+      "target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
       "intended_target_path": "codebase/main/infrastructure/persistence/audioStorage.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
       "target_owner": "Meeting workflow",
       "capability_owner": "Meeting workflow",
       "module_owner": "Meeting workflow",
@@ -22885,7 +22885,7 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
       ],
       "database_or_filesystem_effect": [],
       "native_dependency": [],
@@ -22908,7 +22908,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-FDC106E62C934CB3",
+      "id": "REG-5A068F88AFD3E2CF",
       "capability_id": "CAP-RECOVERY",
       "stable_capability_id": "CAP-RECOVERY",
       "capability_name": "Recording recovery",
@@ -22924,16 +22924,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Meeting workflow",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "Meeting workflow",
       "capability_owner": "Meeting workflow",
       "module_owner": "Meeting workflow",
@@ -22944,10 +22944,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -24290,7 +24290,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-DEL-72F565A7D40DEABC",
+      "id": "REG-DEL-005E94E5ECE6469E",
       "capability_id": "CAP-REMOVE-ACTIVE-OPENWHISPR-IDENTITY",
       "stable_capability_id": "CAP-REMOVE-ACTIVE-OPENWHISPR-IDENTITY",
       "capability_name": "Active OpenWhispr identity",
@@ -24305,17 +24305,17 @@
       "status": "REVIEWED DELETION EVIDENCE - IMPLEMENTATION INTERLOCK PENDING",
       "candidate_disposition": "HISTORICAL MIGRATION - PRESERVE",
       "current_path": "codebase/main/infrastructure/persistence/dataMigration.js",
-      "current_symbol": "line:25:// 2. Identify the legacy OpenWhispr user-data path.",
-      "current_anchor": "codebase/main/infrastructure/persistence/dataMigration.js::line:25:// 2. Identify the legacy OpenWhispr user-data path.",
-      "current_line_start": 25,
-      "current_line_end": 25,
+      "current_symbol": "line:47:channel === \"production\" ? \"OpenWhispr\" : `OpenWhispr-${channel}`",
+      "current_anchor": "codebase/main/infrastructure/persistence/dataMigration.js::line:47:channel === \"production\" ? \"OpenWhispr\" : `OpenWhispr-${channel}`",
+      "current_line_start": 47,
+      "current_line_end": 47,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Excluded-system removal",
       "target_path": "codebase/main/infrastructure/persistence/dataMigration.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::line:25:// 2. Identify the legacy OpenWhispr user-data path.",
+      "target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::line:47:channel === \"production\" ? \"OpenWhispr\" : `OpenWhispr-${channel}`",
       "intended_target_path": "codebase/main/infrastructure/persistence/dataMigration.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::line:25:// 2. Identify the legacy OpenWhispr user-data path.",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::line:47:channel === \"production\" ? \"OpenWhispr\" : `OpenWhispr-${channel}`",
       "target_owner": "Excluded-system removal",
       "capability_owner": "Excluded-system removal",
       "module_owner": "Excluded-system removal",
@@ -24326,132 +24326,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/dataMigration.js::line:25:// 2. Identify the legacy OpenWhispr user-data path."
+        "codebase/main/infrastructure/persistence/dataMigration.js::line:47:channel === \"production\" ? \"OpenWhispr\" : `OpenWhispr-${channel}`"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/dataMigration.js::line:25:// 2. Identify the legacy OpenWhispr user-data path."
-      ],
-      "native_dependency": [],
-      "runtime_registration": [],
-      "configuration_references": [],
-      "tests": [],
-      "required_changes": [
-        "Capture pre-change evidence at these exact reviewed locations: codebase/main/infrastructure/persistence/dataMigration.js.",
-        "At the reviewed Active OpenWhispr identity locations, trace every listed current anchor and implement only the mapped Master requirement contracts while preserving data, IPC, native, packaging and cleanup behavior applicable to this capability.",
-        "Create or preserve the single owned target ABSENT_FROM_ACTIVE_PRODUCT::absence::cap-remove-active-openwhispr-identity; update only listed callers, registrations, persistence effects, tests and packaging references proven to depend on it.",
-        "Save the focused diff/hash delta and all classified targeted, real-boundary, regression, offline or not-applicable evidence before changing planning status."
-      ],
-      "verification_evidence_required": [
-        "Evidence bundle for TASK-DEL-ACTIVE-OPENWHISPR-IDENTITY"
-      ],
-      "phase": "PHASE-04-EXCLUDED-SYSTEM-REMOVAL",
-      "wave": "WAVE-04",
-      "last_planning_verification_checkpoint": "CHECKPOINT-SEMANTIC-PLANNING",
-      "editable_target": false,
-      "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
-    },
-    {
-      "id": "REG-DEL-86C539DC16259346",
-      "capability_id": "CAP-REMOVE-ACTIVE-OPENWHISPR-IDENTITY",
-      "stable_capability_id": "CAP-REMOVE-ACTIVE-OPENWHISPR-IDENTITY",
-      "capability_name": "Active OpenWhispr identity",
-      "entity_type": "database/migration",
-      "location_class": "DATABASE/MIGRATION",
-      "master_requirement_ids": [
-        "REQ-MP2-B00BFFB27C",
-        "REQ-MP2-D9B3A44B86",
-        "REQ-MP2-2C2440B403"
-      ],
-      "decision": "REMOVE",
-      "status": "REVIEWED DELETION EVIDENCE - IMPLEMENTATION INTERLOCK PENDING",
-      "candidate_disposition": "HISTORICAL MIGRATION - PRESERVE",
-      "current_path": "codebase/main/infrastructure/persistence/dataMigration.js",
-      "current_symbol": "line:28:oldUserDataPath = pathMock.join(appDataPath, \"OpenWhispr\");",
-      "current_anchor": "codebase/main/infrastructure/persistence/dataMigration.js::line:28:oldUserDataPath = pathMock.join(appDataPath, \"OpenWhispr\");",
-      "current_line_start": 28,
-      "current_line_end": 28,
-      "graphify_node_id": null,
-      "real_graph_or_static_analysis_node_id": null,
-      "current_owner": "Excluded-system removal",
-      "target_path": "codebase/main/infrastructure/persistence/dataMigration.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::line:28:oldUserDataPath = pathMock.join(appDataPath, \"OpenWhispr\");",
-      "intended_target_path": "codebase/main/infrastructure/persistence/dataMigration.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::line:28:oldUserDataPath = pathMock.join(appDataPath, \"OpenWhispr\");",
-      "target_owner": "Excluded-system removal",
-      "capability_owner": "Excluded-system removal",
-      "module_owner": "Excluded-system removal",
-      "dependencies": [],
-      "dependents": [],
-      "renderer_entry": [],
-      "preload_exposure": [],
-      "ipc_channel": [],
-      "ipc_handler": [],
-      "service": [
-        "codebase/main/infrastructure/persistence/dataMigration.js::line:28:oldUserDataPath = pathMock.join(appDataPath, \"OpenWhispr\");"
-      ],
-      "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/dataMigration.js::line:28:oldUserDataPath = pathMock.join(appDataPath, \"OpenWhispr\");"
-      ],
-      "native_dependency": [],
-      "runtime_registration": [],
-      "configuration_references": [],
-      "tests": [],
-      "required_changes": [
-        "Capture pre-change evidence at these exact reviewed locations: codebase/main/infrastructure/persistence/dataMigration.js.",
-        "At the reviewed Active OpenWhispr identity locations, trace every listed current anchor and implement only the mapped Master requirement contracts while preserving data, IPC, native, packaging and cleanup behavior applicable to this capability.",
-        "Create or preserve the single owned target ABSENT_FROM_ACTIVE_PRODUCT::absence::cap-remove-active-openwhispr-identity; update only listed callers, registrations, persistence effects, tests and packaging references proven to depend on it.",
-        "Save the focused diff/hash delta and all classified targeted, real-boundary, regression, offline or not-applicable evidence before changing planning status."
-      ],
-      "verification_evidence_required": [
-        "Evidence bundle for TASK-DEL-ACTIVE-OPENWHISPR-IDENTITY"
-      ],
-      "phase": "PHASE-04-EXCLUDED-SYSTEM-REMOVAL",
-      "wave": "WAVE-04",
-      "last_planning_verification_checkpoint": "CHECKPOINT-SEMANTIC-PLANNING",
-      "editable_target": false,
-      "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
-    },
-    {
-      "id": "REG-DEL-262884976A2FE752",
-      "capability_id": "CAP-REMOVE-ACTIVE-OPENWHISPR-IDENTITY",
-      "stable_capability_id": "CAP-REMOVE-ACTIVE-OPENWHISPR-IDENTITY",
-      "capability_name": "Active OpenWhispr identity",
-      "entity_type": "database/migration",
-      "location_class": "DATABASE/MIGRATION",
-      "master_requirement_ids": [
-        "REQ-MP2-B00BFFB27C",
-        "REQ-MP2-D9B3A44B86",
-        "REQ-MP2-2C2440B403"
-      ],
-      "decision": "REMOVE",
-      "status": "REVIEWED DELETION EVIDENCE - IMPLEMENTATION INTERLOCK PENDING",
-      "candidate_disposition": "HISTORICAL MIGRATION - PRESERVE",
-      "current_path": "codebase/main/infrastructure/persistence/dataMigration.js",
-      "current_symbol": "line:30:oldUserDataPath = pathMock.join(appDataPath, `OpenWhispr-${channel}`);",
-      "current_anchor": "codebase/main/infrastructure/persistence/dataMigration.js::line:30:oldUserDataPath = pathMock.join(appDataPath, `OpenWhispr-${channel}`);",
-      "current_line_start": 30,
-      "current_line_end": 30,
-      "graphify_node_id": null,
-      "real_graph_or_static_analysis_node_id": null,
-      "current_owner": "Excluded-system removal",
-      "target_path": "codebase/main/infrastructure/persistence/dataMigration.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::line:30:oldUserDataPath = pathMock.join(appDataPath, `OpenWhispr-${channel}`);",
-      "intended_target_path": "codebase/main/infrastructure/persistence/dataMigration.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/dataMigration.js::line:30:oldUserDataPath = pathMock.join(appDataPath, `OpenWhispr-${channel}`);",
-      "target_owner": "Excluded-system removal",
-      "capability_owner": "Excluded-system removal",
-      "module_owner": "Excluded-system removal",
-      "dependencies": [],
-      "dependents": [],
-      "renderer_entry": [],
-      "preload_exposure": [],
-      "ipc_channel": [],
-      "ipc_handler": [],
-      "service": [
-        "codebase/main/infrastructure/persistence/dataMigration.js::line:30:oldUserDataPath = pathMock.join(appDataPath, `OpenWhispr-${channel}`);"
-      ],
-      "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/dataMigration.js::line:30:oldUserDataPath = pathMock.join(appDataPath, `OpenWhispr-${channel}`);"
+        "codebase/main/infrastructure/persistence/dataMigration.js::line:47:channel === \"production\" ? \"OpenWhispr\" : `OpenWhispr-${channel}`"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -25940,7 +25818,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-DEL-7806D686DE934BD3",
+      "id": "REG-DEL-F0BE49ABF5A60F82",
       "capability_id": "CAP-REMOVE-ACTIVE-OPENWHISPR-IDENTITY",
       "stable_capability_id": "CAP-REMOVE-ACTIVE-OPENWHISPR-IDENTITY",
       "capability_name": "Active OpenWhispr identity",
@@ -25955,76 +25833,17 @@
       "status": "REVIEWED DELETION EVIDENCE - IMPLEMENTATION INTERLOCK PENDING",
       "candidate_disposition": "HISTORICAL MIGRATION - PRESERVE",
       "current_path": "codebase/tests/unit/persistence/dataMigration.test.js",
-      "current_symbol": "line:37:if (p === \"/appData/OpenWhispr\") {",
-      "current_anchor": "codebase/tests/unit/persistence/dataMigration.test.js::line:37:if (p === \"/appData/OpenWhispr\") {",
-      "current_line_start": 37,
-      "current_line_end": 37,
+      "current_symbol": "line:12:const legacyPath = path.join(appDataPath, \"OpenWhispr\");",
+      "current_anchor": "codebase/tests/unit/persistence/dataMigration.test.js::line:12:const legacyPath = path.join(appDataPath, \"OpenWhispr\");",
+      "current_line_start": 12,
+      "current_line_end": 12,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Excluded-system removal",
       "target_path": "codebase/tests/unit/persistence/dataMigration.test.js",
-      "target_symbol": "codebase/tests/unit/persistence/dataMigration.test.js::line:37:if (p === \"/appData/OpenWhispr\") {",
+      "target_symbol": "codebase/tests/unit/persistence/dataMigration.test.js::line:12:const legacyPath = path.join(appDataPath, \"OpenWhispr\");",
       "intended_target_path": "codebase/tests/unit/persistence/dataMigration.test.js",
-      "intended_target_symbol": "codebase/tests/unit/persistence/dataMigration.test.js::line:37:if (p === \"/appData/OpenWhispr\") {",
-      "target_owner": "Excluded-system removal",
-      "capability_owner": "Excluded-system removal",
-      "module_owner": "Excluded-system removal",
-      "dependencies": [],
-      "dependents": [],
-      "renderer_entry": [],
-      "preload_exposure": [],
-      "ipc_channel": [],
-      "ipc_handler": [],
-      "service": [],
-      "database_or_filesystem_effect": [],
-      "native_dependency": [],
-      "runtime_registration": [],
-      "configuration_references": [],
-      "tests": [
-        "codebase/tests/unit/persistence/dataMigration.test.js"
-      ],
-      "required_changes": [
-        "Capture pre-change evidence at these exact reviewed locations: codebase/tests/unit/persistence/dataMigration.test.js.",
-        "At the reviewed Active OpenWhispr identity locations, trace every listed current anchor and implement only the mapped Master requirement contracts while preserving data, IPC, native, packaging and cleanup behavior applicable to this capability.",
-        "Create or preserve the single owned target ABSENT_FROM_ACTIVE_PRODUCT::absence::cap-remove-active-openwhispr-identity; update only listed callers, registrations, persistence effects, tests and packaging references proven to depend on it.",
-        "Save the focused diff/hash delta and all classified targeted, real-boundary, regression, offline or not-applicable evidence before changing planning status."
-      ],
-      "verification_evidence_required": [
-        "Evidence bundle for TASK-DEL-ACTIVE-OPENWHISPR-IDENTITY"
-      ],
-      "phase": "PHASE-04-EXCLUDED-SYSTEM-REMOVAL",
-      "wave": "WAVE-04",
-      "last_planning_verification_checkpoint": "CHECKPOINT-SEMANTIC-PLANNING",
-      "editable_target": false,
-      "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
-    },
-    {
-      "id": "REG-DEL-9C1CE06E306BDFF2",
-      "capability_id": "CAP-REMOVE-ACTIVE-OPENWHISPR-IDENTITY",
-      "stable_capability_id": "CAP-REMOVE-ACTIVE-OPENWHISPR-IDENTITY",
-      "capability_name": "Active OpenWhispr identity",
-      "entity_type": "owned test",
-      "location_class": "OWNED TEST",
-      "master_requirement_ids": [
-        "REQ-MP2-B00BFFB27C",
-        "REQ-MP2-D9B3A44B86",
-        "REQ-MP2-2C2440B403"
-      ],
-      "decision": "REMOVE",
-      "status": "REVIEWED DELETION EVIDENCE - IMPLEMENTATION INTERLOCK PENDING",
-      "candidate_disposition": "HISTORICAL MIGRATION - PRESERVE",
-      "current_path": "codebase/tests/unit/persistence/dataMigration.test.js",
-      "current_symbol": "line:66:if (p === \"/appData/OpenWhispr\") return true;",
-      "current_anchor": "codebase/tests/unit/persistence/dataMigration.test.js::line:66:if (p === \"/appData/OpenWhispr\") return true;",
-      "current_line_start": 66,
-      "current_line_end": 66,
-      "graphify_node_id": null,
-      "real_graph_or_static_analysis_node_id": null,
-      "current_owner": "Excluded-system removal",
-      "target_path": "codebase/tests/unit/persistence/dataMigration.test.js",
-      "target_symbol": "codebase/tests/unit/persistence/dataMigration.test.js::line:66:if (p === \"/appData/OpenWhispr\") return true;",
-      "intended_target_path": "codebase/tests/unit/persistence/dataMigration.test.js",
-      "intended_target_symbol": "codebase/tests/unit/persistence/dataMigration.test.js::line:66:if (p === \"/appData/OpenWhispr\") return true;",
+      "intended_target_symbol": "codebase/tests/unit/persistence/dataMigration.test.js::line:12:const legacyPath = path.join(appDataPath, \"OpenWhispr\");",
       "target_owner": "Excluded-system removal",
       "capability_owner": "Excluded-system removal",
       "module_owner": "Excluded-system removal",
@@ -37888,7 +37707,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-CBF2A94322F731F8",
+      "id": "REG-23E9EAB7989F934B",
       "capability_id": "CAP-RESTORE",
       "stable_capability_id": "CAP-RESTORE",
       "capability_name": "Restore",
@@ -37902,16 +37721,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "SQLite persistence",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "SQLite persistence",
       "capability_owner": "SQLite persistence",
       "module_owner": "SQLite persistence",
@@ -37922,10 +37741,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -37947,7 +37766,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-72558C1D0F61DB12",
+      "id": "REG-09C515DFF45218A2",
       "capability_id": "CAP-RESTORE",
       "stable_capability_id": "CAP-RESTORE",
       "capability_name": "Restore",
@@ -37961,16 +37780,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/localBackup.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+      "current_anchor": "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "SQLite persistence",
       "target_path": "codebase/main/infrastructure/persistence/localBackup.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+      "target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
       "intended_target_path": "codebase/main/infrastructure/persistence/localBackup.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
       "target_owner": "SQLite persistence",
       "capability_owner": "SQLite persistence",
       "module_owner": "SQLite persistence",
@@ -37981,7 +37800,7 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
       ],
       "database_or_filesystem_effect": [],
       "native_dependency": [],
@@ -38602,7 +38421,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-A5CD7941D12BABE2",
+      "id": "REG-72F46473562B6AEE",
       "capability_id": "CAP-SEARCH-EXACT",
       "stable_capability_id": "CAP-SEARCH-EXACT",
       "capability_name": "Exact search",
@@ -38619,16 +38438,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
       "current_symbol": null,
-      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Search",
       "target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "intended_target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "target_owner": "Search",
       "capability_owner": "Search",
       "module_owner": "Search",
@@ -39358,7 +39177,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-2A507A25A45AB8B8",
+      "id": "REG-6C6673837306F8D4",
       "capability_id": "CAP-SEGMENTS",
       "stable_capability_id": "CAP-SEGMENTS",
       "capability_name": "Timestamped transcript segments",
@@ -39373,16 +39192,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Local transcription",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "Local transcription",
       "capability_owner": "Local transcription",
       "module_owner": "Local transcription",
@@ -39393,10 +39212,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -39654,7 +39473,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-0077845F04424CB5",
+      "id": "REG-5B2F8440725CD1CE",
       "capability_id": "CAP-SEGMENTS",
       "stable_capability_id": "CAP-SEGMENTS",
       "capability_name": "Timestamped transcript segments",
@@ -39669,16 +39488,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
       "current_symbol": null,
-      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Local transcription",
       "target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "intended_target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "target_owner": "Local transcription",
       "capability_owner": "Local transcription",
       "module_owner": "Local transcription",
@@ -39712,7 +39531,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-DE643CB4A30DE38D",
+      "id": "REG-9A6706F82B0A1C11",
       "capability_id": "CAP-SETTINGS",
       "stable_capability_id": "CAP-SETTINGS",
       "capability_name": "Settings",
@@ -39728,16 +39547,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Settings and platform security",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "Settings and platform security",
       "capability_owner": "Settings and platform security",
       "module_owner": "Settings and platform security",
@@ -39748,10 +39567,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -40743,7 +40562,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-3F7B455FB5DC87DD",
+      "id": "REG-D80DAF08FA430D67",
       "capability_id": "CAP-SNIPPETS",
       "stable_capability_id": "CAP-SNIPPETS",
       "capability_name": "Snippets",
@@ -40757,16 +40576,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Notes",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "Notes",
       "capability_owner": "Notes",
       "module_owner": "Notes",
@@ -40777,10 +40596,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -41376,7 +41195,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-A4404FE11D01F97C",
+      "id": "REG-7332ED98CF7C41C3",
       "capability_id": "CAP-SPEAKER-EMBEDDINGS",
       "stable_capability_id": "CAP-SPEAKER-EMBEDDINGS",
       "capability_name": "Speaker embeddings",
@@ -41390,16 +41209,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Diarization and speakers",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "Diarization and speakers",
       "capability_owner": "Diarization and speakers",
       "module_owner": "Diarization and speakers",
@@ -41410,10 +41229,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -41606,7 +41425,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-8297E6D74E46475E",
+      "id": "REG-35DA6BBC4F165530",
       "capability_id": "CAP-SPEAKER-LABELS",
       "stable_capability_id": "CAP-SPEAKER-LABELS",
       "capability_name": "Speaker labels",
@@ -41620,16 +41439,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Diarization and speakers",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "Diarization and speakers",
       "capability_owner": "Diarization and speakers",
       "module_owner": "Diarization and speakers",
@@ -41640,10 +41459,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -41836,7 +41655,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-4A309E1A2104E1EA",
+      "id": "REG-535C98EA47D76675",
       "capability_id": "CAP-SPEAKER-NAMING",
       "stable_capability_id": "CAP-SPEAKER-NAMING",
       "capability_name": "Speaker naming",
@@ -41850,16 +41669,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Diarization and speakers",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "Diarization and speakers",
       "capability_owner": "Diarization and speakers",
       "module_owner": "Diarization and speakers",
@@ -41870,10 +41689,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -42184,7 +42003,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-B42CCF99E66F15F7",
+      "id": "REG-AF6E374B09A63D48",
       "capability_id": "CAP-SPEAKER-PERSISTENCE",
       "stable_capability_id": "CAP-SPEAKER-PERSISTENCE",
       "capability_name": "Speaker persistence",
@@ -42198,16 +42017,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Diarization and speakers",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "Diarization and speakers",
       "capability_owner": "Diarization and speakers",
       "module_owner": "Diarization and speakers",
@@ -42218,10 +42037,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -42304,7 +42123,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-18EC4983DCB05BDF",
+      "id": "REG-1D0B0D4B46CFC526",
       "capability_id": "CAP-SPEAKER-PERSISTENCE",
       "stable_capability_id": "CAP-SPEAKER-PERSISTENCE",
       "capability_name": "Speaker persistence",
@@ -42318,16 +42137,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
       "current_symbol": null,
-      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Diarization and speakers",
       "target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "intended_target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "target_owner": "Diarization and speakers",
       "capability_owner": "Diarization and speakers",
       "module_owner": "Diarization and speakers",
@@ -42418,7 +42237,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-EC203E65B09CF168",
+      "id": "REG-4B5BE5F0E2E8E240",
       "capability_id": "CAP-SPEAKER-RENAMING",
       "stable_capability_id": "CAP-SPEAKER-RENAMING",
       "capability_name": "Speaker renaming",
@@ -42432,16 +42251,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Diarization and speakers",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "Diarization and speakers",
       "capability_owner": "Diarization and speakers",
       "module_owner": "Diarization and speakers",
@@ -42452,10 +42271,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -43226,7 +43045,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-77EEF39A6E38B3CC",
+      "id": "REG-ECCF090E7D150925",
       "capability_id": "CAP-TAGS",
       "stable_capability_id": "CAP-TAGS",
       "capability_name": "Tags",
@@ -43241,16 +43060,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Notes",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "Notes",
       "capability_owner": "Notes",
       "module_owner": "Notes",
@@ -43261,10 +43080,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -43580,7 +43399,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-EF26752F98D6062D",
+      "id": "REG-D4EA178D7626A0E0",
       "capability_id": "CAP-TAGS",
       "stable_capability_id": "CAP-TAGS",
       "capability_name": "Tags",
@@ -43595,16 +43414,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
       "current_symbol": null,
-      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Notes",
       "target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "intended_target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "target_owner": "Notes",
       "capability_owner": "Notes",
       "module_owner": "Notes",
@@ -44076,7 +43895,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-F4A7F34CF9BA47E4",
+      "id": "REG-44099FDDA5D9763E",
       "capability_id": "CAP-TRANSCRIPT-EDIT",
       "stable_capability_id": "CAP-TRANSCRIPT-EDIT",
       "capability_name": "Transcript editing",
@@ -44091,16 +43910,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Local transcription",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "Local transcription",
       "capability_owner": "Local transcription",
       "module_owner": "Local transcription",
@@ -44111,10 +43930,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -44430,7 +44249,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-729B39E4C547A617",
+      "id": "REG-D5D2495156C5A7AE",
       "capability_id": "CAP-TRANSCRIPT-EDIT",
       "stable_capability_id": "CAP-TRANSCRIPT-EDIT",
       "capability_name": "Transcript editing",
@@ -44445,16 +44264,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
       "current_symbol": null,
-      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "current_anchor": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Local transcription",
       "target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "intended_target_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
-      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+      "intended_target_symbol": "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
       "target_owner": "Local transcription",
       "capability_owner": "Local transcription",
       "module_owner": "Local transcription",
@@ -44488,7 +44307,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-A84289C94948DD25",
+      "id": "REG-F4060A8D7224FEA1",
       "capability_id": "CAP-TRANSCRIPT-HISTORY",
       "stable_capability_id": "CAP-TRANSCRIPT-HISTORY",
       "capability_name": "Transcript history",
@@ -44502,16 +44321,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/audioStorage.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+      "current_anchor": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Local transcription",
       "target_path": "codebase/main/infrastructure/persistence/audioStorage.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+      "target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
       "intended_target_path": "codebase/main/infrastructure/persistence/audioStorage.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
       "target_owner": "Local transcription",
       "capability_owner": "Local transcription",
       "module_owner": "Local transcription",
@@ -44522,7 +44341,7 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
       ],
       "database_or_filesystem_effect": [],
       "native_dependency": [],
@@ -44545,7 +44364,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-19E55610817745EC",
+      "id": "REG-F6941B86E8E37B1C",
       "capability_id": "CAP-TRANSCRIPT-HISTORY",
       "stable_capability_id": "CAP-TRANSCRIPT-HISTORY",
       "capability_name": "Transcript history",
@@ -44559,16 +44378,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Local transcription",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "Local transcription",
       "capability_owner": "Local transcription",
       "module_owner": "Local transcription",
@@ -44579,10 +44398,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -45021,7 +44840,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-40A5433761B64A3F",
+      "id": "REG-784A2A01BCCBA8DB",
       "capability_id": "CAP-TRANSCRIPTION",
       "stable_capability_id": "CAP-TRANSCRIPTION",
       "capability_name": "Transcript creation",
@@ -45042,16 +44861,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Local transcription",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "Local transcription",
       "capability_owner": "Local transcription",
       "module_owner": "Local transcription",
@@ -45062,10 +44881,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],
@@ -46064,7 +45883,7 @@
       "notes": "Reviewed symbols are source-verifiable. Content SHA-256 anchors are used for binaries/data/configuration or source without a reviewed symbol. A null current location is an explicit planned addition."
     },
     {
-      "id": "REG-C254BB5312364323",
+      "id": "REG-64C12466B6DFF14B",
       "capability_id": "CAP-VOICE-FINGERPRINTING",
       "stable_capability_id": "CAP-VOICE-FINGERPRINTING",
       "capability_name": "Local voice fingerprinting",
@@ -46080,16 +45899,16 @@
       "candidate_disposition": null,
       "current_path": "codebase/main/infrastructure/persistence/database.js",
       "current_symbol": null,
-      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "current_anchor": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "current_line_start": null,
       "current_line_end": null,
       "graphify_node_id": null,
       "real_graph_or_static_analysis_node_id": null,
       "current_owner": "Diarization and speakers",
       "target_path": "codebase/main/infrastructure/persistence/database.js",
-      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "intended_target_path": "codebase/main/infrastructure/persistence/database.js",
-      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+      "intended_target_symbol": "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
       "target_owner": "Diarization and speakers",
       "capability_owner": "Diarization and speakers",
       "module_owner": "Diarization and speakers",
@@ -46100,10 +45919,10 @@
       "ipc_channel": [],
       "ipc_handler": [],
       "service": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "database_or_filesystem_effect": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "native_dependency": [],
       "runtime_registration": [],

@@ -8,7 +8,7 @@
 - Git: present at the repository root; branch, commit, staged, unstaged, deleted and untracked states are verified at implementation time by `TASK-GOV-001-PROVENANCE-BASELINE` and recorded in the audit baseline (the checked-out branch name is intentionally not embedded so generated evidence is identical across clones).
 - Provenance fallback: `REPOSITORY_FILE_INVENTORY.json` plus `REPOSITORY_FINGERPRINT.json`; the immutable execution root is `TASK-GOV-001-PROVENANCE-BASELINE`.
 - Immutable Master Plan files: verified against the SHA-256 values below before derived generation.
-- Implementation status: `IN PROGRESS`; task counts: `{"BLOCKED": 0, "COMPLETE": 1, "NOT APPLICABLE": 0, "NOT STARTED": 157}`.
+- Implementation status: `BLOCKED`; task counts: `{"BLOCKED": 1, "COMPLETE": 1, "NOT APPLICABLE": 0, "NOT STARTED": 156}`.
 - Latest terminal task checkpoint: `5ed0e52c9c52ebbf2329caff5cfd71af4b3e7237`.
 - Release status: not evaluated by task execution state.
 
@@ -16,7 +16,7 @@
 
 - Requirements: 536 in `MASTER_REQUIREMENT_REGISTER.json`.
 - Capabilities: 120 in `CAPABILITY_REGISTRY.json`.
-- Exact-location entries: 780 in `EXACT_LOCATION_REGISTRY.json`.
+- Exact-location entries: 777 in `EXACT_LOCATION_REGISTRY.json`.
 - Implementation tasks: 158 in `IMPLEMENTATION_QUEUE.json`.
 - Deletion tasks: 31.
 - Conditional decision packages: 11.
@@ -25,7 +25,7 @@
 
 ## Resume pointer
 
-Read `START-HERE.md`. The current next task is `TASK-CAP-DATA-SAFETY` with disposition `NOT STARTED`; `BLOCKED` is a stop barrier, never a skip condition. Re-run `python -B Graphify/tools/validate_planning.py` before execution.
+Read `START-HERE.md`. The current next task is `TASK-CAP-DATA-SAFETY` with disposition `BLOCKED`; `BLOCKED` is a stop barrier, never a skip condition. Re-run `python -B Graphify/tools/validate_planning.py` before execution.
 
 ## Master Plan hashes
 

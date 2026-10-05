@@ -1,0 +1,11 @@
+TASK_ID=TASK-CAP-DATA-SAFETY
+COMMAND=npm test
+WORKING_DIRECTORY=codebase
+EXIT_CODE=0
+RESULT=PASS
+TESTS=190
+PASSED=186
+FAILED=0
+SKIPPED=4
+TARGETED_ASSERTIONS=ordered migration backup and journal checksums; failed migration rollback journal; restart idempotency; newer-schema refusal; cleanup preserves database; verified backup and restore; checksum corruption refusal; non-empty destination refusal; staged migration interruption and retry; atomic audio no-overwrite
+REAL_USER_DATA_TOUCHED=false

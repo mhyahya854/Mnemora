@@ -35,10 +35,18 @@ class AudioStorageManager {
   }
 
   saveAudio(transcriptionId, audioBuffer, timestamp) {
+    let temporaryPath = null;
     try {
       const filename = this._buildFilename(transcriptionId, timestamp);
       const filePath = path.join(this.audioDir, filename);
-      fs.writeFileSync(filePath, audioBuffer);
+      if (fs.existsSync(filePath)) {
+        return { success: false, reason: "already_exists", path: filePath };
+      }
+      temporaryPath = `${filePath}.tmp-${process.pid}-${Date.now()}`;
+      fs.writeFileSync(temporaryPath, audioBuffer, { flag: "wx" });
+      fs.linkSync(temporaryPath, filePath);
+      fs.unlinkSync(temporaryPath);
+      temporaryPath = null;
       debugLogger.debug(
         "Audio saved",
         { transcriptionId, filename, size: audioBuffer.length },
@@ -46,6 +54,11 @@ class AudioStorageManager {
       );
       return { success: true, path: filePath };
     } catch (error) {
+      if (temporaryPath) {
+        try {
+          fs.unlinkSync(temporaryPath);
+        } catch {}
+      }
       debugLogger.error(
         "Failed to save audio",
         { transcriptionId, error: error.message },

@@ -1,0 +1,5 @@
+TASK_ID=TASK-CAP-DATA-SAFETY
+COMMAND=npm run lint
+WORKING_DIRECTORY=codebase
+EXIT_CODE=0
+RESULT=PASS errors=0 warnings_preexisting=28 warnings_task_introduced=0

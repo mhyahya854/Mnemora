@@ -250,8 +250,9 @@ function readAndVerifyBundle(bundlePath) {
   }
   const databaseKey = process.platform === "win32" ? DATABASE_ENTRY.toLocaleLowerCase() : DATABASE_ENTRY;
   if (!seen.has(databaseKey)) throw new Error("Backup database is missing");
-  const actualFiles = new Set(["manifest.json", ...listFiles(root)]);
-  const expectedFiles = new Set(["manifest.json", ...seen]);
+  const pathKey = (value) => (process.platform === "win32" ? value.toLocaleLowerCase() : value);
+  const actualFiles = new Set(["manifest.json", ...listFiles(root)].map(pathKey));
+  const expectedFiles = new Set(["manifest.json", ...seen].map(pathKey));
   if (
     actualFiles.size !== expectedFiles.size ||
     [...actualFiles].some((file) => !expectedFiles.has(file))

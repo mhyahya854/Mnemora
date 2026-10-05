@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "task_id": "TASK-CAP-DATA-SAFETY",
+  "check": "task-owned local persistence workflow without a network dependency",
+  "status": "PASS",
+  "authorizing_contract": "IMPLEMENTATION_QUEUE.json#TASK-CAP-DATA-SAFETY.offline_verification_impact",
+  "reachability_evidence": {
+    "runtime_reachable": true,
+    "boundaries": [
+      "local SQLite database",
+      "local filesystem migration staging",
+      "local audio storage",
+      "local backup archive and restore"
+    ],
+    "network_dependencies": [],
+    "test_environment": "Disposable local filesystem and real SQLite database through the Electron Node test runtime"
+  },
+  "evidence": {
+    "command": "npm test",
+    "exit_code": 0,
+    "real_boundary_test": "PASS",
+    "sqlite_quick_check": "ok",
+    "foreign_key_violations": 0,
+    "source_hashes_preserved": true
+  },
+  "installed_application_release_regression": "Remains required by the later release-proof workflow; this task does not claim that later installed-build proof.",
+  "rationale": "Every boundary owned by this task is local and was exercised without a remote service. NOT APPLICABLE is not used because the runtime is reachable.",
+  "result": "PASS"
+}

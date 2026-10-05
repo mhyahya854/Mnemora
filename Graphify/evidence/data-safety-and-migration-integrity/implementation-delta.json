@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "batch_id": "TASK-CAP-DATA-SAFETY",
+  "capability_id": "CAP-DATA-SAFETY",
+  "reason": "Make every task-owned persistence boundary lossless, rollbackable, checksum-verifiable, and real-boundary tested.",
+  "mutation_type": "PRESERVATION-FIRST DATA SAFETY HARDENING",
+  "starting_commit": "d977e348223ceb29a828442e908ad76daad52964",
+  "checkpoint_identity": "d977e348223ceb29a828442e908ad76daad52964",
+  "changed_files": [
+    "codebase/main/infrastructure/persistence/database.js",
+    "codebase/main/infrastructure/persistence/localBackup.js",
+    "codebase/main/infrastructure/persistence/dataMigration.js",
+    "codebase/main/infrastructure/persistence/audioStorage.js",
+    "codebase/tests/unit/persistence/localDataDatabase.test.js",
+    "codebase/tests/unit/persistence/dataMigration.test.js",
+    "codebase/tests/integration/data-safety-and-migration-integrity.real-boundary.test.js",
+    "Graphify implementation state, derived views, validation reports, and this task's six evidence files"
+  ],
+  "source_sha256_after": {
+    "codebase/main/infrastructure/persistence/database.js": "C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+    "codebase/main/infrastructure/persistence/localBackup.js": "68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+    "codebase/main/infrastructure/persistence/dataMigration.js": "1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+    "codebase/main/infrastructure/persistence/audioStorage.js": "BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
+    "codebase/tests/unit/persistence/localDataDatabase.test.js": "0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
+    "codebase/tests/unit/persistence/localBackup.test.js": "65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5",
+    "codebase/tests/unit/persistence/dataMigration.test.js": "2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
+    "codebase/tests/integration/data-safety-and-migration-integrity.real-boundary.test.js": "1BDE47FAC90D8430086953EB5B69C83E37B444CFDEF9145CF3B063AE89316BB5"
+  },
+  "implemented_invariants": [
+    "Forward database migrations create a verified backup and a durable migration journal with source and destination checksums and result status.",
+    "Database cleanup closes handles but never deletes the user's database.",
+    "Legacy migration stages verified copies beside the destination, rejects symlinks and non-empty targets, writes a completion journal, and publishes by atomic rename.",
+    "Failed legacy migration removes only disposable staging data; source data remains unchanged and retryable.",
+    "Audio writes use exclusive temporary creation and atomic no-overwrite publication.",
+    "Backup verification compares Windows paths with one consistent case-folding rule.",
+    "A real SQLite/filesystem boundary test verifies protected counts, hashes, backup/restore, migration idempotency, and source preservation."
+  ],
+  "database_impact": "Forward schema migration 4 to 5 adds migration_journal; all prior tables and user rows are preserved.",
+  "filesystem_impact": "Atomic staging and temporary files are confined to disposable test roots during evidence collection.",
+  "real_user_data_touched": false,
+  "dependencies_added": [],
+  "deleted_files": [],
+  "failed_checks": [
+    {
+      "check": "first post-change npm test",
+      "failure": "Backup archive verification treated Windows path casing asymmetrically.",
+      "repair": "Applied the same normalized path key to expected and actual archive file lists."
+    },
+    {
+      "check": "second post-change npm test",
+      "failure": "The integration test read transient migration details after restore reinitialized the manager.",
+      "repair": "Captured the already-verified migration backup SHA before restore."
+    }
+  ],
+  "tests_executed": "See targeted.log, integration.log, and regression.log.",
+  "evidence_paths": [
+    "Graphify/evidence/data-safety-and-migration-integrity/pre-change-characterization.json",
+    "Graphify/evidence/data-safety-and-migration-integrity/implementation-delta.json",
+    "Graphify/evidence/data-safety-and-migration-integrity/targeted.log",
+    "Graphify/evidence/data-safety-and-migration-integrity/integration.log",
+    "Graphify/evidence/data-safety-and-migration-integrity/regression.log",
+    "Graphify/evidence/data-safety-and-migration-integrity/offline-or-applicability.json"
+  ],
+  "remaining_task_risks": [
+    "Graphify full validation cannot currently reconcile an authorized implementation delta: SEM-021, SEM-033, SEM-037, SEM-041, and SEM-042 failed."
+  ],
+  "model_tool_identity": "Codex; Graphify query workflow; Ponytail minimal-diff guidance; Ponytail Audit read-only repository review",
+  "result": "BLOCKED - APPLICATION PROOF PASSED; GRAPHIFY RECONCILIATION FAILED"
+}

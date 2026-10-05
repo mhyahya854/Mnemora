@@ -1,10 +1,10 @@
 {
   "schema_version": 4,
-  "verdict": "PASS",
+  "verdict": "FAIL",
   "requirements": 536,
   "capabilities": 120,
   "tasks": 158,
-  "exact_locations": 780,
+  "exact_locations": 777,
   "dependency_graph": {
     "task_nodes": 158,
     "dependency_edges": 323,
