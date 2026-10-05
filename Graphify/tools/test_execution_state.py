@@ -14,10 +14,12 @@ from pathlib import Path
 from execution_state import (
     ExecutionStateError,
     apply_queue_summary,
+    authorized_task_paths,
     execution_state_errors,
     merge_execution_states,
     select_next_task,
     summarize_execution_state,
+    validate_codebase_mutation,
 )
 
 
@@ -135,6 +137,20 @@ class ExecutionStateBootstrapTests(unittest.TestCase):
             task.pop("execution_state", None)
         with self.assertRaises(ExecutionStateError):
             merge_execution_states(generated, existing)
+
+    def test_authorized_task_paths_for_active_and_completed_tasks(self) -> None:
+        expected_changes, expected_additions, forbidden = authorized_task_paths(self.tasks, "TASK-CAP-DATA-SAFETY")
+        self.assertIn("codebase/main/infrastructure/persistence/dataMigration.js", expected_changes)
+        self.assertIn("codebase/tests/integration/data-safety-and-migration-integrity.real-boundary.test.js", expected_additions)
+        self.assertIn("Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md", forbidden)
+
+    def test_validate_codebase_mutation_detects_unauthorized_and_forbidden_edits(self) -> None:
+        expected_changes, expected_additions, forbidden = authorized_task_paths(self.tasks, "TASK-CAP-DATA-SAFETY")
+        unauthorized_path = "codebase/renderer/App.tsx"
+        self.assertNotIn(unauthorized_path, expected_changes)
+        self.assertNotIn(unauthorized_path, expected_additions)
+        forbidden_path = "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md"
+        self.assertIn(forbidden_path, forbidden)
 
 
 if __name__ == "__main__":

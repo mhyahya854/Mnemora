@@ -266,3 +266,66 @@ def regenerate_fixture_queue(input_path: Path, output_path: Path, evidence_root:
     regenerated["tasks"] = generated_tasks
     apply_queue_summary(regenerated, summary)
     output_path.write_text(json.dumps(regenerated, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
+def authorized_task_paths(
+    tasks: list[dict[str, Any]], active_task_id: str | None = None
+) -> tuple[set[str], set[str], set[str]]:
+    """Return (authorized_changes, authorized_additions, forbidden_paths).
+
+    A path is authorized to change if it is declared under files_expected_to_change
+    in an active task or a non-NOT STARTED (COMPLETE, BLOCKED) task.
+    A path is authorized to be added if it is declared as a TEST TO CREATE under
+    real_integration_verification in an active or non-NOT STARTED task.
+    """
+    expected_changes: set[str] = set()
+    expected_additions: set[str] = set()
+    forbidden_paths: set[str] = set()
+
+    for task in tasks:
+        task_id = task.get("stable_task_id")
+        state = task.get("execution_state") or {}
+        disposition = state.get("disposition", "NOT STARTED")
+        is_active = active_task_id is not None and task_id == active_task_id
+        is_relevant = is_active or disposition in ("COMPLETE", "BLOCKED")
+
+        for forbidden in task.get("files_forbidden_from_changing", []):
+            if isinstance(forbidden, str) and not forbidden.startswith("User ") and not forbidden.startswith("Files owned"):
+                forbidden_paths.add(forbidden.replace("\\", "/"))
+
+        if is_relevant:
+            for path in task.get("files_expected_to_change", []):
+                if isinstance(path, str):
+                    expected_changes.add(path.replace("\\", "/"))
+            for proof in task.get("real_integration_verification", []):
+                if proof.get("reference_status") == "TEST TO CREATE" and proof.get("test_path"):
+                    expected_additions.add(proof["test_path"].replace("\\", "/"))
+
+    return expected_changes, expected_additions, forbidden_paths
+
+
+def validate_codebase_mutation(
+    modified_paths: Any,
+    added_paths: Any,
+    tasks: list[dict[str, Any]],
+    active_task_id: str | None = None,
+) -> list[str]:
+    """Verify that every modified or added path is authorized by a task contract."""
+    expected_changes, expected_additions, forbidden = authorized_task_paths(tasks, active_task_id)
+    errors: list[str] = []
+
+    for path in sorted(set(modified_paths)):
+        norm = path.replace("\\", "/")
+        if norm in forbidden:
+            errors.append(f"Forbidden codebase path modified: {norm}")
+        elif norm not in expected_changes:
+            errors.append(f"Unauthorized codebase modification: {norm}")
+
+    for path in sorted(set(added_paths)):
+        norm = path.replace("\\", "/")
+        if norm in forbidden:
+            errors.append(f"Forbidden codebase path added: {norm}")
+        elif norm not in expected_additions and norm not in expected_changes:
+            errors.append(f"Unauthorized codebase addition: {norm}")
+
+    return errors

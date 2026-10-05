@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "scope": "FINAL REPOSITORY RECONCILIATION - tracked Git parity, Git LFS verification and separate local-only inventory claims",
-  "repository_url": "git@github.com:mhyahya854/Mnemora.git",
+  "repository_url": "https://github.com/mhyahya854/Mnemora.git",
   "default_branch": "main",
   "branch": "main (canonical default branch; linear history integrated from graphify-final-reconciliation)",
-  "verified_commit_sha": "b4e3c28e32f9be69e0b58695246cdb563e85b9b1",
-  "verified_tree_sha": "8fb470b6ef6c006d45bf164fe03ebcfb9163a9b6",
-  "tracked_file_count": 433,
+  "verified_commit_sha": "d977e348223ceb29a828442e908ad76daad52964",
+  "verified_tree_sha": "f0cab69ef4a2ffcca360859b98f2716c0ecd6b70",
+  "tracked_file_count": 435,
   "tracked_codebase_file_count": 346,
   "lfs_file_count": 1,
   "master_plan_sha256": {
@@ -57,10 +57,10 @@
     "__pycache__",
     "~"
   ],
-  "output_manifest_entries": 68,
+  "output_manifest_entries": 70,
   "validator": {
-    "gate_count": 43,
-    "passed": 43,
+    "gate_count": 44,
+    "passed": 44,
     "failed": 0,
     "verdict": "PASS",
     "commands": [

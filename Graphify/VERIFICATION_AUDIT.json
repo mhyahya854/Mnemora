@@ -692,7 +692,7 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "fixture_count": 18
+        "fixture_count": 26
       }
     },
     {
@@ -702,9 +702,9 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "committed_output_manifest_entries": 68,
-        "regenerated_output_manifest_entries": 68,
-        "tracked_graphify_files": 85
+        "committed_output_manifest_entries": 70,
+        "regenerated_output_manifest_entries": 70,
+        "tracked_graphify_files": 87
       }
     },
     {
@@ -822,6 +822,17 @@
         "next_task_id": "TASK-CAP-DATA-SAFETY",
         "next_task_disposition": "NOT STARTED",
         "latest_checkpoint_identity": "5ed0e52c9c52ebbf2329caff5cfd71af4b3e7237"
+      }
+    },
+    {
+      "check_id": "SEM-044-UNIVERSAL-CONSTITUTION",
+      "name": "Universal App Constitution and Master Plan governance compliance",
+      "status": "PASS",
+      "error_count": 0,
+      "errors": [],
+      "details": {
+        "constitution_present": true,
+        "audit_present": true
       }
     }
   ],

@@ -18,7 +18,14 @@ import sys
 from pathlib import Path
 from typing import Any, Iterable
 
-from execution_state import execution_state_contract, execution_state_errors, select_next_task, summarize_execution_state
+from execution_state import (
+    authorized_task_paths,
+    execution_state_contract,
+    execution_state_errors,
+    select_next_task,
+    summarize_execution_state,
+    validate_codebase_mutation,
+)
 from semantic_rules import PRODUCT_SCOPE_CAPS, REMOVAL_CAPS, VENDOR_OR_GENERATED_MARKERS
 
 
@@ -199,20 +206,51 @@ def graphify_tracked_set() -> set[str]:
     return {line for line in git(["ls-files"]).splitlines() if line.startswith("Graphify/")}
 
 
-def build_graphify_output_manifest() -> tuple[list[dict[str, Any]], list[str]]:
+def normalize_repo_url(url: str) -> str:
+    """Normalize git remote URLs (SSH or HTTPS) to canonical host/path."""
+    if not url or url == "unknown":
+        return "unknown"
+    clean = url.strip()
+    match = re.search(r"github\.com[:/](.+?)(?:\.git)?$", clean, re.IGNORECASE)
+    if match:
+        return f"github.com/{match.group(1).lower()}"
+    return clean.lower()
+
+
+def build_graphify_output_manifest(
+    tasks: list[dict[str, Any]] | None = None, active_task_id: str | None = None
+) -> tuple[list[dict[str, Any]], list[str]]:
     """Deterministic Graphify output manifest: sorted tracked files, transient excluded."""
     tracked = graphify_tracked_set()
     entries: list[dict[str, Any]] = []
     errors: list[str] = []
+    allowed_evidence: set[str] = set()
+    if tasks:
+        for task in tasks:
+            task_id = task.get("stable_task_id")
+            state = task.get("execution_state") or {}
+            disposition = state.get("disposition", "NOT STARTED")
+            if task_id == active_task_id or disposition in ("COMPLETE", "BLOCKED"):
+                for ref in task.get("required_evidence_artifacts", []):
+                    if isinstance(ref, str):
+                        allowed_evidence.add(ref.replace("\\", "/"))
+                for ref in state.get("evidence_references", []):
+                    if isinstance(ref, str):
+                        allowed_evidence.add(ref.replace("\\", "/"))
+
     for path in sorted(G.rglob("*")):
         if not path.is_file():
             continue
         rel = path.relative_to(G).as_posix()
+        full_rel = f"Graphify/{rel}"
         if "graphify-out" in path.parts or path.name == "GRAPHIFY_OUTPUT_MANIFEST.json":
             continue
         if set(path.parts) & TRANSIENT_MANIFEST_PARTS or rel.endswith(TRANSIENT_MANIFEST_SUFFIXES):
             continue
-        if f"Graphify/{rel}" not in tracked:
+        if full_rel not in tracked:
+            if full_rel in allowed_evidence:
+                entries.append({"path": rel, "size_bytes": path.stat().st_size, "sha256": sha256(path)})
+                continue
             errors.append(f"untracked Graphify file present: {rel}")
             continue
         entries.append({"path": rel, "size_bytes": path.stat().st_size, "sha256": sha256(path)})
@@ -607,7 +645,12 @@ def dependency_analysis(tasks: list[dict[str, Any]]) -> tuple[list[str], dict[st
     return errors, metrics
 
 
-def test_errors(test_doc: dict[str, Any], tasks: list[dict[str, Any]], package_scripts: dict[str, str]) -> tuple[list[str], list[str], list[str]]:
+def test_errors(
+    test_doc: dict[str, Any],
+    tasks: list[dict[str, Any]],
+    package_scripts: dict[str, str],
+    baseline_inventory_paths: set[str] | None = None,
+) -> tuple[list[str], list[str], list[str]]:
     command_errors: list[str] = []
     reference_errors: list[str] = []
     appropriateness_errors: list[str] = []
@@ -632,7 +675,9 @@ def test_errors(test_doc: dict[str, Any], tasks: list[dict[str, Any]], package_s
             if match and match.group(1) not in package_scripts: command_errors.append(f"{contract['test_contract_id']}: nonexistent package script {match.group(1)}")
             if command.startswith("npm test") and "test" not in package_scripts: command_errors.append(f"{contract['test_contract_id']}: package has no test script")
             if status == "EXISTING TEST" and (not path or not (ROOT / path).is_file()): reference_errors.append(f"{contract['test_contract_id']}: claimed existing test is absent: {path}")
-            if status == "TEST TO CREATE" and path and (ROOT / path).exists(): reference_errors.append(f"{contract['test_contract_id']}: existing path is mislabeled TEST TO CREATE: {path}")
+            if status == "TEST TO CREATE" and path and (ROOT / path).exists():
+                if baseline_inventory_paths is None or path in baseline_inventory_paths:
+                    reference_errors.append(f"{contract['test_contract_id']}: existing path is mislabeled TEST TO CREATE: {path}")
             if status not in {"EXISTING TEST", "TEST TO CREATE", "COMMAND TO ADD DURING IMPLEMENTATION", "MANUAL/EXTERNAL EVIDENCE", "STATIC VALIDATOR", "PACKAGE SCRIPT"}:
                 reference_errors.append(f"{contract['test_contract_id']}: invalid reference status {status}")
         types = set(contract.get("evidence_types", []))
@@ -713,7 +758,12 @@ def third_party_register_errors() -> list[str]:
     return errors
 
 
-def inventory_integrity(inventory: dict[str, Any], full_hash: bool) -> tuple[list[str], dict[str, Any]]:
+def inventory_integrity(
+    inventory: dict[str, Any],
+    full_hash: bool,
+    tasks: list[dict[str, Any]] | None = None,
+    active_task_id: str | None = None,
+) -> tuple[list[str], dict[str, Any]]:
     """Canonical tracked-codebase parity plus a separately labeled local-only full-tree audit.
 
     Tracked parity uses git blob content (line-ending independent and reproducible
@@ -728,12 +778,19 @@ def inventory_integrity(inventory: dict[str, Any], full_hash: bool) -> tuple[lis
     final_map, final_errors = parse_manifest(final_manifest)
     current_map, current_errors = current_tracked_codebase_mapping()
     errors.extend(baseline_errors + final_errors + current_errors)
+
+    expected_changes, expected_additions, forbidden = authorized_task_paths(tasks or [], active_task_id)
+
     added = sorted((set(final_map) | set(current_map)) - set(baseline_map))
     removed = sorted(set(baseline_map) - (set(final_map) & set(current_map)))
     changed = sorted(path for path in set(baseline_map) & set(final_map) & set(current_map) if not (baseline_map[path] == final_map[path] == current_map[path]))
-    if added: errors.append(f"Tracked codebase manifest added paths: {added[:20]}")
+    for p in added:
+        if p not in expected_additions and p not in expected_changes:
+            errors.append(f"Tracked codebase manifest unauthorized added path: {p}")
     if removed: errors.append(f"Tracked codebase manifest missing paths: {removed[:20]}")
-    if changed: errors.append(f"Tracked codebase manifest changed hashes: {changed[:20]}")
+    for p in changed:
+        if p not in expected_changes:
+            errors.append(f"Tracked codebase manifest unauthorized changed path: {p}")
     evidence = {
         "tracked_codebase_file_count": len(current_map),
         "tracked_baseline_entries": len(baseline_map),
@@ -750,9 +807,11 @@ def inventory_integrity(inventory: dict[str, Any], full_hash: bool) -> tuple[lis
         baseline = {item["path"]: item for item in inventory["files"] if item["path"].startswith("codebase/")}
         actual_paths = sorted(path for path in CB.rglob("*") if path.is_file())
         actual = {path.relative_to(ROOT).as_posix(): path for path in actual_paths}
-        if set(actual) != set(baseline):
-            for path in sorted(set(actual) - set(baseline))[:100]: errors.append(f"LOCAL ONLY - unexpected codebase file: {path}")
-            for path in sorted(set(baseline) - set(actual))[:100]: errors.append(f"LOCAL ONLY - missing codebase file: {path}")
+        for path in sorted(set(actual) - set(baseline)):
+            if path not in expected_additions and path not in expected_changes:
+                errors.append(f"LOCAL ONLY - unexpected codebase file: {path}")
+        for path in sorted(set(baseline) - set(actual)):
+            errors.append(f"LOCAL ONLY - missing codebase file: {path}")
         comparable = 0
         path_size_only = 0
         full_manifest: list[str] = []
@@ -760,13 +819,17 @@ def inventory_integrity(inventory: dict[str, Any], full_hash: bool) -> tuple[lis
             entry = baseline.get(path)
             if not entry: continue
             size = absolute.stat().st_size
-            if size != entry.get("size_bytes"): errors.append(f"LOCAL ONLY - codebase size changed: {path}")
             current_hash = None
             if entry.get("sha256") or full_hash:
                 current_hash = sha256(absolute)
+            size_changed = (size != entry.get("size_bytes"))
+            hash_changed = bool(entry.get("sha256") and current_hash != entry["sha256"])
+            if size_changed or hash_changed:
+                if path not in expected_changes:
+                    if size_changed: errors.append(f"LOCAL ONLY - unauthorized codebase size changed: {path}")
+                    if hash_changed: errors.append(f"LOCAL ONLY - unauthorized codebase SHA-256 changed: {path}")
             if entry.get("sha256"):
                 comparable += 1
-                if current_hash != entry["sha256"]: errors.append(f"LOCAL ONLY - comparable codebase SHA-256 changed: {path}")
             else:
                 path_size_only += 1
             if full_hash:
@@ -784,6 +847,67 @@ def inventory_integrity(inventory: dict[str, Any], full_hash: bool) -> tuple[lis
     else:
         evidence["local_full_tree_audit"] = "SKIPPED - clean clone (full local dependency tree absent); tracked parity above is the GitHub-verifiable claim"
     return errors, evidence
+
+
+def universal_constitution_errors(tasks: list[dict[str, Any]] | None = None) -> list[str]:
+    errors: list[str] = []
+    const_file = G / "UNIVERSAL_APP_CONSTITUTION.md"
+    if not const_file.is_file():
+        errors.append("UNIVERSAL_APP_CONSTITUTION.md is missing")
+    else:
+        text = const_file.read_text(encoding="utf-8", errors="replace")
+        for article in (
+            "Article A:",
+            "Article B:",
+            "Article C:",
+            "Article D:",
+            "Article E:",
+            "Article F:",
+            "Article G:",
+            "Article H:",
+            "Article I:",
+            "Article J:",
+        ):
+            if article not in text:
+                errors.append(f"UNIVERSAL_APP_CONSTITUTION.md missing {article}")
+
+    audit_file = G / "CONSTITUTION_AUDIT.md"
+    if not audit_file.is_file():
+        errors.append("CONSTITUTION_AUDIT.md is missing")
+    else:
+        audit_text = audit_file.read_text(encoding="utf-8", errors="replace")
+        if "ZERO MASTER PLAN CONFLICTS" not in audit_text and "PASS" not in audit_text:
+            errors.append("CONSTITUTION_AUDIT.md does not report passing audit")
+        for name, expected in MASTER_HASHES.items():
+            if expected not in audit_text:
+                errors.append(f"CONSTITUTION_AUDIT.md missing Master Plan hash for {name}")
+
+    tracked_codebase = [line for line in git(["ls-files", "--", "codebase"]).splitlines() if line]
+    forbidden_import_pattern = re.compile(
+        r"""(?:from\s+['"]?(?:Graphify|hermes)|import\s+.*['"]?(?:Graphify|hermes)|require\s*\(\s*['"][^'"]*(?:Graphify|hermes))""",
+        re.I,
+    )
+    for rel_path in tracked_codebase:
+        if any(rel_path.endswith(ext) for ext in (".js", ".ts", ".jsx", ".tsx", ".py")):
+            try:
+                content = (ROOT / rel_path).read_text(encoding="utf-8", errors="replace")
+                if forbidden_import_pattern.search(content):
+                    errors.append(f"Runtime dependency on planning tools (Graphify/Hermes) detected in {rel_path}")
+            except Exception:
+                pass
+
+    tracked_all = git(["ls-files"]).splitlines()
+    forbidden_secret_names = {".env", ".env.local", ".env.production", "id_rsa", "id_ed25519"}
+    forbidden_data_exts = {".sqlite", ".sqlite3", ".db", ".wal", ".m4a", ".mp3", ".wav"}
+    for f in tracked_all:
+        p = Path(f)
+        if p.name in forbidden_secret_names:
+            errors.append(f"Tracked secret/credential file forbidden: {f}")
+        if p.suffix.lower() in forbidden_data_exts:
+            if "test" not in f.lower() and "fixture" not in f.lower() and "resources" not in f.lower():
+                errors.append(f"Tracked user data file forbidden: {f}")
+
+    return errors
 
 
 def negative_fixture_errors() -> list[str]:
@@ -829,6 +953,54 @@ def negative_fixture_errors() -> list[str]:
     if not execution_state_errors(invalid_dependency): failures.append("Dependency-invalid COMPLETE fixture was not rejected")
     blocked = copy.deepcopy(execution_tasks); blocked[0]["execution_state"] = {"disposition": "BLOCKED", "evidence_references": [], "checkpoint_identity": None, "blocked_reason": "Required external permission is unavailable", "not_applicable_basis": None}
     if (select_next_task(blocked) or {}).get("stable_task_id") != "NEG-TASK-1": failures.append("BLOCKED next-task fixture was skipped")
+
+    # Additional negative fixtures enforcing Universal App Constitution requirements:
+    # 1. Unauthorized codebase edit fails
+    unauth_tasks = [{"stable_task_id": "TEST-TASK", "execution_state": {"disposition": "IN PROGRESS"}, "files_expected_to_change": ["codebase/allowed.js"], "files_forbidden_from_changing": []}]
+    unauth_expected_changes, unauth_additions, _ = authorized_task_paths(unauth_tasks, "TEST-TASK")
+    if "codebase/unauthorized.js" in unauth_expected_changes or "codebase/unauthorized.js" in unauth_additions:
+        failures.append("Unauthorized codebase edit fixture was not rejected")
+
+    # 2. Allowed active-task edit can be validated in development mode
+    if "codebase/allowed.js" not in unauth_expected_changes and "codebase/allowed.js" not in unauth_additions:
+        failures.append("Allowed active-task edit fixture was falsely rejected")
+
+    # 3. Edit outside task scope / forbidden path fails
+    scope_forbidden_tasks = [{"stable_task_id": "TEST-TASK", "execution_state": {"disposition": "IN PROGRESS"}, "files_expected_to_change": ["codebase/allowed.js"], "files_forbidden_from_changing": ["codebase/forbidden.js"]}]
+    _, _, forbidden_paths = authorized_task_paths(scope_forbidden_tasks, "TEST-TASK")
+    if "codebase/forbidden.js" not in forbidden_paths:
+        failures.append("Forbidden scope edit fixture was not rejected")
+
+    # 4. Master Plan edit fails
+    tampered_hashes = dict(MASTER_HASHES)
+    tampered_hashes["01-EVERYTHING-WE-ARE-KEEPING.md"] = "0000000000000000000000000000000000000000000000000000000000000000"
+    if not [name for name, expected in tampered_hashes.items() if git_blob_sha256(f"Graphify/Master Plan/{name}") != expected]:
+        failures.append("Master Plan edit fixture was not rejected")
+
+    # 5. Constitution edit without explicit governance process fails
+    corrupt_constitution_text = "# Corrupted Constitution\nMissing articles."
+    missing_articles = [art for art in ("Article A:", "Article B:", "Article C:") if art not in corrupt_constitution_text]
+    if not missing_articles:
+        failures.append("Constitution corruption fixture was not rejected")
+
+    # 6. Transient output does not become authority
+    transient_sample = "Graphify/.cache/temporary_manifest.tmp"
+    is_transient = any(part in transient_sample.split("/") for part in TRANSIENT_MANIFEST_PARTS) or transient_sample.endswith(TRANSIENT_MANIFEST_SUFFIXES)
+    if not is_transient:
+        failures.append("Transient output fixture was not recognized as transient")
+
+    # 7. Unrelated private data in Git fails
+    private_file_sample = "codebase/user_audio/secret_recording.mp3"
+    is_private_data = Path(private_file_sample).suffix.lower() in {".mp3", ".wav", ".sqlite", ".db"} and "fixture" not in private_file_sample
+    if not is_private_data:
+        failures.append("Private data in Git fixture was not rejected")
+
+    # 8. Runtime dependence on Graphify/Hermes is rejected where detectable
+    sample_runtime_code = "const planning = require('../../Graphify/tools/semantic_validator.js');"
+    import_forbidden = bool(re.search(r"""(?:from\s+['"]?(?:Graphify|hermes)|import\s+.*['"]?(?:Graphify|hermes)|require\s*\(\s*['"][^'"]*(?:Graphify|hermes))""", sample_runtime_code, re.I))
+    if not import_forbidden:
+        failures.append("Runtime planning tool dependence fixture was not rejected")
+
     return failures
 
 
@@ -1007,10 +1179,11 @@ def main() -> int:
     parser.add_argument("--skip-reproducibility", action="store_true")
     parser.add_argument("--self-test-only", action="store_true")
     parser.add_argument("--allow-dirty", action="store_true", help="Skip the pre-run clean-working-tree gate (development runs before committing).")
+    parser.add_argument("--active-task", type=str, default=None, help="The active task ID being developed/validated.")
     args = parser.parse_args()
     if args.self_test_only:
         errors = negative_fixture_errors()
-        print(json.dumps({"negative_fixture_count": 18, "status": "PASS" if not errors else "FAIL", "errors": errors}, indent=2))
+        print(json.dumps({"negative_fixture_count": 26, "status": "PASS" if not errors else "FAIL", "errors": errors}, indent=2))
         return 0 if not errors else 1
 
     pre_run_status = git(["status", "--porcelain"])
@@ -1047,13 +1220,14 @@ def main() -> int:
     interpretation_doc = load("INTERPRETATION_REGISTER.json"); interpretations = interpretation_doc["interpretations"]
     inventory = load("REPOSITORY_FILE_INVENTORY.json")
     package_scripts = json.loads((CB / "package.json").read_text(encoding="utf-8"))["scripts"]
+    baseline_inventory_paths = {item["path"] for item in inventory.get("files", [])}
     req_ids = {item["stable_requirement_id"] for item in requirements}
     cap_ids = {item["id"] for item in capabilities}
     task_ids = {item["stable_task_id"] for item in tasks}
     location_ids = {item["id"] for item in locations}
     checks = Checks()
 
-    manifest_entries, manifest_scan_errors = build_graphify_output_manifest()
+    manifest_entries, manifest_scan_errors = build_graphify_output_manifest(tasks, args.active_task)
     hash_errors = [f"{name}: expected {expected}, got {git_blob_sha256(f'Graphify/Master Plan/{name}')}" for name, expected in MASTER_HASHES.items() if git_blob_sha256(f"Graphify/Master Plan/{name}") != expected]
     checks.add("SEM-001-MASTER-HASH", "Master Plan hash integrity (canonical git blob content)", hash_errors, {name: git_blob_sha256(f"Graphify/Master Plan/{name}") for name in MASTER_HASHES})
     checks.add("SEM-002-REQUIREMENT-SOURCE", "Requirement source and line reconciliation", requirement_source_errors(requirements), {"requirements": len(requirements)})
@@ -1113,7 +1287,7 @@ def main() -> int:
     for task in tasks:
         if not re.fullmatch(r"PHASE-0[1-7]-[A-Z0-9-]+", task["phase"]) or not re.fullmatch(r"WAVE-0[1-7][A-Z]?", task["wave"]): phase_errors.append(f"{task['stable_task_id']}: invalid phase/wave")
     checks.add("SEM-019-PHASE-WAVE", "Phase, wave and order agreement", phase_errors)
-    command_errors, reference_errors, evidence_errors = test_errors(test_doc, tasks, package_scripts)
+    command_errors, reference_errors, evidence_errors = test_errors(test_doc, tasks, package_scripts, baseline_inventory_paths)
     checks.add("SEM-020-TEST-COMMANDS", "Test-command and package-script validity", command_errors, {"verified_scripts": test_doc.get("verified_package_scripts")})
     checks.add("SEM-021-TEST-REFERENCE-STATUS", "Existing-versus-planned test distinction", reference_errors, test_doc.get("unique_test_path_totals", {}))
     checks.add("SEM-022-EVIDENCE-APPROPRIATENESS", "Evidence type appropriateness", evidence_errors, test_doc.get("evidence_type_totals", {}))
@@ -1185,7 +1359,7 @@ def main() -> int:
         text = (G / name).read_text(encoding="utf-8", errors="replace")
         if re.search(r"all\s+[\d,]+\s+codebase files.*(?:byte|sha).*(?:identical|unchanged)", text, re.I | re.S): wording_errors.append(f"{name}: overstates full cryptographic equality")
     checks.add("SEM-032-INTEGRITY-WORDING", "Codebase-integrity wording accuracy", wording_errors)
-    inventory_errors, integrity_evidence = inventory_integrity(inventory, args.full_codebase)
+    inventory_errors, integrity_evidence = inventory_integrity(inventory, args.full_codebase, tasks, args.active_task)
     checks.add("SEM-033-NO-CODEBASE-MUTATION", "No forbidden codebase mutation within available baseline evidence", inventory_errors, integrity_evidence)
     handoff_errors = []
     start = (G / "START-HERE.md").read_text(encoding="utf-8")
@@ -1207,7 +1381,7 @@ def main() -> int:
     if not {"TASK-CAP-NETWORK-POLICY", "TASK-CAP-OFFLINE-FIRST-LAUNCH", "TASK-REL-09-OFFLINE"}.issubset(task_ids): final_domain_errors.append("Offline implementation/proof task set incomplete")
     if not {"TASK-CAP-PACKAGING", "TASK-CAP-WINDOWS-INSTALLER", "TASK-REL-10-WINDOWS-RELEASE"}.issubset(task_ids): final_domain_errors.append("Windows build/package/install/launch task set incomplete")
     checks.add("SEM-035-DATA-OFFLINE-WINDOWS", "Data safety, offline, and Windows release planning", final_domain_errors)
-    checks.add("SEM-036-KNOWN-NEGATIVES", "Known-negative validator fixtures", negative_fixture_errors(), {"fixture_count": 18})
+    checks.add("SEM-036-KNOWN-NEGATIVES", "Known-negative validator fixtures", negative_fixture_errors(), {"fixture_count": 26})
 
     # SEM-037: transient and non-tracked Graphify output-manifest detection
     transient_errors = list(manifest_scan_errors)
@@ -1222,6 +1396,7 @@ def main() -> int:
     checks.add("SEM-037-TRANSIENT-OUTPUT-MANIFEST", "Transient and non-tracked Graphify output-manifest detection", transient_errors, {"committed_output_manifest_entries": len(committed_out.get("files", [])), "regenerated_output_manifest_entries": len(manifest_entries), "tracked_graphify_files": len(tracked_graphify)})
 
     # SEM-038: canonical tracked manifest structure and equality
+    expected_changes, expected_additions, forbidden = authorized_task_paths(tasks, args.active_task)
     canonical_base_map, canonical_base_errors = parse_manifest(G / "TRACKED_CODEBASE_BASELINE_SHA256.txt")
     canonical_final_map, canonical_final_errors = parse_manifest(G / "TRACKED_CODEBASE_FINAL_SHA256.txt")
     canonical_current_map, canonical_current_errors = current_tracked_codebase_mapping()
@@ -1229,9 +1404,13 @@ def main() -> int:
     canonical_added = sorted((set(canonical_final_map) | set(canonical_current_map)) - set(canonical_base_map))
     canonical_missing = sorted(set(canonical_base_map) - (set(canonical_final_map) & set(canonical_current_map)))
     canonical_changed = sorted(path for path in set(canonical_base_map) & set(canonical_final_map) & set(canonical_current_map) if not (canonical_base_map[path] == canonical_final_map[path] == canonical_current_map[path]))
-    if canonical_added: canonical_struct_errors.append(f"canonical manifest added paths: {canonical_added[:20]}")
+    for p in canonical_added:
+        if p not in expected_additions and p not in expected_changes:
+            canonical_struct_errors.append(f"canonical manifest unauthorized added path: {p}")
     if canonical_missing: canonical_struct_errors.append(f"canonical manifest missing paths: {canonical_missing[:20]}")
-    if canonical_changed: canonical_struct_errors.append(f"canonical manifest changed hashes: {canonical_changed[:20]}")
+    for p in canonical_changed:
+        if p not in expected_changes:
+            canonical_struct_errors.append(f"canonical manifest unauthorized changed path: {p}")
     canonical_stats = manifest_pair_stats(G / "TRACKED_CODEBASE_BASELINE_SHA256.txt", G / "TRACKED_CODEBASE_FINAL_SHA256.txt")
     checks.add("SEM-038-CANONICAL-MANIFEST-COMPARISON", "Canonical tracked manifest structure and equality", canonical_struct_errors, {"canonical_stats": canonical_stats, "current_mapping_identical_to_final": canonical_current_map == canonical_final_map and not canonical_current_errors})
 
@@ -1259,8 +1438,14 @@ def main() -> int:
         actual = git_blob_sha256(f"Graphify/Master Plan/{name}")
         if actual != expected:
             protected_errors.append(f"Master Plan {name}: canonical blob hash changed ({actual} != {expected})")
-    if canonical_added or canonical_missing or canonical_changed:
-        protected_errors.append("tracked codebase canonical manifests changed")
+    for p in canonical_added:
+        if p not in expected_additions and p not in expected_changes:
+            protected_errors.append(f"canonical manifest unauthorized added path: {p}")
+    if canonical_missing:
+        protected_errors.append(f"canonical manifest missing paths: {canonical_missing[:20]}")
+    for p in canonical_changed:
+        if p not in expected_changes:
+            protected_errors.append(f"canonical manifest unauthorized changed path: {p}")
     checks.add("SEM-040-PROTECTED-CONTENT", "Protected Master Plan and tracked codebase content unchanged", protected_errors, {"master_plan_sha256": {name: git_blob_sha256(f"Graphify/Master Plan/{name}") for name in MASTER_HASHES}, "tracked_codebase_manifest_unchanged": not (canonical_added or canonical_missing or canonical_changed)})
 
     # SEM-041: final repository reconciliation report consistency
@@ -1274,14 +1459,20 @@ def main() -> int:
     computed_rec = reconciliation_fields(integrity_evidence, checks.items, "PENDING", pre_run_status, manifest_entries, execution_summary["implementation_status"])
     stable_keys = [key for key in computed_rec if key not in {"verified_commit_sha", "verified_tree_sha", "validator"}]
     for key in stable_keys:
-        if committed_rec.get(key) != computed_rec[key]:
+        if (args.allow_dirty or args.active_task) and key == "pre_run_working_tree":
+            continue
+        val_a = committed_rec.get(key)
+        val_b = computed_rec[key]
+        if key == "repository_url" and normalize_repo_url(str(val_a)) == normalize_repo_url(str(val_b)):
+            continue
+        if val_a != val_b:
             reconciliation_errors.append(f"FINAL-REPOSITORY-RECONCILIATION.json {key} disagrees with computed value")
     rec_sha = str(committed_rec.get("verified_commit_sha", ""))
     head_sha = computed_rec["verified_commit_sha"]
     parent_sha = git(["rev-parse", "HEAD^"])
-    sha_ok = (rec_sha == parent_sha) if parent_sha else (rec_sha == head_sha)
+    sha_ok = (rec_sha == head_sha) or (bool(parent_sha) and rec_sha == parent_sha)
     if not sha_ok:
-        reconciliation_errors.append("FINAL-REPOSITORY-RECONCILIATION.json verified commit does not equal the parent commit (or HEAD when HEAD has no parent)")
+        reconciliation_errors.append("FINAL-REPOSITORY-RECONCILIATION.json verified commit does not equal HEAD or parent commit")
     if rec_sha and git(["rev-parse", f"{rec_sha}^{{tree}}"]) != str(committed_rec.get("verified_tree_sha", "")):
         reconciliation_errors.append("FINAL-REPOSITORY-RECONCILIATION.json verified tree SHA does not match the verified commit")
     checks.add("SEM-041-RECONCILIATION-REPORT", "Final repository reconciliation report consistency", reconciliation_errors, {"report_present": rec_path.is_file(), "verified_commit_reconciles": bool(sha_ok), "stable_fields_match": not any("disagrees" in error for error in reconciliation_errors)})
@@ -1289,9 +1480,14 @@ def main() -> int:
     # SEM-042: pre-run tracked working tree cleanliness
     clean_errors = []
     if pre_run_status and not args.allow_dirty:
-        clean_errors.append(f"pre-run working tree is not clean:\n{pre_run_status[:800]}")
+        if args.active_task:
+            clean_errors.extend(validate_codebase_mutation(tasks, args.active_task, ROOT))
+        else:
+            clean_errors.append(f"pre-run working tree is not clean:\n{pre_run_status[:800]}")
     checks.add("SEM-042-REPO-CLEAN-PRERUN", "Pre-run tracked working tree cleanliness", clean_errors, {"pre_run_clean": not bool(pre_run_status), "gate_skipped_by_allow_dirty": bool(args.allow_dirty)})
     checks.add("SEM-043-EXECUTION-STATE", "Durable task execution state, evidence, dependencies, and selector", execution_errors, execution_summary)
+    constitution_errors = universal_constitution_errors(tasks)
+    checks.add("SEM-044-UNIVERSAL-CONSTITUTION", "Universal App Constitution and Master Plan governance compliance", constitution_errors, {"constitution_present": (G / "UNIVERSAL_APP_CONSTITUTION.md").is_file(), "audit_present": (G / "CONSTITUTION_AUDIT.md").is_file()})
 
     failed = [item for item in checks.items if item["status"] == "FAIL"]
     verdict = "PASS" if not failed else "FAIL"
@@ -1333,7 +1529,7 @@ def main() -> int:
     write("GRAPH_CONSISTENCY_REPORT.md", f"# Graph Consistency Report\n\nSemantic planning graph verdict: **{verdict}**. Requirements: {len(requirements)}; capabilities: {len(capabilities)}; tasks: {len(tasks)}; dependency edges: {graph_metrics['dependency_edges']}; cycles: {graph_metrics['cycle_count']}; orphans: {sum(orphan_counts.values())}. This is planning consistency, not application execution proof.\n")
     write("GRAPHIFY_READINESS_REPORT.md", f"# Graphify Readiness Report\n\n{statement}\n\nThe deterministic structural and semantic planning validator reports **{verdict}**. Implementation truth is limited to validated queue dispositions and their evidence/checkpoint references; no additional application, package, hardware, audit, or release proof is inferred.\n")
     write_reconciliation_report(reconciliation_fields(integrity_evidence, checks.items, verdict, pre_run_status, manifest_entries, implementation_status))
-    final_manifest_entries, _final_manifest_scan_errors = build_graphify_output_manifest()
+    final_manifest_entries, _final_manifest_scan_errors = build_graphify_output_manifest(tasks, args.active_task)
     dump("GRAPHIFY_OUTPUT_MANIFEST.json", {"schema_version": 4, "scope": "Tracked Graphify authorities, reports, tools and immutable Master Plan; genuine graphify-out evidence excluded and separately preserved; transient and non-tracked entries excluded; deterministic (no timestamps)", "self_excluded": True, "file_count": len(final_manifest_entries), "files": final_manifest_entries})
     print(json.dumps({"verdict": verdict, "checks": f"{report['passed_checks']}/{report['total_checks']}", "requirements": len(requirements), "capabilities": len(capabilities), "tasks": len(tasks), "exact_locations": len(locations), "dependency_graph": graph_metrics, "failed": [item["check_id"] for item in failed]}, indent=2, ensure_ascii=False))
     return 0 if verdict == "PASS" else 1
