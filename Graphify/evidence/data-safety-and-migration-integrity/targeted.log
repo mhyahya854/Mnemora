@@ -1,0 +1,13 @@
+TASK_ID=TASK-CAP-DATA-SAFETY
+CAPABILITY_ID=CAP-DATA-SAFETY
+WORKING_DIRECTORY=codebase
+COMMAND=npx cross-env ELECTRON_RUN_AS_NODE=1 npx electron --test tests/unit/persistence/localDataDatabase.test.js
+EXIT_CODE=0
+RESULT=PASS
+SUMMARY=5 tests, 5 passed, 0 failed, 0 skipped
+TESTS_EXECUTED:
+- fresh schema supports local graphs, Unicode search, tags, settings, and cascades (PASS)
+- legacy adoption is backed up, transactional, lossless, and restart-idempotent (PASS)
+- a failed ordered migration rolls back its schema version and destructive cleanup (PASS)
+- cleanup closes the database without deleting user data (PASS)
+- a newer database is rejected before the older app mutates it (PASS)

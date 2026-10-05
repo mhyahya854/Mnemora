@@ -637,9 +637,9 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "before": "57595B58433C09DC145064B2B2A91AA6222242041B81C8C5F3EF993CD6A284FE",
-        "after": "57595B58433C09DC145064B2B2A91AA6222242041B81C8C5F3EF993CD6A284FE",
-        "generator_stdout": "{\n  \"requirements\": 536,\n  \"capabilities\": 122,\n  \"tasks\": 162,\n  \"deletion_tasks\": 31,\n  \"conditional_packages\": 12,\n  \"release_gates\": 12,\n  \"exact_locations\": 783\n}"
+        "before": "D6BF18F1E0ADDDD8E46456B50B3D7DEACDEB729590B689AE6E0B43C54ED254FC",
+        "after": "D6BF18F1E0ADDDD8E46456B50B3D7DEACDEB729590B689AE6E0B43C54ED254FC",
+        "generator_stdout": "{\n  \"requirements\": 536,\n  \"capabilities\": 122,\n  \"tasks\": 162,\n  \"deletion_tasks\": 31,\n  \"conditional_packages\": 12,\n  \"release_gates\": 12,\n  \"exact_locations\": 780\n}"
       }
     },
     {
@@ -657,18 +657,18 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "tracked_codebase_file_count": 346,
+        "tracked_codebase_file_count": 347,
         "tracked_baseline_entries": 346,
         "tracked_final_entries": 346,
-        "tracked_unchanged": 346,
-        "tracked_added": 0,
+        "tracked_unchanged": 340,
+        "tracked_added": 1,
         "tracked_removed": 0,
-        "tracked_changed": 0,
+        "tracked_changed": 6,
         "tracked_manifest_errors": 0,
         "claim": "Tracked codebase parity is verified from git blob content and is reproducible from any clean clone.",
         "local_full_tree_audit": "RUN - LOCAL ONLY (ignored dependencies/build output are not GitHub-verified)",
         "local_baseline_codebase_files": 24839,
-        "local_current_codebase_files": 24839,
+        "local_current_codebase_files": 24840,
         "local_comparable_pre_and_post_sha256_files": 346,
         "local_path_and_size_only_files": 24493,
         "local_post_run_full_sha256_fingerprint": null,
@@ -708,9 +708,9 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "committed_output_manifest_entries": 75,
-        "regenerated_output_manifest_entries": 75,
-        "tracked_graphify_files": 92
+        "committed_output_manifest_entries": 78,
+        "regenerated_output_manifest_entries": 78,
+        "tracked_graphify_files": 100
       }
     },
     {
@@ -731,7 +731,7 @@
           "malformed": 0,
           "mappings_identical": true
         },
-        "current_mapping_identical_to_final": true
+        "current_mapping_identical_to_final": false
       }
     },
     {
@@ -768,7 +768,7 @@
           "duplicates": 0,
           "malformed": 0,
           "mappings_identical": true,
-          "current_mapping_identical_to_final": true
+          "current_mapping_identical_to_final": false
         }
       }
     },
@@ -784,7 +784,7 @@
           "02-EVERYTHING-WE-ARE-DELETING.md": "76B6EEC15778B1928F2CD9C0F73FA68C9F3363493062E31E0C904E620DE0AAC3",
           "03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md": "5E076498731C35ACF314904AAB3A39671F7026A166B5E847EFE3CCD4CF07304E"
         },
-        "tracked_codebase_manifest_unchanged": true
+        "tracked_codebase_manifest_unchanged": false
       }
     },
     {
@@ -806,7 +806,7 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "pre_run_clean": true,
+        "pre_run_clean": false,
         "gate_skipped_by_allow_dirty": false
       }
     },
@@ -819,15 +819,15 @@
       "details": {
         "implementation_status": "IN PROGRESS",
         "execution_state_counts": {
-          "NOT STARTED": 161,
-          "COMPLETE": 1,
+          "NOT STARTED": 160,
+          "COMPLETE": 2,
           "NOT APPLICABLE": 0,
           "BLOCKED": 0
         },
-        "terminal_task_count": 1,
-        "next_task_id": "TASK-CAP-DATA-SAFETY",
+        "terminal_task_count": 2,
+        "next_task_id": "TASK-CAP-DATABASE",
         "next_task_disposition": "NOT STARTED",
-        "latest_checkpoint_identity": "5ed0e52c9c52ebbf2329caff5cfd71af4b3e7237"
+        "latest_checkpoint_identity": "304be6391e41cad92884614011813665ccf1baff"
       }
     },
     {
@@ -867,7 +867,7 @@
       "Testing requirement": 7
     },
     "capabilities": 122,
-    "exact_locations": 783,
+    "exact_locations": 780,
     "tasks": 162,
     "deletion_tasks": 31,
     "conditional_packages": 12,
@@ -890,13 +890,13 @@
     "ACTIVE REMOVAL CANDIDATE": 130,
     "BUILD-TIME ONLY - REVIEW UNDER BUILD RULE": 25,
     "FALSE POSITIVE": 14,
-    "HISTORICAL MIGRATION - PRESERVE": 10,
+    "HISTORICAL MIGRATION - PRESERVE": 7,
     "LEGAL/ATTRIBUTION - PRESERVE": 2,
     "POSITIVE OFFLINE/LOCAL MESSAGE - RETAIN": 5,
     "REQUIRES IMPLEMENTATION-TIME STATIC PROOF": 21,
     "RETAINED DEPENDENCY - DO NOT DELETE": 21
   },
-  "deletion_candidate_count": 228,
+  "deletion_candidate_count": 225,
   "known_false_positive_active_count": 0,
   "unmapped_requirement_count": 0,
   "placeholder_count": 0,
@@ -909,18 +909,18 @@
     "tasks_without_capability": 0
   },
   "codebase_integrity_evidence": {
-    "tracked_codebase_file_count": 346,
+    "tracked_codebase_file_count": 347,
     "tracked_baseline_entries": 346,
     "tracked_final_entries": 346,
-    "tracked_unchanged": 346,
-    "tracked_added": 0,
+    "tracked_unchanged": 340,
+    "tracked_added": 1,
     "tracked_removed": 0,
-    "tracked_changed": 0,
+    "tracked_changed": 6,
     "tracked_manifest_errors": 0,
     "claim": "Tracked codebase parity is verified from git blob content and is reproducible from any clean clone.",
     "local_full_tree_audit": "RUN - LOCAL ONLY (ignored dependencies/build output are not GitHub-verified)",
     "local_baseline_codebase_files": 24839,
-    "local_current_codebase_files": 24839,
+    "local_current_codebase_files": 24840,
     "local_comparable_pre_and_post_sha256_files": 346,
     "local_path_and_size_only_files": 24493,
     "local_post_run_full_sha256_fingerprint": null,
@@ -936,14 +936,14 @@
   "execution_state": {
     "implementation_status": "IN PROGRESS",
     "execution_state_counts": {
-      "NOT STARTED": 161,
-      "COMPLETE": 1,
+      "NOT STARTED": 160,
+      "COMPLETE": 2,
       "NOT APPLICABLE": 0,
       "BLOCKED": 0
     },
-    "terminal_task_count": 1,
-    "next_task_id": "TASK-CAP-DATA-SAFETY",
+    "terminal_task_count": 2,
+    "next_task_id": "TASK-CAP-DATABASE",
     "next_task_disposition": "NOT STARTED",
-    "latest_checkpoint_identity": "5ed0e52c9c52ebbf2329caff5cfd71af4b3e7237"
+    "latest_checkpoint_identity": "304be6391e41cad92884614011813665ccf1baff"
   }
 }

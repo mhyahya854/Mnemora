@@ -453,13 +453,13 @@
         "codebase/tests/unit/persistence/dataMigration.test.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
-        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
         "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5",
-        "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F"
+        "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368"
       ],
       "intended_target_paths": [
         "codebase/main/infrastructure/persistence/database.js"
@@ -472,35 +472,35 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
           "path": "codebase/main/infrastructure/persistence/localBackup.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+            "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
           ]
         },
         {
           "path": "codebase/main/infrastructure/persistence/dataMigration.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE"
+            "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576"
           ]
         },
         {
           "path": "codebase/main/infrastructure/persistence/audioStorage.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+            "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
           ]
         },
         {
           "path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
           ]
         },
         {
@@ -514,7 +514,7 @@
           "path": "codebase/tests/unit/persistence/dataMigration.test.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F"
+            "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368"
           ]
         }
       ],
@@ -526,13 +526,13 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-E9F29E6AEDD7D2CD",
-        "REG-EC04C7BA138B18DD",
-        "REG-01299E795EA2C54C",
-        "REG-FE56D652AA6609D0",
-        "REG-F6564829F3F6DB7E",
+        "REG-C18C29581ACE2F46",
+        "REG-D9E1D164191B2832",
+        "REG-879FEE523EDEC664",
+        "REG-2FE9541A050C0DDD",
+        "REG-F9AEB99A1E2F490E",
         "REG-E22A76CC17A14E49",
-        "REG-16753AB86C159C46"
+        "REG-4B88A0E99811BE48"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -580,13 +580,13 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F"
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -705,9 +705,18 @@
       "execution_order": 2,
       "ordering_index": 2,
       "execution_state": {
-        "disposition": "NOT STARTED",
-        "evidence_references": [],
-        "checkpoint_identity": null,
+        "disposition": "COMPLETE",
+        "evidence_references": [
+          "Graphify/evidence/data-safety-and-migration-integrity/pre-change-characterization.json",
+          "Graphify/evidence/data-safety-and-migration-integrity/implementation-delta.json",
+          "Graphify/evidence/data-safety-and-migration-integrity/targeted.log",
+          "Graphify/evidence/data-safety-and-migration-integrity/integration.log",
+          "Graphify/evidence/data-safety-and-migration-integrity/regression.log",
+          "Graphify/evidence/data-safety-and-migration-integrity/typecheck.log",
+          "Graphify/evidence/data-safety-and-migration-integrity/lint.log",
+          "Graphify/evidence/data-safety-and-migration-integrity/offline-or-applicability.json"
+        ],
+        "checkpoint_identity": "304be6391e41cad92884614011813665ccf1baff",
         "blocked_reason": null,
         "not_applicable_basis": null
       }
@@ -833,11 +842,11 @@
         "codebase/tests/unit/persistence/localBackup.test.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
-        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
-        "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
+        "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
         "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
       ],
       "intended_target_paths": [
@@ -851,35 +860,35 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
           "path": "codebase/main/infrastructure/persistence/dataMigration.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE"
+            "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576"
           ]
         },
         {
           "path": "codebase/main/infrastructure/persistence/localBackup.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+            "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
           ]
         },
         {
           "path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
           ]
         },
         {
           "path": "codebase/tests/unit/persistence/dataMigration.test.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F"
+            "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368"
           ]
         },
         {
@@ -898,12 +907,12 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-E908453D839A8531",
-        "REG-6483FAD758D5DBA6",
-        "REG-CE81EF9436F2D3B6",
-        "REG-6BBD858724CC02E8",
+        "REG-CEDF7E29D2F60B0E",
+        "REG-C4CB01E818BE96CC",
+        "REG-7D4F1A7ADB95E435",
+        "REG-078525CAA770E834",
         "REG-1B6ED0FB408A23D9",
-        "REG-51E4447C89D2B401"
+        "REG-325A15A4E59DDC4E"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -953,11 +962,11 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
@@ -1165,8 +1174,8 @@
         "codebase/tests/unit/persistence/localBackup.test.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
@@ -1183,14 +1192,14 @@
           "path": "codebase/main/infrastructure/persistence/localBackup.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+            "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
           ]
         },
         {
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -1230,8 +1239,8 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-17CD624EC75E42EF",
-        "REG-886CDEEA3560B710",
+        "REG-B00D0D4B11B3EB38",
+        "REG-490B9ADFAFCD7BEB",
         "REG-C6D9A26B00955A6E",
         "REG-F5A8647B23B53019",
         "REG-2F3E45AC6BF61904",
@@ -1283,8 +1292,8 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
@@ -2749,12 +2758,12 @@
         "codebase/tests/unit/persistence/localDataDatabase.test.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
         "codebase/main/infrastructure/persistence/postMigrationDetector.js::sha256:B1A0A9FF570280267D5D3668CC91005D0A31FA1054F76EB6CE885D6DAD5365A0",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/renderer/features/onboarding/PostMigrationOnboarding.tsx::sha256:18E5371C8DF7BB919E76B2854914E6A4B2791FCBA93D43358717C818568B2E9C",
-        "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+        "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
       ],
       "intended_target_paths": [
         "codebase/main/infrastructure/persistence/dataMigration.js"
@@ -2767,7 +2776,7 @@
           "path": "codebase/main/infrastructure/persistence/dataMigration.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE"
+            "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576"
           ]
         },
         {
@@ -2781,7 +2790,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -2795,14 +2804,14 @@
           "path": "codebase/tests/unit/persistence/dataMigration.test.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F"
+            "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368"
           ]
         },
         {
           "path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
           ]
         }
       ],
@@ -2814,12 +2823,12 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-9E3F6CD64782A275",
-        "REG-92361E6D5C19A2E9",
+        "REG-E75A8A6E70D9A25F",
+        "REG-68F2C3DD4C7B2BE0",
         "REG-DD4FC8F1F341AFDF",
         "REG-6CDB10249F31CC8E",
-        "REG-3CF084773E7DA35F",
-        "REG-DE1020E51973957E"
+        "REG-949BEAF223A245BB",
+        "REG-6409A23A038F0723"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -2865,11 +2874,11 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
           "codebase/main/infrastructure/persistence/postMigrationDetector.js::sha256:B1A0A9FF570280267D5D3668CC91005D0A31FA1054F76EB6CE885D6DAD5365A0",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -3302,8 +3311,8 @@
         "codebase/tests/unit/persistence/localBackup.test.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
@@ -3320,14 +3329,14 @@
           "path": "codebase/main/infrastructure/persistence/localBackup.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+            "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
           ]
         },
         {
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -3367,8 +3376,8 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-CBF2A94322F731F8",
-        "REG-72558C1D0F61DB12",
+        "REG-23E9EAB7989F934B",
+        "REG-09C515DFF45218A2",
         "REG-7F0567C6232E52EF",
         "REG-C8E8E4A4738EEC42",
         "REG-2BFAD3D41FAC5C38",
@@ -3418,8 +3427,8 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
@@ -6580,8 +6589,8 @@
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
         "codebase/main/features/meetings/audioUtils.js::sha256:525CADA6C62B556528804ADAA36FC8101058B0F1706B3B570D25C3D1B0DBEE8C",
         "codebase/main/features/meetings/diarization.js::sha256:63F3C180A47D4823567B58957A16E66F661438D1C523EBE424AABD804E3DE302",
         "codebase/tests/unit/meetings/meetingMicHoldback.test.js::sha256:54C8EE6904C07E91318E88A82241CC9EC64B16AFB58EA85DD7DF77F4108864B7"
@@ -6639,14 +6648,14 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
           "path": "codebase/main/infrastructure/persistence/audioStorage.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+            "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
           ]
         },
         {
@@ -6681,8 +6690,8 @@
       "exact_location_registry_refs": [
         "REG-3FDF598BEA724512",
         "REG-20635B630958C4DF",
-        "REG-B11168C251CE9BC6",
-        "REG-15087545799E553F",
+        "REG-B8388589618BA8F6",
+        "REG-06E622BC1ED1A8C5",
         "REG-21C6F886B7569D8A",
         "REG-7153A82703C1A265",
         "REG-3BCD5DC031F3C8E9",
@@ -6736,8 +6745,8 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -8146,7 +8155,7 @@
         "codebase/renderer/features/notes/components/NoteEditor.tsx::NoteEditor",
         "codebase/renderer/features/notes/components/RichTextEditor.tsx::RichTextEditor",
         "codebase/renderer/features/notes/components/PersonalNotesView.tsx::sha256:84D1F20E74231A316AD3A3C1F9221C11AD6139ED89F02709C58789909F804D12",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
         "codebase/tests/unit/persistence/snippetsDatabase.test.js::sha256:C0491533534C4858C1CEC60EDCB7B6D5B1D9FECDD7DB3B7AF66DC964F7B25575",
         "codebase/tests/unit/snippets/snippets.test.js::sha256:CF459677A2F56BE1F4BADB288752FE2249A08F7CB9D52499FEA3B6F8DCD66BA0"
       ],
@@ -8259,7 +8268,7 @@
           "path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
           ]
         },
         {
@@ -8299,7 +8308,7 @@
         "REG-C523246924A5F8AF",
         "REG-BF47CF271985EDFF",
         "REG-6962C71A90FD377C",
-        "REG-305CE6EF2F30B1DE",
+        "REG-924A04084FAA2CE3",
         "REG-C69C5D0C6A360407",
         "REG-2FCC223E3D2464C9"
       ],
@@ -8359,7 +8368,7 @@
       "native_impact": {
         "known_boundaries": [
           "codebase/main/infrastructure/persistence/database.js::saveNote",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
           "codebase/tests/unit/persistence/snippetsDatabase.test.js::sha256:C0491533534C4858C1CEC60EDCB7B6D5B1D9FECDD7DB3B7AF66DC964F7B25575"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
@@ -8988,7 +8997,7 @@
         "codebase/preload/index.js::searchNotes",
         "codebase/renderer/shared/types/electron.ts::searchNotes",
         "codebase/renderer/features/search/SearchView.tsx::SearchView",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
         "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
       ],
       "intended_target_paths": [
@@ -9037,7 +9046,7 @@
           "path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
           ]
         },
         {
@@ -9062,7 +9071,7 @@
         "REG-AE471A61C835A6F1",
         "REG-CAA2402CB1487AF5",
         "REG-E7C3D63C9FBBCFE5",
-        "REG-A5CD7941D12BABE2"
+        "REG-72F46473562B6AEE"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -9111,7 +9120,7 @@
       "native_impact": {
         "known_boundaries": [
           "codebase/main/infrastructure/persistence/database.js::searchLocal",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
@@ -9555,7 +9564,7 @@
         "codebase/renderer/features/settings/SettingsPage.tsx::sha256:EE15562F762EA473E76C011C8193EA24DE97AA9D02812CEDBFA06BC078DAAE9B",
         "codebase/renderer/features/settings/settingsStore.ts::sha256:0342292D4CDF400DAC7432C8805CF07DD1A02B6FBF43E64B8923F21D6126747C",
         "codebase/renderer/features/settings/useSettings.ts::sha256:9D1024D2A5264E0D9FECC123B5D5DE778275F89808FCCCE9AB0E771618E4A432",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392"
@@ -9592,7 +9601,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -9625,7 +9634,7 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-DE643CB4A30DE38D",
+        "REG-9A6706F82B0A1C11",
         "REG-EA73636E22A6A2F2",
         "REG-02DF742D3EDDCC69",
         "REG-7F561DA54AA38B55",
@@ -9674,7 +9683,7 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -10121,7 +10130,7 @@
         "codebase/renderer/features/transcription/transcriptionStore.ts::sha256:BF0954D6BD1734092B5CFEC331BBD3D8D71E13E19D9B87E6A8583BBE555ABC5D",
         "codebase/renderer/features/transcription/useWhisper.ts::sha256:3091DD09269AFA1D153B0E18D419C5A803C233717FE95FC95379D1936C008146",
         "codebase/renderer/features/transcription/TranscriptionPreviewOverlay.tsx::sha256:B8C292541312555CF940E4DC74E71E7F9ADF4EE80B6DCAEBF01309E3FCD112FB",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
@@ -10173,7 +10182,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -10215,7 +10224,7 @@
       "exact_location_registry_refs": [
         "REG-CE5F9B11165EF607",
         "REG-3E1F11DDA1635650",
-        "REG-40A5433761B64A3F",
+        "REG-784A2A01BCCBA8DB",
         "REG-F12EB64A892FAEED",
         "REG-CC1E7687CA59F283",
         "REG-127AC370EC80E1CE",
@@ -10268,7 +10277,7 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -12444,9 +12453,7 @@
         "REG-DEL-7106DABEC7353993",
         "REG-DEL-316386B6319EB8BF",
         "REG-DEL-73436BA51C8B4776",
-        "REG-DEL-72F565A7D40DEABC",
-        "REG-DEL-86C539DC16259346",
-        "REG-DEL-262884976A2FE752",
+        "REG-DEL-005E94E5ECE6469E",
         "REG-DEL-65C03D79BA50A4B8",
         "REG-DEL-0962B5DF40806A20",
         "REG-DEL-18AE49CA6FDCABF1",
@@ -12472,8 +12479,7 @@
         "REG-DEL-B9D8772158B215C8",
         "REG-DEL-CBA0CF76BB674023",
         "REG-DEL-E1EDF57040D728F2",
-        "REG-DEL-7806D686DE934BD3",
-        "REG-DEL-9C1CE06E306BDFF2"
+        "REG-DEL-F0BE49ABF5A60F82"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -12513,7 +12519,7 @@
       },
       "packaging_impact": "Run packaged smoke coverage if the changed module is reachable from production packaging; no asset change is presumed.",
       "exact_implementation_actions": [
-        "Review all 35 recorded static candidates and the exact registry for CAP-REMOVE-ACTIVE-OPENWHISPR-IDENTITY; label each ACTIVE, HISTORICAL/LEGAL/MIGRATION, BUILD-TIME-ISOLATED or FALSE POSITIVE with path, symbol/anchor and owner.",
+        "Review all 32 recorded static candidates and the exact registry for CAP-REMOVE-ACTIVE-OPENWHISPR-IDENTITY; label each ACTIVE, HISTORICAL/LEGAL/MIGRATION, BUILD-TIME-ISOLATED or FALSE POSITIVE with path, symbol/anchor and owner.",
         "Trace static imports, dynamic imports, string references and runtime registration from renderer entry through preload/IPC/service to data, filesystem, native, child-process and packaged effects; an empty text search cannot close a layer.",
         "Add characterization tests for every retained workflow sharing a boundary, and create a disposable database/user-data fixture before any schema or filesystem change.",
         "Complete BDI-1 through BDI-4; stop if any retained caller, data path, migration history, legal notice or replacement proof is unresolved.",
@@ -12653,34 +12659,8 @@
         },
         {
           "path": "codebase/main/infrastructure/persistence/dataMigration.js",
-          "line": 25,
-          "anchor": "// 2. Identify the legacy OpenWhispr user-data path.",
-          "matched_terms": [
-            "openwhispr"
-          ],
-          "reviewed_disposition": "HISTORICAL MIGRATION - PRESERVE",
-          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
-          "layers": [
-            "database/filesystem/native effect"
-          ]
-        },
-        {
-          "path": "codebase/main/infrastructure/persistence/dataMigration.js",
-          "line": 28,
-          "anchor": "oldUserDataPath = pathMock.join(appDataPath, \"OpenWhispr\");",
-          "matched_terms": [
-            "openwhispr"
-          ],
-          "reviewed_disposition": "HISTORICAL MIGRATION - PRESERVE",
-          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
-          "layers": [
-            "database/filesystem/native effect"
-          ]
-        },
-        {
-          "path": "codebase/main/infrastructure/persistence/dataMigration.js",
-          "line": 30,
-          "anchor": "oldUserDataPath = pathMock.join(appDataPath, `OpenWhispr-${channel}`);",
+          "line": 47,
+          "anchor": "channel === \"production\" ? \"OpenWhispr\" : `OpenWhispr-${channel}`",
           "matched_terms": [
             "openwhispr"
           ],
@@ -13020,22 +13000,8 @@
         },
         {
           "path": "codebase/tests/unit/persistence/dataMigration.test.js",
-          "line": 37,
-          "anchor": "if (p === \"/appData/OpenWhispr\") {",
-          "matched_terms": [
-            "openwhispr"
-          ],
-          "reviewed_disposition": "HISTORICAL MIGRATION - PRESERVE",
-          "review_basis": "Context rule evaluated path, architectural layer, runtime/build role, historical/legal status, and known false-positive exclusions; implementation interlocks remain mandatory.",
-          "layers": [
-            "database/filesystem/native effect",
-            "tests"
-          ]
-        },
-        {
-          "path": "codebase/tests/unit/persistence/dataMigration.test.js",
-          "line": 66,
-          "anchor": "if (p === \"/appData/OpenWhispr\") return true;",
+          "line": 12,
+          "anchor": "const legacyPath = path.join(appDataPath, \"OpenWhispr\");",
           "matched_terms": [
             "openwhispr"
           ],
@@ -13063,7 +13029,7 @@
       "candidate_disposition_counts": {
         "ACTIVE REMOVAL CANDIDATE": 2,
         "BUILD-TIME ONLY - REVIEW UNDER BUILD RULE": 6,
-        "HISTORICAL MIGRATION - PRESERVE": 10,
+        "HISTORICAL MIGRATION - PRESERVE": 7,
         "LEGAL/ATTRIBUTION - PRESERVE": 1,
         "REQUIRES IMPLEMENTATION-TIME STATIC PROOF": 16
       },
@@ -13140,11 +13106,8 @@
         "database/filesystem/native effect": {
           "status": "CANDIDATES REVIEWED - IMPLEMENTATION-TIME PROOF REQUIRED",
           "candidates": [
-            "codebase/main/infrastructure/persistence/dataMigration.js:25::HISTORICAL MIGRATION - PRESERVE::// 2. Identify the legacy OpenWhispr user-data path.",
-            "codebase/main/infrastructure/persistence/dataMigration.js:28::HISTORICAL MIGRATION - PRESERVE::oldUserDataPath = pathMock.join(appDataPath, \"OpenWhispr\");",
-            "codebase/main/infrastructure/persistence/dataMigration.js:30::HISTORICAL MIGRATION - PRESERVE::oldUserDataPath = pathMock.join(appDataPath, `OpenWhispr-${channel}`);",
-            "codebase/tests/unit/persistence/dataMigration.test.js:37::HISTORICAL MIGRATION - PRESERVE::if (p === \"/appData/OpenWhispr\") {",
-            "codebase/tests/unit/persistence/dataMigration.test.js:66::HISTORICAL MIGRATION - PRESERVE::if (p === \"/appData/OpenWhispr\") return true;"
+            "codebase/main/infrastructure/persistence/dataMigration.js:47::HISTORICAL MIGRATION - PRESERVE::channel === \"production\" ? \"OpenWhispr\" : `OpenWhispr-${channel}`",
+            "codebase/tests/unit/persistence/dataMigration.test.js:12::HISTORICAL MIGRATION - PRESERVE::const legacyPath = path.join(appDataPath, \"OpenWhispr\");"
           ],
           "absence_rule": "An empty candidate list is not absence proof; inspect imports, dynamic/string references, runtime registration and packaged output, then save a scoped not-present record."
         },
@@ -13185,8 +13148,7 @@
             "codebase/tests/unit/dictation/dictionaryEchoFilter.test.js:97::REQUIRES IMPLEMENTATION-TIME STATIC PROOF::const dict = \"OpenWhispr, Parakeet, Alcahest\";",
             "codebase/tests/unit/dictation/dictionaryEchoFilter.test.js:98::REQUIRES IMPLEMENTATION-TIME STATIC PROOF::const repeated = \"OpenWhispr, Parakeet, Alcahest, OpenWhispr, Parakeet, Alcahest\";",
             "codebase/tests/unit/dictation/dictionaryEchoFilter.test.js:114::REQUIRES IMPLEMENTATION-TIME STATIC PROOF::\"OpenWhispr, Parakeet, Alcahest\"",
-            "codebase/tests/unit/persistence/dataMigration.test.js:37::HISTORICAL MIGRATION - PRESERVE::if (p === \"/appData/OpenWhispr\") {",
-            "codebase/tests/unit/persistence/dataMigration.test.js:66::HISTORICAL MIGRATION - PRESERVE::if (p === \"/appData/OpenWhispr\") return true;"
+            "codebase/tests/unit/persistence/dataMigration.test.js:12::HISTORICAL MIGRATION - PRESERVE::const legacyPath = path.join(appDataPath, \"OpenWhispr\");"
           ],
           "absence_rule": "An empty candidate list is not absence proof; inspect imports, dynamic/string references, runtime registration and packaged output, then save a scoped not-present record."
         },
@@ -27716,11 +27678,11 @@
         "codebase/renderer/features/notes/useFolderManagement.ts::sha256:A95A9B2641E76859750BBCA1D973D23745CBA107775AE2005A9360DA98A83E77",
         "codebase/renderer/features/notes/useNoteDragAndDrop.ts::sha256:EAC728870247CB039E366D043538542B9400041FBC1A802E7166C3A983A9881D",
         "codebase/renderer/features/notes/components/AddNotesToFolderDialog.tsx::sha256:5C6E9F359A6CA30F2D0F04F092E8487371B493534621232AA57477F40C62BE76",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
       ],
       "intended_target_paths": [
         "codebase/renderer/features/notes/useFolderManagement.ts"
@@ -27754,7 +27716,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -27782,7 +27744,7 @@
           "path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
           ]
         }
       ],
@@ -27794,14 +27756,14 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-FD234FF5C56C928F",
+        "REG-BDF28429D078C72B",
         "REG-146114AD5C322675",
         "REG-ECB133B6FA329BBC",
         "REG-439A122AFB9B4D53",
         "REG-9FA915959F4973E6",
         "REG-B27157C70EB8BEE1",
         "REG-D7BEB3585466D0BC",
-        "REG-C99FFBEC00E67DB0"
+        "REG-F1CF56944111B2C5"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -27845,8 +27807,8 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -28654,7 +28616,7 @@
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
         "codebase/renderer/features/notes/components/UploadAudioView.tsx::sha256:104C586B8E233FE6BD70168CB7D115A71567EA070AD74862B5B4EE70DDD0581A",
         "codebase/main/features/dictation/transcriptFormatter.js::sha256:0E5FF63FD06963BB03052EF912D80C5D18E8707C7A6909142F404E00215449A3",
-        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
       ],
       "intended_target_paths": [
         "codebase/main/ipc/ipcHandlers.js"
@@ -28702,7 +28664,7 @@
           "path": "codebase/main/infrastructure/persistence/localBackup.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+            "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
           ]
         }
       ],
@@ -28715,7 +28677,7 @@
       ],
       "exact_location_registry_refs": [
         "REG-D7C2E61B31BFEE94",
-        "REG-F22B54770833F341",
+        "REG-90E89E3FDFB908B3",
         "REG-C1D89C96B81D05C8",
         "REG-9AF19A725C6A1960",
         "REG-55DC22936998425C",
@@ -28761,7 +28723,7 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -29128,7 +29090,7 @@
         "codebase/renderer/features/notes/components/NoteEditor.tsx::sha256:D7CCFEDEC48B74F0E9DADCD07DEFA2DC479DC1BF71C3C634E03CD7676C425ADC",
         "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
         "codebase/renderer/features/notes/components/MeetingRecordingPill.tsx::sha256:7E0F1147A9C0EC7F452CC5D8632A3CF6AA5C50C98929BF82033C49401AF82C82",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392"
@@ -29165,7 +29127,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -29198,7 +29160,7 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-39A9F08BEC69CF42",
+        "REG-8A394CDC30F204C5",
         "REG-94432ACE41CFAF37",
         "REG-F536CB224B237C52",
         "REG-62BB27978F13569B",
@@ -29247,7 +29209,7 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -29381,7 +29343,7 @@
       "current_symbols": [
         "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
         "codebase/renderer/features/notes/components/MeetingRecordingPill.tsx::sha256:7E0F1147A9C0EC7F452CC5D8632A3CF6AA5C50C98929BF82033C49401AF82C82",
-        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15"
       ],
@@ -29410,7 +29372,7 @@
           "path": "codebase/main/infrastructure/persistence/audioStorage.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+            "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
           ]
         },
         {
@@ -29436,7 +29398,7 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-15A6280DE52500F7",
+        "REG-52BA14116904A0C3",
         "REG-BC71A6A92599C616",
         "REG-BC4BD8FBCA9CC98C",
         "REG-70433C29BD772588",
@@ -29481,7 +29443,7 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -29619,7 +29581,7 @@
         "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
         "codebase/renderer/features/notes/components/MeetingRecordingPill.tsx::sha256:7E0F1147A9C0EC7F452CC5D8632A3CF6AA5C50C98929BF82033C49401AF82C82",
         "codebase/renderer/features/meetings/MeetingsView.tsx::sha256:AD0FCFCC1DF75A2DBBBABEBA9AAFEE2FBF31B369067B5BF7F03382264028B436",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15"
       ],
@@ -29662,7 +29624,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -29688,7 +29650,7 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-18F81ED9B6E1B5A3",
+        "REG-EE60BBC3149BABB0",
         "REG-A7B45DE1DFB6AA80",
         "REG-3F5E39F4F0487348",
         "REG-BBDC9B9C1EA71C8C",
@@ -29737,7 +29699,7 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -30600,7 +30562,7 @@
         "codebase/main/infrastructure/persistence/database.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "intended_target_paths": [
         "codebase/main/infrastructure/persistence/database.js"
@@ -30613,7 +30575,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         }
       ],
@@ -30625,7 +30587,7 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-5DA86D77C008B2DF"
+        "REG-3557E33F52BBE38F"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -30664,7 +30626,7 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -31223,10 +31185,10 @@
         "codebase/renderer/features/notes/components/PersonalNotesView.tsx::sha256:84D1F20E74231A316AD3A3C1F9221C11AD6139ED89F02709C58789909F804D12",
         "codebase/renderer/features/notes/components/NoteEditor.tsx::sha256:D7CCFEDEC48B74F0E9DADCD07DEFA2DC479DC1BF71C3C634E03CD7676C425ADC",
         "codebase/renderer/features/notes/noteStore.ts::sha256:EE12BD7480E32C173C125247D98F5CF8C4771B35FF0FCA0801B2B931421ED03D",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
       ],
       "intended_target_paths": [
         "codebase/renderer/features/notes/components/PersonalNotesView.tsx"
@@ -31260,7 +31222,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -31281,7 +31243,7 @@
           "path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
           ]
         }
       ],
@@ -31293,13 +31255,13 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-056B5B1EAF33408C",
+        "REG-0A84286E6AD0CB34",
         "REG-7B26749B30EA77B6",
         "REG-7059A074706514FC",
         "REG-7FDF4AF6C2C2C571",
         "REG-A19A915281499F06",
         "REG-74AFE2EECC83C909",
-        "REG-DBED84560CCFE992"
+        "REG-B019088F79083718"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -31342,8 +31304,8 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -31478,7 +31440,7 @@
       "current_symbols": [
         "codebase/renderer/features/notes/components/MeetingRecordingPill.tsx::sha256:7E0F1147A9C0EC7F452CC5D8632A3CF6AA5C50C98929BF82033C49401AF82C82",
         "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
-        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392"
@@ -31508,7 +31470,7 @@
           "path": "codebase/main/infrastructure/persistence/audioStorage.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+            "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
           ]
         },
         {
@@ -31541,7 +31503,7 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-92206EB57EF09555",
+        "REG-5E11E74227D976DD",
         "REG-59351C2D63AB5BEE",
         "REG-DC002B0758B1C45F",
         "REG-BA59E31CB4A7966B",
@@ -31588,7 +31550,7 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -32160,8 +32122,8 @@
       "current_symbols": [
         "codebase/renderer/features/meetings/meetingRecordingStore.ts::sha256:6EC53CD5D171551EC379693A4D004555BB64D2B50E5C3679030BFCE0E0EFE283",
         "codebase/renderer/features/meetings/MeetingRecordingMount.tsx::sha256:886695391244A72A62226E0D3A19A11886A2079D0B81EBD80A12CE2467D51C2C",
-        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
       ],
       "intended_target_paths": [
@@ -32189,14 +32151,14 @@
           "path": "codebase/main/infrastructure/persistence/audioStorage.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+            "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
           ]
         },
         {
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -32215,8 +32177,8 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-41591D7AF8D4580D",
-        "REG-FDC106E62C934CB3",
+        "REG-9761000F608D4475",
+        "REG-5A068F88AFD3E2CF",
         "REG-8ABFEBA59F40FE19",
         "REG-FA19BA574B472D15",
         "REG-594565BFEAA37673"
@@ -32261,8 +32223,8 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -32397,14 +32359,14 @@
         "codebase/tests/unit/persistence/localDataDatabase.test.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/features/meetings/diarization.js::sha256:63F3C180A47D4823567B58957A16E66F661438D1C523EBE424AABD804E3DE302",
         "codebase/main/features/meetings/transcriptText.js::sha256:20866A4CA203952C59D8A32CBC478608361C5BA016B83D5E1789F007E2186BC1",
         "codebase/renderer/features/meetings/parseTranscriptSegments.ts::sha256:3C1713651F04E17470B261708C7847BF4317145A234E2A97900E65F58F43E7B2",
         "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/tests/unit/meetings/transcriptText.test.js::sha256:4F287E1CBEFC909032FC5B97EAEA354A81D27BCA9B70643FA58AE17B9677BB72",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
       ],
       "intended_target_paths": [
         "codebase/main/infrastructure/persistence/database.js"
@@ -32417,7 +32379,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -32466,7 +32428,7 @@
           "path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
           ]
         }
       ],
@@ -32480,12 +32442,12 @@
       "exact_location_registry_refs": [
         "REG-B417AE8C7237621B",
         "REG-A2ADA43A13941068",
-        "REG-2A507A25A45AB8B8",
+        "REG-6C6673837306F8D4",
         "REG-B9FCFDF42FF7E54D",
         "REG-3AC78FCA1EC527AD",
         "REG-BC2981838CBA0088",
         "REG-C27379C95A355155",
-        "REG-0077845F04424CB5"
+        "REG-5B2F8440725CD1CE"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -32529,8 +32491,8 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -32673,7 +32635,7 @@
       "current_symbols": [
         "codebase/renderer/features/snippets/SnippetsView.tsx::sha256:23812CFC02E89371EE600339119B52D766582AB3058A2E5184B38E153FB4E0BE",
         "codebase/renderer/features/snippets/snippets.ts::sha256:BE02A9357E99116ED36FA3968277B85217B61752EBF4A74D40ACB10359D2CEE8",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
@@ -32705,7 +32667,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -32752,7 +32714,7 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-3F7B455FB5DC87DD",
+        "REG-D80DAF08FA430D67",
         "REG-01390D7634E05C87",
         "REG-D9B6673356B98770",
         "REG-2A473909BFDDDD7B",
@@ -32803,7 +32765,7 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/tests/unit/persistence/snippetsDatabase.test.js::sha256:C0491533534C4858C1CEC60EDCB7B6D5B1D9FECDD7DB3B7AF66DC964F7B25575"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
@@ -32946,7 +32908,7 @@
         "codebase/main/features/meetings/speakerEmbeddings.js::sha256:C707A53F2D86991EBBA662A519AC1E9C9B08C82F8BE16177C471806682F7E100",
         "codebase/main/features/meetings/liveSpeakerIdentifier.js::sha256:1C66FE6D6E5C1FA2422514BCFC7658AB80F8A5AA206C52BD16C80D96673DDF1D",
         "codebase/main/features/meetings/speakerAssignmentPolicy.js::sha256:4207154EE20E9E117BB54979297ED95E2E76B96DB6CD9CBA14182C24B4838ACB",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/renderer/features/meetings/transcriptSpeakerState.ts::sha256:CCDA238A0096B6831BC420B118BBEFC5E3AF8A03182EDADB4910F962D7109A3B",
         "codebase/main/workers/onnxWorker.js::sha256:6C3298177E5C9D7E8368EE410A94DD347B3E6C4637AAA2334DE0FE5E75A1A438"
       ],
@@ -32982,7 +32944,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -33011,7 +32973,7 @@
         "REG-DCC18ABB8A284753",
         "REG-88F877D44F81BC0C",
         "REG-00CD170F2963410A",
-        "REG-A4404FE11D01F97C",
+        "REG-7332ED98CF7C41C3",
         "REG-88825A730F45BAA1",
         "REG-DE275A14689D6C2E"
       ],
@@ -33053,7 +33015,7 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -33185,7 +33147,7 @@
         "codebase/renderer/features/meetings/transcriptSpeakerState.ts::sha256:CCDA238A0096B6831BC420B118BBEFC5E3AF8A03182EDADB4910F962D7109A3B",
         "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
         "codebase/main/features/meetings/speakerAssignmentPolicy.js::sha256:4207154EE20E9E117BB54979297ED95E2E76B96DB6CD9CBA14182C24B4838ACB",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "intended_target_paths": [
         "codebase/renderer/features/meetings/transcriptSpeakerState.ts"
@@ -33219,7 +33181,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         }
       ],
@@ -33232,7 +33194,7 @@
       ],
       "exact_location_registry_refs": [
         "REG-5073E39CF990869C",
-        "REG-8297E6D74E46475E",
+        "REG-35DA6BBC4F165530",
         "REG-86C7EF3DB4AFEA6F",
         "REG-567268CA1B503D44"
       ],
@@ -33272,7 +33234,7 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -33405,7 +33367,7 @@
         "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
         "codebase/renderer/features/meetings/transcriptSpeakerState.ts::sha256:CCDA238A0096B6831BC420B118BBEFC5E3AF8A03182EDADB4910F962D7109A3B",
         "codebase/main/features/meetings/speakerAssignmentPolicy.js::sha256:4207154EE20E9E117BB54979297ED95E2E76B96DB6CD9CBA14182C24B4838ACB",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
       ],
       "intended_target_paths": [
@@ -33440,7 +33402,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -33460,7 +33422,7 @@
       ],
       "exact_location_registry_refs": [
         "REG-25ED9ABAFD7EEEE7",
-        "REG-4A309E1A2104E1EA",
+        "REG-535C98EA47D76675",
         "REG-7298494B8D97FCE7",
         "REG-1EEF77F0F65E795B",
         "REG-91FF6D76B51DCF77"
@@ -33504,7 +33466,7 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -33634,11 +33596,11 @@
         "codebase/tests/unit/persistence/localDataDatabase.test.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/features/meetings/liveSpeakerIdentifier.js::sha256:1C66FE6D6E5C1FA2422514BCFC7658AB80F8A5AA206C52BD16C80D96673DDF1D",
         "codebase/main/features/meetings/speakerEmbeddings.js::sha256:C707A53F2D86991EBBA662A519AC1E9C9B08C82F8BE16177C471806682F7E100",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
       ],
       "intended_target_paths": [
         "codebase/main/infrastructure/persistence/database.js"
@@ -33651,7 +33613,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -33679,7 +33641,7 @@
           "path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
           ]
         }
       ],
@@ -33693,9 +33655,9 @@
       "exact_location_registry_refs": [
         "REG-84E4150522FD4A82",
         "REG-BAB010ADCD413614",
-        "REG-B42CCF99E66F15F7",
+        "REG-AF6E374B09A63D48",
         "REG-50AF484074681458",
-        "REG-18EC4983DCB05BDF"
+        "REG-1D0B0D4B46CFC526"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -33736,8 +33698,8 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -33870,7 +33832,7 @@
         "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
         "codebase/renderer/features/meetings/transcriptSpeakerState.ts::sha256:CCDA238A0096B6831BC420B118BBEFC5E3AF8A03182EDADB4910F962D7109A3B",
         "codebase/main/features/meetings/speakerAssignmentPolicy.js::sha256:4207154EE20E9E117BB54979297ED95E2E76B96DB6CD9CBA14182C24B4838ACB",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
       ],
       "intended_target_paths": [
@@ -33905,7 +33867,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -33925,7 +33887,7 @@
       ],
       "exact_location_registry_refs": [
         "REG-06ADB447F0D9C672",
-        "REG-EC203E65B09CF168",
+        "REG-4B5BE5F0E2E8E240",
         "REG-C57838F0932F5132",
         "REG-9837F383C67581DB",
         "REG-9569538514168EB0"
@@ -33969,7 +33931,7 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -34103,13 +34065,13 @@
         "codebase/tests/unit/persistence/localDataDatabase.test.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/renderer/features/search/SearchView.tsx::sha256:1D9E8DA7B6B2E333733A82ABAF87D3E72C2597E43C66BEFB57CB05EAB98D197B",
         "codebase/renderer/features/notes/components/NoteEditor.tsx::sha256:D7CCFEDEC48B74F0E9DADCD07DEFA2DC479DC1BF71C3C634E03CD7676C425ADC",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
       ],
       "intended_target_paths": [
         "codebase/main/infrastructure/persistence/database.js"
@@ -34122,7 +34084,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -34164,7 +34126,7 @@
           "path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
           ]
         }
       ],
@@ -34176,13 +34138,13 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-77EEF39A6E38B3CC",
+        "REG-ECCF090E7D150925",
         "REG-963D21A5176D591F",
         "REG-8C9C1D7D6BF96D3F",
         "REG-026AE36B9A2DAC6B",
         "REG-7F0EF3250B3BF7C1",
         "REG-4DA0C96E0CB0CC18",
-        "REG-EF26752F98D6062D"
+        "REG-D4EA178D7626A0E0"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -34225,8 +34187,8 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -34362,11 +34324,11 @@
       "current_symbols": [
         "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
         "codebase/renderer/features/notes/components/NoteEditor.tsx::sha256:D7CCFEDEC48B74F0E9DADCD07DEFA2DC479DC1BF71C3C634E03CD7676C425ADC",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
       ],
       "intended_target_paths": [
         "codebase/main/infrastructure/persistence/database.js"
@@ -34393,7 +34355,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -34421,7 +34383,7 @@
           "path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+            "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
           ]
         }
       ],
@@ -34433,13 +34395,13 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-F4A7F34CF9BA47E4",
+        "REG-44099FDDA5D9763E",
         "REG-8CB855DD8D531DB1",
         "REG-9B31A5402203AB3D",
         "REG-FB616303171EC257",
         "REG-2C9628AC1215C52B",
         "REG-302FFA3E9284A294",
-        "REG-729B39E4C547A617"
+        "REG-D5D2495156C5A7AE"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -34482,8 +34444,8 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -34617,8 +34579,8 @@
       "current_symbols": [
         "codebase/renderer/features/dictation/HistoryView.tsx::sha256:3844ADD053FB4A4EA10F6E006C317E594ED6A051FCC5FE2C0487341BA76AC9D7",
         "codebase/renderer/features/transcription/transcriptionStore.ts::sha256:BF0954D6BD1734092B5CFEC331BBD3D8D71E13E19D9B87E6A8583BBE555ABC5D",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392"
@@ -34648,14 +34610,14 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
           "path": "codebase/main/infrastructure/persistence/audioStorage.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+            "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
           ]
         },
         {
@@ -34688,8 +34650,8 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-A84289C94948DD25",
-        "REG-19E55610817745EC",
+        "REG-F4060A8D7224FEA1",
+        "REG-F6941B86E8E37B1C",
         "REG-C91935187579FF02",
         "REG-E98A2A9C4BC79258",
         "REG-2D44B350E21350D6",
@@ -34737,8 +34699,8 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -36558,8 +36520,8 @@
         "codebase/main/infrastructure/persistence/localBackup.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
       ],
       "intended_target_paths": [
         "codebase/main/infrastructure/persistence/database.js"
@@ -36572,14 +36534,14 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
           "path": "codebase/main/infrastructure/persistence/localBackup.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+            "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
           ]
         }
       ],
@@ -36591,8 +36553,8 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-FE7B983DF6DD3C92",
-        "REG-78F44D1C53EA6AC9"
+        "REG-ABEBB3AC02B50A67",
+        "REG-CBCD2CFE81EEAC73"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -36634,8 +36596,8 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -38087,7 +38049,7 @@
       "current_symbols": [
         "codebase/main/features/meetings/speakerEmbeddings.js::sha256:C707A53F2D86991EBBA662A519AC1E9C9B08C82F8BE16177C471806682F7E100",
         "codebase/main/features/meetings/liveSpeakerIdentifier.js::sha256:1C66FE6D6E5C1FA2422514BCFC7658AB80F8A5AA206C52BD16C80D96673DDF1D",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/renderer/features/notes/components/NoteEditor.tsx::sha256:D7CCFEDEC48B74F0E9DADCD07DEFA2DC479DC1BF71C3C634E03CD7676C425ADC",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
       ],
@@ -38116,7 +38078,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -38144,7 +38106,7 @@
       "exact_location_registry_refs": [
         "REG-BC292E1F2DF8A753",
         "REG-3EF88C08373C9E31",
-        "REG-C254BB5312364323",
+        "REG-64C12466B6DFF14B",
         "REG-E5627BD0BDDDF392",
         "REG-521485BBAA9F3222"
       ],
@@ -38189,7 +38151,7 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -39444,8 +39406,8 @@
         "codebase/main/infrastructure/persistence/localBackup.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
       ],
       "intended_target_paths": [
         "codebase/main/infrastructure/persistence/database.js"
@@ -39458,14 +39420,14 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
           "path": "codebase/main/infrastructure/persistence/localBackup.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+            "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
           ]
         }
       ],
@@ -39477,8 +39439,8 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-FE7B983DF6DD3C92",
-        "REG-78F44D1C53EA6AC9"
+        "REG-ABEBB3AC02B50A67",
+        "REG-CBCD2CFE81EEAC73"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -39515,8 +39477,8 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -40787,7 +40749,7 @@
       "current_symbols": [
         "codebase/main/features/meetings/speakerEmbeddings.js::sha256:C707A53F2D86991EBBA662A519AC1E9C9B08C82F8BE16177C471806682F7E100",
         "codebase/main/features/meetings/liveSpeakerIdentifier.js::sha256:1C66FE6D6E5C1FA2422514BCFC7658AB80F8A5AA206C52BD16C80D96673DDF1D",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/renderer/features/notes/components/NoteEditor.tsx::sha256:D7CCFEDEC48B74F0E9DADCD07DEFA2DC479DC1BF71C3C634E03CD7676C425ADC",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
       ],
@@ -40816,7 +40778,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -40844,7 +40806,7 @@
       "exact_location_registry_refs": [
         "REG-BC292E1F2DF8A753",
         "REG-3EF88C08373C9E31",
-        "REG-C254BB5312364323",
+        "REG-64C12466B6DFF14B",
         "REG-E5627BD0BDDDF392",
         "REG-521485BBAA9F3222"
       ],
@@ -40888,7 +40850,7 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -42114,8 +42076,8 @@
         "codebase/main/infrastructure/persistence/localBackup.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
       ],
       "intended_target_paths": [
         "codebase/main/infrastructure/persistence/database.js"
@@ -42128,14 +42090,14 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
           "path": "codebase/main/infrastructure/persistence/localBackup.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+            "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
           ]
         }
       ],
@@ -42147,8 +42109,8 @@
         }
       ],
       "exact_location_registry_refs": [
-        "REG-FE7B983DF6DD3C92",
-        "REG-78F44D1C53EA6AC9"
+        "REG-ABEBB3AC02B50A67",
+        "REG-CBCD2CFE81EEAC73"
       ],
       "preconditions": [
         "TASK-GOV-001-PROVENANCE-BASELINE is complete at the implementation checkpoint.",
@@ -42185,8 +42147,8 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -43457,7 +43419,7 @@
       "current_symbols": [
         "codebase/main/features/meetings/speakerEmbeddings.js::sha256:C707A53F2D86991EBBA662A519AC1E9C9B08C82F8BE16177C471806682F7E100",
         "codebase/main/features/meetings/liveSpeakerIdentifier.js::sha256:1C66FE6D6E5C1FA2422514BCFC7658AB80F8A5AA206C52BD16C80D96673DDF1D",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/renderer/features/notes/components/NoteEditor.tsx::sha256:D7CCFEDEC48B74F0E9DADCD07DEFA2DC479DC1BF71C3C634E03CD7676C425ADC",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
       ],
@@ -43486,7 +43448,7 @@
           "path": "codebase/main/infrastructure/persistence/database.js",
           "status": "PRESENT",
           "symbols": [
-            "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+            "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
           ]
         },
         {
@@ -43514,7 +43476,7 @@
       "exact_location_registry_refs": [
         "REG-BC292E1F2DF8A753",
         "REG-3EF88C08373C9E31",
-        "REG-C254BB5312364323",
+        "REG-64C12466B6DFF14B",
         "REG-E5627BD0BDDDF392",
         "REG-521485BBAA9F3222"
       ],
@@ -43558,7 +43520,7 @@
       },
       "native_impact": {
         "known_boundaries": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "contract": "Real native/process cleanup and packaged-path proof required."
       },
@@ -49956,15 +49918,15 @@
   ],
   "implementation_status": "IN PROGRESS",
   "execution_state_counts": {
-    "NOT STARTED": 161,
-    "COMPLETE": 1,
+    "NOT STARTED": 160,
+    "COMPLETE": 2,
     "NOT APPLICABLE": 0,
     "BLOCKED": 0
   },
-  "terminal_task_count": 1,
-  "next_task_id": "TASK-CAP-DATA-SAFETY",
+  "terminal_task_count": 2,
+  "next_task_id": "TASK-CAP-DATABASE",
   "next_task_disposition": "NOT STARTED",
-  "latest_checkpoint_identity": "5ed0e52c9c52ebbf2329caff5cfd71af4b3e7237",
+  "latest_checkpoint_identity": "304be6391e41cad92884614011813665ccf1baff",
   "execution_state_contract": {
     "authority": "Each task's execution_state is durable mutable state; generated task-definition fields remain planning contracts.",
     "task_id_field": "stable_task_id",

@@ -1,0 +1,10 @@
+TASK_ID=TASK-CAP-DATA-SAFETY
+CAPABILITY_ID=CAP-DATA-SAFETY
+WORKING_DIRECTORY=codebase
+COMMAND=npm run lint
+EXIT_CODE=0
+RESULT=PASS (0 errors, 28 warnings)
+OUTPUT:
+> mnemora@1.7.5 lint
+> eslint . && cd renderer && eslint .
+✖ 28 problems (0 errors, 28 warnings)

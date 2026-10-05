@@ -1,0 +1,8 @@
+TASK_ID=TASK-CAP-DATA-SAFETY
+CAPABILITY_ID=CAP-DATA-SAFETY
+BOUNDARY=Full application unit and integration regression suite
+WORKING_DIRECTORY=codebase
+COMMAND=npm test
+EXIT_CODE=0
+RESULT=PASS
+SUMMARY=191 tests, 187 passed, 0 failed, 4 skipped (platform-specific OS desktop integrations)

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "task_id": "TASK-CAP-DATA-SAFETY",
+  "capability_id": "CAP-DATA-SAFETY",
+  "captured_at_utc": "2026-10-05T22:25:00.000Z",
+  "repository_root": "C:/Users/mhyah/OneDrive/Desktop/Digital Brain/0-Projects/Mnemora",
+  "git": {
+    "present": true,
+    "git_dir": ".git",
+    "inside_work_tree": true,
+    "branch": "main",
+    "head": "304be6391e41cad92884614011813665ccf1baff",
+    "origin_main": "304be6391e41cad92884614011813665ccf1baff",
+    "ahead": 0,
+    "behind": 0,
+    "remote": "https://github.com/mhyahya854/Mnemora.git"
+  },
+  "pre_change_hashes": {
+    "codebase/main/infrastructure/persistence/database.js": "C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+    "codebase/main/infrastructure/persistence/localBackup.js": "264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+    "codebase/main/infrastructure/persistence/dataMigration.js": "55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+    "codebase/main/infrastructure/persistence/audioStorage.js": "90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+    "codebase/tests/unit/persistence/localDataDatabase.test.js": "6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+    "codebase/tests/unit/persistence/localBackup.test.js": "65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5",
+    "codebase/tests/unit/persistence/dataMigration.test.js": "76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F"
+  },
+  "characterization_tests": [
+    {
+      "test_path": "codebase/tests/unit/persistence/localDataDatabase.test.js",
+      "result": "PASS",
+      "status": "EXISTING TEST"
+    },
+    {
+      "test_path": "codebase/tests/unit/persistence/localBackup.test.js",
+      "result": "PASS",
+      "status": "EXISTING TEST"
+    },
+    {
+      "test_path": "codebase/tests/unit/persistence/dataMigration.test.js",
+      "result": "PASS",
+      "status": "EXISTING TEST"
+    }
+  ],
+  "master_plan_sha256": {
+    "01-EVERYTHING-WE-ARE-KEEPING.md": "BDF185A823422BCAA9BFEBA815A6852D8F7A5CD46B64714B2CD1DE3357A67F64",
+    "02-EVERYTHING-WE-ARE-DELETING.md": "76B6EEC15778B1928F2CD9C0F73FA68C9F3363493062E31E0C904E620DE0AAC3",
+    "03-HOW-WE-WILL-KEEP-DELETE-AND-REPLACE.md": "5E076498731C35ACF314904AAB3A39671F7026A166B5E847EFE3CCD4CF07304E"
+  },
+  "user_data_protection": "Only disposable temporary fixtures used; no user database or recording touched",
+  "result": "PASS"
+}

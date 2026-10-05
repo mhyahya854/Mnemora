@@ -2,7 +2,7 @@
   "schema_version": 4,
   "scope": "Tracked Graphify authorities, reports, tools and immutable Master Plan; genuine graphify-out evidence excluded and separately preserved; transient and non-tracked entries excluded; deterministic (no timestamps)",
   "self_excluded": true,
-  "file_count": 75,
+  "file_count": 78,
   "files": [
     {
       "path": "AUDIT_CODEBASE_BASELINE_SHA256.txt",
@@ -16,8 +16,8 @@
     },
     {
       "path": "CAPABILITY_REGISTRY.json",
-      "size_bytes": 1465262,
-      "sha256": "52FF3ED87277624477D79E7F12DB6B0047A0E6F91475F98859BC2B40F5293EAD"
+      "size_bytes": 1465259,
+      "sha256": "4E7ACA4AE02E456A92BFD30897E38204C41D8008E45C2D173A4C9B6CA2F851AD"
     },
     {
       "path": "CAPABILITY_REGISTRY.md",
@@ -31,8 +31,8 @@
     },
     {
       "path": "COMPLETION_TRACKER.md",
-      "size_bytes": 3081,
-      "sha256": "EF9BE5CFAFB9966F17C08F4E9FDBCA6B0AE93ED41FE53C09308795F6878C7B6B"
+      "size_bytes": 3078,
+      "sha256": "698167CA29B8297C6206763F5A71E3C79ED6BA4A40BAE0A9262120DA3F9F81FD"
     },
     {
       "path": "CONDITIONAL_DECISION_PACKAGES.json",
@@ -57,12 +57,27 @@
     {
       "path": "DELETED_ITEMS_LEDGER.md",
       "size_bytes": 3194,
-      "sha256": "844F29B8BD3DDE0D3FC70393B91267C705BD085BD94254EABD044437B2175D28"
+      "sha256": "6621CA5FD901F4B66E14FACF5BA76515C1C1789AAD825A6CD4E8A0897C29FE3F"
     },
     {
       "path": "DEPENDENCY_GRAPH.md",
       "size_bytes": 1330,
       "sha256": "1598469827049482116DFABF6ECA4CDD4D3C00398A9A980B9E14F9AF630A7BFC"
+    },
+    {
+      "path": "evidence/data-safety-and-migration-integrity/implementation-delta.json",
+      "size_bytes": 5918,
+      "sha256": "9553B805B90FBA8F50FF5F2551E0B932C3598A8CAF1E8B79B9BCF1AD8E812DE2"
+    },
+    {
+      "path": "evidence/data-safety-and-migration-integrity/offline-or-applicability.json",
+      "size_bytes": 1050,
+      "sha256": "E6C628F561F3F797B4BAD71014423991C113F69C833BCA265F22CDA4AFE8B926"
+    },
+    {
+      "path": "evidence/data-safety-and-migration-integrity/pre-change-characterization.json",
+      "size_bytes": 2464,
+      "sha256": "ACEBE797AA38EDB9A4ECB1DDDAD23ECCCCDE79C0E8C0E881FF668FA611318CE7"
     },
     {
       "path": "evidence/repository-provenance-and-safe-git-batching/implementation-delta.json",
@@ -81,18 +96,18 @@
     },
     {
       "path": "EXACT_LOCATION_REGISTRY.json",
-      "size_bytes": 2716102,
-      "sha256": "BED1C6DC27F7AB67BF87412DEFAFD72F718B66509D102C91948E108B2B011D93"
+      "size_bytes": 2704939,
+      "sha256": "1FFDF386245CBED402240144C60EB8661F52E86AC29905B9C5010BB7EAB79007"
     },
     {
       "path": "FINAL-REPOSITORY-RECONCILIATION.json",
-      "size_bytes": 2895,
-      "sha256": "3C89AFC0450C1564114899AD39E36D9C9462288D050D8852EBF76159DAAA57B8"
+      "size_bytes": 2896,
+      "sha256": "FD291206CCC0D6162AA8469A0BB90A87102BC3FFB0D86193A9EE86B6D29F7765"
     },
     {
       "path": "FINAL-REPOSITORY-RECONCILIATION.md",
-      "size_bytes": 3008,
-      "sha256": "70BA14D5BA5136679131DAF6047C47F082AED5DBB1062117109ABF83E61AF811"
+      "size_bytes": 3009,
+      "sha256": "2AD9803AA525B7126B3CE237959920341E26DDA321F214A611F1894BE75C1702"
     },
     {
       "path": "FOLDER_OWNERSHIP_MAP.md",
@@ -102,7 +117,7 @@
     {
       "path": "GRAPH_CONSISTENCY_REPORT.json",
       "size_bytes": 779,
-      "sha256": "74D98EE960BDB1AF41E985091000E951924C603D5D863F00260F3154E1C49FFE"
+      "sha256": "ACBFE4402D6498741EA3FD9EB272BBD224356CB17F2D4C4AC405781E022E15D7"
     },
     {
       "path": "GRAPH_CONSISTENCY_REPORT.md",
@@ -116,13 +131,13 @@
     },
     {
       "path": "IMPLEMENTATION_QUEUE.json",
-      "size_bytes": 3165866,
-      "sha256": "16DBDA2C67DCA43AD13E6E641F1DE87A1A9072431E2E1C9649162F7D681E099D"
+      "size_bytes": 3163988,
+      "sha256": "288C341797345A9E1273EDCDEF940524A95EB94255584AE79F931F91CEAA9C2B"
     },
     {
       "path": "IMPLEMENTATION_QUEUE.md",
-      "size_bytes": 30672,
-      "sha256": "0DB026520DF714451501E7BDBAB9637BEECC62AF6D194A6C46D11F9F0F1379D1"
+      "size_bytes": 30666,
+      "sha256": "F419531118B1D45F1DE49BCC5D9E2FFD1BC0EDA85D16EA7E2F05EB6D315CB880"
     },
     {
       "path": "IMPORT_AND_CALL_MAP.md",
@@ -187,17 +202,17 @@
     {
       "path": "PLANNING_COUNTS.md",
       "size_bytes": 1149,
-      "sha256": "E4E2AE2FA400B49AA084FFF4325362DE147E72DE59369A32B6C5A50083FF234C"
+      "sha256": "AA7B3DCE28D3E5FAF5AFE46FCEFE2B0E0EDB9009A3C18DC1ED2FD0A7413AEF76"
     },
     {
       "path": "PLANNING_VALIDATION_REPORT.json",
-      "size_bytes": 32973,
-      "sha256": "FBEDFD59C782B37C945E77AF4FE8885BD803040AB19152E1858621922F93BC74"
+      "size_bytes": 32971,
+      "sha256": "19485FB1D6D172102D5682D5D89A19077901104812BA46976DCD90F456DB2E7B"
     },
     {
       "path": "PLANNING_VALIDATION_REPORT.md",
-      "size_bytes": 4125,
-      "sha256": "E825764A59FA1360F9EB9AFDD560260D38938A7F4A7FC4ACABBA07A4E6A7601D"
+      "size_bytes": 4122,
+      "sha256": "AA5030220D1802327C56810DFFA8A02CB20F4815E6120E874F96855A57850C56"
     },
     {
       "path": "PONYTAIL_AUDIT.md",
@@ -211,13 +226,13 @@
     },
     {
       "path": "READINESS_GATE.json",
-      "size_bytes": 417,
-      "sha256": "F2BE1F283442A75EF2C785375F67618ABDD574DA27E1DE3028FEEC9F5B274396"
+      "size_bytes": 414,
+      "sha256": "1FD38555AE1CAF7132963EA57043A30885E3464449738F390A5E4E464693E636"
     },
     {
       "path": "READINESS_GATE.md",
-      "size_bytes": 298,
-      "sha256": "83280D589E51557F7765A9B58775350A21E0500E8BAEA6CA9BA8165CB1C8A2C6"
+      "size_bytes": 295,
+      "sha256": "D623362F02CD72AA88BFC80130E9FCECFEDCBAEB2D50E54BA438579B858B3E54"
     },
     {
       "path": "REGRESSION_RESULTS.md",
@@ -251,8 +266,8 @@
     },
     {
       "path": "RUN_STATE.md",
-      "size_bytes": 2271,
-      "sha256": "E0F09481677F8EE5B3AC438D4C8F2F77E0AC634EF9D4BDEED896490ABF9504D5"
+      "size_bytes": 2268,
+      "sha256": "EC68BBDC845E8C59F24F8DE90F82320E40CE9F9460B48AC9032965AB31638DCA"
     },
     {
       "path": "RUNTIME_CHAIN_MAP.md",
@@ -261,8 +276,8 @@
     },
     {
       "path": "START-HERE.md",
-      "size_bytes": 9948,
-      "sha256": "AF0502E2F8E167770728A3556C870DE70F626589C1D9EF07F8ACE179D4EB2670"
+      "size_bytes": 9945,
+      "sha256": "5574B695CB4ECEA63A8728D77D3E741C2D0650458782F1B5BD7B7FADD2165FBC"
     },
     {
       "path": "TARGET_ARCHITECTURE.md",
@@ -281,8 +296,8 @@
     },
     {
       "path": "THIRD_PARTY_CODE_REGISTER.md",
-      "size_bytes": 29443,
-      "sha256": "716791901097EB675E642897CAC459CE9EE6D636705DC4E7581EA959DAF2D2E2"
+      "size_bytes": 29557,
+      "sha256": "7DF5AE41450A09E4F094734EA1A9858FD10DE28D4F197AB49FDEE6E5A2A2E0D8"
     },
     {
       "path": "TOOL_EXECUTION_LOG.md",
@@ -331,8 +346,8 @@
     },
     {
       "path": "tools/semantic_validator.py",
-      "size_bytes": 125860,
-      "sha256": "FE9AA85CB70BE6B10C0AAA9AFF7D94D3E149E0476A05CF9295CDF53B6F0DC491"
+      "size_bytes": 127710,
+      "sha256": "121B9E56DD66AF41746D749E09BB8A9A024812907E57FB901D350408C4180112"
     },
     {
       "path": "tools/test_execution_state.py",
@@ -376,8 +391,8 @@
     },
     {
       "path": "VERIFICATION_AUDIT.json",
-      "size_bytes": 30329,
-      "sha256": "DFFE5A2484E84FBEA73580FAF35D4A0666ABEBD5753A72E4BB577A0B46B9159F"
+      "size_bytes": 30328,
+      "sha256": "D18C8EF16807EDEDA8340A7475BC97CC49C73922A59FFE5EDAF2B34085F309EB"
     }
   ]
 }

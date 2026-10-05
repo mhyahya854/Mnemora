@@ -1,0 +1,9 @@
+TASK_ID=TASK-CAP-DATA-SAFETY
+CAPABILITY_ID=CAP-DATA-SAFETY
+WORKING_DIRECTORY=codebase
+COMMAND=npm run typecheck
+EXIT_CODE=0
+RESULT=PASS
+OUTPUT:
+> mnemora@1.7.5 typecheck
+> cd renderer && tsc --noEmit

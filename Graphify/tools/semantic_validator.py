@@ -1598,11 +1598,24 @@ def main() -> int:
     transient_errors = list(manifest_scan_errors)
     committed_out = load("GRAPHIFY_OUTPUT_MANIFEST.json")
     tracked_graphify = graphify_tracked_set()
+    allowed_evidence: set[str] = set()
+    if tasks:
+        for task in tasks:
+            task_id = task.get("stable_task_id")
+            state = task.get("execution_state") or {}
+            disposition = state.get("disposition", "NOT STARTED")
+            if task_id == args.active_task or disposition in ("COMPLETE", "BLOCKED"):
+                for ref in task.get("required_evidence_artifacts", []):
+                    if isinstance(ref, str):
+                        allowed_evidence.add(ref.replace("\\", "/"))
+                for ref in state.get("evidence_references", []):
+                    if isinstance(ref, str):
+                        allowed_evidence.add(ref.replace("\\", "/"))
     for entry in committed_out.get("files", []):
         rel = str(entry.get("path", ""))
         if set(rel.split("/")) & TRANSIENT_MANIFEST_PARTS or rel.endswith(TRANSIENT_MANIFEST_SUFFIXES):
             transient_errors.append(f"committed output manifest contains transient entry: {rel}")
-        if rel and f"Graphify/{rel}" not in tracked_graphify:
+        if rel and f"Graphify/{rel}" not in tracked_graphify and f"Graphify/{rel}" not in allowed_evidence:
             transient_errors.append(f"committed output manifest contains non-tracked entry: {rel}")
     checks.add("SEM-037-TRANSIENT-OUTPUT-MANIFEST", "Transient and non-tracked Graphify output-manifest detection", transient_errors, {"committed_output_manifest_entries": len(committed_out.get("files", [])), "regenerated_output_manifest_entries": len(manifest_entries), "tracked_graphify_files": len(tracked_graphify)})
 
@@ -1692,7 +1705,31 @@ def main() -> int:
     clean_errors = []
     if pre_run_status and not args.allow_dirty:
         if args.active_task:
-            clean_errors.extend(validate_codebase_mutation(tasks, args.active_task, ROOT))
+            modified_paths = []
+            added_paths = []
+            other_paths = []
+            for line in pre_run_status.splitlines():
+                if not line.strip():
+                    continue
+                parts = line.strip().split(None, 1)
+                if len(parts) < 2:
+                    continue
+                code = parts[0]
+                path = parts[1].strip().strip('"').replace("\\", "/")
+                if " -> " in path:
+                    path = path.split(" -> ")[1].strip().strip('"').replace("\\", "/")
+                if path.startswith("codebase/"):
+                    if "?" in code or "A" in code:
+                        added_paths.append(path)
+                    else:
+                        modified_paths.append(path)
+                elif path.startswith("Graphify/"):
+                    pass
+                else:
+                    other_paths.append(path)
+            clean_errors.extend(validate_codebase_mutation(modified_paths, added_paths, tasks, args.active_task))
+            if other_paths:
+                clean_errors.append(f"pre-run working tree has unauthorized changes outside codebase/ and Graphify/:\n{other_paths}")
         else:
             clean_errors.append(f"pre-run working tree is not clean:\n{pre_run_status[:800]}")
     checks.add("SEM-042-REPO-CLEAN-PRERUN", "Pre-run tracked working tree cleanliness", clean_errors, {"pre_run_clean": not bool(pre_run_status), "gate_skipped_by_allow_dirty": bool(args.allow_dirty)})

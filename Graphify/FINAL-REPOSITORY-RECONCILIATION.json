@@ -4,10 +4,10 @@
   "repository_url": "https://github.com/mhyahya854/Mnemora.git",
   "default_branch": "main",
   "branch": "main (canonical default branch; linear history integrated from graphify-final-reconciliation)",
-  "verified_commit_sha": "6a9858a060ea7676363731e86950be1273f99d18",
-  "verified_tree_sha": "ca9e039887e8b475e0e877fa2961ed42ee913477",
-  "tracked_file_count": 440,
-  "tracked_codebase_file_count": 346,
+  "verified_commit_sha": "304be6391e41cad92884614011813665ccf1baff",
+  "verified_tree_sha": "893d63c9fb916f9633181b4e03ad2c842bbfa43d",
+  "tracked_file_count": 449,
+  "tracked_codebase_file_count": 347,
   "lfs_file_count": 1,
   "master_plan_sha256": {
     "01-EVERYTHING-WE-ARE-KEEPING.md": "BDF185A823422BCAA9BFEBA815A6852D8F7A5CD46B64714B2CD1DE3357A67F64",
@@ -41,7 +41,7 @@
     "duplicates": 0,
     "malformed": 0,
     "mappings_identical": true,
-    "current_mapping_identical_to_final": true
+    "current_mapping_identical_to_final": false
   },
   "transient_exclusions": [
     ".git",
@@ -57,7 +57,7 @@
     "__pycache__",
     "~"
   ],
-  "output_manifest_entries": 75,
+  "output_manifest_entries": 78,
   "validator": {
     "gate_count": 44,
     "passed": 44,
@@ -70,7 +70,7 @@
     ]
   },
   "local_full_tree_audit": "RUN in the original full-tree repository; SKIPPED in clean clones (tracked Git parity above is the GitHub-verifiable claim; detailed per-environment evidence is in PLANNING_VALIDATION_REPORT.json)",
-  "pre_run_working_tree": "CLEAN",
+  "pre_run_working_tree": "DIRTY",
   "implementation_status": "IN PROGRESS",
   "release_status": "NOT EVALUATED"
 }

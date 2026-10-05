@@ -56,6 +56,7 @@ test("fresh schema supports local graphs, Unicode search, tags, settings, and ca
     "transcript_segments",
     "attachments",
     "backups",
+    "migration_journal",
     "semantic_index_state",
   ]) {
     assert.ok(tables.has(table), `${table} should exist`);
@@ -79,8 +80,8 @@ test("fresh schema supports local graphs, Unicode search, tags, settings, and ca
   ]) {
     assert.ok(!noteColumns.has(removedColumn), `${removedColumn} should be removed`);
   }
-  assert.equal(DatabaseManager.SCHEMA_VERSION, 4);
-  assert.equal(manager.db.pragma("user_version", { simple: true }), 4);
+  assert.equal(DatabaseManager.SCHEMA_VERSION, 5);
+  assert.equal(manager.db.pragma("user_version", { simple: true }), 5);
   assert.equal(manager.db.pragma("foreign_keys", { simple: true }), 1);
 
   manager.setLocalSetting("retention", { enabled: false, days: null });
@@ -233,7 +234,7 @@ test("legacy adoption is backed up, transactional, lossless, and restart-idempot
     fs.rmSync(directory, { recursive: true, force: true });
   });
 
-  assert.equal(manager.db.pragma("user_version", { simple: true }), 4);
+  assert.equal(manager.db.pragma("user_version", { simple: true }), 5);
   assert.equal(manager.db.pragma("foreign_keys", { simple: true }), 1);
   assert.equal(manager.getNote(7).title, "Legacy meeting");
   assert.equal(manager.getTranscriptionById(8).text, "preserve me");
@@ -282,6 +283,8 @@ test("legacy adoption is backed up, transactional, lossless, and restart-idempot
 
   assert.ok(manager.lastMigrationBackupPath);
   assert.ok(fs.existsSync(manager.lastMigrationBackupPath));
+  assert.match(manager.lastMigrationBackupDetails.sourceSha256, /^[0-9a-f]{64}$/);
+  assert.match(manager.lastMigrationBackupDetails.backupSha256, /^[0-9a-f]{64}$/);
   const snapshot = new BetterSqlite(manager.lastMigrationBackupPath, {
     readonly: true,
     fileMustExist: true,
@@ -289,6 +292,15 @@ test("legacy adoption is backed up, transactional, lossless, and restart-idempot
   assert.equal(snapshot.prepare("SELECT COUNT(*) AS count FROM notes WHERE id = 7").get().count, 1);
   assert.ok(snapshot.pragma("table_info(notes)").some((column) => column.name === "deleted_at"));
   snapshot.close();
+  const migration = manager.db
+    .prepare("SELECT * FROM migration_journal ORDER BY id DESC LIMIT 1")
+    .get();
+  assert.equal(migration.source_schema_version, 0);
+  assert.equal(migration.destination_schema_version, 5);
+  assert.equal(migration.status, "completed");
+  assert.match(migration.source_sha256, /^[0-9a-f]{64}$/);
+  assert.match(migration.backup_sha256, /^[0-9a-f]{64}$/);
+  assert.match(migration.destination_sha256, /^[0-9a-f]{64}$/);
 
   const backupCount = fs.readdirSync(path.join(directory, "migration-backups")).length;
   manager.db.close();
@@ -351,8 +363,27 @@ test("a failed ordered migration rolls back its schema version and destructive c
   );
   probe.close();
   assert.equal(fs.readdirSync(path.join(directory, "migration-backups")).length, 1);
+  const journalProbe = new BetterSqlite(databasePath, { readonly: true, fileMustExist: true });
+  const failedMigration = journalProbe
+    .prepare("SELECT * FROM migration_journal ORDER BY id DESC LIMIT 1")
+    .get();
+  assert.equal(failedMigration.status, "failed");
+  assert.match(failedMigration.result, /injected migration failure/);
+  journalProbe.close();
 
   t.after(() => fs.rmSync(directory, { recursive: true, force: true }));
+});
+
+test("cleanup closes the database without deleting user data", (t) => {
+  const { manager, directory } = createManager(t);
+  const databasePath = path.join(directory, "mnemora.sqlite");
+  manager.saveNote("Preserved", "cleanup must not delete this");
+
+  assert.deepEqual(manager.cleanup(), { success: true });
+  assert.equal(fs.existsSync(databasePath), true);
+  const probe = new BetterSqlite(databasePath, { readonly: true, fileMustExist: true });
+  assert.equal(probe.prepare("SELECT title FROM notes").get().title, "Preserved");
+  probe.close();
 });
 
 test("a newer database is rejected before the older app mutates it", (t) => {

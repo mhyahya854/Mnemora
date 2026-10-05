@@ -2,7 +2,7 @@
 
 SEMANTIC GRAPHIFY PLANNING COMPLETE - IMPLEMENTATION IN PROGRESS
 
-Checks: **44/44 passed**. Implementation: **IN PROGRESS**. Release: **NOT EVALUATED**. Next task: **TASK-CAP-DATA-SAFETY**.
+Checks: **44/44 passed**. Implementation: **IN PROGRESS**. Release: **NOT EVALUATED**. Next task: **TASK-CAP-DATABASE**.
 
 | Gate | Result | Errors |
 | --- | --- | ---: |

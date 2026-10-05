@@ -1,18 +1,82 @@
 const Database = require("better-sqlite3");
+const crypto = require("node:crypto");
 const path = require("path");
 const fs = require("fs");
 const debugLogger = require("../runtime/debugLogger");
 const localBackup = require("./localBackup");
 const { app } = require("electron");
 
-const SCHEMA_VERSION = 4;
+const SCHEMA_VERSION = 5;
 
 class DatabaseManager {
   constructor() {
     this.db = null;
     this.dbPath = null;
     this.lastMigrationBackupPath = null;
+    this.lastMigrationBackupDetails = null;
     this.initDatabase();
+  }
+
+  _sha256File(filePath) {
+    const hash = crypto.createHash("sha256");
+    const handle = fs.openSync(filePath, "r");
+    const buffer = Buffer.allocUnsafe(1024 * 1024);
+    try {
+      let read;
+      while ((read = fs.readSync(handle, buffer, 0, buffer.length, null)) > 0) {
+        hash.update(buffer.subarray(0, read));
+      }
+    } finally {
+      fs.closeSync(handle);
+    }
+    return hash.digest("hex");
+  }
+
+  _ensureMigrationJournalSchema() {
+    this.db.exec(`
+      CREATE TABLE IF NOT EXISTS migration_journal (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        source_schema_version INTEGER NOT NULL,
+        destination_schema_version INTEGER NOT NULL,
+        source_sha256 TEXT,
+        backup_path TEXT,
+        backup_sha256 TEXT,
+        destination_sha256 TEXT,
+        status TEXT NOT NULL CHECK (status IN ('running', 'completed', 'failed')),
+        result TEXT,
+        started_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        completed_at DATETIME
+      )
+    `);
+  }
+
+  _startMigrationJournal(sourceVersion, destinationVersion) {
+    this._ensureMigrationJournalSchema();
+    const backup = this.lastMigrationBackupDetails;
+    return this.db
+      .prepare(
+        `INSERT INTO migration_journal (
+           source_schema_version, destination_schema_version, source_sha256,
+           backup_path, backup_sha256, status, result
+         ) VALUES (?, ?, ?, ?, ?, 'running', 'pending')`
+      )
+      .run(
+        sourceVersion,
+        destinationVersion,
+        backup?.sourceSha256 || null,
+        backup?.path || null,
+        backup?.backupSha256 || null
+      ).lastInsertRowid;
+  }
+
+  _finishMigrationJournal(id, status, result, destinationSha256 = null) {
+    this.db
+      .prepare(
+        `UPDATE migration_journal
+         SET status = ?, result = ?, destination_sha256 = ?, completed_at = CURRENT_TIMESTAMP
+         WHERE id = ?`
+      )
+      .run(status, result, destinationSha256, id);
   }
 
   _runMigrations({ dbPath, hadSchema }) {
@@ -44,28 +108,44 @@ class DatabaseManager {
         },
       },
       { version: 4, run: () => this._removeCloudAndAgentSchema() },
+      { version: 5, run: () => this._ensureMigrationJournalSchema() },
     ];
     const pending = migrations.filter((migration) => migration.version > currentVersion);
 
     if (pending.length > 0 && hadSchema && !this.lastMigrationBackupPath) {
-      this.lastMigrationBackupPath = this._createPreMigrationBackup(
+      this.lastMigrationBackupDetails = this._createPreMigrationBackup(
         dbPath,
         currentVersion,
         SCHEMA_VERSION
       );
+      this.lastMigrationBackupPath = this.lastMigrationBackupDetails.path;
     }
 
     if (pending.length > 0) {
-      this.db.transaction(() => {
-        for (const migration of pending) {
-          migration.run();
-          this.db.pragma(`user_version = ${migration.version}`);
-        }
-        const violations = this.db.pragma("foreign_key_check");
-        if (violations.length > 0) {
-          throw new Error(`Database migration left ${violations.length} foreign-key violation(s)`);
-        }
-      })();
+      const destinationVersion = pending[pending.length - 1].version;
+      const journalId = this._startMigrationJournal(currentVersion, destinationVersion);
+      try {
+        this.db.transaction(() => {
+          for (const migration of pending) {
+            migration.run();
+            this.db.pragma(`user_version = ${migration.version}`);
+          }
+          const violations = this.db.pragma("foreign_key_check");
+          if (violations.length > 0) {
+            throw new Error(`Database migration left ${violations.length} foreign-key violation(s)`);
+          }
+        })();
+        this.db.pragma("wal_checkpoint(FULL)");
+        this._finishMigrationJournal(
+          journalId,
+          "completed",
+          `schema ${currentVersion} -> ${destinationVersion}`,
+          this._sha256File(dbPath)
+        );
+      } catch (error) {
+        this._finishMigrationJournal(journalId, "failed", error.message);
+        throw error;
+      }
     }
 
     this.db.pragma("foreign_keys = ON");
@@ -83,8 +163,15 @@ class DatabaseManager {
       `mnemora-pre-migration-v${fromVersion}-to-v${toVersion}-${timestamp}.sqlite`
     );
     this.db.pragma("wal_checkpoint(FULL)");
+    const sourceSha256 = this._sha256File(dbPath);
     this.db.prepare("VACUUM INTO ?").run(backupPath);
-    return backupPath;
+    return {
+      path: backupPath,
+      sourceSchemaVersion: fromVersion,
+      destinationSchemaVersion: toVersion,
+      sourceSha256,
+      backupSha256: this._sha256File(backupPath),
+    };
   }
 
   _cleanLegacyOrphans() {
@@ -489,6 +576,7 @@ class DatabaseManager {
   initDatabase() {
     try {
       this.lastMigrationBackupPath = null;
+      this.lastMigrationBackupDetails = null;
       const dbFileName =
         process.env.NODE_ENV === "development" ? "mnemora-dev.sqlite" : "mnemora.sqlite";
 
@@ -510,11 +598,12 @@ class DatabaseManager {
         );
       }
       if (hadSchema && startingVersion < SCHEMA_VERSION) {
-        this.lastMigrationBackupPath = this._createPreMigrationBackup(
+        this.lastMigrationBackupDetails = this._createPreMigrationBackup(
           dbPath,
           startingVersion,
           SCHEMA_VERSION
         );
+        this.lastMigrationBackupPath = this.lastMigrationBackupDetails.path;
       }
 
       this.db.transaction(() => {
@@ -2130,6 +2219,73 @@ class DatabaseManager {
     }
   }
 
+  // Graphify owner anchor: owned::cap-data-safety
+  getDataSafetySnapshot() {
+    if (!this.db?.open || !this.dbPath) throw new Error("Database not initialized");
+    this.db.pragma("wal_checkpoint(FULL)");
+    const tables = new Set(
+      this.db
+        .prepare("SELECT name FROM sqlite_master WHERE type = 'table'")
+        .all()
+        .map((row) => row.name)
+    );
+    const entityTables = [
+      "meetings",
+      "recordings",
+      "transcripts",
+      "transcript_segments",
+      "speaker_profiles",
+      "speaker_mappings",
+      "note_speaker_embeddings",
+      "notes",
+      "folders",
+      "tags",
+      "note_tags",
+      "meeting_tags",
+      "snippets",
+      "attachments",
+      "local_settings",
+      "backups",
+      "migration_journal",
+      "semantic_index_state",
+    ];
+    const counts = Object.fromEntries(
+      entityTables.map((table) => [
+        table,
+        tables.has(table)
+          ? this.db.prepare(`SELECT COUNT(*) AS count FROM ${table}`).get().count
+          : null,
+      ])
+    );
+    const recordingReferences = tables.has("recordings")
+      ? this.db
+          .prepare("SELECT id, file_path, sha256 FROM recordings ORDER BY id")
+          .all()
+          .map((recording) => {
+            const filePath = path.isAbsolute(recording.file_path)
+              ? recording.file_path
+              : path.join(path.dirname(this.dbPath), recording.file_path);
+            const exists = fs.existsSync(filePath);
+            return {
+              ...recording,
+              exists,
+              observedSha256: exists ? this._sha256File(filePath) : null,
+            };
+          })
+      : [];
+    return {
+      schemaVersion: this.db.pragma("user_version", { simple: true }),
+      databaseSha256: this._sha256File(this.dbPath),
+      quickCheck: this.db.pragma("quick_check", { simple: true }),
+      foreignKeyViolations: this.db.pragma("foreign_key_check"),
+      counts,
+      recordingReferences,
+      migrationJournal: tables.has("migration_journal")
+        ? this.db.prepare("SELECT * FROM migration_journal ORDER BY id").all()
+        : [],
+    };
+  }
+
   cleanup() {
     try {
       if (this.db) {
@@ -2140,15 +2296,10 @@ class DatabaseManager {
         }
         this.db = null;
       }
-      const dbPath = path.join(
-        app.getPath("userData"),
-        process.env.NODE_ENV === "development" ? "mnemora-dev.sqlite" : "mnemora.sqlite"
-      );
-      if (fs.existsSync(dbPath)) {
-        fs.unlinkSync(dbPath);
-      }
+      return { success: true };
     } catch (error) {
-      debugLogger.error("Error deleting database file", { error: error.message }, "database");
+      debugLogger.error("Error closing database", { error: error.message }, "database");
+      return { success: false, error: error.message };
     }
   }
   _normalizeEmail(email) {

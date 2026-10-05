@@ -4,7 +4,7 @@
   "requirements": 536,
   "capabilities": 122,
   "tasks": 162,
-  "exact_locations": 783,
+  "exact_locations": 780,
   "dependency_graph": {
     "task_nodes": 162,
     "dependency_edges": 335,

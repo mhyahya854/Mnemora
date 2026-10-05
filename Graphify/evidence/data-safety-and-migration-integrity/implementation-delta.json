@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "batch_id": "TASK-CAP-DATA-SAFETY",
+  "capability_id": "CAP-DATA-SAFETY",
+  "reason": "Characterize, protect, and establish the cross-cutting contract for data safety and migration integrity; satisfy linked Master requirements and Universal Constitution principles UAC-01 through UAC-22.",
+  "mutation_type": "APPLICATION PERSISTENCE HARDENING AND REAL BOUNDARY INTEGRATION PROOF",
+  "starting_commit": "304be6391e41cad92884614011813665ccf1baff",
+  "verified_baseline_commit": "304be6391e41cad92884614011813665ccf1baff",
+  "checkpoint_identity": "304be6391e41cad92884614011813665ccf1baff",
+  "original_paths": [
+    "codebase/main/infrastructure/persistence/database.js",
+    "codebase/main/infrastructure/persistence/localBackup.js",
+    "codebase/main/infrastructure/persistence/dataMigration.js",
+    "codebase/main/infrastructure/persistence/audioStorage.js",
+    "codebase/tests/unit/persistence/localDataDatabase.test.js",
+    "codebase/tests/unit/persistence/localBackup.test.js",
+    "codebase/tests/unit/persistence/dataMigration.test.js"
+  ],
+  "target_paths": [
+    "codebase/main/infrastructure/persistence/database.js",
+    "codebase/main/infrastructure/persistence/localBackup.js",
+    "codebase/main/infrastructure/persistence/dataMigration.js",
+    "codebase/main/infrastructure/persistence/audioStorage.js",
+    "codebase/tests/unit/persistence/localDataDatabase.test.js",
+    "codebase/tests/unit/persistence/localBackup.test.js",
+    "codebase/tests/unit/persistence/dataMigration.test.js",
+    "codebase/tests/integration/data-safety-and-migration-integrity.real-boundary.test.js",
+    "Graphify/evidence/data-safety-and-migration-integrity/"
+  ],
+  "changed_files": [
+    "codebase/main/infrastructure/persistence/database.js",
+    "codebase/main/infrastructure/persistence/localBackup.js",
+    "codebase/main/infrastructure/persistence/dataMigration.js",
+    "codebase/main/infrastructure/persistence/audioStorage.js",
+    "codebase/tests/unit/persistence/localDataDatabase.test.js",
+    "codebase/tests/unit/persistence/dataMigration.test.js"
+  ],
+  "added_files": [
+    "codebase/tests/integration/data-safety-and-migration-integrity.real-boundary.test.js",
+    "Graphify/evidence/data-safety-and-migration-integrity/pre-change-characterization.json",
+    "Graphify/evidence/data-safety-and-migration-integrity/implementation-delta.json",
+    "Graphify/evidence/data-safety-and-migration-integrity/targeted.log",
+    "Graphify/evidence/data-safety-and-migration-integrity/integration.log",
+    "Graphify/evidence/data-safety-and-migration-integrity/regression.log",
+    "Graphify/evidence/data-safety-and-migration-integrity/typecheck.log",
+    "Graphify/evidence/data-safety-and-migration-integrity/lint.log",
+    "Graphify/evidence/data-safety-and-migration-integrity/offline-or-applicability.json"
+  ],
+  "deleted_files": [],
+  "moved_files": [],
+  "post_change_hashes": {
+    "codebase/main/infrastructure/persistence/database.js": "C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+    "codebase/main/infrastructure/persistence/localBackup.js": "68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+    "codebase/main/infrastructure/persistence/dataMigration.js": "1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+    "codebase/main/infrastructure/persistence/audioStorage.js": "BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
+    "codebase/tests/unit/persistence/localDataDatabase.test.js": "0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
+    "codebase/tests/unit/persistence/localBackup.test.js": "65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5",
+    "codebase/tests/unit/persistence/dataMigration.test.js": "2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
+    "codebase/tests/integration/data-safety-and-migration-integrity.real-boundary.test.js": "7D56D06B071ECDFA73348498CEE78FBBDD8DB3B5E4206BF36882CC3201F43436"
+  },
+  "dependencies": [
+    "TASK-GOV-001-PROVENANCE-BASELINE"
+  ],
+  "dependents": [
+    "TASK-CAP-BACKUP",
+    "TASK-CAP-DATABASE",
+    "TASK-CAP-LEGACY-MIGRATION",
+    "TASK-GOV-002-CHARACTERIZATION-GATE",
+    "TASK-CAP-MODEL-DISCOVERY",
+    "TASK-CAP-MODEL-PACK",
+    "TASK-CAP-MUTATION-LOG",
+    "TASK-DEC-NAS"
+  ],
+  "database_impact": "Schema v5 with migration_journal table; WAL checkpointing; non-destructive cleanup; zero user-data deletion.",
+  "native_impact": "better-sqlite3 native bindings exercised; explicit DB close and WAL flush prevent Windows file lock conflicts.",
+  "tests_selected": [
+    "npx cross-env ELECTRON_RUN_AS_NODE=1 npx electron --test tests/unit/persistence/localDataDatabase.test.js",
+    "npx cross-env ELECTRON_RUN_AS_NODE=1 npx electron --test tests/integration/data-safety-and-migration-integrity.real-boundary.test.js",
+    "npm test",
+    "npm run typecheck",
+    "npm run lint"
+  ],
+  "tests_executed": "See targeted.log, integration.log, regression.log, typecheck.log, and lint.log",
+  "evidence_paths": [
+    "Graphify/evidence/data-safety-and-migration-integrity/pre-change-characterization.json",
+    "Graphify/evidence/data-safety-and-migration-integrity/implementation-delta.json",
+    "Graphify/evidence/data-safety-and-migration-integrity/targeted.log",
+    "Graphify/evidence/data-safety-and-migration-integrity/integration.log",
+    "Graphify/evidence/data-safety-and-migration-integrity/regression.log",
+    "Graphify/evidence/data-safety-and-migration-integrity/typecheck.log",
+    "Graphify/evidence/data-safety-and-migration-integrity/lint.log",
+    "Graphify/evidence/data-safety-and-migration-integrity/offline-or-applicability.json"
+  ],
+  "start_timestamp_utc": "2026-10-05T22:25:00.000Z",
+  "completion_timestamp_utc": "2026-10-05T22:30:00.000Z",
+  "model_tool_identity": "Gemini 3.8 Flash; Antigravity One-Task Implementation Loop",
+  "result": "PASS"
+}

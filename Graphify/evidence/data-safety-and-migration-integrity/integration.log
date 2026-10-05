@@ -1,0 +1,21 @@
+TASK_ID=TASK-CAP-DATA-SAFETY
+CAPABILITY_ID=CAP-DATA-SAFETY
+BOUNDARY=Real SQLite and filesystem boundary; disposable user-data preservation; migration rollback & recovery; UAC-03/UAC-04/UAC-11 contracts
+WORKING_DIRECTORY=codebase
+COMMAND=npx cross-env ELECTRON_RUN_AS_NODE=1 npx electron --test tests/integration/data-safety-and-migration-integrity.real-boundary.test.js
+EXIT_CODE=0
+RESULT=PASS
+SUMMARY=2 tests, 2 passed, 0 failed, 0 skipped
+TESTS_EXECUTED:
+- real SQLite and filesystem boundary preserves every disposable user-data class (PASS)
+- portable data root relocation, relative path preservation, external divergence detection, and network-share boundaries (PASS)
+DATA_SAFETY_BOUNDARY_VERIFICATION:
+- Source schema version: 4, Destination schema version: 5
+- Pre-migration backup verified before destructive transform
+- Disposable user data verified before and after migration: meetings=2, recordings=2, transcripts=2, transcript_segments=2, notes=2, folders=2, tags=1, attachments=1, local_settings=1
+- Legacy hash preservation verified: transcriptions.db, legacy-recording.webm, legacy-export.txt, legacy-backup.bin
+- SQLite foreign key violations: 0
+- SQLite quick_check: ok
+- UAC-03 relative path preservation: verified across data root directory move
+- UAC-11 external modification divergence detection: verified without silent overwrite
+- UAC-04 simulated network-share / NAS data safety boundary: verified

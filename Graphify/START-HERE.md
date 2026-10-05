@@ -40,7 +40,7 @@ If Git is still absent, record that exact result; do not treat the Git command f
 
 `TASK-GOV-001-PROVENANCE-BASELINE`
 
-The immutable execution root is ordering index 1 in `IMPLEMENTATION_QUEUE.json`. The current derived `next_task_id` is `TASK-CAP-DATA-SAFETY` with disposition `NOT STARTED`. Establish Git or the Master Plan-permitted recoverable hash checkpoint before any application mutation. Do not begin a later task merely because its files appear familiar.
+The immutable execution root is ordering index 1 in `IMPLEMENTATION_QUEUE.json`. The current derived `next_task_id` is `TASK-CAP-DATABASE` with disposition `NOT STARTED`. Establish Git or the Master Plan-permitted recoverable hash checkpoint before any application mutation. Do not begin a later task merely because its files appear familiar.
 
 ## Dependency-safe phase and wave sequence
 

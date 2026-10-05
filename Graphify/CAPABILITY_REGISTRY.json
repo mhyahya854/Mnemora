@@ -1619,16 +1619,16 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "result_events": [],
@@ -1642,24 +1642,24 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "side_effects": [],
         "failure_path": [],
         "cleanup_path": [],
         "recovery_path": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "failure_cleanup_recovery": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "current_test_coverage": [
@@ -1669,8 +1669,8 @@
         "required_change": "Execute only the linked dependency-safe task at the reviewed paths and anchors; preserve all retained behavior and data.",
         "target_owner": "SQLite persistence",
         "intermediate_symbols": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
           "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
           "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
@@ -1744,8 +1744,8 @@
         "codebase/tests/unit/persistence/localBackup.test.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
@@ -2180,7 +2180,7 @@
       ],
       "module_owner": "SQLite persistence",
       "planning_status": "PLANNING COMPLETE - IMPLEMENTATION EVIDENCE PENDING",
-      "implementation_status": "NOT STARTED",
+      "implementation_status": "COMPLETE",
       "presence_status": "CURRENT IMPLEMENTATION OR STATIC CANDIDATES MAPPED",
       "master_requirement_ids": [
         "REQ-MP1-00F5F9F108",
@@ -2234,13 +2234,13 @@
         "codebase/tests/unit/persistence/dataMigration.test.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
-        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
         "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5",
-        "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F"
+        "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368"
       ],
       "target_symbols": [
         "owned::cap-data-safety"
@@ -2274,23 +2274,23 @@
         "ipc_handlers": [],
         "main_services_and_handlers": [],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F"
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368"
         ],
         "result_events": [],
         "renderer_update": [],
@@ -2301,37 +2301,37 @@
         ],
         "runtime_registrations": [],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F"
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F"
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368"
         ],
         "side_effects": [],
         "failure_path": [],
         "cleanup_path": [],
         "recovery_path": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F"
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368"
         ],
         "failure_cleanup_recovery": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F"
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368"
         ],
         "current_test_coverage": [
           "codebase/tests/unit/persistence/localDataDatabase.test.js",
@@ -2342,13 +2342,13 @@
         "required_change": "Execute only the linked dependency-safe task at the reviewed paths and anchors; preserve all retained behavior and data.",
         "target_owner": "SQLite persistence",
         "intermediate_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F"
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368"
         ],
         "mapping_evidence": [
           "codebase/main/infrastructure/persistence/database.js",
@@ -2408,20 +2408,20 @@
         "ipc_handlers": [],
         "main_services_and_handlers": [],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "result_events": [],
@@ -2433,34 +2433,34 @@
         ],
         "runtime_registrations": [],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "side_effects": [],
         "failure_path": [],
         "cleanup_path": [],
         "recovery_path": [
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "failure_cleanup_recovery": [
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "current_test_coverage": [
@@ -2472,11 +2472,11 @@
         "required_change": "Execute only the linked dependency-safe task at the reviewed paths and anchors; preserve all retained behavior and data.",
         "target_owner": "SQLite persistence",
         "intermediate_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "mapping_evidence": [
@@ -2901,11 +2901,11 @@
         "codebase/tests/unit/persistence/localBackup.test.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
-        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
-        "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
+        "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
         "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
       ],
       "target_paths": [
@@ -4442,16 +4442,16 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "result_events": [],
         "renderer_update": [
@@ -4467,12 +4467,12 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -4489,11 +4489,11 @@
           "codebase/renderer/features/notes/useFolderManagement.ts::sha256:A95A9B2641E76859750BBCA1D973D23745CBA107775AE2005A9360DA98A83E77",
           "codebase/renderer/features/notes/useNoteDragAndDrop.ts::sha256:EAC728870247CB039E366D043538542B9400041FBC1A802E7166C3A983A9881D",
           "codebase/renderer/features/notes/components/AddNotesToFolderDialog.tsx::sha256:5C6E9F359A6CA30F2D0F04F092E8487371B493534621232AA57477F40C62BE76",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
           "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
           "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "mapping_evidence": [
           "codebase/renderer/features/notes/useFolderManagement.ts",
@@ -4539,11 +4539,11 @@
         "codebase/renderer/features/notes/useFolderManagement.ts::sha256:A95A9B2641E76859750BBCA1D973D23745CBA107775AE2005A9360DA98A83E77",
         "codebase/renderer/features/notes/useNoteDragAndDrop.ts::sha256:EAC728870247CB039E366D043538542B9400041FBC1A802E7166C3A983A9881D",
         "codebase/renderer/features/notes/components/AddNotesToFolderDialog.tsx::sha256:5C6E9F359A6CA30F2D0F04F092E8487371B493534621232AA57477F40C62BE76",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
       ],
       "target_paths": [
         "codebase/renderer/features/notes/useFolderManagement.ts"
@@ -6069,11 +6069,11 @@
         "main_symbols": [
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
           "codebase/main/features/dictation/transcriptFormatter.js::sha256:0E5FF63FD06963BB03052EF912D80C5D18E8707C7A6909142F404E00215449A3",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
         ],
         "repositories": [],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
         ],
         "result_events": [],
         "renderer_update": [
@@ -6085,19 +6085,19 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
         ],
         "side_effects": [],
         "failure_path": [],
         "cleanup_path": [],
         "recovery_path": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
         ],
         "failure_cleanup_recovery": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
         ],
         "current_test_coverage": [],
         "current_breakage": "Implementation status must be established by the linked characterization task; static planning does not claim a runtime result.",
@@ -6109,7 +6109,7 @@
           "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
           "codebase/renderer/features/notes/components/UploadAudioView.tsx::sha256:104C586B8E233FE6BD70168CB7D115A71567EA070AD74862B5B4EE70DDD0581A",
           "codebase/main/features/dictation/transcriptFormatter.js::sha256:0E5FF63FD06963BB03052EF912D80C5D18E8707C7A6909142F404E00215449A3",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
         ],
         "mapping_evidence": [
           "codebase/main/ipc/ipcHandlers.js",
@@ -6175,7 +6175,7 @@
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
         "codebase/renderer/features/notes/components/UploadAudioView.tsx::sha256:104C586B8E233FE6BD70168CB7D115A71567EA070AD74862B5B4EE70DDD0581A",
         "codebase/main/features/dictation/transcriptFormatter.js::sha256:0E5FF63FD06963BB03052EF912D80C5D18E8707C7A6909142F404E00215449A3",
-        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
       ],
       "target_paths": [
         "codebase/main/ipc/ipcHandlers.js"
@@ -6979,20 +6979,20 @@
         "ipc_handlers": [],
         "main_services_and_handlers": [],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
           "codebase/main/infrastructure/persistence/postMigrationDetector.js::sha256:B1A0A9FF570280267D5D3668CC91005D0A31FA1054F76EB6CE885D6DAD5365A0",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
           "codebase/main/infrastructure/persistence/postMigrationDetector.js::sha256:B1A0A9FF570280267D5D3668CC91005D0A31FA1054F76EB6CE885D6DAD5365A0",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "result_events": [],
         "renderer_update": [
@@ -7004,33 +7004,33 @@
         ],
         "runtime_registrations": [],
         "data_read": [
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
           "codebase/main/infrastructure/persistence/postMigrationDetector.js::sha256:B1A0A9FF570280267D5D3668CC91005D0A31FA1054F76EB6CE885D6DAD5365A0",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
           "codebase/main/infrastructure/persistence/postMigrationDetector.js::sha256:B1A0A9FF570280267D5D3668CC91005D0A31FA1054F76EB6CE885D6DAD5365A0",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "side_effects": [],
         "failure_path": [],
         "cleanup_path": [],
         "recovery_path": [
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
           "codebase/main/infrastructure/persistence/postMigrationDetector.js::sha256:B1A0A9FF570280267D5D3668CC91005D0A31FA1054F76EB6CE885D6DAD5365A0",
           "codebase/renderer/features/onboarding/PostMigrationOnboarding.tsx::sha256:18E5371C8DF7BB919E76B2854914E6A4B2791FCBA93D43358717C818568B2E9C",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F"
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368"
         ],
         "failure_cleanup_recovery": [
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
           "codebase/main/infrastructure/persistence/postMigrationDetector.js::sha256:B1A0A9FF570280267D5D3668CC91005D0A31FA1054F76EB6CE885D6DAD5365A0",
           "codebase/renderer/features/onboarding/PostMigrationOnboarding.tsx::sha256:18E5371C8DF7BB919E76B2854914E6A4B2791FCBA93D43358717C818568B2E9C",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F"
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368"
         ],
         "current_test_coverage": [
           "codebase/tests/unit/persistence/dataMigration.test.js",
@@ -7040,12 +7040,12 @@
         "required_change": "Execute only the linked dependency-safe task at the reviewed paths and anchors; preserve all retained behavior and data.",
         "target_owner": "SQLite persistence",
         "intermediate_symbols": [
-          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+          "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
           "codebase/main/infrastructure/persistence/postMigrationDetector.js::sha256:B1A0A9FF570280267D5D3668CC91005D0A31FA1054F76EB6CE885D6DAD5365A0",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/renderer/features/onboarding/PostMigrationOnboarding.tsx::sha256:18E5371C8DF7BB919E76B2854914E6A4B2791FCBA93D43358717C818568B2E9C",
-          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "mapping_evidence": [
           "codebase/main/infrastructure/persistence/dataMigration.js",
@@ -7115,12 +7115,12 @@
         "codebase/tests/unit/persistence/localDataDatabase.test.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:55A8F49D4A6589B17EABF084E15BA2B418A29CF72379318EC10C9B68ACFA9ECE",
+        "codebase/main/infrastructure/persistence/dataMigration.js::sha256:1B582E10C376CBF2D0D862CCEADA206DDD7283EAC3FD2C32BCCDEBF958F82576",
         "codebase/main/infrastructure/persistence/postMigrationDetector.js::sha256:B1A0A9FF570280267D5D3668CC91005D0A31FA1054F76EB6CE885D6DAD5365A0",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/renderer/features/onboarding/PostMigrationOnboarding.tsx::sha256:18E5371C8DF7BB919E76B2854914E6A4B2791FCBA93D43358717C818568B2E9C",
-        "codebase/tests/unit/persistence/dataMigration.test.js::sha256:76DD67E6DC9AC396D73FB6F658C8344DD757F0C51261018C614F19FA5030335F",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+        "codebase/tests/unit/persistence/dataMigration.test.js::sha256:2633DD91D93576D78A4A1AD6B002E80B237B861862A362F922AF244A789AF368",
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
       ],
       "target_paths": [
         "codebase/main/infrastructure/persistence/dataMigration.js"
@@ -7307,14 +7307,14 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "result_events": [],
         "renderer_update": [
@@ -7328,10 +7328,10 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -7346,7 +7346,7 @@
           "codebase/renderer/features/notes/components/NoteEditor.tsx::sha256:D7CCFEDEC48B74F0E9DADCD07DEFA2DC479DC1BF71C3C634E03CD7676C425ADC",
           "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
           "codebase/renderer/features/notes/components/MeetingRecordingPill.tsx::sha256:7E0F1147A9C0EC7F452CC5D8632A3CF6AA5C50C98929BF82033C49401AF82C82",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
           "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
           "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392"
@@ -7392,7 +7392,7 @@
         "codebase/renderer/features/notes/components/NoteEditor.tsx::sha256:D7CCFEDEC48B74F0E9DADCD07DEFA2DC479DC1BF71C3C634E03CD7676C425ADC",
         "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
         "codebase/renderer/features/notes/components/MeetingRecordingPill.tsx::sha256:7E0F1147A9C0EC7F452CC5D8632A3CF6AA5C50C98929BF82033C49401AF82C82",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392"
@@ -7463,12 +7463,12 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
         ],
         "result_events": [],
         "renderer_update": [
@@ -7480,10 +7480,10 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -7497,7 +7497,7 @@
         "intermediate_symbols": [
           "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
           "codebase/renderer/features/notes/components/MeetingRecordingPill.tsx::sha256:7E0F1147A9C0EC7F452CC5D8632A3CF6AA5C50C98929BF82033C49401AF82C82",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
           "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15"
         ],
@@ -7538,7 +7538,7 @@
       "current_symbols": [
         "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
         "codebase/renderer/features/notes/components/MeetingRecordingPill.tsx::sha256:7E0F1147A9C0EC7F452CC5D8632A3CF6AA5C50C98929BF82033C49401AF82C82",
-        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15"
       ],
@@ -7950,17 +7950,17 @@
         ],
         "main_symbols": [
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
           "codebase/main/features/meetings/audioUtils.js::sha256:525CADA6C62B556528804ADAA36FC8101058B0F1706B3B570D25C3D1B0DBEE8C",
           "codebase/main/features/meetings/diarization.js::sha256:63F3C180A47D4823567B58957A16E66F661438D1C523EBE424AABD804E3DE302"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
         ],
         "result_events": [],
         "renderer_update": [
@@ -7976,12 +7976,12 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -8001,8 +8001,8 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
           "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
           "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
           "codebase/main/features/meetings/audioUtils.js::sha256:525CADA6C62B556528804ADAA36FC8101058B0F1706B3B570D25C3D1B0DBEE8C",
           "codebase/main/features/meetings/diarization.js::sha256:63F3C180A47D4823567B58957A16E66F661438D1C523EBE424AABD804E3DE302",
           "codebase/tests/unit/meetings/meetingMicHoldback.test.js::sha256:54C8EE6904C07E91318E88A82241CC9EC64B16AFB58EA85DD7DF77F4108864B7"
@@ -8661,8 +8661,8 @@
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
         "codebase/main/features/meetings/audioUtils.js::sha256:525CADA6C62B556528804ADAA36FC8101058B0F1706B3B570D25C3D1B0DBEE8C",
         "codebase/main/features/meetings/diarization.js::sha256:63F3C180A47D4823567B58957A16E66F661438D1C523EBE424AABD804E3DE302",
         "codebase/tests/unit/meetings/meetingMicHoldback.test.js::sha256:54C8EE6904C07E91318E88A82241CC9EC64B16AFB58EA85DD7DF77F4108864B7"
@@ -8893,14 +8893,14 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "result_events": [],
         "renderer_update": [
@@ -8914,10 +8914,10 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -8933,7 +8933,7 @@
           "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
           "codebase/renderer/features/notes/components/MeetingRecordingPill.tsx::sha256:7E0F1147A9C0EC7F452CC5D8632A3CF6AA5C50C98929BF82033C49401AF82C82",
           "codebase/renderer/features/meetings/MeetingsView.tsx::sha256:AD0FCFCC1DF75A2DBBBABEBA9AAFEE2FBF31B369067B5BF7F03382264028B436",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
           "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15"
         ],
@@ -8980,7 +8980,7 @@
         "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
         "codebase/renderer/features/notes/components/MeetingRecordingPill.tsx::sha256:7E0F1147A9C0EC7F452CC5D8632A3CF6AA5C50C98929BF82033C49401AF82C82",
         "codebase/renderer/features/meetings/MeetingsView.tsx::sha256:AD0FCFCC1DF75A2DBBBABEBA9AAFEE2FBF31B369067B5BF7F03382264028B436",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15"
       ],
@@ -10057,7 +10057,7 @@
         "codebase/main/infrastructure/persistence/database.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "target_symbols": [
         "DatabaseManager"
@@ -10086,23 +10086,23 @@
         "ipc_handlers": [],
         "main_services_and_handlers": [],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "result_events": [],
         "renderer_update": [],
         "tests": [],
         "runtime_registrations": [],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -10114,7 +10114,7 @@
         "required_change": "Execute only the linked dependency-safe task at the reviewed paths and anchors; preserve all retained behavior and data.",
         "target_owner": "SQLite persistence",
         "intermediate_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "mapping_evidence": [
           "codebase/main/infrastructure/persistence/database.js"
@@ -10155,8 +10155,8 @@
         "codebase/main/infrastructure/persistence/localBackup.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
       ],
       "target_symbols": [
         "DatabaseManager"
@@ -10186,44 +10186,44 @@
         "ipc_handlers": [],
         "main_services_and_handlers": [],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
         ],
         "result_events": [],
         "renderer_update": [],
         "tests": [],
         "runtime_registrations": [],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
         ],
         "side_effects": [],
         "failure_path": [],
         "cleanup_path": [],
         "recovery_path": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
         ],
         "failure_cleanup_recovery": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
         ],
         "current_test_coverage": [],
         "current_breakage": "Implementation status must be established by the linked characterization task; static planning does not claim a runtime result.",
         "required_change": "Execute only the linked dependency-safe task at the reviewed paths and anchors; preserve all retained behavior and data.",
         "target_owner": "SQLite persistence",
         "intermediate_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C"
         ],
         "mapping_evidence": [
           "codebase/main/infrastructure/persistence/database.js",
@@ -10776,12 +10776,12 @@
         ],
         "repositories": [
           "codebase/main/infrastructure/persistence/database.js::saveNote",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
           "codebase/tests/unit/persistence/snippetsDatabase.test.js::sha256:C0491533534C4858C1CEC60EDCB7B6D5B1D9FECDD7DB3B7AF66DC964F7B25575"
         ],
         "data_native_or_process_boundary": [
           "codebase/main/infrastructure/persistence/database.js::saveNote",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
           "codebase/tests/unit/persistence/snippetsDatabase.test.js::sha256:C0491533534C4858C1CEC60EDCB7B6D5B1D9FECDD7DB3B7AF66DC964F7B25575"
         ],
         "result_events": [],
@@ -10807,12 +10807,12 @@
         ],
         "data_read": [
           "codebase/main/infrastructure/persistence/database.js::saveNote",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
           "codebase/tests/unit/persistence/snippetsDatabase.test.js::sha256:C0491533534C4858C1CEC60EDCB7B6D5B1D9FECDD7DB3B7AF66DC964F7B25575"
         ],
         "data_written": [
           "codebase/main/infrastructure/persistence/database.js::saveNote",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
           "codebase/tests/unit/persistence/snippetsDatabase.test.js::sha256:C0491533534C4858C1CEC60EDCB7B6D5B1D9FECDD7DB3B7AF66DC964F7B25575"
         ],
         "side_effects": [],
@@ -10843,7 +10843,7 @@
           "codebase/renderer/features/notes/components/NoteEditor.tsx::NoteEditor",
           "codebase/renderer/features/notes/components/RichTextEditor.tsx::RichTextEditor",
           "codebase/renderer/features/notes/components/PersonalNotesView.tsx::sha256:84D1F20E74231A316AD3A3C1F9221C11AD6139ED89F02709C58789909F804D12",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
           "codebase/tests/unit/persistence/snippetsDatabase.test.js::sha256:C0491533534C4858C1CEC60EDCB7B6D5B1D9FECDD7DB3B7AF66DC964F7B25575",
           "codebase/tests/unit/snippets/snippets.test.js::sha256:CF459677A2F56BE1F4BADB288752FE2249A08F7CB9D52499FEA3B6F8DCD66BA0"
         ],
@@ -11337,7 +11337,7 @@
         "codebase/renderer/features/notes/components/NoteEditor.tsx::NoteEditor",
         "codebase/renderer/features/notes/components/RichTextEditor.tsx::RichTextEditor",
         "codebase/renderer/features/notes/components/PersonalNotesView.tsx::sha256:84D1F20E74231A316AD3A3C1F9221C11AD6139ED89F02709C58789909F804D12",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
         "codebase/tests/unit/persistence/snippetsDatabase.test.js::sha256:C0491533534C4858C1CEC60EDCB7B6D5B1D9FECDD7DB3B7AF66DC964F7B25575",
         "codebase/tests/unit/snippets/snippets.test.js::sha256:CF459677A2F56BE1F4BADB288752FE2249A08F7CB9D52499FEA3B6F8DCD66BA0"
       ],
@@ -12047,16 +12047,16 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "result_events": [],
         "renderer_update": [
@@ -12071,12 +12071,12 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -12093,10 +12093,10 @@
           "codebase/renderer/features/notes/components/PersonalNotesView.tsx::sha256:84D1F20E74231A316AD3A3C1F9221C11AD6139ED89F02709C58789909F804D12",
           "codebase/renderer/features/notes/components/NoteEditor.tsx::sha256:D7CCFEDEC48B74F0E9DADCD07DEFA2DC479DC1BF71C3C634E03CD7676C425ADC",
           "codebase/renderer/features/notes/noteStore.ts::sha256:EE12BD7480E32C173C125247D98F5CF8C4771B35FF0FCA0801B2B931421ED03D",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
           "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "mapping_evidence": [
           "codebase/renderer/features/notes/components/PersonalNotesView.tsx",
@@ -12139,10 +12139,10 @@
         "codebase/renderer/features/notes/components/PersonalNotesView.tsx::sha256:84D1F20E74231A316AD3A3C1F9221C11AD6139ED89F02709C58789909F804D12",
         "codebase/renderer/features/notes/components/NoteEditor.tsx::sha256:D7CCFEDEC48B74F0E9DADCD07DEFA2DC479DC1BF71C3C634E03CD7676C425ADC",
         "codebase/renderer/features/notes/noteStore.ts::sha256:EE12BD7480E32C173C125247D98F5CF8C4771B35FF0FCA0801B2B931421ED03D",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
       ],
       "target_paths": [
         "codebase/renderer/features/notes/components/PersonalNotesView.tsx"
@@ -12361,12 +12361,12 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
         ],
         "result_events": [],
         "renderer_update": [
@@ -12379,10 +12379,10 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -12396,7 +12396,7 @@
         "intermediate_symbols": [
           "codebase/renderer/features/notes/components/MeetingRecordingPill.tsx::sha256:7E0F1147A9C0EC7F452CC5D8632A3CF6AA5C50C98929BF82033C49401AF82C82",
           "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
           "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
           "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392"
@@ -12442,7 +12442,7 @@
       "current_symbols": [
         "codebase/renderer/features/notes/components/MeetingRecordingPill.tsx::sha256:7E0F1147A9C0EC7F452CC5D8632A3CF6AA5C50C98929BF82033C49401AF82C82",
         "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
-        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392"
@@ -13138,16 +13138,16 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "result_events": [],
         "renderer_update": [
@@ -13159,12 +13159,12 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -13178,8 +13178,8 @@
         "intermediate_symbols": [
           "codebase/renderer/features/meetings/meetingRecordingStore.ts::sha256:6EC53CD5D171551EC379693A4D004555BB64D2B50E5C3679030BFCE0E0EFE283",
           "codebase/renderer/features/meetings/MeetingRecordingMount.tsx::sha256:886695391244A72A62226E0D3A19A11886A2079D0B81EBD80A12CE2467D51C2C",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "mapping_evidence": [
@@ -13220,8 +13220,8 @@
       "current_symbols": [
         "codebase/renderer/features/meetings/meetingRecordingStore.ts::sha256:6EC53CD5D171551EC379693A4D004555BB64D2B50E5C3679030BFCE0E0EFE283",
         "codebase/renderer/features/meetings/MeetingRecordingMount.tsx::sha256:886695391244A72A62226E0D3A19A11886A2079D0B81EBD80A12CE2467D51C2C",
-        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
       ],
       "target_paths": [
@@ -17691,16 +17691,16 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "result_events": [],
@@ -17714,24 +17714,24 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "side_effects": [],
         "failure_path": [],
         "cleanup_path": [],
         "recovery_path": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "failure_cleanup_recovery": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "current_test_coverage": [
@@ -17741,8 +17741,8 @@
         "required_change": "Execute only the linked dependency-safe task at the reviewed paths and anchors; preserve all retained behavior and data.",
         "target_owner": "SQLite persistence",
         "intermediate_symbols": [
-          "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
           "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
           "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
@@ -17784,8 +17784,8 @@
         "codebase/tests/unit/persistence/localBackup.test.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/localBackup.js::sha256:264F464E2856E1CABF8C533AFFB65C1ECE8200F2B8B0E59EE20CAB6B1BD5FECF",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/localBackup.js::sha256:68A4ECBB0F06CAB2741F4EF14ACFBF2DCEAB59786CF4CD52D81938636F58E64C",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
@@ -17866,11 +17866,11 @@
         ],
         "repositories": [
           "codebase/main/infrastructure/persistence/database.js::searchLocal",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "data_native_or_process_boundary": [
           "codebase/main/infrastructure/persistence/database.js::searchLocal",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "result_events": [],
@@ -17887,12 +17887,12 @@
         ],
         "data_read": [
           "codebase/main/infrastructure/persistence/database.js::searchLocal",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "data_written": [
           "codebase/main/infrastructure/persistence/database.js::searchLocal",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "side_effects": [],
@@ -17917,7 +17917,7 @@
           "codebase/preload/index.js::searchNotes",
           "codebase/renderer/shared/types/electron.ts::searchNotes",
           "codebase/renderer/features/search/SearchView.tsx::SearchView",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
           "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
         ],
         "mapping_evidence": [
@@ -18047,7 +18047,7 @@
         "codebase/preload/index.js::searchNotes",
         "codebase/renderer/shared/types/electron.ts::searchNotes",
         "codebase/renderer/features/search/SearchView.tsx::SearchView",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F",
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1",
         "codebase/tests/unit/persistence/localBackup.test.js::sha256:65B362BB1585BCDD2668554C6A058A4893288698F6C474F9A4AA52E40E4495F5"
       ],
       "target_paths": [
@@ -18403,18 +18403,18 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/features/meetings/diarization.js::sha256:63F3C180A47D4823567B58957A16E66F661438D1C523EBE424AABD804E3DE302",
           "codebase/main/features/meetings/transcriptText.js::sha256:20866A4CA203952C59D8A32CBC478608361C5BA016B83D5E1789F007E2186BC1",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "result_events": [],
         "renderer_update": [
@@ -18429,12 +18429,12 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -18449,14 +18449,14 @@
         "required_change": "Execute only the linked dependency-safe task at the reviewed paths and anchors; preserve all retained behavior and data.",
         "target_owner": "Local transcription",
         "intermediate_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/features/meetings/diarization.js::sha256:63F3C180A47D4823567B58957A16E66F661438D1C523EBE424AABD804E3DE302",
           "codebase/main/features/meetings/transcriptText.js::sha256:20866A4CA203952C59D8A32CBC478608361C5BA016B83D5E1789F007E2186BC1",
           "codebase/renderer/features/meetings/parseTranscriptSegments.ts::sha256:3C1713651F04E17470B261708C7847BF4317145A234E2A97900E65F58F43E7B2",
           "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
           "codebase/tests/unit/meetings/transcriptText.test.js::sha256:4F287E1CBEFC909032FC5B97EAEA354A81D27BCA9B70643FA58AE17B9677BB72",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "mapping_evidence": [
           "codebase/main/infrastructure/persistence/database.js",
@@ -18499,14 +18499,14 @@
         "codebase/tests/unit/persistence/localDataDatabase.test.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/features/meetings/diarization.js::sha256:63F3C180A47D4823567B58957A16E66F661438D1C523EBE424AABD804E3DE302",
         "codebase/main/features/meetings/transcriptText.js::sha256:20866A4CA203952C59D8A32CBC478608361C5BA016B83D5E1789F007E2186BC1",
         "codebase/renderer/features/meetings/parseTranscriptSegments.ts::sha256:3C1713651F04E17470B261708C7847BF4317145A234E2A97900E65F58F43E7B2",
         "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/tests/unit/meetings/transcriptText.test.js::sha256:4F287E1CBEFC909032FC5B97EAEA354A81D27BCA9B70643FA58AE17B9677BB72",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
       ],
       "target_paths": [
         "codebase/main/infrastructure/persistence/database.js"
@@ -18581,14 +18581,14 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "result_events": [],
         "renderer_update": [
@@ -18602,10 +18602,10 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -18620,7 +18620,7 @@
           "codebase/renderer/features/settings/SettingsPage.tsx::sha256:EE15562F762EA473E76C011C8193EA24DE97AA9D02812CEDBFA06BC078DAAE9B",
           "codebase/renderer/features/settings/settingsStore.ts::sha256:0342292D4CDF400DAC7432C8805CF07DD1A02B6FBF43E64B8923F21D6126747C",
           "codebase/renderer/features/settings/useSettings.ts::sha256:9D1024D2A5264E0D9FECC123B5D5DE778275F89808FCCCE9AB0E771618E4A432",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
           "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
           "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392"
@@ -18768,7 +18768,7 @@
         "codebase/renderer/features/settings/SettingsPage.tsx::sha256:EE15562F762EA473E76C011C8193EA24DE97AA9D02812CEDBFA06BC078DAAE9B",
         "codebase/renderer/features/settings/settingsStore.ts::sha256:0342292D4CDF400DAC7432C8805CF07DD1A02B6FBF43E64B8923F21D6126747C",
         "codebase/renderer/features/settings/useSettings.ts::sha256:9D1024D2A5264E0D9FECC123B5D5DE778275F89808FCCCE9AB0E771618E4A432",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392"
@@ -19069,15 +19069,15 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/tests/unit/persistence/snippetsDatabase.test.js::sha256:C0491533534C4858C1CEC60EDCB7B6D5B1D9FECDD7DB3B7AF66DC964F7B25575"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/tests/unit/persistence/snippetsDatabase.test.js::sha256:C0491533534C4858C1CEC60EDCB7B6D5B1D9FECDD7DB3B7AF66DC964F7B25575"
         ],
         "result_events": [],
@@ -19094,11 +19094,11 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/tests/unit/persistence/snippetsDatabase.test.js::sha256:C0491533534C4858C1CEC60EDCB7B6D5B1D9FECDD7DB3B7AF66DC964F7B25575"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/tests/unit/persistence/snippetsDatabase.test.js::sha256:C0491533534C4858C1CEC60EDCB7B6D5B1D9FECDD7DB3B7AF66DC964F7B25575"
         ],
         "side_effects": [],
@@ -19116,7 +19116,7 @@
         "intermediate_symbols": [
           "codebase/renderer/features/snippets/SnippetsView.tsx::sha256:23812CFC02E89371EE600339119B52D766582AB3058A2E5184B38E153FB4E0BE",
           "codebase/renderer/features/snippets/snippets.ts::sha256:BE02A9357E99116ED36FA3968277B85217B61752EBF4A74D40ACB10359D2CEE8",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
           "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
           "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
@@ -19165,7 +19165,7 @@
       "current_symbols": [
         "codebase/renderer/features/snippets/SnippetsView.tsx::sha256:23812CFC02E89371EE600339119B52D766582AB3058A2E5184B38E153FB4E0BE",
         "codebase/renderer/features/snippets/snippets.ts::sha256:BE02A9357E99116ED36FA3968277B85217B61752EBF4A74D40ACB10359D2CEE8",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
@@ -19233,14 +19233,14 @@
           "codebase/main/features/meetings/speakerEmbeddings.js::sha256:C707A53F2D86991EBBA662A519AC1E9C9B08C82F8BE16177C471806682F7E100",
           "codebase/main/features/meetings/liveSpeakerIdentifier.js::sha256:1C66FE6D6E5C1FA2422514BCFC7658AB80F8A5AA206C52BD16C80D96673DDF1D",
           "codebase/main/features/meetings/speakerAssignmentPolicy.js::sha256:4207154EE20E9E117BB54979297ED95E2E76B96DB6CD9CBA14182C24B4838ACB",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/workers/onnxWorker.js::sha256:6C3298177E5C9D7E8368EE410A94DD347B3E6C4637AAA2334DE0FE5E75A1A438"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "result_events": [],
         "renderer_update": [
@@ -19249,10 +19249,10 @@
         "tests": [],
         "runtime_registrations": [],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -19267,7 +19267,7 @@
           "codebase/main/features/meetings/speakerEmbeddings.js::sha256:C707A53F2D86991EBBA662A519AC1E9C9B08C82F8BE16177C471806682F7E100",
           "codebase/main/features/meetings/liveSpeakerIdentifier.js::sha256:1C66FE6D6E5C1FA2422514BCFC7658AB80F8A5AA206C52BD16C80D96673DDF1D",
           "codebase/main/features/meetings/speakerAssignmentPolicy.js::sha256:4207154EE20E9E117BB54979297ED95E2E76B96DB6CD9CBA14182C24B4838ACB",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/renderer/features/meetings/transcriptSpeakerState.ts::sha256:CCDA238A0096B6831BC420B118BBEFC5E3AF8A03182EDADB4910F962D7109A3B",
           "codebase/main/workers/onnxWorker.js::sha256:6C3298177E5C9D7E8368EE410A94DD347B3E6C4637AAA2334DE0FE5E75A1A438"
         ],
@@ -19310,7 +19310,7 @@
         "codebase/main/features/meetings/speakerEmbeddings.js::sha256:C707A53F2D86991EBBA662A519AC1E9C9B08C82F8BE16177C471806682F7E100",
         "codebase/main/features/meetings/liveSpeakerIdentifier.js::sha256:1C66FE6D6E5C1FA2422514BCFC7658AB80F8A5AA206C52BD16C80D96673DDF1D",
         "codebase/main/features/meetings/speakerAssignmentPolicy.js::sha256:4207154EE20E9E117BB54979297ED95E2E76B96DB6CD9CBA14182C24B4838ACB",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/renderer/features/meetings/transcriptSpeakerState.ts::sha256:CCDA238A0096B6831BC420B118BBEFC5E3AF8A03182EDADB4910F962D7109A3B",
         "codebase/main/workers/onnxWorker.js::sha256:6C3298177E5C9D7E8368EE410A94DD347B3E6C4637AAA2334DE0FE5E75A1A438"
       ],
@@ -19375,13 +19375,13 @@
         ],
         "main_symbols": [
           "codebase/main/features/meetings/speakerAssignmentPolicy.js::sha256:4207154EE20E9E117BB54979297ED95E2E76B96DB6CD9CBA14182C24B4838ACB",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "result_events": [],
         "renderer_update": [
@@ -19391,10 +19391,10 @@
         "tests": [],
         "runtime_registrations": [],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -19409,7 +19409,7 @@
           "codebase/renderer/features/meetings/transcriptSpeakerState.ts::sha256:CCDA238A0096B6831BC420B118BBEFC5E3AF8A03182EDADB4910F962D7109A3B",
           "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
           "codebase/main/features/meetings/speakerAssignmentPolicy.js::sha256:4207154EE20E9E117BB54979297ED95E2E76B96DB6CD9CBA14182C24B4838ACB",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "mapping_evidence": [
           "codebase/renderer/features/meetings/transcriptSpeakerState.ts",
@@ -19446,7 +19446,7 @@
         "codebase/renderer/features/meetings/transcriptSpeakerState.ts::sha256:CCDA238A0096B6831BC420B118BBEFC5E3AF8A03182EDADB4910F962D7109A3B",
         "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
         "codebase/main/features/meetings/speakerAssignmentPolicy.js::sha256:4207154EE20E9E117BB54979297ED95E2E76B96DB6CD9CBA14182C24B4838ACB",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
       ],
       "target_paths": [
         "codebase/renderer/features/meetings/transcriptSpeakerState.ts"
@@ -19514,14 +19514,14 @@
         ],
         "main_symbols": [
           "codebase/main/features/meetings/speakerAssignmentPolicy.js::sha256:4207154EE20E9E117BB54979297ED95E2E76B96DB6CD9CBA14182C24B4838ACB",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "result_events": [],
         "renderer_update": [
@@ -19533,10 +19533,10 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -19551,7 +19551,7 @@
           "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
           "codebase/renderer/features/meetings/transcriptSpeakerState.ts::sha256:CCDA238A0096B6831BC420B118BBEFC5E3AF8A03182EDADB4910F962D7109A3B",
           "codebase/main/features/meetings/speakerAssignmentPolicy.js::sha256:4207154EE20E9E117BB54979297ED95E2E76B96DB6CD9CBA14182C24B4838ACB",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "mapping_evidence": [
@@ -19591,7 +19591,7 @@
         "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
         "codebase/renderer/features/meetings/transcriptSpeakerState.ts::sha256:CCDA238A0096B6831BC420B118BBEFC5E3AF8A03182EDADB4910F962D7109A3B",
         "codebase/main/features/meetings/speakerAssignmentPolicy.js::sha256:4207154EE20E9E117BB54979297ED95E2E76B96DB6CD9CBA14182C24B4838ACB",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
       ],
       "target_paths": [
@@ -19655,18 +19655,18 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/features/meetings/liveSpeakerIdentifier.js::sha256:1C66FE6D6E5C1FA2422514BCFC7658AB80F8A5AA206C52BD16C80D96673DDF1D",
           "codebase/main/features/meetings/speakerEmbeddings.js::sha256:C707A53F2D86991EBBA662A519AC1E9C9B08C82F8BE16177C471806682F7E100",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "result_events": [],
         "renderer_update": [],
@@ -19677,12 +19677,12 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -19696,11 +19696,11 @@
         "required_change": "Execute only the linked dependency-safe task at the reviewed paths and anchors; preserve all retained behavior and data.",
         "target_owner": "Diarization and speakers",
         "intermediate_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/features/meetings/liveSpeakerIdentifier.js::sha256:1C66FE6D6E5C1FA2422514BCFC7658AB80F8A5AA206C52BD16C80D96673DDF1D",
           "codebase/main/features/meetings/speakerEmbeddings.js::sha256:C707A53F2D86991EBBA662A519AC1E9C9B08C82F8BE16177C471806682F7E100",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "mapping_evidence": [
           "codebase/main/infrastructure/persistence/database.js",
@@ -19736,11 +19736,11 @@
         "codebase/tests/unit/persistence/localDataDatabase.test.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/features/meetings/liveSpeakerIdentifier.js::sha256:1C66FE6D6E5C1FA2422514BCFC7658AB80F8A5AA206C52BD16C80D96673DDF1D",
         "codebase/main/features/meetings/speakerEmbeddings.js::sha256:C707A53F2D86991EBBA662A519AC1E9C9B08C82F8BE16177C471806682F7E100",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
       ],
       "target_paths": [
         "codebase/main/infrastructure/persistence/database.js"
@@ -19808,14 +19808,14 @@
         ],
         "main_symbols": [
           "codebase/main/features/meetings/speakerAssignmentPolicy.js::sha256:4207154EE20E9E117BB54979297ED95E2E76B96DB6CD9CBA14182C24B4838ACB",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "result_events": [],
         "renderer_update": [
@@ -19827,10 +19827,10 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -19845,7 +19845,7 @@
           "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
           "codebase/renderer/features/meetings/transcriptSpeakerState.ts::sha256:CCDA238A0096B6831BC420B118BBEFC5E3AF8A03182EDADB4910F962D7109A3B",
           "codebase/main/features/meetings/speakerAssignmentPolicy.js::sha256:4207154EE20E9E117BB54979297ED95E2E76B96DB6CD9CBA14182C24B4838ACB",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "mapping_evidence": [
@@ -19885,7 +19885,7 @@
         "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
         "codebase/renderer/features/meetings/transcriptSpeakerState.ts::sha256:CCDA238A0096B6831BC420B118BBEFC5E3AF8A03182EDADB4910F962D7109A3B",
         "codebase/main/features/meetings/speakerAssignmentPolicy.js::sha256:4207154EE20E9E117BB54979297ED95E2E76B96DB6CD9CBA14182C24B4838ACB",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
       ],
       "target_paths": [
@@ -20144,16 +20144,16 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "result_events": [],
         "renderer_update": [
@@ -20168,12 +20168,12 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -20187,13 +20187,13 @@
         "required_change": "Execute only the linked dependency-safe task at the reviewed paths and anchors; preserve all retained behavior and data.",
         "target_owner": "Notes",
         "intermediate_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/renderer/features/search/SearchView.tsx::sha256:1D9E8DA7B6B2E333733A82ABAF87D3E72C2597E43C66BEFB57CB05EAB98D197B",
           "codebase/renderer/features/notes/components/NoteEditor.tsx::sha256:D7CCFEDEC48B74F0E9DADCD07DEFA2DC479DC1BF71C3C634E03CD7676C425ADC",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
           "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
           "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "mapping_evidence": [
           "codebase/main/infrastructure/persistence/database.js",
@@ -20234,13 +20234,13 @@
         "codebase/tests/unit/persistence/localDataDatabase.test.js"
       ],
       "current_symbols": [
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/renderer/features/search/SearchView.tsx::sha256:1D9E8DA7B6B2E333733A82ABAF87D3E72C2597E43C66BEFB57CB05EAB98D197B",
         "codebase/renderer/features/notes/components/NoteEditor.tsx::sha256:D7CCFEDEC48B74F0E9DADCD07DEFA2DC479DC1BF71C3C634E03CD7676C425ADC",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
       ],
       "target_paths": [
         "codebase/main/infrastructure/persistence/database.js"
@@ -20631,16 +20631,16 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "result_events": [],
         "renderer_update": [
@@ -20655,12 +20655,12 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -20676,11 +20676,11 @@
         "intermediate_symbols": [
           "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
           "codebase/renderer/features/notes/components/NoteEditor.tsx::sha256:D7CCFEDEC48B74F0E9DADCD07DEFA2DC479DC1BF71C3C634E03CD7676C425ADC",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
           "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
           "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
-          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+          "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
         ],
         "mapping_evidence": [
           "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx",
@@ -20723,11 +20723,11 @@
       "current_symbols": [
         "codebase/renderer/features/notes/components/MeetingTranscriptView.tsx::sha256:4EA415F3CB3198136E7BEF3B4120EE7F91AAFEA26E4BE2EE46CAA2830C1009AA",
         "codebase/renderer/features/notes/components/NoteEditor.tsx::sha256:D7CCFEDEC48B74F0E9DADCD07DEFA2DC479DC1BF71C3C634E03CD7676C425ADC",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
-        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:6CE9E0C6F9426F290E6E358AEF6AF939F032514D43EDEC6EDBE579FA9911054F"
+        "codebase/tests/unit/persistence/localDataDatabase.test.js::sha256:0DF1BB4D98B88CA0ACE4F0447FBEE64184853861934967FF9B6DFCF8E9D6EEB1"
       ],
       "target_paths": [
         "codebase/main/infrastructure/persistence/database.js"
@@ -20803,16 +20803,16 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "main_symbols": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
         ],
         "result_events": [],
         "renderer_update": [
@@ -20825,12 +20825,12 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -20844,8 +20844,8 @@
         "intermediate_symbols": [
           "codebase/renderer/features/dictation/HistoryView.tsx::sha256:3844ADD053FB4A4EA10F6E006C317E594ED6A051FCC5FE2C0487341BA76AC9D7",
           "codebase/renderer/features/transcription/transcriptionStore.ts::sha256:BF0954D6BD1734092B5CFEC331BBD3D8D71E13E19D9B87E6A8583BBE555ABC5D",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+          "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
           "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
           "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392"
@@ -20890,8 +20890,8 @@
       "current_symbols": [
         "codebase/renderer/features/dictation/HistoryView.tsx::sha256:3844ADD053FB4A4EA10F6E006C317E594ED6A051FCC5FE2C0487341BA76AC9D7",
         "codebase/renderer/features/transcription/transcriptionStore.ts::sha256:BF0954D6BD1734092B5CFEC331BBD3D8D71E13E19D9B87E6A8583BBE555ABC5D",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
-        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:90F0088E03033B7B4BE6F5E7B8AA2D9643FB34F046CA7064AB05B9489902C6D9",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
+        "codebase/main/infrastructure/persistence/audioStorage.js::sha256:BC1B28E1711C5353308FDCEE731736C56FBBDB1FB529D1EC67B5FDD469786D8D",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392"
@@ -20975,14 +20975,14 @@
         "main_symbols": [
           "codebase/main/features/transcription/whisper.js::sha256:73684EF92985BB3043A2CA7D792595B1C6B004BF2A14AA65DA570385F6750BDD",
           "codebase/main/features/transcription/whisperServer.js::sha256:CF67A348ACCB466D0CA28248284A3B2251729F8954D53DEF0E37D1175D1FCB7C",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "result_events": [],
         "renderer_update": [
@@ -20998,10 +20998,10 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -21020,7 +21020,7 @@
           "codebase/renderer/features/transcription/transcriptionStore.ts::sha256:BF0954D6BD1734092B5CFEC331BBD3D8D71E13E19D9B87E6A8583BBE555ABC5D",
           "codebase/renderer/features/transcription/useWhisper.ts::sha256:3091DD09269AFA1D153B0E18D419C5A803C233717FE95FC95379D1936C008146",
           "codebase/renderer/features/transcription/TranscriptionPreviewOverlay.tsx::sha256:B8C292541312555CF940E4DC74E71E7F9ADF4EE80B6DCAEBF01309E3FCD112FB",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
           "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
           "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
@@ -21590,7 +21590,7 @@
         "codebase/renderer/features/transcription/transcriptionStore.ts::sha256:BF0954D6BD1734092B5CFEC331BBD3D8D71E13E19D9B87E6A8583BBE555ABC5D",
         "codebase/renderer/features/transcription/useWhisper.ts::sha256:3091DD09269AFA1D153B0E18D419C5A803C233717FE95FC95379D1936C008146",
         "codebase/renderer/features/transcription/TranscriptionPreviewOverlay.tsx::sha256:B8C292541312555CF940E4DC74E71E7F9ADF4EE80B6DCAEBF01309E3FCD112FB",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4",
         "codebase/preload/index.js::sha256:7D0F6CFDFB713A602E4FB695AEF301290FBA80CC4030978F214B3D3E4E639E15",
         "codebase/renderer/shared/types/electron.ts::sha256:205D9A4EF70C7241963A13FE56BFE91C067CEE59C13759773C805D78D5F73392",
@@ -21893,7 +21893,7 @@
       "current_symbols": [
         "codebase/main/features/meetings/speakerEmbeddings.js::sha256:C707A53F2D86991EBBA662A519AC1E9C9B08C82F8BE16177C471806682F7E100",
         "codebase/main/features/meetings/liveSpeakerIdentifier.js::sha256:1C66FE6D6E5C1FA2422514BCFC7658AB80F8A5AA206C52BD16C80D96673DDF1D",
-        "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+        "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
         "codebase/renderer/features/notes/components/NoteEditor.tsx::sha256:D7CCFEDEC48B74F0E9DADCD07DEFA2DC479DC1BF71C3C634E03CD7676C425ADC",
         "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
       ],
@@ -21941,14 +21941,14 @@
         "main_symbols": [
           "codebase/main/features/meetings/speakerEmbeddings.js::sha256:C707A53F2D86991EBBA662A519AC1E9C9B08C82F8BE16177C471806682F7E100",
           "codebase/main/features/meetings/liveSpeakerIdentifier.js::sha256:1C66FE6D6E5C1FA2422514BCFC7658AB80F8A5AA206C52BD16C80D96673DDF1D",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "repositories": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_native_or_process_boundary": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "result_events": [],
         "renderer_update": [
@@ -21959,10 +21959,10 @@
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
         "data_read": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "data_written": [
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6"
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B"
         ],
         "side_effects": [],
         "failure_path": [],
@@ -21976,7 +21976,7 @@
         "intermediate_symbols": [
           "codebase/main/features/meetings/speakerEmbeddings.js::sha256:C707A53F2D86991EBBA662A519AC1E9C9B08C82F8BE16177C471806682F7E100",
           "codebase/main/features/meetings/liveSpeakerIdentifier.js::sha256:1C66FE6D6E5C1FA2422514BCFC7658AB80F8A5AA206C52BD16C80D96673DDF1D",
-          "codebase/main/infrastructure/persistence/database.js::sha256:C68B022C55F151A10CF24FE0B4FD875B4460BCA0F202493565F90E858031D1B6",
+          "codebase/main/infrastructure/persistence/database.js::sha256:C482A7AE6749B871BAC5CA99909FCD9F42F730FAC1A8674D96EF8268C65C7F0B",
           "codebase/renderer/features/notes/components/NoteEditor.tsx::sha256:D7CCFEDEC48B74F0E9DADCD07DEFA2DC479DC1BF71C3C634E03CD7676C425ADC",
           "codebase/main/ipc/ipcHandlers.js::sha256:B4B1FCAB92752549309E053A4FE6EB2D2BD6E41BF8B3057EA91293A82689BCB4"
         ],
