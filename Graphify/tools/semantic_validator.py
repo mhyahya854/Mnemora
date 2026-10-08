@@ -25,6 +25,7 @@ from execution_state import (
     select_next_task,
     summarize_execution_state,
     validate_codebase_mutation,
+    validate_run_state_checkpoint,
 )
 from semantic_rules import PRODUCT_SCOPE_CAPS, REMOVAL_CAPS, VENDOR_OR_GENERATED_MARKERS
 
@@ -1425,6 +1426,14 @@ def main() -> int:
         execution_errors.append("Queue execution_state_contract does not match the validator schema")
     if task_doc.get("schema_version") != 4:
         execution_errors.append("Implementation queue schema_version must be 4")
+    run_state_path = G / "RUN_STATE.md"
+    if run_state_path.is_file():
+        execution_errors.extend(
+            validate_run_state_checkpoint(
+                run_state_path.read_text(encoding="utf-8", errors="replace"),
+                execution_summary["latest_checkpoint_identity"],
+            )
+        )
     test_doc = load("TEST_MATRIX.json")
     conditional_doc = load("CONDITIONAL_DECISION_PACKAGES.json"); packages = conditional_doc["packages"]
     release_doc = load("RELEASE_GATE_PLAN.json"); release_gates = release_doc["gates"]

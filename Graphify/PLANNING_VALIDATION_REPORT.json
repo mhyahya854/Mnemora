@@ -637,8 +637,8 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "before": "D6BF18F1E0ADDDD8E46456B50B3D7DEACDEB729590B689AE6E0B43C54ED254FC",
-        "after": "D6BF18F1E0ADDDD8E46456B50B3D7DEACDEB729590B689AE6E0B43C54ED254FC",
+        "before": "CD36A04F95B7181BAFDBE18C78D4F54CB084ED16E91505E9EE21C79DD3C9F4DF",
+        "after": "CD36A04F95B7181BAFDBE18C78D4F54CB084ED16E91505E9EE21C79DD3C9F4DF",
         "generator_stdout": "{\n  \"requirements\": 536,\n  \"capabilities\": 122,\n  \"tasks\": 162,\n  \"deletion_tasks\": 31,\n  \"conditional_packages\": 12,\n  \"release_gates\": 12,\n  \"exact_locations\": 780\n}"
       }
     },
@@ -671,7 +671,7 @@
         "local_current_codebase_files": 24840,
         "local_comparable_pre_and_post_sha256_files": 346,
         "local_path_and_size_only_files": 24493,
-        "local_post_run_full_sha256_fingerprint": null,
+        "local_post_run_full_sha256_fingerprint": "868D3C92B855B421044671EE6CECB7E7A37FC4C2636A123E67BEB5CE1771DC99",
         "local_claim_limit": "Only comparable-hash files are proven byte-identical. Path/size-only files are not cryptographic equality proof. A post-run full fingerprint without an equivalent pre-run full fingerprint is a current-state checkpoint, not full before/after proof."
       }
     },
@@ -806,7 +806,7 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "pre_run_clean": false,
+        "pre_run_clean": true,
         "gate_skipped_by_allow_dirty": false
       }
     },
@@ -827,7 +827,7 @@
         "terminal_task_count": 2,
         "next_task_id": "TASK-CAP-DATABASE",
         "next_task_disposition": "NOT STARTED",
-        "latest_checkpoint_identity": "304be6391e41cad92884614011813665ccf1baff"
+        "latest_checkpoint_identity": "6686f243ccf0d8d19632c54ce78dfe261168413c"
       }
     },
     {
@@ -923,7 +923,7 @@
     "local_current_codebase_files": 24840,
     "local_comparable_pre_and_post_sha256_files": 346,
     "local_path_and_size_only_files": 24493,
-    "local_post_run_full_sha256_fingerprint": null,
+    "local_post_run_full_sha256_fingerprint": "868D3C92B855B421044671EE6CECB7E7A37FC4C2636A123E67BEB5CE1771DC99",
     "local_claim_limit": "Only comparable-hash files are proven byte-identical. Path/size-only files are not cryptographic equality proof. A post-run full fingerprint without an equivalent pre-run full fingerprint is a current-state checkpoint, not full before/after proof."
   },
   "master_plan_hashes": {
@@ -944,6 +944,6 @@
     "terminal_task_count": 2,
     "next_task_id": "TASK-CAP-DATABASE",
     "next_task_disposition": "NOT STARTED",
-    "latest_checkpoint_identity": "304be6391e41cad92884614011813665ccf1baff"
+    "latest_checkpoint_identity": "6686f243ccf0d8d19632c54ce78dfe261168413c"
   }
 }

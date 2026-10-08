@@ -716,7 +716,7 @@
           "Graphify/evidence/data-safety-and-migration-integrity/lint.log",
           "Graphify/evidence/data-safety-and-migration-integrity/offline-or-applicability.json"
         ],
-        "checkpoint_identity": "304be6391e41cad92884614011813665ccf1baff",
+        "checkpoint_identity": "6686f243ccf0d8d19632c54ce78dfe261168413c",
         "blocked_reason": null,
         "not_applicable_basis": null
       }
@@ -49926,7 +49926,7 @@
   "terminal_task_count": 2,
   "next_task_id": "TASK-CAP-DATABASE",
   "next_task_disposition": "NOT STARTED",
-  "latest_checkpoint_identity": "304be6391e41cad92884614011813665ccf1baff",
+  "latest_checkpoint_identity": "6686f243ccf0d8d19632c54ce78dfe261168413c",
   "execution_state_contract": {
     "authority": "Each task's execution_state is durable mutable state; generated task-definition fields remain planning contracts.",
     "task_id_field": "stable_task_id",

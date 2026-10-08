@@ -20,6 +20,7 @@ from execution_state import (
     select_next_task,
     summarize_execution_state,
     validate_codebase_mutation,
+    validate_run_state_checkpoint,
 )
 
 
@@ -151,6 +152,163 @@ class ExecutionStateBootstrapTests(unittest.TestCase):
         self.assertNotIn(unauthorized_path, expected_additions)
         forbidden_path = "Graphify/Master Plan/01-EVERYTHING-WE-ARE-KEEPING.md"
         self.assertIn(forbidden_path, forbidden)
+
+    def test_negative_1_complete_with_nonexistent_checkpoint_sha_rejected(self) -> None:
+        first = copy.deepcopy(self.queue["tasks"][0])
+        first["execution_state"]["checkpoint_identity"] = "deadbeefdeadbeefdeadbeefdeadbeefdeadbeef"
+        errors = execution_state_errors([first], ROOT)
+        self.assertTrue(
+            any("does not resolve to a real Git commit" in err for err in errors),
+            f"Expected git commit resolution error, got {errors}",
+        )
+
+    def test_negative_2_checkpoint_equals_starting_commit_after_mutations_rejected(self) -> None:
+        fixture_delta = ROOT / "Graphify" / "evidence" / "_fixture_mut_delta.json"
+        try:
+            delta_content = {
+                "starting_commit": "304be6391e41cad92884614011813665ccf1baff",
+                "verified_baseline_commit": "304be6391e41cad92884614011813665ccf1baff",
+                "checkpoint_identity": "304be6391e41cad92884614011813665ccf1baff",
+                "ending_commit": "304be6391e41cad92884614011813665ccf1baff",
+                "mutation_type": "CAPABILITY IMPLEMENTATION",
+                "changed_files": ["codebase/main/example.js"],
+                "added_files": [],
+            }
+            fixture_delta.write_text(json.dumps(delta_content), encoding="utf-8")
+            task = {
+                "stable_task_id": "TASK-MOCK-MUTATION",
+                "task_kind": "CAPABILITY",
+                "semantic_dependencies": [],
+                "required_evidence_artifacts": ["Graphify/evidence/_fixture_mut_delta.json"],
+                "execution_state": {
+                    "disposition": "COMPLETE",
+                    "evidence_references": ["Graphify/evidence/_fixture_mut_delta.json"],
+                    "checkpoint_identity": "304be6391e41cad92884614011813665ccf1baff",
+                    "blocked_reason": None,
+                    "not_applicable_basis": None,
+                },
+            }
+            errors = execution_state_errors([task], ROOT)
+            self.assertTrue(
+                any("cannot equal starting_commit" in err for err in errors),
+                f"Expected start==checkpoint error, got {errors}",
+            )
+        finally:
+            if fixture_delta.is_file():
+                fixture_delta.unlink()
+
+    def test_negative_3_task2_style_starting_commit_as_checkpoint_rejected(self) -> None:
+        # Reproduces the historical defect where TASK-CAP-DATA-SAFETY used its starting commit 304be...
+        # as its checkpoint_identity despite declared codebase mutations
+        fixture_delta = ROOT / "Graphify" / "evidence" / "_fixture_task2_defect_delta.json"
+        try:
+            delta_content = {
+                "starting_commit": "304be6391e41cad92884614011813665ccf1baff",
+                "verified_baseline_commit": "304be6391e41cad92884614011813665ccf1baff",
+                "checkpoint_identity": "304be6391e41cad92884614011813665ccf1baff",
+                "ending_commit": "304be6391e41cad92884614011813665ccf1baff",
+                "mutation_type": "DATA SAFETY RECOVERY AND CAPABILITY IMPLEMENTATION",
+                "changed_files": ["codebase/main/infrastructure/persistence/dataMigration.js"],
+                "added_files": ["codebase/tests/integration/data-safety-and-migration-integrity.real-boundary.test.js"],
+            }
+            fixture_delta.write_text(json.dumps(delta_content), encoding="utf-8")
+            gov_task = copy.deepcopy(self.queue["tasks"][0])
+            task2_defect = {
+                "stable_task_id": "TASK-CAP-DATA-SAFETY",
+                "task_kind": "CAPABILITY",
+                "semantic_dependencies": ["TASK-GOV-001-PROVENANCE-BASELINE"],
+                "required_evidence_artifacts": ["Graphify/evidence/_fixture_task2_defect_delta.json"],
+                "execution_state": {
+                    "disposition": "COMPLETE",
+                    "evidence_references": ["Graphify/evidence/_fixture_task2_defect_delta.json"],
+                    "checkpoint_identity": "304be6391e41cad92884614011813665ccf1baff",
+                    "blocked_reason": None,
+                    "not_applicable_basis": None,
+                },
+            }
+            errors = execution_state_errors([gov_task, task2_defect], ROOT)
+            self.assertTrue(
+                any("cannot equal starting_commit '304be6391e41cad92884614011813665ccf1baff' after declared implementation mutations" in err for err in errors),
+                f"Expected Task-2 defect rejection, got {errors}",
+            )
+        finally:
+            if fixture_delta.is_file():
+                fixture_delta.unlink()
+
+    def test_negative_4_ending_commit_mismatch_rejected(self) -> None:
+        fixture_delta = ROOT / "Graphify" / "evidence" / "_fixture_end_mismatch_delta.json"
+        try:
+            delta_content = {
+                "starting_commit": "304be6391e41cad92884614011813665ccf1baff",
+                "verified_baseline_commit": "304be6391e41cad92884614011813665ccf1baff",
+                "checkpoint_identity": "6686f243ccf0d8d19632c54ce78dfe261168413c",
+                "ending_commit": "304be6391e41cad92884614011813665ccf1baff",
+                "mutation_type": "CAPABILITY IMPLEMENTATION",
+                "changed_files": [],
+                "added_files": [],
+            }
+            fixture_delta.write_text(json.dumps(delta_content), encoding="utf-8")
+            task = {
+                "stable_task_id": "TASK-MOCK-END-MISMATCH",
+                "task_kind": "CAPABILITY",
+                "semantic_dependencies": [],
+                "required_evidence_artifacts": ["Graphify/evidence/_fixture_end_mismatch_delta.json"],
+                "execution_state": {
+                    "disposition": "COMPLETE",
+                    "evidence_references": ["Graphify/evidence/_fixture_end_mismatch_delta.json"],
+                    "checkpoint_identity": "6686f243ccf0d8d19632c54ce78dfe261168413c",
+                    "blocked_reason": None,
+                    "not_applicable_basis": None,
+                },
+            }
+            errors = execution_state_errors([task], ROOT)
+            self.assertTrue(
+                any("ending_commit" in err and "!=" in err for err in errors),
+                f"Expected ending_commit != checkpoint_identity error, got {errors}",
+            )
+        finally:
+            if fixture_delta.is_file():
+                fixture_delta.unlink()
+
+    def test_negative_5_checkpoint_not_descendant_of_dependency_rejected(self) -> None:
+        task_a = copy.deepcopy(self.queue["tasks"][0])
+        task_a["stable_task_id"] = "TASK-A"
+        task_a["execution_state"]["checkpoint_identity"] = "6686f243ccf0d8d19632c54ce78dfe261168413c"
+
+        task_b = copy.deepcopy(self.queue["tasks"][0])
+        task_b["stable_task_id"] = "TASK-B"
+        task_b["semantic_dependencies"] = ["TASK-A"]
+        task_b["execution_state"]["checkpoint_identity"] = "5ed0e52c9c52ebbf2329caff5cfd71af4b3e7237"
+
+        errors = execution_state_errors([task_a, task_b], ROOT)
+        self.assertTrue(
+            any("is not a descendant of dependency TASK-A checkpoint" in err for err in errors),
+            f"Expected non-descendant dependency checkpoint error, got {errors}",
+        )
+
+    def test_negative_6_validate_run_state_checkpoint_mismatch(self) -> None:
+        run_state_text = (
+            "# Run State\n\n"
+            "- Latest terminal task checkpoint: `304be6391e41cad92884614011813665ccf1baff`.\n"
+        )
+        errors = validate_run_state_checkpoint(run_state_text, "6686f243ccf0d8d19632c54ce78dfe261168413c")
+        self.assertEqual(len(errors), 1)
+        self.assertIn("disagrees with queue latest_checkpoint_identity", errors[0])
+
+        missing_checkpoint_text = "# Run State\n\nNo checkpoint line\n"
+        errors_missing = validate_run_state_checkpoint(missing_checkpoint_text, "6686f243ccf0d8d19632c54ce78dfe261168413c")
+        self.assertEqual(len(errors_missing), 1)
+        self.assertIn("missing 'Latest terminal task checkpoint' entry", errors_missing[0])
+
+        matching_errors = validate_run_state_checkpoint(run_state_text, "304be6391e41cad92884614011813665ccf1baff")
+        self.assertEqual(matching_errors, [])
+
+    def test_7_report_delivery_model_ancestor_checkpoint_accepted(self) -> None:
+        real_tasks = copy.deepcopy(self.queue["tasks"][:2])
+        self.assertEqual(real_tasks[0]["execution_state"]["checkpoint_identity"], "5ed0e52c9c52ebbf2329caff5cfd71af4b3e7237")
+        self.assertEqual(real_tasks[1]["execution_state"]["checkpoint_identity"], "6686f243ccf0d8d19632c54ce78dfe261168413c")
+        errors = execution_state_errors(real_tasks, ROOT)
+        self.assertEqual(errors, [])
 
 
 if __name__ == "__main__":

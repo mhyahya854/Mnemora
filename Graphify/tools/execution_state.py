@@ -5,6 +5,8 @@ from __future__ import annotations
 
 import copy
 import json
+import re
+import subprocess
 from pathlib import Path, PurePosixPath
 from typing import Any
 
@@ -61,6 +63,28 @@ def _repo_relative_evidence_path(reference: Any) -> tuple[PurePosixPath | None, 
     return path, None
 
 
+def _git_run(args: list[str], cwd: Path) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(
+        ["git", *args],
+        cwd=cwd,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+    )
+
+
+def validate_run_state_checkpoint(run_state_text: str, expected_latest_checkpoint: str | None) -> list[str]:
+    match = re.search(r"Latest terminal task checkpoint:\s*`([^`]+)`", run_state_text)
+    if not match:
+        return ["RUN_STATE.md missing 'Latest terminal task checkpoint' entry"]
+    actual = match.group(1).strip()
+    expected = expected_latest_checkpoint or "NONE"
+    if actual != expected:
+        return [f"RUN_STATE.md latest terminal task checkpoint {actual!r} disagrees with queue latest_checkpoint_identity {expected!r}"]
+    return []
+
+
 def execution_state_errors(tasks: list[dict[str, Any]], evidence_root: Path | None = None) -> list[str]:
     """Validate per-task state, dependency closure, and referenced evidence."""
     errors: list[str] = []
@@ -112,6 +136,7 @@ def execution_state_errors(tasks: list[dict[str, Any]], evidence_root: Path | No
                 if not evidence_root.joinpath(*path.parts).is_file():
                     errors.append(f"{task_id}: evidence file does not exist: {reference}")
 
+        has_mutations = False
         if disposition == "NOT STARTED":
             if evidence or checkpoint is not None or blocked_reason is not None or not_applicable_basis is not None:
                 errors.append(f"{task_id}: NOT STARTED must not retain execution evidence, checkpoint, blocked reason, or not-applicable basis")
@@ -124,6 +149,81 @@ def execution_state_errors(tasks: list[dict[str, Any]], evidence_root: Path | No
                 errors.append(f"{task_id}: COMPLETE requires checkpoint_identity")
             if blocked_reason is not None or not_applicable_basis is not None:
                 errors.append(f"{task_id}: COMPLETE cannot carry blocked_reason or not_applicable_basis")
+
+            delta_doc: dict[str, Any] | None = None
+            if evidence_root is not None:
+                for _ref_str, ref_path in valid_references:
+                    if ref_path.name.endswith(".json") and ("delta" in ref_path.name or "implementation" in ref_path.name):
+                        delta_file = evidence_root.joinpath(*ref_path.parts)
+                        if delta_file.is_file():
+                            try:
+                                delta_doc = json.loads(delta_file.read_text(encoding="utf-8"))
+                                break
+                            except Exception:
+                                pass
+
+            start_commit = delta_doc.get("starting_commit") if delta_doc else None
+            base_commit = delta_doc.get("verified_baseline_commit") if delta_doc else None
+            delta_checkpoint = delta_doc.get("checkpoint_identity") if delta_doc else None
+            end_commit = delta_doc.get("ending_commit") if delta_doc else None
+            changed_files = delta_doc.get("changed_files", []) if delta_doc else []
+            added_files = delta_doc.get("added_files", []) if delta_doc else []
+
+            if start_commit is not None and base_commit is not None and start_commit != base_commit:
+                errors.append(f"{task_id}: implementation delta starting_commit {start_commit!r} != verified_baseline_commit {base_commit!r}")
+            if end_commit is not None and end_commit != checkpoint:
+                errors.append(f"{task_id}: implementation delta ending_commit {end_commit!r} != checkpoint_identity {checkpoint!r}")
+            if delta_checkpoint is not None and delta_checkpoint != checkpoint:
+                errors.append(f"{task_id}: implementation delta checkpoint_identity {delta_checkpoint!r} != task checkpoint_identity {checkpoint!r}")
+
+            mutation_type = str(delta_doc.get("mutation_type", "")).strip().upper() if delta_doc else ""
+            is_governance_baseline = (
+                task.get("task_kind") == "GOVERNANCE"
+                or mutation_type == "GOVERNANCE EVIDENCE AND DERIVED STATE RECONCILIATION"
+            )
+            has_mutations = False
+            if not is_governance_baseline:
+                app_files = [
+                    p for p in (list(changed_files) + list(added_files))
+                    if isinstance(p, str) and (p.startswith("codebase/") or not p.startswith("Graphify/"))
+                ]
+                has_mutations = bool(
+                    app_files
+                    or (mutation_type and mutation_type not in ("NONE", "READONLY"))
+                )
+            if has_mutations and start_commit and start_commit == checkpoint:
+                errors.append(f"{task_id}: checkpoint {checkpoint!r} cannot equal starting_commit {start_commit!r} after declared implementation mutations")
+
+            if isinstance(checkpoint, str) and checkpoint.strip() and evidence_root is not None and (evidence_root / ".git").exists():
+                res = _git_run(["rev-parse", "--verify", "--quiet", f"{checkpoint}^{{commit}}"], cwd=evidence_root)
+                if res.returncode != 0 or not res.stdout.strip():
+                    errors.append(f"{task_id}: checkpoint_identity {checkpoint!r} does not resolve to a real Git commit")
+                else:
+                    resolved_checkpoint = res.stdout.strip()
+                    res_reach = _git_run(["merge-base", "--is-ancestor", resolved_checkpoint, "HEAD"], cwd=evidence_root)
+                    if res_reach.returncode != 0:
+                        errors.append(f"{task_id}: checkpoint_identity {checkpoint!r} is not reachable from HEAD")
+
+                    if start_commit:
+                        res_start = _git_run(["rev-parse", "--verify", "--quiet", f"{start_commit}^{{commit}}"], cwd=evidence_root)
+                        if res_start.returncode == 0:
+                            resolved_start = res_start.stdout.strip()
+                            res_anc = _git_run(["merge-base", "--is-ancestor", resolved_start, resolved_checkpoint], cwd=evidence_root)
+                            if res_anc.returncode != 0:
+                                errors.append(f"{task_id}: starting_commit {start_commit!r} is not an ancestor of checkpoint {checkpoint!r}")
+                            if resolved_start != resolved_checkpoint:
+                                app_files = [
+                                    p for p in (list(changed_files) + list(added_files))
+                                    if isinstance(p, str) and p.startswith("codebase/")
+                                ]
+                                if app_files:
+                                    res_diff = _git_run(["diff", "--name-only", f"{resolved_start}..{resolved_checkpoint}", "--", "codebase"], cwd=evidence_root)
+                                    if res_diff.returncode == 0:
+                                        git_diff_paths = {line.strip().replace("\\", "/") for line in res_diff.stdout.splitlines() if line.strip()}
+                                        for app_file in app_files:
+                                            norm_app = app_file.replace("\\", "/")
+                                            if norm_app not in git_diff_paths:
+                                                errors.append(f"{task_id}: declared codebase path {norm_app!r} is not present in git diff {start_commit}..{checkpoint}")
         elif disposition == "NOT APPLICABLE":
             if not evidence:
                 errors.append(f"{task_id}: NOT APPLICABLE requires evidence_references")
@@ -151,6 +251,27 @@ def execution_state_errors(tasks: list[dict[str, Any]], evidence_root: Path | No
                 dependency_disposition = dependency_state.get("disposition") if isinstance(dependency_state, dict) else None
                 if dependency_disposition not in TERMINAL_DISPOSITIONS:
                     errors.append(f"{task_id}: {disposition} is invalid while dependency {dependency} is {dependency_disposition!r}")
+                elif disposition == "COMPLETE" and isinstance(dependency_state, dict):
+                    dep_checkpoint = dependency_state.get("checkpoint_identity")
+                    if (
+                        isinstance(dep_checkpoint, str)
+                        and dep_checkpoint.strip()
+                        and isinstance(checkpoint, str)
+                        and checkpoint.strip()
+                        and evidence_root is not None
+                        and (evidence_root / ".git").exists()
+                    ):
+                        res_dep = _git_run(["rev-parse", "--verify", "--quiet", f"{dep_checkpoint}^{{commit}}"], cwd=evidence_root)
+                        res_cp = _git_run(["rev-parse", "--verify", "--quiet", f"{checkpoint}^{{commit}}"], cwd=evidence_root)
+                        if res_dep.returncode == 0 and res_cp.returncode == 0:
+                            resolved_dep = res_dep.stdout.strip()
+                            resolved_cp = res_cp.stdout.strip()
+                            res_anc = _git_run(["merge-base", "--is-ancestor", resolved_dep, resolved_cp], cwd=evidence_root)
+                            if res_anc.returncode != 0:
+                                errors.append(f"{task_id}: checkpoint {checkpoint!r} is not a descendant of dependency {dependency} checkpoint {dep_checkpoint!r}")
+                            elif resolved_cp == resolved_dep:
+                                if has_mutations or task.get("task_kind") in ("CAPABILITY", "DELETION", "EXECUTION") or task.get("files_expected_to_change"):
+                                    errors.append(f"{task_id}: checkpoint {checkpoint!r} cannot reuse dependency {dependency} checkpoint without advancing")
     return errors
 
 

@@ -66,8 +66,8 @@
     },
     {
       "path": "evidence/data-safety-and-migration-integrity/implementation-delta.json",
-      "size_bytes": 5918,
-      "sha256": "9553B805B90FBA8F50FF5F2551E0B932C3598A8CAF1E8B79B9BCF1AD8E812DE2"
+      "size_bytes": 5981,
+      "sha256": "A80BC16C3B928B53A45036937CABB9E674284CCF73D8FCC58ED04BA0456FFEFD"
     },
     {
       "path": "evidence/data-safety-and-migration-integrity/offline-or-applicability.json",
@@ -102,12 +102,12 @@
     {
       "path": "FINAL-REPOSITORY-RECONCILIATION.json",
       "size_bytes": 2896,
-      "sha256": "FD291206CCC0D6162AA8469A0BB90A87102BC3FFB0D86193A9EE86B6D29F7765"
+      "sha256": "01CE3C55D305C9F965E127E101BDE75552A9827F5FB4BAD892AB881C65008D3F"
     },
     {
       "path": "FINAL-REPOSITORY-RECONCILIATION.md",
       "size_bytes": 3009,
-      "sha256": "2AD9803AA525B7126B3CE237959920341E26DDA321F214A611F1894BE75C1702"
+      "sha256": "025E55CEFCFD21D832AE0EBCF7BE2A05D8786A5A584E70AA4E7FE712567AA21B"
     },
     {
       "path": "FOLDER_OWNERSHIP_MAP.md",
@@ -132,7 +132,7 @@
     {
       "path": "IMPLEMENTATION_QUEUE.json",
       "size_bytes": 3163988,
-      "sha256": "288C341797345A9E1273EDCDEF940524A95EB94255584AE79F931F91CEAA9C2B"
+      "sha256": "9FAB4567674D10216B2DD55EDC3B3F21D804FB82DA8CD062426DA528FDBA8BBB"
     },
     {
       "path": "IMPLEMENTATION_QUEUE.md",
@@ -206,8 +206,8 @@
     },
     {
       "path": "PLANNING_VALIDATION_REPORT.json",
-      "size_bytes": 32971,
-      "sha256": "19485FB1D6D172102D5682D5D89A19077901104812BA46976DCD90F456DB2E7B"
+      "size_bytes": 33094,
+      "sha256": "5BF44E66A70BA5F032D085CC71555CA9079F93EFBE7080C1DB1CBB38BF2A49BC"
     },
     {
       "path": "PLANNING_VALIDATION_REPORT.md",
@@ -267,7 +267,7 @@
     {
       "path": "RUN_STATE.md",
       "size_bytes": 2268,
-      "sha256": "EC68BBDC845E8C59F24F8DE90F82320E40CE9F9460B48AC9032965AB31638DCA"
+      "sha256": "B8225E436F19D2DE244065078D52D5CC8A8B3ABFE6E0B12119C19B123E22CA0A"
     },
     {
       "path": "RUNTIME_CHAIN_MAP.md",
@@ -321,8 +321,8 @@
     },
     {
       "path": "tools/execution_state.py",
-      "size_bytes": 16483,
-      "sha256": "3CC33E75BED1ED7AD42CD22E3A7B935017E03D346626C745BADD6F5174BB485F"
+      "size_bytes": 24528,
+      "sha256": "C1265F361CDF8A72495040D2FA2A03EDC4EA7DE97C24768C63B7631461C6C4AD"
     },
     {
       "path": "tools/generate_constitution_authorities.py",
@@ -346,13 +346,13 @@
     },
     {
       "path": "tools/semantic_validator.py",
-      "size_bytes": 127710,
-      "sha256": "121B9E56DD66AF41746D749E09BB8A9A024812907E57FB901D350408C4180112"
+      "size_bytes": 128061,
+      "sha256": "0BA55A4736780625B4549B9C268A6AC592A71CBFCEB82CDEEE34055619A610AD"
     },
     {
       "path": "tools/test_execution_state.py",
-      "size_bytes": 7843,
-      "sha256": "EA5E38A0CEC655241FF3861369C14499B1387961D05A790D11DE25B28A2F62FF"
+      "size_bytes": 16585,
+      "sha256": "6E71301EF86157D0B5FCE3DA231FC63C293E505D0DE6FD140E3E19211A2FC0B0"
     },
     {
       "path": "tools/test_universal_constitution.py",
@@ -391,8 +391,8 @@
     },
     {
       "path": "VERIFICATION_AUDIT.json",
-      "size_bytes": 30328,
-      "sha256": "D18C8EF16807EDEDA8340A7475BC97CC49C73922A59FFE5EDAF2B34085F309EB"
+      "size_bytes": 30451,
+      "sha256": "832C63D178C2CF97AAF7859A0CBE9B870DCFEF2D1BD448179BF457083A9F6738"
     }
   ]
 }

@@ -4,8 +4,8 @@
   "repository_url": "https://github.com/mhyahya854/Mnemora.git",
   "default_branch": "main",
   "branch": "main (canonical default branch; linear history integrated from graphify-final-reconciliation)",
-  "verified_commit_sha": "304be6391e41cad92884614011813665ccf1baff",
-  "verified_tree_sha": "893d63c9fb916f9633181b4e03ad2c842bbfa43d",
+  "verified_commit_sha": "6686f243ccf0d8d19632c54ce78dfe261168413c",
+  "verified_tree_sha": "dab251333795c1d175e0363337aa9a9a83692beb",
   "tracked_file_count": 449,
   "tracked_codebase_file_count": 347,
   "lfs_file_count": 1,
@@ -70,7 +70,7 @@
     ]
   },
   "local_full_tree_audit": "RUN in the original full-tree repository; SKIPPED in clean clones (tracked Git parity above is the GitHub-verifiable claim; detailed per-environment evidence is in PLANNING_VALIDATION_REPORT.json)",
-  "pre_run_working_tree": "DIRTY",
+  "pre_run_working_tree": "CLEAN",
   "implementation_status": "IN PROGRESS",
   "release_status": "NOT EVALUATED"
 }

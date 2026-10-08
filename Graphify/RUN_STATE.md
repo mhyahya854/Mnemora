@@ -9,7 +9,7 @@
 - Provenance fallback: `REPOSITORY_FILE_INVENTORY.json` plus `REPOSITORY_FINGERPRINT.json`; the immutable execution root is `TASK-GOV-001-PROVENANCE-BASELINE`.
 - Immutable Master Plan files: verified against the SHA-256 values below before derived generation.
 - Implementation status: `IN PROGRESS`; task counts: `{"BLOCKED": 0, "COMPLETE": 2, "NOT APPLICABLE": 0, "NOT STARTED": 160}`.
-- Latest terminal task checkpoint: `304be6391e41cad92884614011813665ccf1baff`.
+- Latest terminal task checkpoint: `6686f243ccf0d8d19632c54ce78dfe261168413c`.
 - Release status: not evaluated by task execution state.
 
 ## Planning authorities
