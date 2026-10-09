@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "task_id": "TASK-CAP-DATABASE",
+  "capability_id": "CAP-DATABASE",
+  "check": "local-first offline SQLite persistence and relational integrity",
+  "status": "PASS - FULLY OFFLINE",
+  "authorizing_contract": "IMPLEMENTATION_QUEUE.json#TASK-CAP-DATABASE.offline_verification_impact",
+  "reachability_evidence": {
+    "task_kind": "CAPABILITY",
+    "owned_runtime_paths": [
+      "codebase/main/infrastructure/persistence/database.js",
+      "codebase/main/infrastructure/persistence/dataMigration.js",
+      "codebase/main/infrastructure/persistence/localBackup.js"
+    ],
+    "network_calls": "ZERO - 100% local-first SQLite embedded engine operations",
+    "cloud_dependencies": "NONE"
+  },
+  "rationale": "SQLite and local persistence mechanisms operate exclusively via native embedded better-sqlite3 engine and local filesystem paths; all CRUD, FTS search, migrations, transactions, and backups are completely functional offline with zero network connectivity.",
+  "result": "PASS"
+}

@@ -1,0 +1,13 @@
+Γ£ö fresh schema supports local graphs, Unicode search, tags, settings, and cascades (62.8868ms)
+Γ£ö legacy adoption is backed up, transactional, lossless, and restart-idempotent (169.6051ms)
+Γ£ö a failed ordered migration rolls back its schema version and destructive cleanup (55.9374ms)
+Γ£ö cleanup closes the database without deleting user data (36.5972ms)
+Γ£ö a newer database is rejected before the older app mutates it (32.2523ms)
+Γä╣ tests 5
+Γä╣ suites 0
+Γä╣ pass 5
+Γä╣ fail 0
+Γä╣ cancelled 0
+Γä╣ skipped 0
+Γä╣ todo 0
+Γä╣ duration_ms 657.0157

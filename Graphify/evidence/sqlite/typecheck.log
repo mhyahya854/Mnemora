@@ -1,0 +1,4 @@
+
+> mnemora@1.7.5 typecheck
+> cd renderer && tsc --noEmit
+

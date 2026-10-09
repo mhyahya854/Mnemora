@@ -1,0 +1,14 @@
+Γ£ö real SQLite native boundary enforces schema v5, WAL mode, foreign keys, and local tables (51.1607ms)
+Γ£ö real SQLite boundary guarantees transaction atomicity and rollback on error (37.4709ms)
+Γ£ö real SQLite boundary enforces foreign key constraints and cascading deletes (40.2529ms)
+Γ£ö real FTS5 full-text search triggers and multilingual Unicode search across notes and transcripts (45.7686ms)
+Γ£ö real SQLite migration journaling and pre-migration backup on disposable legacy copy (55.2455ms)
+Γ£ö real SQLite WAL checkpointing and safe connection release (61.1685ms)
+Γä╣ tests 6
+Γä╣ suites 0
+Γä╣ pass 6
+Γä╣ fail 0
+Γä╣ cancelled 0
+Γä╣ skipped 0
+Γä╣ todo 0
+Γä╣ duration_ms 585.3212
