@@ -2,7 +2,7 @@
   "schema_version": 4,
   "scope": "Tracked Graphify authorities, reports, tools and immutable Master Plan; genuine graphify-out evidence excluded and separately preserved; transient and non-tracked entries excluded; deterministic (no timestamps)",
   "self_excluded": true,
-  "file_count": 78,
+  "file_count": 81,
   "files": [
     {
       "path": "AUDIT_CODEBASE_BASELINE_SHA256.txt",
@@ -16,8 +16,8 @@
     },
     {
       "path": "CAPABILITY_REGISTRY.json",
-      "size_bytes": 1465259,
-      "sha256": "4E7ACA4AE02E456A92BFD30897E38204C41D8008E45C2D173A4C9B6CA2F851AD"
+      "size_bytes": 1465256,
+      "sha256": "ECD69236D1A8B0F6BA1BD91239846ECA6C38E045720DF0F28789FD5057B0D28A"
     },
     {
       "path": "CAPABILITY_REGISTRY.md",
@@ -31,8 +31,8 @@
     },
     {
       "path": "COMPLETION_TRACKER.md",
-      "size_bytes": 3078,
-      "sha256": "698167CA29B8297C6206763F5A71E3C79ED6BA4A40BAE0A9262120DA3F9F81FD"
+      "size_bytes": 3076,
+      "sha256": "5A0FF53A2A9940A78BD820B8604D85BB9E7279A43D1AE859B8352C9C01CC1DD9"
     },
     {
       "path": "CONDITIONAL_DECISION_PACKAGES.json",
@@ -95,19 +95,34 @@
       "sha256": "2ABB1E2423C45C639C9644C762A370A844E6DA36421C9787D56C24265DC98E00"
     },
     {
+      "path": "evidence/sqlite/implementation-delta.json",
+      "size_bytes": 4699,
+      "sha256": "0B388ECA46F2C98D0A2A3C44270DDBDAB946170900E75C0286FB57C10D714AD8"
+    },
+    {
+      "path": "evidence/sqlite/offline-or-applicability.json",
+      "size_bytes": 1013,
+      "sha256": "B9D1398497563163CAEEE3760FC8DFE032F9365C64CDCF25A5B56698DFC464B9"
+    },
+    {
+      "path": "evidence/sqlite/pre-change-characterization.json",
+      "size_bytes": 2326,
+      "sha256": "33EEDE8C562D685FAF20519D2752DD0A8C3D487BBEAA1E71658554645A634C14"
+    },
+    {
       "path": "EXACT_LOCATION_REGISTRY.json",
       "size_bytes": 2704939,
       "sha256": "1FFDF386245CBED402240144C60EB8661F52E86AC29905B9C5010BB7EAB79007"
     },
     {
       "path": "FINAL-REPOSITORY-RECONCILIATION.json",
-      "size_bytes": 2896,
-      "sha256": "01CE3C55D305C9F965E127E101BDE75552A9827F5FB4BAD892AB881C65008D3F"
+      "size_bytes": 2894,
+      "sha256": "E9E08C57B2F3C5B5F773E98763C5753DD159247C455BE7788B16E1252BF683F8"
     },
     {
       "path": "FINAL-REPOSITORY-RECONCILIATION.md",
       "size_bytes": 3009,
-      "sha256": "025E55CEFCFD21D832AE0EBCF7BE2A05D8786A5A584E70AA4E7FE712567AA21B"
+      "sha256": "7800252216184162564314A905A24EA9613EB61DF28FC13C1A79C28A31A204C0"
     },
     {
       "path": "FOLDER_OWNERSHIP_MAP.md",
@@ -131,13 +146,13 @@
     },
     {
       "path": "IMPLEMENTATION_QUEUE.json",
-      "size_bytes": 3163988,
-      "sha256": "9FAB4567674D10216B2DD55EDC3B3F21D804FB82DA8CD062426DA528FDBA8BBB"
+      "size_bytes": 3164397,
+      "sha256": "F90959108B01ADA9C92FA93458FDA1DE39EA776283FE8C92935C6D3AEA88D386"
     },
     {
       "path": "IMPLEMENTATION_QUEUE.md",
-      "size_bytes": 30666,
-      "sha256": "F419531118B1D45F1DE49BCC5D9E2FFD1BC0EDA85D16EA7E2F05EB6D315CB880"
+      "size_bytes": 30661,
+      "sha256": "27F8E6514B0D9461F9B5CCF33DE1E344A2E40FD1575E80055B8A5E53E440388D"
     },
     {
       "path": "IMPORT_AND_CALL_MAP.md",
@@ -206,13 +221,13 @@
     },
     {
       "path": "PLANNING_VALIDATION_REPORT.json",
-      "size_bytes": 33094,
-      "sha256": "5BF44E66A70BA5F032D085CC71555CA9079F93EFBE7080C1DB1CBB38BF2A49BC"
+      "size_bytes": 32784,
+      "sha256": "CB59191BA074191014EF6163602EC194B4F900C4F4BF2EF47432782FE059CDA8"
     },
     {
       "path": "PLANNING_VALIDATION_REPORT.md",
-      "size_bytes": 4122,
-      "sha256": "AA5030220D1802327C56810DFFA8A02CB20F4815E6120E874F96855A57850C56"
+      "size_bytes": 4120,
+      "sha256": "9CBB4BEBC259F8F12BF7D1FF5A9385B56A118F0FC87609B58267975E8955CC77"
     },
     {
       "path": "PONYTAIL_AUDIT.md",
@@ -226,13 +241,13 @@
     },
     {
       "path": "READINESS_GATE.json",
-      "size_bytes": 414,
-      "sha256": "1FD38555AE1CAF7132963EA57043A30885E3464449738F390A5E4E464693E636"
+      "size_bytes": 412,
+      "sha256": "23B126771D526936DCD162081CEFAAEFDE4647FBE1A8B44AE4F5832DAA810EFC"
     },
     {
       "path": "READINESS_GATE.md",
-      "size_bytes": 295,
-      "sha256": "D623362F02CD72AA88BFC80130E9FCECFEDCBAEB2D50E54BA438579B858B3E54"
+      "size_bytes": 293,
+      "sha256": "E9B4792C25D6FEFAA50CB9F73DE964A58033E9A414DA730D56B241426383E8C8"
     },
     {
       "path": "REGRESSION_RESULTS.md",
@@ -266,8 +281,8 @@
     },
     {
       "path": "RUN_STATE.md",
-      "size_bytes": 2268,
-      "sha256": "B8225E436F19D2DE244065078D52D5CC8A8B3ABFE6E0B12119C19B123E22CA0A"
+      "size_bytes": 2266,
+      "sha256": "D826E48CB9E92105BF5868F1A7347234721D16B7D47D4A29BE905091ABD8CBFA"
     },
     {
       "path": "RUNTIME_CHAIN_MAP.md",
@@ -276,8 +291,8 @@
     },
     {
       "path": "START-HERE.md",
-      "size_bytes": 9945,
-      "sha256": "5574B695CB4ECEA63A8728D77D3E741C2D0650458782F1B5BD7B7FADD2165FBC"
+      "size_bytes": 9943,
+      "sha256": "220391B7DDBC20E48864A557DB6FC1E198F53293D29798DEDC50526EC0E7250A"
     },
     {
       "path": "TARGET_ARCHITECTURE.md",
@@ -391,8 +406,8 @@
     },
     {
       "path": "VERIFICATION_AUDIT.json",
-      "size_bytes": 30451,
-      "sha256": "832C63D178C2CF97AAF7859A0CBE9B870DCFEF2D1BD448179BF457083A9F6738"
+      "size_bytes": 30141,
+      "sha256": "AA8EE2BF68E9CCEB1838107C81FD0D2159B82B33B0E78172BD2506271840E814"
     }
   ]
 }

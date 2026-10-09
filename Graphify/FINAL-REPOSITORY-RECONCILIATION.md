@@ -7,10 +7,10 @@ This report is machine-generated from the reconciliation validator. Tracked Git 
 - Repository URL: `https://github.com/mhyahya854/Mnemora.git`
 - Default branch: `main`
 - Branch at verification: `main (canonical default branch; linear history integrated from graphify-final-reconciliation)`
-- Verified commit: `6686f243ccf0d8d19632c54ce78dfe261168413c`
-- Verified tree: `dab251333795c1d175e0363337aa9a9a83692beb`
-- Tracked file count: 449
-- Tracked codebase file count: 347
+- Verified commit: `605b8fed289f5d3d772d292ea523b9338ca5e1ab`
+- Verified tree: `d56e48970709cba3c16e89e5e7fbf01ce9120682`
+- Tracked file count: 458
+- Tracked codebase file count: 348
 - Git LFS file count: 1
 
 ## Protected content
@@ -43,7 +43,7 @@ This report is machine-generated from the reconciliation validator. Tracked Git 
 ## Transient exclusions
 
 - Excluded categories: .git, .log, .mypy_cache, .pyc, .pyo, .pytest_cache, .ruff_cache, .swo, .swp, .tmp, __pycache__, ~
-- Graphify output-manifest entries: 78
+- Graphify output-manifest entries: 81
 
 ## Validation
 

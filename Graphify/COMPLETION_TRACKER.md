@@ -33,4 +33,4 @@ The derived model contains 536 normalized requirements, 122 capabilities, 162 im
 
 ## Application and release status
 
-Implementation status is `IN PROGRESS` with 2 terminal tasks; the current next task is `TASK-CAP-DATABASE` (NOT STARTED). Planning completeness never changes task dispositions. Application execution evidence is valid only through queue references at the recorded checkpoint. Release approval remains a separate strict conjunction. Historical full-tree manifest evidence is preserved in `PLANNING_BASELINE.md`; precise tracked/Git, Git LFS and local-only inventory claims are in `FINAL-REPOSITORY-RECONCILIATION.md`.
+Implementation status is `IN PROGRESS` with 3 terminal tasks; the current next task is `TASK-CAP-BACKUP` (NOT STARTED). Planning completeness never changes task dispositions. Application execution evidence is valid only through queue references at the recorded checkpoint. Release approval remains a separate strict conjunction. Historical full-tree manifest evidence is preserved in `PLANNING_BASELINE.md`; precise tracked/Git, Git LFS and local-only inventory claims are in `FINAL-REPOSITORY-RECONCILIATION.md`.

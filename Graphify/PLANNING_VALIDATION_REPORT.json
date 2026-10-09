@@ -637,9 +637,9 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "before": "CD36A04F95B7181BAFDBE18C78D4F54CB084ED16E91505E9EE21C79DD3C9F4DF",
-        "after": "CD36A04F95B7181BAFDBE18C78D4F54CB084ED16E91505E9EE21C79DD3C9F4DF",
-        "generator_stdout": "{\n  \"requirements\": 536,\n  \"capabilities\": 122,\n  \"tasks\": 162,\n  \"deletion_tasks\": 31,\n  \"conditional_packages\": 12,\n  \"release_gates\": 12,\n  \"exact_locations\": 780\n}"
+        "before": "2D6BA80BED1FA79B0D34E570305AA1F129CFE03D137EA075BB6D4D80AAF37452",
+        "after": "2D6BA80BED1FA79B0D34E570305AA1F129CFE03D137EA075BB6D4D80AAF37452",
+        "generator_stdout": "SKIPPED"
       }
     },
     {
@@ -657,21 +657,21 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "tracked_codebase_file_count": 347,
+        "tracked_codebase_file_count": 348,
         "tracked_baseline_entries": 346,
         "tracked_final_entries": 346,
         "tracked_unchanged": 340,
-        "tracked_added": 1,
+        "tracked_added": 2,
         "tracked_removed": 0,
         "tracked_changed": 6,
         "tracked_manifest_errors": 0,
         "claim": "Tracked codebase parity is verified from git blob content and is reproducible from any clean clone.",
         "local_full_tree_audit": "RUN - LOCAL ONLY (ignored dependencies/build output are not GitHub-verified)",
         "local_baseline_codebase_files": 24839,
-        "local_current_codebase_files": 24840,
+        "local_current_codebase_files": 24841,
         "local_comparable_pre_and_post_sha256_files": 346,
         "local_path_and_size_only_files": 24493,
-        "local_post_run_full_sha256_fingerprint": "868D3C92B855B421044671EE6CECB7E7A37FC4C2636A123E67BEB5CE1771DC99",
+        "local_post_run_full_sha256_fingerprint": null,
         "local_claim_limit": "Only comparable-hash files are proven byte-identical. Path/size-only files are not cryptographic equality proof. A post-run full fingerprint without an equivalent pre-run full fingerprint is a current-state checkpoint, not full before/after proof."
       }
     },
@@ -708,9 +708,9 @@
       "error_count": 0,
       "errors": [],
       "details": {
-        "committed_output_manifest_entries": 78,
-        "regenerated_output_manifest_entries": 78,
-        "tracked_graphify_files": 100
+        "committed_output_manifest_entries": 81,
+        "regenerated_output_manifest_entries": 81,
+        "tracked_graphify_files": 108
       }
     },
     {
@@ -819,15 +819,15 @@
       "details": {
         "implementation_status": "IN PROGRESS",
         "execution_state_counts": {
-          "NOT STARTED": 160,
-          "COMPLETE": 2,
+          "NOT STARTED": 159,
+          "COMPLETE": 3,
           "NOT APPLICABLE": 0,
           "BLOCKED": 0
         },
-        "terminal_task_count": 2,
-        "next_task_id": "TASK-CAP-DATABASE",
+        "terminal_task_count": 3,
+        "next_task_id": "TASK-CAP-BACKUP",
         "next_task_disposition": "NOT STARTED",
-        "latest_checkpoint_identity": "6686f243ccf0d8d19632c54ce78dfe261168413c"
+        "latest_checkpoint_identity": "605b8fed289f5d3d772d292ea523b9338ca5e1ab"
       }
     },
     {
@@ -909,21 +909,21 @@
     "tasks_without_capability": 0
   },
   "codebase_integrity_evidence": {
-    "tracked_codebase_file_count": 347,
+    "tracked_codebase_file_count": 348,
     "tracked_baseline_entries": 346,
     "tracked_final_entries": 346,
     "tracked_unchanged": 340,
-    "tracked_added": 1,
+    "tracked_added": 2,
     "tracked_removed": 0,
     "tracked_changed": 6,
     "tracked_manifest_errors": 0,
     "claim": "Tracked codebase parity is verified from git blob content and is reproducible from any clean clone.",
     "local_full_tree_audit": "RUN - LOCAL ONLY (ignored dependencies/build output are not GitHub-verified)",
     "local_baseline_codebase_files": 24839,
-    "local_current_codebase_files": 24840,
+    "local_current_codebase_files": 24841,
     "local_comparable_pre_and_post_sha256_files": 346,
     "local_path_and_size_only_files": 24493,
-    "local_post_run_full_sha256_fingerprint": "868D3C92B855B421044671EE6CECB7E7A37FC4C2636A123E67BEB5CE1771DC99",
+    "local_post_run_full_sha256_fingerprint": null,
     "local_claim_limit": "Only comparable-hash files are proven byte-identical. Path/size-only files are not cryptographic equality proof. A post-run full fingerprint without an equivalent pre-run full fingerprint is a current-state checkpoint, not full before/after proof."
   },
   "master_plan_hashes": {
@@ -936,14 +936,14 @@
   "execution_state": {
     "implementation_status": "IN PROGRESS",
     "execution_state_counts": {
-      "NOT STARTED": 160,
-      "COMPLETE": 2,
+      "NOT STARTED": 159,
+      "COMPLETE": 3,
       "NOT APPLICABLE": 0,
       "BLOCKED": 0
     },
-    "terminal_task_count": 2,
-    "next_task_id": "TASK-CAP-DATABASE",
+    "terminal_task_count": 3,
+    "next_task_id": "TASK-CAP-BACKUP",
     "next_task_disposition": "NOT STARTED",
-    "latest_checkpoint_identity": "6686f243ccf0d8d19632c54ce78dfe261168413c"
+    "latest_checkpoint_identity": "605b8fed289f5d3d772d292ea523b9338ca5e1ab"
   }
 }

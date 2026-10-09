@@ -6,6 +6,6 @@
   "release_status": "NOT EVALUATED",
   "failed_planning_checks": [],
   "exact_first_task_id": "TASK-GOV-001-PROVENANCE-BASELINE",
-  "next_task_id": "TASK-CAP-DATABASE",
+  "next_task_id": "TASK-CAP-BACKUP",
   "next_task_disposition": "NOT STARTED"
 }

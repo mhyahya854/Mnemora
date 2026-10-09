@@ -8,8 +8,8 @@
 - Git: present at the repository root; branch, commit, staged, unstaged, deleted and untracked states are verified at implementation time by `TASK-GOV-001-PROVENANCE-BASELINE` and recorded in the audit baseline (the checked-out branch name is intentionally not embedded so generated evidence is identical across clones).
 - Provenance fallback: `REPOSITORY_FILE_INVENTORY.json` plus `REPOSITORY_FINGERPRINT.json`; the immutable execution root is `TASK-GOV-001-PROVENANCE-BASELINE`.
 - Immutable Master Plan files: verified against the SHA-256 values below before derived generation.
-- Implementation status: `IN PROGRESS`; task counts: `{"BLOCKED": 0, "COMPLETE": 2, "NOT APPLICABLE": 0, "NOT STARTED": 160}`.
-- Latest terminal task checkpoint: `6686f243ccf0d8d19632c54ce78dfe261168413c`.
+- Implementation status: `IN PROGRESS`; task counts: `{"BLOCKED": 0, "COMPLETE": 3, "NOT APPLICABLE": 0, "NOT STARTED": 159}`.
+- Latest terminal task checkpoint: `605b8fed289f5d3d772d292ea523b9338ca5e1ab`.
 - Release status: not evaluated by task execution state.
 
 ## Planning authorities
@@ -25,7 +25,7 @@
 
 ## Resume pointer
 
-Read `START-HERE.md`. The current next task is `TASK-CAP-DATABASE` with disposition `NOT STARTED`; `BLOCKED` is a stop barrier, never a skip condition. Re-run `python -B Graphify/tools/validate_planning.py` before execution.
+Read `START-HERE.md`. The current next task is `TASK-CAP-BACKUP` with disposition `NOT STARTED`; `BLOCKED` is a stop barrier, never a skip condition. Re-run `python -B Graphify/tools/validate_planning.py` before execution.
 
 ## Master Plan hashes
 
